@@ -4,7 +4,7 @@ const ContactInfos = () => {
 
     return  <>
                 <div className="subheading">Location</div>
-                <div className="contactinfo">
+                <div className="element">
                     <BiDirections className="icon" /> Brittany
                 </div>
             </>
