@@ -1,0 +1,81 @@
+/*your CSS code here*/
+.CurriculumVitaeContainer {
+    background: linear-gradient(
+          0.2turn, 
+          rgb(155, 17, 247), 
+          rgb(153, 65, 235),
+          rgb(176, 139, 209)
+      );
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    text-align: left;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.intro {
+    padding: 10px;
+    background: rgb(176, 166, 185);
+    border-radius: 5px;
+    margin: 10px;
+}
+.intro img {
+    float: right;
+}
+
+.heading {
+    font-size: 100%;
+    font-weight: bolder;
+}
+
+.prof {
+    font-weight: lighter;
+}
+
+.summary {
+    font-size: medium;
+}
+
+.contactinfo {
+    padding-bottom: 5px;
+}
+
+.subheading {
+    text-decoration: underline;
+    font-weight: bolder;
+    text-transform: uppercase;
+    padding-left: 10px;
+    color: rgb(252, 243, 127);
+}
+
+.data, .icon {
+    display: inline-block;
+}
+
+.skills, .frameworks, .contactinfo, .explist, .icon {
+    color: rgb(224, 224, 219);
+}
+
+.skills, .frameworks, .contactinfo, .explist, .social, .perso {
+    padding-left: 16px;
+}
+
+.progress {
+    width: 30%;
+}
+
+.explist {
+    font-size: 15px;
+}
+
+.date {
+    text-decoration: underline;
+}
+
+.jobtitle {
+    font-weight:bold;
+}
+
+.jobdesc {
+    font-style: italic;
+}
