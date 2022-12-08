@@ -48,10 +48,6 @@
     float: right;
 }
 
-.contact {
-    font-size: medium;
-}
-
 .heading {
     font-size: 100%;
     font-weight: bolder;
@@ -66,11 +62,6 @@
     margin-top: 20px;
 }
 
-.contactinfo {
-    margin-top: 15px;
-    margin-bottom: 15px;
-}
-
 .data, .icon {
     display: inline-block;
 }
@@ -82,7 +73,7 @@
 }
 
 .progress {
-    width: 30%;
+    width: 60%;
     color:rgb(71, 240, 155);
 }
 
@@ -119,6 +110,16 @@
 }
 
 .desc, .reference {
+    font-size: medium;
+}
+
+
+.contactinfo {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.contact {
     font-size: medium;
 }
 

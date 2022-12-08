@@ -4,32 +4,28 @@ import getLeasures from "./getLeasures";
 const Leasures = () => {
 
     var leasures = getLeasures();
-    console.log(leasures)
-    var nbRows = Math.ceil(leasures.length / 3);
-    var nbCols = 3;
+
+    var mobile = document.body.offsetWidth < 350;
+
+    var nbCols = mobile ? 2 : 3;
+    var nbRows = Math.ceil(leasures.length / nbCols);
     var rows = [];
     var i = 0;
 
     for(var r = 0; r < nbRows; r++) {
         var cols = [];
         for(var c = 0; c < nbCols; c++) {
-            console.log("r", r)
-            console.log("nbRows - 1", (nbRows - 1))
-
-            console.log("c", c)
-            console.log("(leasures.length % nbCols)", (leasures.length % nbCols))
-
             var col = {};
 
             if(r === (nbRows - 1) && c >= (leasures.length % nbCols)) {
                 continue;
             } else {
                 col =   <Col className="element" key={`col${c}`}>
-                                <div className="icon-block">
-                                    <div className="icon" >{leasures[i].icon}</div> 
-                                    <div className="element-of-icon">{leasures[i].activity}</div>
-                                </div>
-                            </Col>;
+                            <div className="icon-block">
+                                <div className="icon" >{leasures[i].icon}</div> 
+                                <div className="element-of-icon">{leasures[i].activity}</div>
+                            </div>
+                        </Col>;
                 
             }
             cols.push(col); 
@@ -54,7 +50,17 @@ const Leasures = () => {
                                 })
                             }
                         </Row>
-                    })}    
+                    })}  
+                    {/* {
+                        leasures.map((leasure, index) => {
+                            return <div className="element flex" key={index}>
+                                        <div className="icon-block">
+                                            <div className="icon" >{leasure.icon}</div> 
+                                            <div className="element-of-icon">{leasure.activity}</div>
+                                        </div>
+                                    </div>;
+                        })
+                    }  */}  
                 </div>
             </>
 }
