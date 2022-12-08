@@ -19,14 +19,15 @@ const Leasures = () => {
                                 <div className="element-of-icon">{leasures[i].activity}</div>
                             </div>
                         </Col>;
-            cols.push(col);    
+            cols.push(col); 
+            i++;   
         }
         rows.push(
             {
                 index: `row${r}`,
                 cols: cols
-            });
-        i++;
+            }
+        );
     }
 
     return <>
