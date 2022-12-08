@@ -5,8 +5,7 @@ const Leasures = () => {
 
     var leasures = getLeasures();
 
-    var mobile = document.body.offsetWidth < 350;
-
+    var mobile = document.body.offsetWidth < 450;
     var nbCols = mobile ? 2 : 3;
     var nbRows = Math.ceil(leasures.length / nbCols);
     var rows = [];

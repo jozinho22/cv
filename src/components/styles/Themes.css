@@ -1,0 +1,19 @@
+.Default {
+    --back-color-1: rgb(155, 17, 247); 
+    --back-color-2: rgb(153, 65, 235); 
+    --back-color-3: rgb(176, 139, 209); 
+    --simple-text-color: rgb(224, 224, 219);
+    --title-color: rgb(252, 243, 127);
+    --intro-background-color: rgb(151, 148, 155);
+    --highlight-color: rgb(71, 240, 155);
+}
+
+.Darcula {
+    --back-color-1: rgb(0, 0, 0); 
+    --back-color-2: rgb(67, 64, 70); 
+    --back-color-3: rgb(139, 128, 148); 
+    --simple-text-color: rgb(224, 224, 219);
+    --title-color: rgb(252, 243, 127);
+    --intro-background-color: rgb(103, 82, 129);
+    --highlight-color: rgb(71, 240, 155);
+}

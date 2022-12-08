@@ -2,6 +2,7 @@ import getJobs from "./getJobs";
 import {GiSandsOfTime} from 'react-icons/gi';
 import {HiLink} from 'react-icons/hi';
 import {MdWork} from 'react-icons/md';
+import {MdAlternateEmail} from 'react-icons/md';
 
 const Experience = () => {
 
@@ -20,7 +21,10 @@ const Experience = () => {
                                             <MdWork className="icon" /> 
                                             <div className="element-of-icon">{job.as}</div>
                                         </div>
-                                        <div className="company">@ {job.company}</div> 
+                                        <div className="icon-block">
+                                            <MdAlternateEmail className="icon" /> 
+                                            <div className="element-of-icon">{job.company}</div>
+                                        </div>
                                         <div className ="desc">{job.desc}</div>
                                         {
                                             job.references ?
@@ -28,7 +32,7 @@ const Experience = () => {
                                                     return <div key={index} className="icon">
                                                                 <a className="reference" href={reference.url} target="_blank" rel="noreferrer">
                                                                     <HiLink /> 
-                                                                    {reference.webSiteName}
+                                                                    <div className="element-of-icon">{reference.webSiteName}</div>
                                                                 </a>
                                                             </div> 
                                                 }) : 
