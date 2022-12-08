@@ -1,3 +1,4 @@
+import { ProgressBar } from 'react-bootstrap';
 import getSkills from './getSkills';
 
 const Skills = () => {
@@ -13,7 +14,7 @@ const Skills = () => {
                                             <div className="icon">{skill.icon}</div>
                                             <div className="element-of-icon">{skill.language}</div>
                                         </div>
-                                        <div><progress value={skill.level} max={100} /></div> 
+                                        <ProgressBar now={skill.level} />
                                         <div className="frameworks">
                                             {skill.frameworks ? 
                                                 `(${skill.frameworks})` :

@@ -20,7 +20,7 @@ const getJobs = () => {
             desc: "I worked on a mobile app generator"
         },
         {
-            period: "sept 2016 - sept 2018",
+            period: "mar 2016 - sept 2018",
             company: "La SACEM",
             as: "Java/SQL developer",
             desc: "I worked on many applications, mainly do some corrections in the Java and PL/SQL code"

@@ -7,9 +7,11 @@ const Intro = () => {
                 <div className="heading">Josselin DOUINEAU</div>
                 <div className="prof">Developer</div>
 
-                {/* <div className="summary">
-                    Hi, I'm a Java developer. 
-                </div> */}
+                <div className="summary">
+                    <p>
+                        After a long period while doing other activities, i'm back in the development. 
+                    </p>
+                </div>
             </div>
 
 }

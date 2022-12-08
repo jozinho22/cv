@@ -11,13 +11,13 @@ const getSkills = () => {
         {
             language: "Java",
             icon: <FaJava />,
-            frameworks: "Spring, Maven, JPA/Hibernate",
+            frameworks: "Spring, Maven, JPA/Hibernate, REST",
             level: 80
         },
         {
             language: "Javascript",
             icon: <TbBrandJavascript />,
-            frameworks: "Node, React, MathJax",
+            frameworks: "Node, React, JSON, MathJax",
             level: 70
         },
         {

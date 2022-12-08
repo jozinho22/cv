@@ -25,8 +25,8 @@ const Experience = () => {
                                         {
                                             job.references ?
                                                 job.references.map((reference, index) => {
-                                                    return <div className="icon">
-                                                                <a className="reference" key={index} href={reference.url} target="_blank" rel="noreferrer">
+                                                    return <div key={index} className="icon">
+                                                                <a className="reference" href={reference.url} target="_blank" rel="noreferrer">
                                                                     <HiLink /> 
                                                                     {reference.webSiteName}
                                                                 </a>
