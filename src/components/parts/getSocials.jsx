@@ -1,6 +1,6 @@
 import {BsGithub} from 'react-icons/bs';
 import {BsStackOverflow} from 'react-icons/bs';
-
+import {FaChess} from 'react-icons/fa';
 
 const getSocials = () => {
 
@@ -14,6 +14,11 @@ const getSocials = () => {
             platform: "Stack Overflow",
             profileLink: "https://stackoverflow.com/users/6741310/jozinho22",
             icon: <BsStackOverflow />
+        },
+        {
+            platform: "Chess",
+            profileLink: "https://www.chess.com/member/jozinho22",
+            icon: <FaChess />
         }
     ]
 }
