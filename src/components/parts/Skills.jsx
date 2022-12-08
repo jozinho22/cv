@@ -9,7 +9,10 @@ const Skills = () => {
                 <div className="skills">
                         {skills.map((skill, index) => {
                             return  <div className="element" key={index}>
-                                        <div className="icon">{skill.icon} {skill.language}</div>
+                                        <div className="icon-block">
+                                            <div className="icon">{skill.icon}</div>
+                                            <div className="element-of-icon">{skill.language}</div>
+                                        </div>
                                         <div><progress value={skill.level} max={100} /></div> 
                                         <div className="frameworks">
                                             {skill.frameworks ? 

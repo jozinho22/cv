@@ -1,13 +1,17 @@
 const getJobs = () => {
 
-    var maThematique = "https://ma-thematique.netlify.app/";
     return [
         {
             period: "mar 2020 - now",
-            company: "@Home",
-            as: "developer",
-            desc: "I develop personal projects such as the last one",
-            references: [maThematique]
+            company: "Home",
+            as: "Fullstack developer",
+            desc: "I develop personal projects and continue training",
+            references: [
+                {
+                    url: "https://ma-thematique.netlify.app/",
+                    webSiteName : "Ma Thematique"
+                }
+            ]
         },
         {
             period: "jan 2021 - apr 2021",

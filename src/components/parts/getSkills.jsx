@@ -33,7 +33,7 @@ const getSkills = () => {
                 {
             language: "SQL",
             icon: <AiOutlineConsoleSql />,
-            frameworks : "MySQL, SQL Server, PostgreSQL",
+            frameworks : "MySQL, SQL Server, PostgreSQL, Oracle",
             level: 75
         },
         {

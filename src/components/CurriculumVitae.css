@@ -35,6 +35,10 @@
     float: right;
 }
 
+.contact {
+    font-size: medium;
+}
+
 .heading {
     font-size: 100%;
     font-weight: bolder;
@@ -46,6 +50,7 @@
 
 .summary {
     font-size: medium;
+    margin-top: 20px;
 }
 
 .contactinfo {
@@ -60,31 +65,60 @@
 .element {
     padding-left: 30px;
     margin-top: 15px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 .progress {
     width: 30%;
+    color:rgb(71, 240, 155);
 }
 
 .frameworks {
     font-size: medium;
     padding-left: 25px;
+    text-align: left;
 }
 
-.jobtitle {
-    font-weight:bold;
-    padding-left: 30px;
+.period {
+    color:rgb(71, 240, 155);
 }
 
-.jobdesc {
+.period-date {
+    text-decoration: underline;
+}
+
+.icon, .element-of-icon {
+    display: inline;
+    vertical-align: middle;
+}
+
+.element-of-icon {
+    margin-left: 10px;
+}
+
+.desc {
     font-style: italic;
+    text-align: justify;
 }
 
-.jobdesc, .reference {
-    padding-left: 60px;
+.element > * {
+    margin-bottom: 5px;
+}
+
+.desc, .reference {
+    font-size: medium;
 }
 
 a {
     color: inherit;
+    text-decoration: none;
+}
+
+@media(width < 350px) {
+    .element {
+        padding-left: 15px;
+    }
+    .subheading {
+        padding-left: 5px;
+    }
 }
