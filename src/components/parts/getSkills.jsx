@@ -23,12 +23,14 @@ const getSkills = () => {
         {
             language: "HTML",
             icon: <ImHtmlFive /> ,
-            level: 70
+            frameworks: "HTML5",
+            level: 75
         },
                 {
             language: "CSS",
             icon: <IoLogoCss3 /> ,
-            level: 60
+            frameworks: "CSS3",
+            level: 65
         },
                 {
             language: "SQL",
@@ -40,7 +42,7 @@ const getSkills = () => {
             language: "Git",
             icon: <BiGitBranch />,
             frameworks : "GitHub, GitLab, Git Bash, Git Fork",
-            level: 60
+            level: 65
         }
     ]
 }
