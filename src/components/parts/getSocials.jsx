@@ -1,7 +1,7 @@
 import {BsGithub} from 'react-icons/bs';
 import {BsStackOverflow} from 'react-icons/bs';
 import {FaChess} from 'react-icons/fa';
-import {SiSololearn} from 'react-icons/fa';
+import {SiSololearn} from 'react-icons/si';
 
 const getSocials = () => {
 
