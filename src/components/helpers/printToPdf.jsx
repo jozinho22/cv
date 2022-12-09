@@ -1,10 +1,11 @@
 import jsPDF from 'jspdf';
 import html2canvas from 'html2canvas';
 
-  function printToPdf() {
+function printToPdf() {
 
     var entirePage = document.querySelector("#capture");
 
+    console.log(entirePage.offsetHeight) 
     var htmlWidth = entirePage.offsetWidth;
     var htmlHeight = entirePage.offsetHeight;
     var pdfWidth = htmlWidth;
@@ -12,10 +13,6 @@ import html2canvas from 'html2canvas';
 
     const pdf = new jsPDF('p', 'px', [pdfWidth, pdfHeight]); 
     var pageCount = Math.ceil(htmlHeight / pdfHeight) - 1;
-
-    var pages = [];
-    pages.push(document.querySelector("#section1"));
-    pages.push(document.querySelector("#section2"));
 
     html2canvas(entirePage)
     .then(canvas => {
@@ -28,9 +25,9 @@ import html2canvas from 'html2canvas';
             pdf.addImage(image, 'PNG', 0, -(pdfHeight * i), htmlWidth, htmlHeight);
         }
 
-        pdf.save("Josselin DOUINEAU-developer.pdf");
+        pdf.save("Josselin DOUINEAU - developer.pdf");
     }); 
     
- }
+}
 
- export default printToPdf;
+export default printToPdf;

@@ -29,7 +29,7 @@ const Header = () => {
                                 updateTheme(newTheme);
                                 localStorage.setItem('theme', JSON.stringify(newTheme));
                             }}>
-                        {theme === "Default" ? "Change to dark" : "Get back to light"}
+                        {theme === "Default" ? "Change to dark" : "Go back to light"}
                     </Button>
                 </Col>
             </Row>
