@@ -16,10 +16,18 @@
 
 .header .dropdown-menu {
     background-color: var(--back-color-1);
-    position: absolute;
+    /* position: absolute;
     left:50% !important;
     transform: none !important;
-    inset: unset !important;
+    inset: unset !important; */
+}
+
+.header .dropdown-item:hover {
+  background-color : var(--back-hover-color);
+}
+
+.header .dropdown-item:focus {
+  background-color : var(--back-hover-color);
 }
 
 .header-button-container {
