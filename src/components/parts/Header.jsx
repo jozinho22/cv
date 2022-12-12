@@ -16,41 +16,36 @@ const Header = () => {
     }
 
     return  <div className="header">
-            <Row className="header-button-container">
-                <Col>
-                    <Button variant="warning" className="header-button" onClick={printToPdf}>
-                        Export to PDF
-                    </Button>
-                </Col>
-                <Col>
-                    <Dropdown onSelect={selectTheme}>
-                        <Dropdown.Toggle 
-                            className="dropdown-button"
-                            variant="success" 
-                            id="theme-dropdown-menu">
-                            Themes
-                        </Dropdown.Toggle>
-                        <Dropdown.Menu>
-                            {
-                                themes.map(theme => (
-                                    <Dropdown.Item 
-                                        key={theme.id}
-                                        id="theme-dropdown-item"
-                                        className={theme.name}
-                                        eventKey={theme.name}>
-                                        {theme.name}
-                                    </Dropdown.Item>
-                                ))
-                            }     
-                        </Dropdown.Menu>
-                    </Dropdown>               
-                
-                </Col>
-
-            </Row>
- 
-                
-          
+                <Row className="header-button-container">
+                    <Col>
+                        <Button variant="warning" className="header-button" onClick={printToPdf}>
+                            Export to PDF
+                        </Button>
+                    </Col>
+                    <Col>
+                        <Dropdown onSelect={selectTheme}>
+                            <Dropdown.Toggle 
+                                className="dropdown-button"
+                                variant="success" 
+                                id="theme-dropdown-menu">
+                                Themes
+                            </Dropdown.Toggle>
+                            <Dropdown.Menu>
+                                {
+                                    themes.map(theme => (
+                                        <Dropdown.Item 
+                                            key={theme.id}
+                                            id="theme-dropdown-item"
+                                            className={theme.name}
+                                            eventKey={theme.name}>
+                                            {theme.name}
+                                        </Dropdown.Item>
+                                    ))
+                                }     
+                            </Dropdown.Menu>
+                        </Dropdown>               
+                    </Col>
+                </Row>
             </div>
 }
 

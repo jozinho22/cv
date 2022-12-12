@@ -17,7 +17,7 @@ const getSkills = () => {
         {
             language: "Javascript",
             icon: <TbBrandJavascript />,
-            frameworks: "Node, React, JSON, MathJax",
+            frameworks: "Node, React/Redux, JSON, MathJax",
             level: 70
         },
         {
