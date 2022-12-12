@@ -42,24 +42,14 @@ const Leasures = () => {
                 <div className="subheading">Leasures</div>
                 <div className="leasures element"> 
                     {rows.map((row) => {
-                        return <Row key={row.index}>
-                            {
-                                row.cols.map(col => {
-                                    return col;
-                                })
-                            }
-                        </Row>
+                        return <Row id={`leasure-${row.index}`} key={row.index}>
+                                    {
+                                        row.cols.map(col => {
+                                            return col;
+                                        })
+                                    }
+                                </Row>
                     })}  
-                    {/* {
-                        leasures.map((leasure, index) => {
-                            return <div className="element flex" key={index}>
-                                        <div className="icon-block">
-                                            <div className="icon" >{leasure.icon}</div> 
-                                            <div className="element-of-icon">{leasure.activity}</div>
-                                        </div>
-                                    </div>;
-                        })
-                    }  */}  
                 </div>
             </>
 }

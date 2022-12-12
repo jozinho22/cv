@@ -1,7 +1,7 @@
 import { Container } from 'react-bootstrap';
 import Header from './parts/Header';
 import Intro from './parts/Intro';
-import ContactInfos from './parts/ContactInfos';
+import Contact from './parts/Contact';
 import Skills from './parts/Skills';
 import Experiences from './parts/Experience';
 import Education from './parts/Education';
@@ -21,7 +21,7 @@ const CurriculumVitae = () => {
             <Education />
             <Socials />
             <Leasures />
-            <ContactInfos />
+            <Contact />
         </Container>
     );
 }

@@ -12,7 +12,7 @@ const Experience = () => {
                 <div className="subheading">Experience</div>
                 <div className="experience">
                         {jobs.map((job, index) => {
-                            return  <div className="element" key={index}>
+                            return  <div className="element" id={`experience-${index}`} key={index}>
                                         <div className="icon-block period">
                                             <GiSandsOfTime className="icon" /> 
                                             <div className="element-of-icon period-date">{job.period}</div>

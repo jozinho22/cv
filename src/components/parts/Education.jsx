@@ -10,7 +10,7 @@ const Education = () => {
                 <div className="subheading">Education</div>
                 <div className="education">
                         {diplomas.map((diploma, index) => {
-                            return  <div className="element" key={index}>
+                            return  <div className="element" id={`education-${index}`} key={index}>
                                         <div className="icon-block period">
                                             <GiSandsOfTime className="icon" /> 
                                             <div className="element-of-icon period-date">{diploma.period}</div>

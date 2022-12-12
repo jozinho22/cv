@@ -19,9 +19,7 @@ function App() {
     <div className="App" id="capture">
         <AppContext.Provider value={appContext} > 
               <div className={`${theme}`}>
-                  <header className="App-header">
-                      <CurriculumVitae />
-                  </header>
+                  <CurriculumVitae />
               </div>
         </AppContext.Provider>
     </div>

@@ -14,13 +14,19 @@
     color: var(--simple-text-color);
 }
 
-.header-button-container {
-    position: relative;
-    height: fit-content;
-    margin-bottom: 10px;;
+.header .dropdown-menu {
+    background-color: var(--back-color-1);
+    position: absolute;
+    left:50% !important;
+    transform: none !important;
+    inset: unset !important;
 }
 
-.header-button {
+.header-button-container {
+    position: relative;
+}
+
+.header-button, .dropdown-button {
     position: relative;
     margin: 0;
     left:50%;
@@ -68,7 +74,6 @@
 .element {
     padding-left: 30px;
     margin-top: 15px;
-    margin-bottom: 20px;
 }
 
 .progress {

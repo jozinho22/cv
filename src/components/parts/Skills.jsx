@@ -9,7 +9,7 @@ const Skills = () => {
                 <div className="subheading">Skills</div>
                 <div className="skills">
                         {skills.map((skill, index) => {
-                            return  <div className="element" key={index}>
+                            return  <div className="element" id={`skill-${index}`} key={index}>
                                         <div className="icon-block">
                                             <div className="icon">{skill.icon}</div>
                                             <div className="element-of-icon">{skill.language}</div>
