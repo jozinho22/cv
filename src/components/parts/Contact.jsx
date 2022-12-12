@@ -1,7 +1,3 @@
-import {BiDirections} from 'react-icons/bi';
-import {BsFillTelephoneFill} from 'react-icons/bs';
-import {BsMailbox} from 'react-icons/bs';
-
 import getContactInfos from './getContactInfos';
 
 const Contact = () => {
