@@ -3,6 +3,7 @@ import { Button, Row, Col, Dropdown } from 'react-bootstrap';
 import printToPdf from '../helpers/printToPdf';
 import getThemes from '../styles/getThemes';
 import AppContext from '../context/AppContext';
+import {ImFilePdf} from 'react-icons/im';
 
 const Header = () => {
 
@@ -19,8 +20,12 @@ const Header = () => {
                 <Row className="header-button-container">
                     <Col>
                         <Button variant="warning" className="header-button" onClick={printToPdf}>
-                            Export to PDF
+                            <div className="icon-block">
+                                <ImFilePdf className="icon" /> 
+                                <div className="element-of-icon">Export to PDF</div>
+                            </div>
                         </Button>
+     
                     </Col>
                     <Col>
                         <Dropdown onSelect={selectTheme}>

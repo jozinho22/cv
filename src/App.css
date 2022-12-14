@@ -1,5 +1,16 @@
 .App {
   text-align: center;
+  background-color: rgb(54, 52, 52);
+}
+
+@media(width > 450px) {
+  .App{
+    position: relative;
+    max-width: 940px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+ 
 }
 
 .App-logo {

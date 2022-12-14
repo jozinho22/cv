@@ -1,5 +1,4 @@
 .Default {
-    background-color: var(--back-color-1);
     --back-color-1: rgb(155, 17, 247); 
     --back-hover-color : rgb(131, 23, 202); 
     --back-color-2: rgb(153, 65, 235); 
@@ -11,7 +10,6 @@
 }
 
 .Darcula {
-    background-color: var(--back-color-1);
     --back-color-1: rgb(0, 0, 0); 
     --back-hover-color : rgb(50, 50, 51); 
     --back-color-2: rgb(67, 64, 70); 
@@ -24,7 +22,6 @@
 }
 
 .Blank {
-    background-color: var(--back-color-1);
     --back-color-1: rgb(255, 255, 255); 
     --back-hover-color : rgb(167, 167, 170); 
     --back-color-2: rgb(254, 254, 255); 

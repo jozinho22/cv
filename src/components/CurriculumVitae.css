@@ -16,10 +16,10 @@
 
 .header .dropdown-menu {
     background-color: var(--back-color-1);
-    /* position: absolute;
-    left:50% !important;
-    transform: none !important;
-    inset: unset !important; */
+}
+
+.header .dropdown-item {
+  background-color : var(--back-color-1);
 }
 
 .header .dropdown-item:hover {
@@ -57,8 +57,19 @@
     margin: 10px;
     margin-bottom: 20px;
 }
+
 .intro img {
     float: right;
+    width: 100px;
+    height: 100px;
+}
+
+@media(width < 400px) {
+    .intro img {
+        float: right;
+        width: 50px;
+        height: 50px;
+    }
 }
 
 .heading {
@@ -158,3 +169,7 @@ a {
     }
 
 }
+
+/* .DocToPrint {
+    max-width: 1122px;
+} */

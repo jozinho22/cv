@@ -16,13 +16,17 @@ function App() {
   }
 
   return (
-    <div className="App" id="capture">
-        <AppContext.Provider value={appContext} > 
-              <div className={`${theme}`}>
-                  <CurriculumVitae />
-              </div>
-        </AppContext.Provider>
-    </div>
+    <>
+      <div className="App" id="capture">
+          <AppContext.Provider value={appContext} > 
+                <div className={`${theme}`}>
+                    <CurriculumVitae />
+                </div>
+                
+          </AppContext.Provider>
+      </div>
+      <div id="doc-to-print"></div>
+    </>
   );
 }
 
