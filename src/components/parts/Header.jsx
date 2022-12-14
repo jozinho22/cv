@@ -4,10 +4,11 @@ import printToPdf from '../helpers/printToPdf';
 import getThemes from '../styles/getThemes';
 import AppContext from '../context/AppContext';
 import {ImFilePdf} from 'react-icons/im';
+import {TbSwitchHorizontal} from 'react-icons/tb';
 
 const Header = () => {
 
-    const {updateTheme} = React.useContext(AppContext);
+    const {updateTheme, language, updateLanguage} = React.useContext(AppContext);
 
     var themes = getThemes(); 
 
@@ -16,16 +17,33 @@ const Header = () => {
         localStorage.setItem('theme', JSON.stringify(eventKey));
     }
 
+    const switchLanguage = () => {
+        updateLanguage(language === 'French' ? 'English' : 'French');
+        localStorage.setItem('language', JSON.stringify(language));
+    }
+
     return  <div className="header">
                 <Row className="header-button-container">
                     <Col>
-                        <Button variant="warning" className="header-button" onClick={printToPdf}>
+                        <Button variant="warning" className="printer-button" onClick={printToPdf}>
                             <div className="icon-block">
                                 <ImFilePdf className="icon" /> 
                                 <div className="element-of-icon">Export to PDF</div>
                             </div>
                         </Button>
-     
+                    </Col>
+                    <Col>
+                        <Button variant="primary" className="language-button" onClick={switchLanguage}>
+                            <div className="icon-block">
+                                <TbSwitchHorizontal className="icon" /> 
+                                <div className="element-of-icon">
+                                    {
+                                        language === 'French' ? 'Changer de langue' : 'Switch idiom'
+                                    }
+                                </div>
+                            </div>
+                        </Button>
+                    
                     </Col>
                     <Col>
                         <Dropdown onSelect={selectTheme}>

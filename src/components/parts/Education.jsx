@@ -1,11 +1,16 @@
-import getDiplomas from "./getDiplomas";
+import React from 'react';
+import getDiplomas from "./infos/getDiplomas";
+
 import {GiSandsOfTime} from 'react-icons/gi';
 import {GiDiploma} from 'react-icons/gi';
+import AppContext from '../context/AppContext';
+import languageChooser from '../helpers/languageChooser';
 
 const Education = () => {
 
-    var diplomas = getDiplomas();
-
+    const {language} = React.useContext(AppContext);
+    var diplomas = languageChooser(language, getDiplomas());
+    
     return  <>
                 <div className="subheading">Education</div>
                 <div className="education">
@@ -13,13 +18,19 @@ const Education = () => {
                             return  <div className="element" id={`education-${index}`} key={index}>
                                         <div className="icon-block period">
                                             <GiSandsOfTime className="icon" /> 
-                                            <div className="element-of-icon period-date">{diploma.period}</div>
+                                            <div className="element-of-icon period-date">
+                                               {diploma.period}
+                                            </div>
                                         </div>
                                         <div className="icon-block">
                                             <GiDiploma className="icon" /> 
-                                            <div className="element-of-icon">{diploma.title}</div>
+                                            <div className="element-of-icon">
+                                                {diploma.title}
+                                            </div>
                                         </div>
-                                        <div className ="school">@ {diploma.school}</div>
+                                        <div className ="school">
+                                            @ {diploma.school}
+                                        </div>
                                     </div>
                         })}        
                 </div>

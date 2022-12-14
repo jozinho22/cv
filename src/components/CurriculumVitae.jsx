@@ -13,7 +13,7 @@ import './CurriculumVitae.css';
 const CurriculumVitae = () => {
   
     return (
-        <Container className="CurriculumVitaeContainer">
+        <Container className="curriculum-vitae-container">
             <Header />
             <Intro />
             <Skills />

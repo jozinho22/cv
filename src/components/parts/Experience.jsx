@@ -1,12 +1,16 @@
-import getJobs from "./getJobs";
+import React from 'react';
+import getJobs from "./infos/getJobs";
 import {GiSandsOfTime} from 'react-icons/gi';
 import {HiLink} from 'react-icons/hi';
 import {MdWork} from 'react-icons/md';
 import {MdAlternateEmail} from 'react-icons/md';
+import AppContext from '../context/AppContext';
+import languageChooser from '../helpers/languageChooser';
 
 const Experience = () => {
 
-    var jobs = getJobs();
+    const {language} = React.useContext(AppContext);
+    var jobs = languageChooser(language, getJobs());
 
     return  <>
                 <div className="subheading">Experience</div>

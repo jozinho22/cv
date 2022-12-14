@@ -1,9 +1,13 @@
+import React from 'react';
 import {Row, Col} from 'react-bootstrap';
-import getLeasures from "./getLeasures";
+import getLeasures from "./infos/getLeasures";
+import AppContext from '../context/AppContext';
+import languageChooser from '../helpers/languageChooser';
 
 const Leasures = () => {
 
-    var leasures = getLeasures();
+    const {language} = React.useContext(AppContext);
+    var leasures = languageChooser(language, getLeasures());
 
     var mobile = document.body.offsetWidth < 450;
     var nbCols = mobile ? 2 : 3;

@@ -7,6 +7,7 @@
     --title-color: rgb(252, 243, 127);
     --intro-background-color: rgb(151, 148, 155);
     --highlight-color: rgb(82, 202, 142);
+    --progressbar-background-color: rgb(170, 197, 184);
 }
 
 .Darcula {
@@ -19,6 +20,7 @@
     --title-color: rgb(252, 243, 127);
     --intro-background-color: rgb(103, 82, 129);
     --highlight-color: rgb(82, 202, 142);
+    --progressbar-background-color: rgb(179, 182, 181);
 }
 
 .Blank {
@@ -31,4 +33,5 @@
     --title-color: rgb(78, 69, 64);
     --intro-background-color: rgb(178, 171, 187);
     --highlight-color: rgb(86, 78, 185);
+    --progressbar-background-color: rgb(179, 182, 181);
 }

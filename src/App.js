@@ -9,10 +9,13 @@ import './App.css';
 function App() {
 
   const [theme, setTheme] = React.useState(JSON.parse(localStorage.getItem('theme')) ? JSON.parse(localStorage.getItem('theme')) : "Default");
+  const [language, setLanguage] = React.useState(JSON.parse(localStorage.getItem('language')) ? JSON.parse(localStorage.getItem('language')) : "French");
 
   const appContext = {
       theme: theme,
-      updateTheme: setTheme
+      updateTheme: setTheme,
+      language: language,
+      updateLanguage: setLanguage
   }
 
   return (
@@ -20,9 +23,8 @@ function App() {
       <div className="App" id="capture">
           <AppContext.Provider value={appContext} > 
                 <div className={`${theme}`}>
-                    <CurriculumVitae />
-                </div>
-                
+                    <CurriculumVitae language={language}/>
+                </div>       
           </AppContext.Provider>
       </div>
       <div id="doc-to-print"></div>

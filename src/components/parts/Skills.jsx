@@ -1,5 +1,5 @@
 import { ProgressBar } from 'react-bootstrap';
-import getSkills from './getSkills';
+import getSkills from './infos/getSkills';
 
 const Skills = () => {
 

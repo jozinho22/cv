@@ -1,4 +1,4 @@
-import getSocials from "./getSocials";
+import getSocials from "./infos/getSocials";
 
 const Socials = () => {
 
