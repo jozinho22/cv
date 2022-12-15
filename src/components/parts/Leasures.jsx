@@ -25,7 +25,7 @@ const Leasures = () => {
             } else {
                 col =   <Col className="element" key={`col${c}`}>
                             <div className="icon-block">
-                                <div className="icon" >{leasures[i].icon}</div> 
+                                <div className="icon">{leasures[i].icon}</div> 
                                 <div className="element-of-icon">{leasures[i].activity}</div>
                             </div>
                         </Col>;

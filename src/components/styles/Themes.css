@@ -1,3 +1,12 @@
+.App {
+    --printer-button-color: rgb(216, 216, 52);
+    --printer-button-hover-color: rgb(190, 190, 44);
+    --language-button-color: rgb(52, 77, 216);
+    --language-button-hover-color: rgb(51, 70, 180);
+    --theme-button-color: rgb(46, 148, 52);
+    --theme-button-hover-color: rgb(38, 124, 44);
+}
+
 .Default {
     --back-color-1: rgb(155, 17, 247); 
     --back-hover-color : rgb(131, 23, 202); 

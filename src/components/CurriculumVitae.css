@@ -34,11 +34,52 @@
     position: relative;
 }
 
-.printer-button, .language-button, .dropdown-button {
+.printer-button, .language-button, .theme-button {
     position: relative;
     margin: 0;
-    left:50% !important;
-    transform: translateX(-50%) !important;
+    left:50%;
+    transform: translateX(-50%);
+}
+
+@media(width < 450px) {
+    .printer-button, .language-button, .theme-button {
+        font-size: small !important;
+        height: 60px;
+    }
+}
+
+.printer-button {
+    background-color: var(--printer-button-color) !important;
+    border: var(--printer-button-color) solid !important;
+}
+
+.printer-button:hover {
+    background-color: var(--printer-button-hover-color) !important;
+    border: var(--printer-button-hover-color) solid !important;
+}
+
+.language-button {
+    background-color: var(--language-button-color) !important;
+    border: var(--language-button-color) solid !important;
+}
+
+.language-button:hover {
+    background-color: var(--language-button-hover-color) !important;
+    border: var(--language-button-hover-color) solid !important;
+}
+
+.theme-button {
+    background-color: var(--theme-button-color) !important;
+    border: var(--theme-button-color) solid !important;
+}
+
+.theme-button:hover {
+    background-color: var(--theme-button-hover-color) !important;
+    border: var(--theme-button-hover-color) solid !important;
+}
+
+.dropdown-toggle::after {
+    display: none !important;
 }
 
 .subheading {
@@ -86,10 +127,6 @@
     margin-top: 20px;
 }
 
-.data, .icon {
-    display: inline-block;
-}
-
 .element {
     padding-left: 30px;
     margin-top: 15px;
@@ -127,9 +164,14 @@
     margin-left: 10px;
 }
 
+.element-of-icon-left {
+    margin-right: 10px;
+}
+
 .desc {
     font-style: italic;
     text-align: justify;
+    width: 90%;
 }
 
 .element > * {

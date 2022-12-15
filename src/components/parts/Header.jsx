@@ -1,10 +1,11 @@
 import React from 'react';
-import { Button, Row, Col, Dropdown } from 'react-bootstrap';
+import { Container, Button, Row, Col, Dropdown } from 'react-bootstrap';
 import printToPdf from '../helpers/printToPdf';
 import getThemes from '../styles/getThemes';
 import AppContext from '../context/AppContext';
 import {ImFilePdf} from 'react-icons/im';
 import {TbSwitchHorizontal} from 'react-icons/tb';
+import {IoMdColorWand} from 'react-icons/io';
 
 const Header = () => {
 
@@ -22,36 +23,27 @@ const Header = () => {
         localStorage.setItem('language', JSON.stringify(language));
     }
 
-    return  <div className="header">
+    return  <Container className="header">
                 <Row className="header-button-container">
-                    <Col>
+                    <Col xs={4}>
                         <Button variant="warning" className="printer-button" onClick={printToPdf}>
                             <div className="icon-block">
                                 <ImFilePdf className="icon" /> 
-                                <div className="element-of-icon">Export to PDF</div>
+                                <div className="element-of-icon">Export</div>
                             </div>
                         </Button>
                     </Col>
-                    <Col>
-                        <Button variant="primary" className="language-button" onClick={switchLanguage}>
-                            <div className="icon-block">
-                                <TbSwitchHorizontal className="icon" /> 
-                                <div className="element-of-icon">
-                                    {
-                                        language === 'French' ? 'Changer de langue' : 'Switch idiom'
-                                    }
-                                </div>
-                            </div>
-                        </Button>
                     
-                    </Col>
-                    <Col>
+                    <Col xs={4}>
                         <Dropdown onSelect={selectTheme}>
                             <Dropdown.Toggle 
-                                className="dropdown-button"
+                                className="theme-button"
                                 variant="success" 
-                                id="theme-dropdown-menu">
-                                Themes
+                                id="theme-dropdown-menu" >
+                                <div className="icon-block">
+                                    <IoMdColorWand className="icon" /> 
+                                    <div className="element-of-icon">Theme</div>
+                                </div>
                             </Dropdown.Toggle>
                             <Dropdown.Menu>
                                 {
@@ -68,8 +60,26 @@ const Header = () => {
                             </Dropdown.Menu>
                         </Dropdown>               
                     </Col>
+
+                    <Col xs={4}>
+                        <Button variant="primary" className="language-button" onClick={switchLanguage}>
+                            <div className="icon-block">
+                                <div className="element-of-icon element-of-icon-left">
+                                    {
+                                        language === 'French' ? 'FR' : 'EN'
+                                    }
+                                </div>
+                                <TbSwitchHorizontal className="icon" /> 
+                                <div className="element-of-icon">
+                                    {
+                                        language === 'French' ? 'EN' : 'FR'
+                                    }
+                                </div>
+                            </div>
+                        </Button>
+                    </Col>
                 </Row>
-            </div>
+            </Container>
 }
 
 export default Header;
