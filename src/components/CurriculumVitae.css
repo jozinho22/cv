@@ -1,4 +1,4 @@
-/*your CSS code here*/
+/* container */
 .curriculum-vitae-container {
     background: linear-gradient(
           0.2turn, 
@@ -14,6 +14,7 @@
     color: var(--simple-text-color);
 }
 
+/* header */
 .header .dropdown-menu {
     background-color: var(--back-color-1);
 }
@@ -82,15 +83,70 @@
     display: none !important;
 }
 
-.subheading {
-    text-decoration: underline;
+/* miscellaneous */
+a {
+    color: inherit !important;
+    text-decoration: none !important;
+}
+
+.element > * {
+    margin-bottom: 5px;
+}
+
+.element {
+    padding-left: 30px;
+    margin-top: 15px;
+}
+
+@media(width < 450px) {
+    .element {
+        padding-left: 15px;
+    }
+}
+
+.icon, .element-of-icon {
+    display: inline;
+    vertical-align: middle;
+}
+
+.element-of-icon {
+    margin-left: 10px;
+}
+
+.element-of-icon-left {
+    margin-right: 10px;
+}
+
+hr {
+    width: 70%;
+    position: relative;
+    left:50%;
+    transform: translateX(-50%);
+}
+
+/* title */
+.title {
     font-weight: bolder;
     text-transform: uppercase;
     padding-left: 10px;
     color: var(--title-color);
     margin-top: 30px;
+    text-align: center;
+    border: var(--highlight-color) solid 2px;
+    border-radius: 5px;
+    position: relative;
+    left:50%;
+    transform: translateX(-50%);
+    width: 75%;
 }
 
+@media(width < 450px) {
+    .title {
+        padding-left: 5px;
+    }
+}
+
+/* intro */
 .intro {
     padding: 10px;
     background: var(--intro-background-color);
@@ -113,11 +169,6 @@
     }
 }
 
-.heading {
-    font-size: 100%;
-    font-weight: bolder;
-}
-
 .prof {
     font-weight: lighter;
 }
@@ -127,14 +178,16 @@
     margin-top: 20px;
 }
 
-.element {
-    padding-left: 30px;
-    margin-top: 15px;
-}
-
+/* skills */
 .progress {
     width: 40%;
     background-color:var(--progressbar-background-color) !important;
+}
+
+@media(width < 450px) {
+    .progress {
+        width: 60%;
+    }
 }
 
 .progress-bar {
@@ -147,6 +200,7 @@
     text-align: left;
 }
 
+/* experience */
 .period {
     color: var(--highlight-color);
 }
@@ -155,27 +209,10 @@
     text-decoration: underline;
 }
 
-.icon, .element-of-icon {
-    display: inline;
-    vertical-align: middle;
-}
-
-.element-of-icon {
-    margin-left: 10px;
-}
-
-.element-of-icon-left {
-    margin-right: 10px;
-}
-
 .desc {
     font-style: italic;
     text-align: justify;
     width: 90%;
-}
-
-.element > * {
-    margin-bottom: 5px;
 }
 
 .desc, .reference {
@@ -186,6 +223,7 @@
     color:var(--title-color) !important;
 }
 
+/* contact */
 .contactinfo {
     margin-top: 15px;
     margin-bottom: 15px;
@@ -194,25 +232,3 @@
 .contact {
     font-size: medium;
 }
-
-a {
-    color: inherit !important;
-    text-decoration: none !important;
-}
-
-@media(width < 450px) {
-    .element {
-        padding-left: 15px;
-    }
-    .subheading {
-        padding-left: 5px;
-    }
-    .progress {
-        width: 60%;
-    }
-
-}
-
-/* .DocToPrint {
-    max-width: 1122px;
-} */

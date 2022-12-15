@@ -1,17 +1,19 @@
 import React from 'react';
-import getContactInfos from './infos/getContactInfos';
+import getContacts from './infos/getContacts';
 import AppContext from '../context/AppContext';
 import languageChooser from '../helpers/languageChooser';
+import getTitles from './infos/getTitles';
 
 const Contact = () => {
 
     const {language} = React.useContext(AppContext);
-    var contactInfos = languageChooser(language, getContactInfos());
+    var title = languageChooser(language, getTitles()).contact;
+    var contacts = languageChooser(language, getContacts());
 
     return  <>
-                <div className="subheading">Contact infos</div>
+                <div className="title">{title}</div>
                 <div className="contact">
-                    {contactInfos.map((contact, index) => {
+                    {contacts.map((contact, index) => {
 
                         var element =   <>
                                             <div className="icon" >{contact.icon}</div> 

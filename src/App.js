@@ -8,7 +8,7 @@ import './App.css';
 
 function App() {
 
-  const [theme, setTheme] = React.useState(JSON.parse(localStorage.getItem('theme')) ? JSON.parse(localStorage.getItem('theme')) : "Default");
+  const [theme, setTheme] = React.useState(JSON.parse(localStorage.getItem('theme')) ? JSON.parse(localStorage.getItem('theme')) : "Blank");
   const [language, setLanguage] = React.useState(JSON.parse(localStorage.getItem('language')) ? JSON.parse(localStorage.getItem('language')) : "French");
 
   const appContext = {

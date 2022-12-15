@@ -3,7 +3,7 @@ import {BsStackOverflow} from 'react-icons/bs';
 import {FaChess} from 'react-icons/fa';
 import {SiSololearn} from 'react-icons/si';
 
-const getSocials = () => {
+const getSocialNetworks = () => {
 
     return [
         {
@@ -29,4 +29,4 @@ const getSocials = () => {
     ]
 }
 
-export default getSocials;
+export default getSocialNetworks;

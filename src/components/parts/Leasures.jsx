@@ -3,10 +3,12 @@ import {Row, Col} from 'react-bootstrap';
 import getLeasures from "./infos/getLeasures";
 import AppContext from '../context/AppContext';
 import languageChooser from '../helpers/languageChooser';
+import getTitles from './infos/getTitles';
 
 const Leasures = () => {
 
     const {language} = React.useContext(AppContext);
+    var title = languageChooser(language, getTitles()).leasures;
     var leasures = languageChooser(language, getLeasures());
 
     var mobile = document.body.offsetWidth < 450;
@@ -43,7 +45,7 @@ const Leasures = () => {
     }
 
     return <>
-                <div className="subheading">Leasures</div>
+                <div className="title">{title}</div>
                 <div className="leasures element"> 
                     {rows.map((row) => {
                         return <Row id={`leasure-${row.index}`} key={row.index}>
@@ -53,7 +55,8 @@ const Leasures = () => {
                                         })
                                     }
                                 </Row>
-                    })}  
+                    })} 
+                    <hr /> 
                 </div>
             </>
 }

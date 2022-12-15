@@ -6,14 +6,16 @@ import {MdWork} from 'react-icons/md';
 import {MdAlternateEmail} from 'react-icons/md';
 import AppContext from '../context/AppContext';
 import languageChooser from '../helpers/languageChooser';
+import getTitles from './infos/getTitles';
 
 const Experience = () => {
 
     const {language} = React.useContext(AppContext);
+    var title = languageChooser(language, getTitles()).experience;
     var jobs = languageChooser(language, getJobs());
 
     return  <>
-                <div className="subheading">Experience</div>
+                <div className="title">{title}</div>
                 <div className="experience">
                         {jobs.map((job, index) => {
                             return  <div className="element" id={`experience-${index}`} key={index}>
@@ -43,7 +45,8 @@ const Experience = () => {
                                                     <></>
                                         } 
                                     </div>  
-                        })}        
+                        })}  
+                    <hr />      
                 </div>
             </>
 }

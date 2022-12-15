@@ -5,7 +5,7 @@ import Contact from './parts/Contact';
 import Skills from './parts/Skills';
 import Experiences from './parts/Experience';
 import Education from './parts/Education';
-import Socials from './parts/Socials';
+import Socials from './parts/SocialNetworks';
 import Leasures from './parts/Leasures';
  
 import './CurriculumVitae.css';
