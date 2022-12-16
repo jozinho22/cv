@@ -10,7 +10,6 @@
     font-size: 20px;
     text-align: left;
     padding: 20px;
-    border-radius: 5px;
     color: var(--simple-text-color);
 }
 
@@ -180,13 +179,13 @@ hr {
 
 /* skills */
 .progress {
-    width: 40%;
+    width: 60%;
     background-color:var(--progressbar-background-color) !important;
 }
 
 @media(width < 450px) {
     .progress {
-        width: 60%;
+        width: 70%;
     }
 }
 

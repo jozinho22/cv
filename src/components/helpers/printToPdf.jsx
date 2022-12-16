@@ -7,7 +7,6 @@ function printToPdf() {
     document.getElementById("doc-to-print").appendChild(entirePage);
 
     var docToPrint = document.getElementById("doc-to-print");
-    docToPrint.getElementsByClassName("App")[0].setAttribute("class", "App DocToPrint");
     docToPrint.getElementsByClassName("header")[0].remove();
 
     var htmlWidth = docToPrint.getElementsByClassName("App")[0].offsetWidth;
