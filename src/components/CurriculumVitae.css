@@ -82,9 +82,13 @@
     display: none !important;
 }
 
+.dropdown-item a {
+    color: var(--simple-text-color) !important;
+}
+
 /* miscellaneous */
 a {
-    color: inherit !important;
+    color: var(--hyperlink-color) !important;
     text-decoration: none !important;
 }
 
@@ -193,7 +197,7 @@ hr {
     }
 }
 
-.progress-bar {
+.progress-bar, ::-webkit-progress-bar {
     background-color:var(--highlight-color) !important;
 }
 
@@ -223,7 +227,6 @@ hr {
 }
 
 .reference {
-    color:var(--title-color) !important;
     padding-left: 20px;
 }
 

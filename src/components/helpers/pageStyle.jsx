@@ -17,7 +17,7 @@ const pageStyle = () => {
         }
 
         @page {
-            size: auto;
+            size: A4;
         }
     `
 }
