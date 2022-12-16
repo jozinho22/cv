@@ -82,7 +82,7 @@
     display: none !important;
 }
 
-.dropdown-item a {
+a .dropdown-item {
     color: var(--simple-text-color) !important;
 }
 
@@ -114,6 +114,7 @@ a {
 
 .element-of-icon {
     margin-left: 10px;
+    font-size: large;
 }
 
 .element-of-icon-left {
@@ -134,9 +135,11 @@ hr {
     padding-left: 10px;
     color: var(--title-color);
     margin-top: 30px;
+    margin-bottom: 30px;
     text-align: center;
     border: var(--highlight-color) solid 2px;
     border-radius: 5px;
+    box-shadow: 5px 5px 10px var(--highlight-color);
     position: relative;
     left:50%;
     transform: translateX(-50%);
