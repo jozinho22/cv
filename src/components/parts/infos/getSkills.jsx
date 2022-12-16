@@ -4,6 +4,7 @@ import {ImHtmlFive} from 'react-icons/im';
 import {IoLogoCss3} from 'react-icons/io';
 import {AiOutlineConsoleSql} from 'react-icons/ai';
 import {BiGitBranch} from 'react-icons/bi';
+import {FaReact} from 'react-icons/fa';
 
 const getSkills = () => {
 
@@ -17,26 +18,32 @@ const getSkills = () => {
         {
             language: "Javascript",
             icon: <TbBrandJavascript />,
-            frameworks: "Node, React/Redux, JSON, MathJax",
+            frameworks: "Node, JSON",
+            level: 75
+        },
+        {
+            language: "ReactJS",
+            icon: <FaReact />,
+            frameworks: "Redux, MathJax",
             level: 70
         },
         {
             language: "HTML",
             icon: <ImHtmlFive /> ,
             frameworks: "HTML5",
-            level: 75
+            level: 80
         },
                 {
             language: "CSS",
             icon: <IoLogoCss3 /> ,
             frameworks: "CSS3",
-            level: 65
+            level: 70
         },
                 {
             language: "SQL",
             icon: <AiOutlineConsoleSql />,
             frameworks : "MySQL, SQL Server, PostgreSQL, Oracle",
-            level: 75
+            level: 80
         },
         {
             language: "Git",
