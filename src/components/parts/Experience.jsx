@@ -1,5 +1,5 @@
 import React from 'react';
-import getJobs from "./infos/getJobs";
+import getExperience from "./infos/getExperience";
 import {GiSandsOfTime} from 'react-icons/gi';
 import {HiLink} from 'react-icons/hi';
 import {MdWork} from 'react-icons/md';
@@ -12,9 +12,9 @@ const Experience = () => {
 
     const {language} = React.useContext(AppContext);
     var title = languageChooser(language, getTitles()).experience;
-    var jobs = languageChooser(language, getJobs());
+    var jobs = languageChooser(language, getExperience());
 
-    return  <>
+    return  <div className="page-break">
                 <div className="title">{title}</div>
                 <div className="experience">
                         {jobs.map((job, index) => {
@@ -36,19 +36,19 @@ const Experience = () => {
                                             job.references ?
                                                 job.references.map((reference, index) => {
                                                     return <div key={index} className="icon">
-                                                                <a className="reference" href={reference.url} target="_blank" rel="noreferrer">
+                                                                <a href={reference.url} className="reference" target="_blank" rel="noreferrer">
                                                                     <HiLink /> 
                                                                     <div className="element-of-icon">{reference.webSiteName}</div>
                                                                 </a>
                                                             </div> 
-                                                }) : 
-                                                    <></>
+                                                })
+                                                    : <></>
                                         } 
                                     </div>  
                         })}  
                     <hr />      
                 </div>
-            </>
+            </div>
 }
 
 export default Experience;

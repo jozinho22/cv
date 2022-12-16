@@ -11,7 +11,7 @@ const Skills = () => {
     var title = languageChooser(language, getTitles()).skills;
     var skills = getSkills();
 
-    return <>
+    return <div className="page-break">
                 <div className="title">{title}</div>
                 <div className="skills">
                     {skills.map((skill, index) => {
@@ -31,7 +31,7 @@ const Skills = () => {
                     })}  
                     <hr />      
                 </div>
-            </>
+            </div>
 }
 
 export default Skills;

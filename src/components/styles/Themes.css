@@ -15,7 +15,7 @@
     color: var(--simple-text-color) !important;
     --simple-text-color: rgb(63, 63, 59);
     --title-color: rgb(78, 69, 64);
-    --intro-background-color: rgb(178, 171, 187);
+    --intro-background-color: rgb(204, 201, 209);
     --highlight-color: rgb(86, 78, 185);
     --progressbar-background-color: rgb(179, 182, 181);
 }

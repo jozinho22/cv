@@ -2,6 +2,8 @@ import React from 'react';
 import CurriculumVitae from './components/CurriculumVitae';
 import AppContext from './components/context/AppContext';
 
+import { useReactToPrint } from 'react-to-print';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './components/styles/Themes.css';
 import './App.css';
@@ -19,16 +21,16 @@ function App() {
   }
 
   return (
-    <>
-      <div className="App" id="capture">
-          <AppContext.Provider value={appContext} > 
-                <div className={`${theme}`}>
-                    <CurriculumVitae language={language}/>
-                </div>       
-          </AppContext.Provider>
-      </div>
-      <div id="doc-to-print"></div>
-    </>
+      <>
+          <div className="App" id="capture">
+              <AppContext.Provider value={appContext} > 
+                  <div className={`${theme}`}>
+                      <CurriculumVitae language={language} />
+                  </div>       
+              </AppContext.Provider>
+          </div>
+          <div id="doc-to-print"></div>
+      </>
   );
 }
 

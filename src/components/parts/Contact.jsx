@@ -10,7 +10,7 @@ const Contact = () => {
     var title = languageChooser(language, getTitles()).contact;
     var contacts = languageChooser(language, getContacts());
 
-    return  <>
+    return  <div className="page-break">
                 <div className="title">{title}</div>
                 <div className="contact">
                     {contacts.map((contact, index) => {
@@ -33,7 +33,7 @@ const Contact = () => {
                                 </div>
                     })}
                 </div>
-            </>
+            </div>
 
 }
 

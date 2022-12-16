@@ -1,4 +1,4 @@
-const getJobs = () => {
+const getExperience = () => {
     return {
             french: [
                 {
@@ -10,6 +10,10 @@ const getJobs = () => {
                         {
                             url: "https://ma-thematique.netlify.app/",
                             webSiteName : "Ma Thematique"
+                        },
+                        {
+                            url: "https://josselin-douineau-developer.netlify.app/",
+                            webSiteName : "Mon CV"
                         }
                     ]
                 },
@@ -36,6 +40,10 @@ const getJobs = () => {
                     {
                         url: "https://ma-thematique.netlify.app/",
                         webSiteName : "Ma Thematique"
+                    },
+                    {
+                        url: "https://josselin-douineau-developer.netlify.app/",
+                        webSiteName : "My CV"
                     }
                 ]
             },
@@ -56,4 +64,4 @@ const getJobs = () => {
     }
 }
 
-export default getJobs;
+export default getExperience;

@@ -44,7 +44,7 @@ const Leasures = () => {
         );
     }
 
-    return <>
+    return <div className="page-break">
                 <div className="title">{title}</div>
                 <div className="leasures element"> 
                     {rows.map((row) => {
@@ -58,7 +58,7 @@ const Leasures = () => {
                     })} 
                     <hr /> 
                 </div>
-            </>
+            </div>
 }
 
 export default Leasures;

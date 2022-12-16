@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Button, Row, Col, Dropdown } from 'react-bootstrap';
-import printToPdf from '../helpers/printToPdf';
+import { useReactToPrint } from "react-to-print";
+import pageStyle from '../helpers/pageStyle';
 
 import getThemes from '../styles/getThemes';
 import AppContext from '../context/AppContext';
@@ -11,6 +12,7 @@ import {IoMdColorWand} from 'react-icons/io';
 const Header = () => {
 
     const {updateTheme, language, updateLanguage} = React.useContext(AppContext);
+    var catchedDiv = {};
 
     var themes = getThemes(); 
 
@@ -24,10 +26,35 @@ const Header = () => {
         localStorage.setItem('language', JSON.stringify(language));
     }
 
+    const buildElementToPrint = () => {
+
+        var entirePage = document.querySelector("#capture").cloneNode(true);
+        document.getElementById("doc-to-print").appendChild(entirePage);
+
+        catchedDiv = document.getElementById("doc-to-print");
+        catchedDiv.getElementsByClassName("header")[0].remove();
+
+        return catchedDiv.getElementsByClassName("App")[0];
+
+    }
+
+    const destroyElementToPrint = () => {
+        catchedDiv.getElementsByClassName("App")[0].remove();
+    }
+
+    const print = useReactToPrint(
+        {
+            content: () => buildElementToPrint(), 
+            pageStyle: pageStyle(),
+            documentTitle: 'Josselin DOUINEAU - developer',
+            onAfterPrint: () => destroyElementToPrint()
+        }
+    );
+
     return  <Container className="header">
                 <Row className="header-button-container">
                     <Col xs={4}>
-                        <Button variant="warning" className="printer-button" onClick={printToPdf}>
+                        <Button variant="warning" className="printer-button" onClick={print}>
                             <div className="icon-block">
                                 <ImFilePdf className="icon" /> 
                                 <div className="element-of-icon">Export</div>

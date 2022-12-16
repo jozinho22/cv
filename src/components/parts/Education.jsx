@@ -13,7 +13,7 @@ const Education = () => {
     var title = languageChooser(language, getTitles()).education;
     var diplomas = languageChooser(language, getDiplomas());
     
-    return  <>
+    return  <div className="page-break">
                 <div className="title">{title}</div>
                 <div className="education">
                         {diplomas.map((diploma, index) => {
@@ -37,7 +37,7 @@ const Education = () => {
                         })}
                     <hr />        
                 </div>
-            </>
+            </div>
 }
 
 export default Education;
