@@ -3,7 +3,7 @@ const getDiplomas = () => {
                 french: [
                     {
                         period: "nov 2022 - maintenant",
-                        title: "Certifications Java, HTML, CSS, SQL, React/Redux",
+                        title: "Certifications Java, HTML, CSS, SQL, React/Redux, C++, Python for Science et Responsive Web Design",
                         school: "Sololearn (online)"
                     },
                     {
@@ -20,7 +20,7 @@ const getDiplomas = () => {
                 english: [
                     {
                         period: "nov 2022 - maintenant",
-                        title: "Java, HTML, CSS, SQL, React/Redux certificates",
+                        title: "Java, HTML, CSS, SQL, React/Redux, C++, Python for Science & Responsive Web Design certificates",
                         school: "Sololearn (online)"
                     },
                     {
