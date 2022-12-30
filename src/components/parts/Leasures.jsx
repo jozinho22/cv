@@ -12,7 +12,7 @@ const Leasures = () => {
     var leasures = languageChooser(language, getLeasures());
 
     var mobile = document.body.offsetWidth < 450;
-    var nbCols = mobile ? 2 : 3;
+    var nbCols = mobile ? 2 : 4;
     var nbRows = Math.ceil(leasures.length / nbCols);
     var rows = [];
     var i = 0;
@@ -21,38 +21,40 @@ const Leasures = () => {
         var cols = [];
         for(var c = 0; c < nbCols; c++) {
             var col = {};
-
-            if(r === (nbRows - 1) && c >= (leasures.length % nbCols)) {
+             console.log(c)
+            if(r === (nbRows - 1) && leasures.length % nbCols !== 0 && c + 1 > leasures.length % nbCols) {
                 continue;
             } else {
-                col =   <Col className="element" key={`col${c}`}>
-                            <div className="icon-block">
-                                <div className="icon">{leasures[i].icon}</div> 
-                                <div className="element-of-icon">{leasures[i].activity}</div>
+                col =   <Col key={`leasures-col-${c}`}>
+                            <div className="element">
+                                <div className="icon-block">
+                                    <div className="icon">{leasures[i].icon}</div> 
+                                    <div className="element-of-icon">{leasures[i].activity}</div>
+                                </div>
                             </div>
                         </Col>;
                 
             }
+           
             cols.push(col); 
             i++; 
         }
         rows.push(
             {
-                index: `row${r}`,
+                index: `leasures-row-${r}`,
                 cols: cols
             }
         );
+        console.log(rows)
     }
 
     return <div className="page-break">
                 <div className="title">{title}</div>
                 <div className="leasures element"> 
                     {rows.map((row) => {
-                        return <Row id={`leasure-${row.index}`} key={row.index}>
+                        return <Row key={row.index}>
                                     {
-                                        row.cols.map(col => {
-                                            return col;
-                                        })
+                                        row.cols.map(col => col)
                                     }
                                 </Row>
                     })} 

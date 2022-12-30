@@ -5,6 +5,7 @@ import {IoLogoCss3} from 'react-icons/io';
 import {AiOutlineConsoleSql} from 'react-icons/ai';
 import {BiGitBranch} from 'react-icons/bi';
 import {FaReact} from 'react-icons/fa';
+import {SiPython} from 'react-icons/si';
 
 const getSkills = () => {
 
@@ -33,17 +34,23 @@ const getSkills = () => {
             frameworks: "HTML5",
             level: 80
         },
-                {
+        {
             language: "CSS",
             icon: <IoLogoCss3 /> ,
             frameworks: "CSS3",
             level: 70
         },
-                {
+        {
             language: "SQL",
             icon: <AiOutlineConsoleSql />,
             frameworks : "MySQL, SQL Server, PostgreSQL, Oracle",
             level: 80
+        },
+        {
+            language: "Python",
+            icon: <SiPython />,
+            frameworks : "NumPy, Pandas, Matplotlib",
+            level: 60
         },
         {
             language: "Git",
