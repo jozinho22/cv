@@ -23,7 +23,7 @@ const Skills = () => {
             var col = {};
 
             if(r === (nbRows - 1) && skills.length % nbCols !== 0 && c + 1 > skills.length % nbCols) {
-                continue;
+                col = <Col key={`skills-col-${c}`}></Col>;
             } else {
                 col =   <Col key={`skills-col-${c}`}>
                             <div className="element">

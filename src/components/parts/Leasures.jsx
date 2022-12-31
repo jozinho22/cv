@@ -21,9 +21,8 @@ const Leasures = () => {
         var cols = [];
         for(var c = 0; c < nbCols; c++) {
             var col = {};
-             console.log(c)
             if(r === (nbRows - 1) && leasures.length % nbCols !== 0 && c + 1 > leasures.length % nbCols) {
-                continue;
+                col = <Col key={`leasures-col-${c}`}></Col>;
             } else {
                 col =   <Col key={`leasures-col-${c}`}>
                             <div className="element">
