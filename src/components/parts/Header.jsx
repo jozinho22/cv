@@ -3,7 +3,7 @@ import { Container, Button, Row, Col, Dropdown } from 'react-bootstrap';
 import { useReactToPrint } from "react-to-print";
 import pageStyle from '../helpers/pageStyle';
 
-import getThemes from '../styles/getThemes';
+import {getThemes} from '../styles/getThemes';
 import AppContext from '../context/AppContext';
 import {ImFilePdf} from 'react-icons/im';
 import {TbSwitchHorizontal} from 'react-icons/tb';
@@ -18,12 +18,11 @@ const Header = () => {
 
     const selectTheme = (eventKey, event) => {
         updateTheme(eventKey);
-        localStorage.setItem('theme', JSON.stringify(eventKey));
+        sessionStorage.setItem('theme', JSON.stringify(eventKey));
     }
 
     const switchLanguage = () => {
         updateLanguage(language === 'French' ? 'English' : 'French');
-        localStorage.setItem('language', JSON.stringify(language));
     }
 
     const buildElementToPrint = () => {

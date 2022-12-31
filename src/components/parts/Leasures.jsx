@@ -22,7 +22,7 @@ const Leasures = () => {
         for(var c = 0; c < nbCols; c++) {
             var col = {};
             if(r === (nbRows - 1) && leasures.length % nbCols !== 0 && c + 1 > leasures.length % nbCols) {
-                col = <Col key={`leasures-col-${c}`}></Col>;
+                col = <Col key={`leasures-col-${c}`}><div className="element"></div></Col>;
             } else {
                 col =   <Col key={`leasures-col-${c}`}>
                             <div className="element">
@@ -32,7 +32,6 @@ const Leasures = () => {
                                 </div>
                             </div>
                         </Col>;
-                
             }
            
             cols.push(col); 
@@ -44,7 +43,6 @@ const Leasures = () => {
                 cols: cols
             }
         );
-        console.log(rows)
     }
 
     return <div className="page-break">

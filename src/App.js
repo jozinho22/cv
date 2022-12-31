@@ -2,7 +2,7 @@ import React from 'react';
 import CurriculumVitae from './components/CurriculumVitae';
 import AppContext from './components/context/AppContext';
 
-import { useReactToPrint } from 'react-to-print';
+import { getThemeIfStoredThemeExists } from './components/styles/getThemes';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './components/styles/Themes.css';
@@ -10,8 +10,8 @@ import './App.css';
 
 function App() {
 
-  const [theme, setTheme] = React.useState(JSON.parse(localStorage.getItem('theme')) ? JSON.parse(localStorage.getItem('theme')) : "Blank");
-  const [language, setLanguage] = React.useState(JSON.parse(localStorage.getItem('language')) ? JSON.parse(localStorage.getItem('language')) : "French");
+  const [theme, setTheme] = React.useState(getThemeIfStoredThemeExists(JSON.parse(sessionStorage.getItem('theme'))) ? JSON.parse(sessionStorage.getItem('theme')) : "Blank");
+  const [language, setLanguage] = React.useState(JSON.parse(sessionStorage.getItem('language')) ? JSON.parse(sessionStorage.getItem('language')) : "French");
 
   const appContext = {
       theme: theme,
