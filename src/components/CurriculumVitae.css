@@ -200,7 +200,7 @@ hr {
     }
 }
 
-.progress-bar, ::-webkit-progress-bar {
+.progress-bar, ::-webkit-progress-bar, ::-moz-progress-bar {
     background-color:var(--highlight-color) !important;
 }
 

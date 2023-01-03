@@ -13,6 +13,13 @@
  
 }
 
+@media print {
+  #capture {
+      print-color-adjust: exact; 
+  }
+}
+
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
