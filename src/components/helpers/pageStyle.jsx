@@ -4,7 +4,9 @@ const pageStyle = () => {
             html, body {
                 height: initial !important;
                 overflow: initial !important;
-                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact; 
+                -webkit-print-color-adjust: exact; 
+                background-color: var(--back-color-1) !important;
             }
         }
 

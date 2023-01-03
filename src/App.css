@@ -15,10 +15,9 @@
 
 @media print {
   #capture {
-      print-color-adjust: exact; 
+      background-color: var(--back-color-1) !important;
   }
 }
-
 
 .App-logo {
   height: 40vmin;
