@@ -5,6 +5,7 @@ const getExperience = () => {
                     period: "mar 2020 - maintenant",
                     company: "Domicile",
                     as: "Développeur Fullstack",
+                    tools: "Java (Spring, JPA/Hibernate, Maven), Javascript (ReactJS), SQL (MySQL), HTML (HTML5), CSS (CSS3), Git (Git Bash, GitHub)", 
                     desc: "Je développe mes propres projets et je continue à me former",
                     references: [
                         {
@@ -14,6 +15,10 @@ const getExperience = () => {
                         {
                             url: "https://josselin-douineau-developer.netlify.app/",
                             webSiteName : "Mon CV"
+                        },
+                        {
+                            url: "https://chess-timer-app.netlify.app/",
+                            webSiteName : "Chess Timer"
                         }
                     ]
                 },
@@ -21,13 +26,26 @@ const getExperience = () => {
                     period: "jan 2021 - avr 2021",
                     company: "Open",
                     as: "Développeur Java/ReactJS",
+                    tools: "Java (Spring, Maven), Javascript (ReactJS), SQL (PostgreSQL), Git (Git Fork, GitLab)", 
                     desc: "J'ai travaillé sur un générateur d'applications mobiles"
+                },
+                {
+                    period: "fév 2020 - avr 2020",
+                    company: "Yoni",
+                    as: "Développeur Java",
+                    tools: "Java (Spring, JHipster, Maven), Git (GitLab)", 
+                    desc: "J'ai aidé au développement de spécifications dans le domaine de la bijouterie"
                 },
                 {
                     period: "mar 2016 - sept 2018",
                     company: "La SACEM",
                     as: "Développeur Java/SQL",
+                    tools: "Java (Spring, JDBC, Restlet, XStream, JUnit/Cucumber, Maven), SQL (PL/SQL), Git (Git Bash, GitLab)", 
                     desc: "J'ai travaillé sur de nombreux projets, principalement en appliquant des modifications dans le code Java et PL/SQL"
+                },
+                {
+                    period: "autres périodes",
+                    desc: "J'ai travaillé à mon compte dans divers domaines (fruits/légumes, cours à domicile notamment)"
                 }
         ],
         english: [
@@ -35,6 +53,7 @@ const getExperience = () => {
                 period: "mar 2020 - now",
                 company: "Home",
                 as: "Fullstack developer",
+                tools: "Java (Spring, JPA/Hibernate, Maven), Javascript (ReactJS), SQL (MySQL), HTML (HTML5), CSS (CSS3), Git (Git Bash, GitHub)", 
                 desc: "I develop personal projects and continue training",
                 references: [
                     {
@@ -44,6 +63,10 @@ const getExperience = () => {
                     {
                         url: "https://josselin-douineau-developer.netlify.app/",
                         webSiteName : "My CV"
+                    },
+                    {
+                        url: "https://chess-timer-app.netlify.app/",
+                        webSiteName : "Chess Timer"
                     }
                 ]
             },
@@ -51,13 +74,26 @@ const getExperience = () => {
                 period: "jan 2021 - apr 2021",
                 company: "Open",
                 as: "Java/ReactJS developer",
+                tools: "Java (Spring, Maven), Javascript (ReactJS), SQL (PostgreSQL), Git (Git Fork, GitLab)", 
                 desc: "I worked on a mobile app generator"
+            },
+            {
+                period: "feb 2020 - apr 2020",
+                company: "Yoni",
+                as: "Java developer",
+                tools: "Java (Spring, JHipster, Maven), Git (GitLab)", 
+                desc: "I helped to develop specifications for a jewelry store"
             },
             {
                 period: "mar 2016 - sept 2018",
                 company: "La SACEM",
                 as: "Java/SQL developer",
+                tools: "Java (Spring, JDBC, Restlet, XStream, JUnit/Cucumber, Maven), SQL (PL/SQL), Git (Git Bash, GitLab)", 
                 desc: "I worked on many applications, mainly do some corrections in the Java and PL/SQL code"
+            },
+            {
+                period: "other periods",
+                desc: "I did differents jobs (fruits & vegetables, home courses for pupils)"
             }
         ]
 

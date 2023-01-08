@@ -4,6 +4,7 @@ import {GiSandsOfTime} from 'react-icons/gi';
 import {HiLink} from 'react-icons/hi';
 import {MdWork} from 'react-icons/md';
 import {MdAlternateEmail} from 'react-icons/md';
+import {AiFillTool} from 'react-icons/ai';
 import AppContext from '../context/AppContext';
 import languageChooser from '../helpers/languageChooser';
 import getTitles from './infos/getTitles';
@@ -24,12 +25,32 @@ const Experience = () => {
                                             <div className="element-of-icon period-date">{job.period}</div>
                                         </div>
                                         <div className="icon-block">
-                                            <MdWork className="icon" /> 
-                                            <div className="element-of-icon">{job.as}</div>
+                                            {job.as ? 
+                                                <>
+                                                    <MdWork className="icon" />
+                                                    <div className="element-of-icon">{job.as}</div> 
+                                                </>
+                                                    : <></>}
                                         </div>
                                         <div className="icon-block">
-                                            <MdAlternateEmail className="icon" /> 
-                                            <div className="element-of-icon">{job.company}</div>
+                                            {job.company ? 
+                                                <>
+                                                    <MdAlternateEmail className="icon" /> 
+                                                    <div className="element-of-icon">{job.company}</div>
+                                                </> 
+                                                    : <></>
+                                            }
+                                            
+                                        </div>
+                                        <div className="icon-block">
+                                            {job.tools ? 
+                                                <>
+                                                    <AiFillTool className="icon" /> 
+                                                    <div className="element-of-icon">{job.tools}</div>
+                                                </> 
+                                                    : <></>
+                                            }
+                                            
                                         </div>
                                         <div className ="desc">{job.desc}</div>
                                         {
