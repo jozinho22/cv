@@ -24,11 +24,34 @@ const Education = () => {
                                                {diploma.period}
                                             </div>
                                         </div>
-                                        <div className="icon-block">
-                                            <GiDiploma className="icon" /> 
-                                            <div className="element-of-icon">
-                                                {diploma.title}
-                                            </div>
+                                        <div className="diplomas">
+                                            {
+                                                Array.isArray(diploma.title) ?
+                                                    <>
+                                                        <GiDiploma className="icon" />
+                                                        <div className="element-of-icon">
+                                                            {language === "French" ? "Certifications" : "Certificates"}
+                                                        </div>
+                                                        
+                                                        <div className="education-display-flex">
+                                                            {
+                                                                diploma.title.map((certif, index) => {
+                                                                    return <div key={index} className="flex-content">
+                                                                                {certif}
+                                                                            </div>
+                                                                            
+                                                                })
+                                                            }  
+                                                        </div>                                                 
+                                                    </>
+                                                        :   <>
+                                                                <GiDiploma className="icon" /> 
+                                                                <div className="element-of-icon">
+                                                                    {diploma.title}
+                                                                </div>
+                                                            </>
+                                            }
+                                            
                                         </div>
                                         <div className ="school">
                                             @ {diploma.school}

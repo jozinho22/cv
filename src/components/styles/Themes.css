@@ -1,17 +1,20 @@
 .App {
     --printer-button-color: rgb(216, 216, 52);
     --printer-button-hover-color: rgb(190, 190, 44);
+    --printer-button-shadow-color: rgb(138, 138, 53);
     --language-button-color: rgb(52, 77, 216);
     --language-button-hover-color: rgb(51, 70, 180);
+    --language-button-shadow-color: rgb(50, 61, 124);
     --theme-button-color: rgb(46, 148, 52);
     --theme-button-hover-color: rgb(38, 124, 44);
+    --theme-button-shadow-color: rgb(36, 94, 40);
 }
 
 .Blank {
     --back-color-1: rgb(255, 255, 255); 
-    --back-hover-color : rgb(200, 200, 206); 
     --back-color-2: rgb(254, 254, 255); 
     --back-color-3: rgb(255, 255, 255); 
+    --back-hover-color : rgb(200, 200, 206); 
     color: var(--simple-text-color) !important;
     --simple-text-color: rgb(63, 63, 59);
     --title-color: rgb(78, 69, 64);
@@ -22,24 +25,24 @@
 }
 
 .Darcula {
-    --back-color-1: rgb(0, 0, 0); 
+    --back-color-1: rgb(59, 55, 55); 
+    --back-color-2: rgb(77, 74, 80); 
+    --back-color-3: rgb(95, 91, 99); 
     --back-hover-color : rgb(50, 50, 51); 
-    --back-color-2: rgb(67, 64, 70); 
-    --back-color-3: rgb(139, 128, 148); 
     color: var(--simple-text-color) !important;
     --simple-text-color: rgb(224, 224, 219);
     --title-color: rgb(207, 198, 70);
-    --intro-background-color: rgb(144, 128, 163);
+    --intro-background-color: rgb(127, 117, 139);
     --highlight-color: rgb(82, 202, 142);
     --hyperlink-color: rgb(207, 198, 70);
     --progressbar-background-color: rgb(179, 182, 181);
 }
 
 .Purple {
-    --back-color-1: rgb(155, 17, 247); 
+    --back-color-1: rgb(115, 57, 153); 
+    --back-color-2: rgb(133, 62, 199); 
+    --back-color-3: rgb(157, 119, 190);
     --back-hover-color : rgb(143, 50, 206); 
-    --back-color-2: rgb(153, 65, 235); 
-    --back-color-3: rgb(176, 139, 209);
     color: var(--simple-text-color) !important; 
     --simple-text-color: rgb(224, 224, 219);
     --title-color: rgb(252, 243, 127);

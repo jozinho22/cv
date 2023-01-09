@@ -42,23 +42,37 @@ const Experience = () => {
                                             }
                                             
                                         </div>
-                                        <div className="icon-block">
+                                        <div className="tools">
                                             {job.tools ? 
-                                                <>
-                                                    <AiFillTool className="icon" /> 
-                                                    <div className="element-of-icon">{job.tools}</div>
-                                                </> 
+                                                <> 
+                                                    <AiFillTool className="icon" />
+                                                    <div className="element-of-icon">
+                                                        {language === "French" ? "Outils" : "Tools"}
+                                                    </div> 
+                                                    <div className="tools-display-flex">
+                                                        {
+                                                            job.tools.map((tool, index) => {
+                                                                return <div key={index} className="flex-content">
+                                                                            {tool}
+                                                                        </div>
+                                                                        
+                                                            })
+                                                        }  
+                                                    </div>                                                 
+                                                </>
                                                     : <></>
                                             }
                                             
                                         </div>
-                                        <div className ="desc">{job.desc}</div>
+                                        <div className="icon-block desc">
+                                            <div className="element-of-icon">{job.desc}</div>
+                                        </div>
                                         {
                                             job.references ?
                                                 job.references.map((reference, index) => {
-                                                    return <div key={index} className="icon">
-                                                                <a href={reference.url} className="reference" target="_blank" rel="noreferrer">
-                                                                    <HiLink /> 
+                                                    return <div key={index} className="reference">
+                                                                <a href={reference.url} className="icon-block" target="_blank" rel="noreferrer">
+                                                                    <HiLink className="icon" /> 
                                                                     <div className="element-of-icon">{reference.webSiteName}</div>
                                                                 </a>
                                                             </div> 

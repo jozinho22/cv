@@ -15,6 +15,7 @@ const Header = () => {
     var catchedDiv = {};
 
     var themes = getThemes(); 
+    var mobile = document.body.offsetWidth < 450;
 
     const selectTheme = (eventKey, event) => {
         updateTheme(eventKey);
@@ -56,7 +57,7 @@ const Header = () => {
                         <Button variant="warning" className="printer-button" onClick={print}>
                             <div className="icon-block">
                                 <ImFilePdf className="icon" /> 
-                                <div className="element-of-icon">Export</div>
+                                {!mobile ? <div className="element-of-icon">Export</div> : <></>}
                             </div>
                         </Button>
                     </Col>
@@ -69,7 +70,7 @@ const Header = () => {
                                 id="theme-dropdown-menu" >
                                 <div className="icon-block">
                                     <IoMdColorWand className="icon" /> 
-                                    <div className="element-of-icon">Theme</div>
+                                    {!mobile ? <div className="element-of-icon">Theme</div> : <></>}
                                 </div>
                             </Dropdown.Toggle>
                             <Dropdown.Menu>
@@ -91,17 +92,26 @@ const Header = () => {
                     <Col xs={4}>
                         <Button variant="primary" className="language-button" onClick={switchLanguage}>
                             <div className="icon-block">
-                                <div className="element-of-icon element-of-icon-left">
-                                    {
-                                        language === 'French' ? 'FR' : 'EN'
-                                    }
-                                </div>
+                                {
+                                    !mobile ?
+                                        <div className="element-of-icon element-of-icon-left">
+                                            {
+                                                language === 'French' ? 'FR' : 'EN'
+                                            }
+                                        </div>
+                                            : <></>
+                                }
+                                
                                 <TbSwitchHorizontal className="icon" /> 
-                                <div className="element-of-icon">
-                                    {
-                                        language === 'French' ? 'EN' : 'FR'
-                                    }
-                                </div>
+                                {
+                                    !mobile ?
+                                        <div className="element-of-icon">
+                                            {
+                                                language === 'French' ? 'EN' : 'FR'
+                                            }
+                                        </div>
+                                            : <></>
+                                }
                             </div>
                         </Button>
                     </Col>

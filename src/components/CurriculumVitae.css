@@ -1,16 +1,21 @@
 /* container */
 .curriculum-vitae-container {
     background: linear-gradient(
-          0.2turn, 
+          0.25turn, 
           var(--back-color-1), 
           var(--back-color-2),
           var(--back-color-3)
       );
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 20px;
     text-align: left;
     padding: 20px;
     color: var(--simple-text-color);
+}
+
+@media (width < 450px) {
+    .curriculum-vitae-container {
+        font-size: 15px;
+    }
 }
 
 /* header */
@@ -30,8 +35,14 @@
   background-color : var(--back-hover-color);
 }
 
-.header-button-container {
-    position: relative;
+@media (width < 450px) {
+    .header-button-container .icon {
+        width: 20px;
+        height: 20px;
+    }
+    .header-button-container .icon::after {
+        display: none;
+    }
 }
 
 .printer-button, .language-button, .theme-button {
@@ -51,6 +62,11 @@
 .printer-button {
     background-color: var(--printer-button-color) !important;
     border: var(--printer-button-color) solid !important;
+    box-shadow: 3px 3px 0px 0px var(--printer-button-shadow-color);
+}
+
+.printer-button:active, .language-button:active, .theme-button:active {
+    top: 6px;
 }
 
 .printer-button:hover {
@@ -61,6 +77,7 @@
 .language-button {
     background-color: var(--language-button-color) !important;
     border: var(--language-button-color) solid !important;
+    box-shadow: 3px 3px 0px 0px var(--language-button-shadow-color);
 }
 
 .language-button:hover {
@@ -71,6 +88,7 @@
 .theme-button {
     background-color: var(--theme-button-color) !important;
     border: var(--theme-button-color) solid !important;
+    box-shadow: 3px 3px 0px 0px var(--theme-button-shadow-color);
 }
 
 .theme-button:hover {
@@ -112,6 +130,11 @@ a {
     vertical-align: middle;
 }
 
+.element .icon, .element .icon svg {
+    width: 20px;
+    height: 20px;
+}
+
 .element-of-icon {
     margin-left: 10px;
     font-size: large;
@@ -128,8 +151,22 @@ hr {
     transform: translateX(-50%);
 }
 
+.hyperlink-icon {
+    padding-left: 10px;
+}
+
+.flex-content {
+    text-align: center;
+    border: 1px solid var(--highlight-color);
+    padding: 10px;
+    flex: 1 0 auto;  
+    width: fit-content;
+    border-radius: 5px;
+}
+
 /* title */
 .title {
+    font-size: 20px;
     font-weight: bolder;
     text-transform: uppercase;
     padding-left: 10px;
@@ -144,10 +181,6 @@ hr {
     left:50%;
     transform: translateX(-50%);
     width: 75%;
-}
-
-.hyperlink-icon {
-    padding-left: 10px;
 }
 
 @media(width < 450px) {
@@ -189,6 +222,22 @@ hr {
 }
 
 /* skills */
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.skills .element {
+    flex: 1 0 21%; 
+}
+
+@media (width < 450px) {
+   .skills .element {
+        flex: 1 0 40%; 
+    } 
+}
+
 .progress {
     width: 60%;
     background-color:var(--progressbar-background-color) !important;
@@ -210,6 +259,12 @@ hr {
     text-align: left;
 }
 
+@media (width < 450px) {
+    .frameworks {
+        font-size: small;
+    }
+}
+
 /* experience */
 .period {
     color: var(--highlight-color);
@@ -223,14 +278,81 @@ hr {
     font-style: italic;
     text-align: justify;
     width: 90%;
+    margin-top: 10px;
 }
 
-.desc, .reference {
+.desc .element-of-icon, .reference .element-of-icon {
     font-size: medium;
+}
+
+.tools .element-of-icon {
+    font-size: medium;
+}
+
+/* .tools .table thead {
+    border-radius: 5px;
+} */
+
+.tools-display-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 80%;
+    position: relative;
+    left: 25%;
+    transform: translateX(-25%);
 }
 
 .reference {
     padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* education */
+
+.education-display-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content:flex-start;
+    gap: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 80%;
+    position: relative;
+    left: 25%;
+    transform: translateX(-25%);
+}
+
+.education-content {
+    text-align: center;
+    border: 1px solid red;
+}
+
+.diplomas {
+    margin-bottom: 20px;
+}
+
+/* leasures */
+.leasures {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    justify-items: stretch;
+}
+
+.leasures .element {
+    flex: 1 0 30%; 
+}
+
+@media (width < 450px) {
+   .leasures .element {
+        flex: 1 0 40%; 
+    } 
 }
 
 /* contact */
