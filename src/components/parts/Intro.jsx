@@ -11,8 +11,8 @@ const Intro = () => {
 
     return  <div className="intro">
                 <img src={favicon512} alt=""/>
-                <div className="heading">{intro.me}</div>
-                <div className="prof">{intro.profession}</div>
+                <div className="me">{intro.me}</div>
+                <div className="profession">{intro.profession}</div>
 
                 <div className="summary">
                     <p>

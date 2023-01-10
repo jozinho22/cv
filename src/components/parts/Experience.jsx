@@ -5,6 +5,7 @@ import {HiLink} from 'react-icons/hi';
 import {MdWork} from 'react-icons/md';
 import {MdAlternateEmail} from 'react-icons/md';
 import {AiFillTool} from 'react-icons/ai';
+import {GrCode} from 'react-icons/gr';
 import AppContext from '../context/AppContext';
 import languageChooser from '../helpers/languageChooser';
 import getTitles from './infos/getTitles';
@@ -49,7 +50,7 @@ const Experience = () => {
                                                     <div className="element-of-icon">
                                                         {language === "French" ? "Outils" : "Tools"}
                                                     </div> 
-                                                    <div className="tools-display-flex">
+                                                    <div className="display-flex">
                                                         {
                                                             job.tools.map((tool, index) => {
                                                                 return <div key={index} className="flex-content">
@@ -64,8 +65,14 @@ const Experience = () => {
                                             }
                                             
                                         </div>
-                                        <div className="icon-block desc">
-                                            <div className="element-of-icon">{job.desc}</div>
+                                        <div className="icon-block achievements">
+                                            {job.company ?
+                                                <>
+                                                    <GrCode className="icon" /> 
+                                                    <div className="element-of-icon">{language === "French" ? "Réalisations" : "Achievements"}</div>
+                                                </>    :  <></>
+                                            }
+                                            <div className="desc">{job.desc}</div>
                                         </div>
                                         {
                                             job.references ?
