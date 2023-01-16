@@ -3,7 +3,7 @@ const getDiplomas = () => {
                 french: [
                     {
                         period: "nov 2022 - maintenant",
-                        title: "Java, HTML, CSS, SQL, React/Redux, C++, Python, Responsive Web Design".split(","),
+                        title: "Java, HTML, JavaScript, CSS, SQL, React/Redux, C++, Python, Responsive Web Design".split(","),
                         school: "Sololearn (à distance)",
                         schoolLink: "https://www.sololearn.com/"
                     },
@@ -24,7 +24,7 @@ const getDiplomas = () => {
                 english: [
                     {
                         period: "nov 2022 - maintenant",
-                        title: "Java, HTML, CSS, SQL, React/Redux, C++, Python, Responsive Web Design".split(","),
+                        title: "Java, HTML, JavaScript, CSS, SQL, React/Redux, C++, Python, Responsive Web Design".split(","),
                         school: "Sololearn (online)",
                         schoolLink: "https://www.sololearn.com/"
                     },
