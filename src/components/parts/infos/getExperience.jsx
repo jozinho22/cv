@@ -45,7 +45,7 @@ const getExperience = () => {
                 },
                 {
                     period: "autres périodes",
-                    desc: "J'ai travaillé à mon compte dans divers domaines (fruits/légumes, cours à domicile notamment)"
+                    desc: "J'ai travaillé divers domaines (cartographie SIG, fruits/légumes, cours à domicile)"
                 }
         ],
         english: [
@@ -93,7 +93,7 @@ const getExperience = () => {
             },
             {
                 period: "other periods",
-                desc: "I did differents jobs (fruits & vegetables, home courses for pupils)"
+                desc: "I did differents jobs (GIS cartography, fruits & vegetables, home courses for pupils)"
             }
         ]
 

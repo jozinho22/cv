@@ -1,4 +1,4 @@
-const getDiplomas = () => {
+const getEducation = () => {
     return  {
                 french: [
                     {
@@ -45,4 +45,4 @@ const getDiplomas = () => {
             }
 }
 
-export default getDiplomas;
+export default getEducation;

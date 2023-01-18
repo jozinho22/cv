@@ -1,5 +1,5 @@
 import React from 'react';
-import getDiplomas from "./infos/getDiplomas";
+import getEducation from "./infos/getEducation";
 
 import {GiSandsOfTime} from 'react-icons/gi';
 import {GiDiploma} from 'react-icons/gi';
@@ -12,7 +12,7 @@ const Education = () => {
 
     const {language} = React.useContext(AppContext);
     var title = languageChooser(language, getTitles()).education;
-    var diplomas = languageChooser(language, getDiplomas());
+    var diplomas = languageChooser(language, getEducation());
     
     return  <div className="page-break">
                 <div className="title">{title}</div>

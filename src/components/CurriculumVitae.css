@@ -171,7 +171,7 @@ hr {
     padding: 7px;
     flex: 1 0 20%;  
     width: fit-content;
-    border-radius: 5px;
+    border-radius: 20px;
 }
 
 @media (width < 450px) {
@@ -315,6 +315,7 @@ hr {
     padding-left: 20px;
     display: flex;
     flex-direction: column;
+    width: fit-content;
 }
 
 /* education */
