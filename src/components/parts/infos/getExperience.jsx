@@ -3,7 +3,7 @@ const getExperience = () => {
             french: [
                 {
                     period: "mar 2020 - maintenant",
-                    company: "Domicile",
+                    company: "À domicile",
                     as: "Développeur Fullstack",
                     tools: "Spring, JPA/Hibernate, Maven, ReactJS, MathJax, MySQL, HTML5, CSS3, Git Bash, GitHub", 
                     desc: "Je développe mes propres projets et je continue à me former",
@@ -41,7 +41,7 @@ const getExperience = () => {
                     company: "La SACEM",
                     as: "Développeur Java/SQL",
                     tools: "JDBC, Restlet, XStream, JUnit/Cucumber, Maven, PL/SQL, Git Bash, GitLab", 
-                    desc: "J'ai travaillé sur de nombreux projets, principalement en appliquant des modifications dans le code Java et PL/SQL"
+                    desc: "J'ai travaillé sur différents projets, principalement en appliquant des corrections et en développant de nouvelles fonctionnalités dans le code Java et PL/SQL"
                 },
                 {
                     period: "autres périodes",
@@ -51,9 +51,9 @@ const getExperience = () => {
         english: [
             {
                 period: "mar 2020 - now",
-                company: "Home",
+                company: "@Home",
                 as: "Fullstack developer",
-                tools: "Spring, JPA/Hibernate, Maven, ReactJS, MathJax, MySQL, HTML5, CSS3, Git Bash, GitHub".split(","), 
+                tools: "Spring, JPA/Hibernate, Maven, ReactJS, MathJax, MySQL, HTML5, CSS3, Git Bash, GitHub", 
                 desc: "I develop personal projects and continue training",
                 references: [
                     {
@@ -89,7 +89,7 @@ const getExperience = () => {
                 company: "La SACEM",
                 as: "Java/SQL developer",
                 tools: "JDBC, Restlet, XStream, JUnit/Cucumber, Maven, PL/SQL, Git Bash, GitLab".split(","), 
-                desc: "I worked on many applications, mainly do some corrections in the Java and PL/SQL code"
+                desc: "I worked on several applications, mainly applying some corrections and developing new features inside the Java and PL/SQL code"
             },
             {
                 period: "other periods",

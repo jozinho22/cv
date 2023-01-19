@@ -30,11 +30,7 @@ const Education = () => {
                                                     {diploma.title}
                                                 </a>
                                             </div>
-                                            {
-                                                diploma.certif ?
-                                                    <div className="certif-desc" >{diploma.certif}</div>
-                                                        :   <></>
-                                            }
+                                            <div className="desc" >{diploma.desc}</div>
                                         </>
                                     </div>
                                     <div className="icon-block school">

@@ -12,9 +12,11 @@ const Leasures = () => {
 
     return  <div className="page-break">
                 <div className="title">{title}</div>
-                <div className="leasures element"> 
+                <div className="leasures"> 
                     <div className="element">        
-                        <div className="element-of-icon">{leasures.list}</div>
+                        <div className="element-of-icon">
+                           {leasures.list}
+                        </div>
                     </div>
                 </div>
                 <hr />

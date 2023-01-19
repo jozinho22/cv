@@ -113,29 +113,31 @@ a {
 }
 
 .element {
-    padding-left: 30px;
+    margin-left: 30px;
     margin-top: 15px;
 }
 
 @media(width < 450px) {
     .element {
-        padding-left: 15px;
+        margin-left: 10px;
     }
 }
 
-.icon, .element-of-icon {
+.icon {
     display: inline-block;
     vertical-align: middle;
+}
+
+.element-of-icon {
+    display: inline;
+    margin-left: 10px;
+    font-size: large;
+    font-weight: bold;
 }
 
 .element .icon, .element .icon svg {
     width: 20px;
     height: 20px;
-}
-
-.element-of-icon {
-    margin-left: 10px;
-    font-size: large;
 }
 
 .element-of-icon-left {
@@ -153,7 +155,7 @@ hr {
     padding-left: 10px;
 }
 
-.display-flex {
+/* .display-flex {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -176,17 +178,13 @@ hr {
     flex: 1 0 20%;  
     width: fit-content;
     border-radius: 20px;
-}
+} 
 
 @media (width < 450px) {
     .flex-content {
         flex: 1 0 40%;  
     }
-}
-
-.card-title {
-    font-size: small !important;
-}
+}*/
 
 /* title */
 .title {
@@ -202,9 +200,15 @@ hr {
     border-radius: 5px;
     box-shadow: 5px 5px 10px var(--highlight-color);
     position: relative;
-    left:50%;
+    left: 50%;
     transform: translateX(-50%);
-    width: 75%;
+    width: 60%;
+}
+
+@media (width < 450px) {
+    .title {
+        width: 80%;
+    }
 }
 
 /* intro */
@@ -250,9 +254,17 @@ hr {
     justify-content: flex-start;
 }
 
+.skills .icon {
+    vertical-align: unset;
+}
+
 .skills .element {
     flex: 1 0 21%; 
-    padding: 0px;
+    margin-left: 0px;
+}
+
+.skills .element-of-icon {
+    font-weight: normal;;
 }
 
 @media (width < 450px) {
@@ -299,6 +311,10 @@ hr {
 }
 
 /* experience */
+.experience .element {
+    margin-bottom: 20px;
+}
+
 .period {
     color: var(--highlight-color);
 }
@@ -308,52 +324,73 @@ hr {
 }
 
 .experience .achievements .desc, .experience .tools .tools-desc {
-    font-style: italic;
+    /* font-style: italic; */
     text-align: justify;
     width: 80%;
     margin-top: 5px;
     margin-left: 50px;
 }
 
-.reference .element-of-icon {
-    font-size: medium;
+@media (width < 450px) {
+    .experience .achievements .desc, .experience .tools .tools-desc {
+        margin-left: 30px;
+    }  
 }
 
 .reference {
     margin-top: 10px;
-    padding-left: 40px;
+    margin-left: 80px;
     display: flex;
     flex-direction: column;
     width: fit-content;
 }
 
-.experience .element {
-    margin-bottom: 30px;
+@media (width < 450px) {
+    .reference {
+        margin-left: 40px;
+    }
+}
+
+.reference .element-of-icon {
+    font-weight: normal;
 }
 
 /* education */
 .education .element {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .education a {
     color : inherit !important;
 }
 
-.education .element-of-icon {
-    margin-left: 20px;
-}
-
-.education .diplomas .certif-desc {
-    font-style: italic;
+.education .diplomas .desc {
+    /* font-style: italic; */
     text-align: justify;
     width: 80%;
     margin-top: 5px;
     margin-left: 50px;
 }
 
+@media (width < 450px) {
+    .education .diplomas .desc {
+        margin-left: 30px;
+    }  
+}
+
 /* leasures */
-.leasures {
+.leasures .element-of-icon {
+    display: block;
+    text-align: justify;
+    font-weight: normal;
+}
+
+@media (width < 450px) {
+    .leasures .element-of-icon {
+        width: 80%;
+    }  
+}
+/* .leasures {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
@@ -368,6 +405,11 @@ hr {
    .leasures .element {
         flex: 1 0 40%; 
     } 
+} */
+
+/* socials */
+.socials .element-of-icon {
+    font-weight: normal;
 }
 
 /* contact */
@@ -380,8 +422,13 @@ hr {
     font-size: medium;
 }
 
+.contact .element-of-icon {
+    font-weight: normal;
+}
+
 /* licenses */
-.Licenses {
+.licenses {
     margin-top: 50px;
     text-align: center;
+    font-size: x-small;
 }
