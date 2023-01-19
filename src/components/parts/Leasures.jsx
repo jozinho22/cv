@@ -13,14 +13,9 @@ const Leasures = () => {
     return  <div className="page-break">
                 <div className="title">{title}</div>
                 <div className="leasures element"> 
-                    {leasures.map((leasure, index) => {
-                        return <div key={index} className="element">
-                                    <div className="icon-block">
-                                        <div className="icon">{leasure.icon}</div> 
-                                        <div className="element-of-icon">{leasure.activity}</div>
-                                    </div>
-                                </div>
-                    })} 
+                    <div className="element">        
+                        <div className="element-of-icon">{leasures.list}</div>
+                    </div>
                 </div>
                 <hr />
             </div> 

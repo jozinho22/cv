@@ -7,7 +7,8 @@ import Experiences from './parts/Experience';
 import Education from './parts/Education';
 import Socials from './parts/SocialNetworks';
 import Leasures from './parts/Leasures';
- 
+import Licenses from './parts/Licenses';
+
 import './CurriculumVitae.css';
 
 const CurriculumVitae = () => {
@@ -22,6 +23,7 @@ const CurriculumVitae = () => {
             <Socials />
             <Leasures />
             <Contact />
+            <Licenses />
         </Container>
     );
 }

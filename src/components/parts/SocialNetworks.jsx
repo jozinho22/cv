@@ -3,7 +3,7 @@ import getSocialNetworks from "./infos/getSocialNetworks";
 import getTitles from './infos/getTitles';
 import languageChooser from '../helpers/languageChooser';
 import AppContext from '../context/AppContext';
-import { HiLink } from 'react-icons/hi';
+import { Link45deg } from 'react-bootstrap-icons';
 
 const SocialNetworks = () => {
 
@@ -17,8 +17,7 @@ const SocialNetworks = () => {
                     {socialNetworks.map((social, index) => {
                         return  <div className="icon-block element" id={`social-${index}`} key={index}>
                                     <a href={social.profileLink} target="_blank" rel="noreferrer">    
-                                        <div className="icon"><HiLink /></div>
-                                        <div className="icon hyperlink-icon">{social.icon}</div>
+                                        <div className="icon"><Link45deg /></div>
                                         <div className="element-of-icon">{social.platform}</div>
                                     </a>    
                                 </div>

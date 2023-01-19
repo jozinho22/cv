@@ -1,11 +1,7 @@
 import React from 'react';
 import getExperience from "./infos/getExperience";
-import {GiSandsOfTime} from 'react-icons/gi';
-import {HiLink} from 'react-icons/hi';
-import {MdWork} from 'react-icons/md';
-import {MdAlternateEmail} from 'react-icons/md';
-import {AiFillTool} from 'react-icons/ai';
-import {GrCode} from 'react-icons/gr';
+
+import { Hourglass, PcDisplayHorizontal, GeoAltFill, CodeSquare, WrenchAdjustable, Link45deg } from 'react-bootstrap-icons';
 import AppContext from '../context/AppContext';
 import languageChooser from '../helpers/languageChooser';
 import getTitles from './infos/getTitles';
@@ -22,13 +18,13 @@ const Experience = () => {
                         {jobs.map((job, index) => {
                             return  <div className="element" id={`experience-${index}`} key={index}>
                                         <div className="icon-block period">
-                                            <GiSandsOfTime className="icon" /> 
+                                            <Hourglass className="icon" /> 
                                             <div className="element-of-icon period-date">{job.period}</div>
                                         </div>
                                         <div className="icon-block">
                                             {job.as ? 
                                                 <>
-                                                    <MdWork className="icon" />
+                                                    <PcDisplayHorizontal className="icon" />
                                                     <div className="element-of-icon">{job.as}</div> 
                                                 </>
                                                     : <></>}
@@ -36,7 +32,7 @@ const Experience = () => {
                                         <div className="icon-block">
                                             {job.company ? 
                                                 <>
-                                                    <MdAlternateEmail className="icon" /> 
+                                                    <GeoAltFill className="icon" /> 
                                                     <div className="element-of-icon">{job.company}</div>
                                                 </> 
                                                     : <></>
@@ -44,31 +40,20 @@ const Experience = () => {
                                             
                                         </div>
                                         <div className="tools">
-                                            {job.tools ? 
-                                                <> 
-                                                    <AiFillTool className="icon" />
-                                                    <div className="element-of-icon">
-                                                        {language === "French" ? "Outils" : "Tools"}
-                                                    </div> 
-                                                    <div className="display-flex">
-                                                        {
-                                                            job.tools.map((tool, index) => {
-                                                                return <div key={index} className="flex-content">
-                                                                            {tool}
-                                                                        </div>
-                                                                        
-                                                            })
-                                                        }  
-                                                    </div>                                                 
-                                                </>
-                                                    : <></>
-                                            }
-                                            
+                                            <> 
+                                                <WrenchAdjustable className="icon" />
+                                                <div className="element-of-icon">
+                                                    {language === "French" ? "Outils" : "Tools"}
+                                                </div> 
+                                                <div className="tools-desc">
+                                                    {job.tools}
+                                                </div>                                                
+                                            </>
                                         </div>
                                         <div className="icon-block achievements">
                                             {job.company ?
                                                 <>
-                                                    <GrCode className="icon" /> 
+                                                    <CodeSquare className="icon" /> 
                                                     <div className="element-of-icon">{language === "French" ? "Réalisations" : "Achievements"}</div>
                                                 </>    :  <></>
                                             }
@@ -79,7 +64,7 @@ const Experience = () => {
                                                 job.references.map((reference, index) => {
                                                     return <div key={index} className="reference">
                                                                 <a href={reference.url} className="icon-block" target="_blank" rel="noreferrer">
-                                                                    <HiLink className="icon" /> 
+                                                                    <Link45deg className="icon" /> 
                                                                     <div className="element-of-icon">{reference.webSiteName}</div>
                                                                 </a>
                                                             </div> 

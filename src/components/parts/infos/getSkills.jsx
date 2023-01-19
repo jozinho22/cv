@@ -1,60 +1,60 @@
-import {FaJava} from 'react-icons/fa';
-import {TbBrandJavascript} from 'react-icons/tb';
-import {ImHtmlFive} from 'react-icons/im';
-import {IoLogoCss3} from 'react-icons/io';
-import {AiOutlineConsoleSql} from 'react-icons/ai';
-import {BiGitBranch} from 'react-icons/bi';
-import {FaReact} from 'react-icons/fa';
-import {SiPython} from 'react-icons/si';
+import {DiJava} from 'react-icons/di';
+import {DiJavascript1} from 'react-icons/di';
+import {DiHtml5} from 'react-icons/di';
+import {DiCss3} from 'react-icons/di';
+import {DiMysql} from 'react-icons/di';
+import {DiGit} from 'react-icons/di';
+import {DiReact} from 'react-icons/di';
+import {DiPython} from 'react-icons/di';
 
 const getSkills = () => {
 
     return [
         {
             language: "Java",
-            icon: <FaJava />,
+            icon: <DiJava />,
             frameworks: "Spring, Maven, JPA/Hibernate, REST",
             level: 80
         },
         {
             language: "Javascript",
-            icon: <TbBrandJavascript />,
+            icon: <DiJavascript1 />,
             frameworks: "Node, JSON",
             level: 75
         },
         {
             language: "ReactJS",
-            icon: <FaReact />,
+            icon: <DiReact />,
             frameworks: "Redux, MathJax",
             level: 70
         },
         {
             language: "HTML",
-            icon: <ImHtmlFive /> ,
+            icon: <DiHtml5 /> ,
             frameworks: "HTML5",
             level: 80
         },
         {
             language: "CSS",
-            icon: <IoLogoCss3 /> ,
+            icon: <DiCss3 /> ,
             frameworks: "CSS3",
             level: 70
         },
         {
             language: "SQL",
-            icon: <AiOutlineConsoleSql />,
+            icon: <DiMysql />,
             frameworks : "MySQL, SQL Server, PostgreSQL, Oracle",
             level: 80
         },
         {
             language: "Python",
-            icon: <SiPython />,
+            icon: <DiPython />,
             frameworks : "NumPy, Pandas, Matplotlib",
             level: 60
         },
         {
             language: "Git",
-            icon: <BiGitBranch />,
+            icon: <DiGit />,
             frameworks : "GitHub, GitLab, Git Bash, Git Fork",
             level: 65
         }

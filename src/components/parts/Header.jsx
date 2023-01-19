@@ -5,9 +5,7 @@ import pageStyle from '../helpers/pageStyle';
 
 import {getThemes} from '../styles/getThemes';
 import AppContext from '../context/AppContext';
-import {ImFilePdf} from 'react-icons/im';
-import {TbSwitchHorizontal} from 'react-icons/tb';
-import {IoMdColorWand} from 'react-icons/io';
+import { FilePdfFill, Globe, Magic } from 'react-bootstrap-icons';
 
 const Header = () => {
 
@@ -56,7 +54,7 @@ const Header = () => {
                     <Col xs={4}>
                         <Button variant="warning" className="printer-button" onClick={print}>
                             <div className="icon-block">
-                                <ImFilePdf className="icon" /> 
+                                <FilePdfFill className="icon" /> 
                                 {!mobile ? <div className="element-of-icon">Export</div> : <></>}
                             </div>
                         </Button>
@@ -69,7 +67,7 @@ const Header = () => {
                                 variant="success" 
                                 id="theme-dropdown-menu" >
                                 <div className="icon-block">
-                                    <IoMdColorWand className="icon" /> 
+                                    <Magic className="icon" /> 
                                     {!mobile ? <div className="element-of-icon">Theme</div> : <></>}
                                 </div>
                             </Dropdown.Toggle>
@@ -102,7 +100,7 @@ const Header = () => {
                                             : <></>
                                 }
                                 
-                                <TbSwitchHorizontal className="icon" /> 
+                                <Globe className="icon" /> 
                                 {
                                     !mobile ?
                                         <div className="element-of-icon">

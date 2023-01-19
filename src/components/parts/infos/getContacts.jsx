@@ -1,39 +1,37 @@
-import {BiDirections} from 'react-icons/bi';
-import {BsFillTelephoneFill} from 'react-icons/bs';
-import {BsMailbox} from 'react-icons/bs';
+import { GeoAltFill, TelephoneFill, Envelope} from 'react-bootstrap-icons';
 
 const getContacts = () => {
     return {
             french: [
                 {
                     info: "Rennes, Bretagne",
-                    icon : <BiDirections />
+                    icon : <GeoAltFill />
                 },
                 {
                     info: "06 25 45 01 76",
                     type: "tel",
-                    icon : <BsFillTelephoneFill />
+                    icon : <TelephoneFill />
                 },
                 {
                     info: "josselin.douineau@gmail.com",
                     type: "courriel",
-                    icon : <BsMailbox />
+                    icon : <Envelope />
                 }
             ],
             english: [
                 {
                     info: "Rennes, Brittany",
-                    icon : <BiDirections />
+                    icon : <GeoAltFill />
                 },
                 {
                     info: "00336 25 45 01 76",
                     type: "tel",
-                    icon : <BsFillTelephoneFill />
+                    icon : <TelephoneFill />
                 },
                 {
                     info: "josselin.douineau@gmail.com",
                     type: "mail",
-                    icon : <BsMailbox />
+                    icon : <Envelope />
                 }
             ]
             

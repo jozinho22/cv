@@ -1,3 +1,7 @@
+/* 
+    Copyright (c) 2011-2023 The Bootstrap Authors
+*/
+
 /* container */
 .curriculum-vitae-container {
     background: linear-gradient(
@@ -120,7 +124,7 @@ a {
 }
 
 .icon, .element-of-icon {
-    display: inline;
+    display: inline-block;
     vertical-align: middle;
 }
 
@@ -178,6 +182,10 @@ hr {
     .flex-content {
         flex: 1 0 40%;  
     }
+}
+
+.card-title {
+    font-size: small !important;
 }
 
 /* title */
@@ -299,11 +307,12 @@ hr {
     text-decoration: underline;
 }
 
-.achievements .desc {
+.experience .achievements .desc, .experience .tools .tools-desc {
     font-style: italic;
     text-align: justify;
-    width: 90%;
-    margin-top: 10px;
+    width: 80%;
+    margin-top: 5px;
+    margin-left: 50px;
 }
 
 .reference .element-of-icon {
@@ -312,17 +321,37 @@ hr {
 
 .reference {
     margin-top: 10px;
-    padding-left: 20px;
+    padding-left: 40px;
     display: flex;
     flex-direction: column;
     width: fit-content;
 }
 
+.experience .element {
+    margin-bottom: 30px;
+}
+
 /* education */
+.education .element {
+    margin-bottom: 30px;
+}
 
 .education a {
     color : inherit !important;
 }
+
+.education .element-of-icon {
+    margin-left: 20px;
+}
+
+.education .diplomas .certif-desc {
+    font-style: italic;
+    text-align: justify;
+    width: 80%;
+    margin-top: 5px;
+    margin-left: 50px;
+}
+
 /* leasures */
 .leasures {
     display: flex;
@@ -349,4 +378,10 @@ hr {
 
 .contact {
     font-size: medium;
+}
+
+/* licenses */
+.Licenses {
+    margin-top: 50px;
+    text-align: center;
 }

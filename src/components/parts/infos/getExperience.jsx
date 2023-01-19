@@ -5,7 +5,7 @@ const getExperience = () => {
                     period: "mar 2020 - maintenant",
                     company: "Domicile",
                     as: "Développeur Fullstack",
-                    tools: "Spring, JPA/Hibernate, Maven, ReactJS, MathJax, MySQL, HTML5, CSS3, Git Bash, GitHub".split(","), 
+                    tools: "Spring, JPA/Hibernate, Maven, ReactJS, MathJax, MySQL, HTML5, CSS3, Git Bash, GitHub", 
                     desc: "Je développe mes propres projets et je continue à me former",
                     references: [
                         {
@@ -22,7 +22,7 @@ const getExperience = () => {
                         }
                     ]
                 },
-                {
+                /* {
                     period: "jan 2021 - avr 2021",
                     company: "Open",
                     as: "Développeur Java/ReactJS",
@@ -35,12 +35,12 @@ const getExperience = () => {
                     as: "Développeur Java",
                     tools: "Spring, JHipster, Maven, GitLab".split(","), 
                     desc: "J'ai aidé au développement de spécifications dans le domaine de la bijouterie"
-                },
+                }, */
                 {
                     period: "mar 2016 - sept 2018",
                     company: "La SACEM",
                     as: "Développeur Java/SQL",
-                    tools: "JDBC, Restlet, XStream, JUnit/Cucumber, Maven, PL/SQL, Git Bash, GitLab".split(","), 
+                    tools: "JDBC, Restlet, XStream, JUnit/Cucumber, Maven, PL/SQL, Git Bash, GitLab", 
                     desc: "J'ai travaillé sur de nombreux projets, principalement en appliquant des modifications dans le code Java et PL/SQL"
                 },
                 {
@@ -70,7 +70,7 @@ const getExperience = () => {
                     }
                 ]
             },
-            {
+            /* {
                 period: "jan 2021 - apr 2021",
                 company: "Open",
                 as: "Java/ReactJS developer",
@@ -83,7 +83,7 @@ const getExperience = () => {
                 as: "Java developer",
                 tools: "Spring, JHipster, Maven, GitLab".split(","), 
                 desc: "I helped to develop specifications for a jewelry store"
-            },
+            }, */
             {
                 period: "mar 2016 - sept 2018",
                 company: "La SACEM",

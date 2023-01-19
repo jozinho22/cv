@@ -3,7 +3,8 @@ const getEducation = () => {
                 french: [
                     {
                         period: "nov 2022 - maintenant",
-                        title: "Java, HTML, JavaScript, CSS, SQL, React/Redux, C++, Python, Responsive Web Design".split(","),
+                        title: "Certifications",
+                        certif : "Java, HTML, JavaScript, CSS, SQL, React/Redux, C++, Python, Responsive Web Design",
                         school: "Sololearn (à distance)",
                         schoolLink: "https://www.sololearn.com/"
                     },
@@ -24,7 +25,8 @@ const getEducation = () => {
                 english: [
                     {
                         period: "nov 2022 - maintenant",
-                        title: "Java, HTML, JavaScript, CSS, SQL, React/Redux, C++, Python, Responsive Web Design".split(","),
+                        title: "Certifications",
+                        certif : "Java, HTML, JavaScript, CSS, SQL, React/Redux, C++, Python, Responsive Web Design",
                         school: "Sololearn (online)",
                         schoolLink: "https://www.sololearn.com/"
                     },
