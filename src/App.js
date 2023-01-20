@@ -10,8 +10,8 @@ import './App.css';
 
 function App() {
 
-  const [theme, setTheme] = React.useState(getThemeIfStoredThemeExists(JSON.parse(sessionStorage.getItem('theme'))) ? JSON.parse(sessionStorage.getItem('theme')) : "Blank");
-  const [language, setLanguage] = React.useState(JSON.parse(sessionStorage.getItem('language')) ? JSON.parse(sessionStorage.getItem('language')) : "French");
+  const [theme, setTheme] = React.useState(getThemeIfStoredThemeExists(JSON.parse(sessionStorage.getItem('josselin-douineau-developer-theme'))) ? JSON.parse(sessionStorage.getItem('josselin-douineau-developer-theme')) : "Blank");
+  const [language, setLanguage] = React.useState("French");
 
   const appContext = {
       theme: theme,

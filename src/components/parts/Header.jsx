@@ -17,7 +17,7 @@ const Header = () => {
 
     const selectTheme = (eventKey, event) => {
         updateTheme(eventKey);
-        sessionStorage.setItem('theme', JSON.stringify(eventKey));
+        sessionStorage.setItem('josselin-douineau-developer-theme', JSON.stringify(eventKey));
     }
 
     const switchLanguage = () => {

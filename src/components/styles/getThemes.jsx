@@ -12,7 +12,7 @@ const getThemeIfStoredThemeExists = (theme) => {
     var themes = getThemes();
     for(var t of themes) {
         if(t.name === theme) {
-            return t;
+            return t.name;
         }
     }
 }
