@@ -14,7 +14,7 @@ const Leasures = () => {
                 <div className="title">{title}</div>
                 <div className="leasures"> 
                     <div className="element">        
-                        <div className="element-of-icon">
+                        <div className="leasures-desc">
                            {leasures.list}
                         </div>
                     </div>

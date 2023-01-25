@@ -329,11 +329,17 @@ hr {
     width: 80%;
     margin-top: 5px;
     margin-left: 50px;
+    white-space: pre-line;   
+    word-wrap: break-word;
 }
 
 @media (width < 450px) {
     .experience .achievements .desc, .experience .tools .tools-desc {
         margin-left: 30px;
+        -moz-hyphens:auto; 
+        -webkit-hyphens:auto; 
+        -o-hyphens:auto; 
+        hyphens:auto;
     }  
 }
 
@@ -375,19 +381,28 @@ hr {
 @media (width < 450px) {
     .education .diplomas .desc {
         margin-left: 30px;
+        -moz-hyphens:auto; 
+        -webkit-hyphens:auto; 
+        -o-hyphens:auto; 
+        hyphens:auto;
     }  
 }
 
 /* leasures */
-.leasures .element-of-icon {
+.leasures .leasures-desc {
     display: block;
     text-align: justify;
     font-weight: normal;
+    width: 80%;
 }
 
 @media (width < 450px) {
-    .leasures .element-of-icon {
-        width: 80%;
+    .leasures .leasures-desc {
+        margin-left: 30px;
+        -moz-hyphens:auto; 
+        -webkit-hyphens:auto; 
+        -o-hyphens:auto; 
+        hyphens:auto;
     }  
 }
 /* .leasures {
