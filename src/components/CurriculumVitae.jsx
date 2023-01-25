@@ -3,7 +3,7 @@ import Header from './parts/Header';
 import Intro from './parts/Intro';
 import Contact from './parts/Contact';
 import Skills from './parts/Skills';
-import Experiences from './parts/Experience';
+import Experience from './parts/Experience';
 import Education from './parts/Education';
 import Socials from './parts/SocialNetworks';
 import Leasures from './parts/Leasures';
@@ -18,7 +18,7 @@ const CurriculumVitae = () => {
             <Header />
             <Intro />
             <Skills />
-            <Experiences />
+            <Experience />
             <Education />
             <Socials />
             <Leasures />

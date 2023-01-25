@@ -29,27 +29,28 @@ const Experience = () => {
                                                 </>
                                                     : <></>}
                                         </div>
-                                        <div className="icon-block">
-                                            {job.company ? 
-                                                <>
-                                                    <GeoAltFill className="icon" /> 
-                                                    <div className="element-of-icon">{job.company}</div>
-                                                </> 
-                                                    : <></>
-                                            }
-                                            
-                                        </div>
-                                        <div className="tools">
-                                            <> 
-                                                <WrenchAdjustable className="icon" />
-                                                <div className="element-of-icon">
-                                                    {language === "French" ? "Outils" : "Tools"}
-                                                </div> 
-                                                <div className="tools-desc">
-                                                    {job.tools}
-                                                </div>                                                
+                                        {job.company ? 
+                                            <>
+                                                <div className="icon-block">
+                                                        <>
+                                                            <GeoAltFill className="icon" /> 
+                                                            <div className="element-of-icon">{job.company}</div>
+                                                        </>
+                                                </div>
+                                                <div className="tools">
+                                                    <> 
+                                                        <WrenchAdjustable className="icon" />
+                                                        <div className="element-of-icon">
+                                                            {language === "French" ? "Outils" : "Tools"}
+                                                        </div> 
+                                                        <div className="tools-desc">
+                                                            {job.tools}
+                                                        </div>                                                
+                                                    </>
+                                                </div>
                                             </>
-                                        </div>
+                                                :   <></>
+                                        }
                                         <div className="icon-block achievements">
                                             {job.company ?
                                                 <>
