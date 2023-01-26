@@ -1,18 +1,18 @@
 import React from 'react';
-import favicon512 from '../assets/favicon-brasil-512.png';
+import photo from '../assets/photo-profil.jpeg';
 import AppContext from '../context/AppContext';
 import languageChooser from '../helpers/languageChooser';
-import getIntroInfos from './infos/getIntroInfos';
+import getIntro from './infos/getIntro';
 
 const Intro = () => {
 
     const {language} = React.useContext(AppContext);
-    var intro = languageChooser(language, getIntroInfos());
+    var intro = languageChooser(language, getIntro());
 
     return  <div className="intro">
-                <img src={favicon512} alt=""/>
+                <img src={photo} alt=""/>
                 <div className="me">{intro.me}</div>
-                <div className="profession">{intro.profession}</div>
+                {/* <div className="profession">{intro.profession}</div> */}
 
                 <div className="summary">
                     <p>

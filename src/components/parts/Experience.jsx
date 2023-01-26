@@ -67,6 +67,11 @@ const Experience = () => {
                                                                 <a href={reference.url} className="icon-block" target="_blank" rel="noreferrer">
                                                                     <Link45deg className="icon" /> 
                                                                     <div className="element-of-icon">{reference.webSiteName}</div>
+                                                                    {
+                                                                        reference.desc ? 
+                                                                            <div className="reference-desc">{reference.desc}</div>
+                                                                                :   <></>
+                                                                    }
                                                                 </a>
                                                             </div> 
                                                 })

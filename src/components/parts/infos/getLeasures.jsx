@@ -3,7 +3,7 @@ const getLeasures = () => {
     return {
                 french : 
                     {
-                        list: "Basket, échecs, arts martiaux, soutien scolaire, lecture, guitare, codage, bénévolat"
+                        list: "Basket, échecs, arts martiaux, soutien scolaire, lecture, guitare, code, bénévolat"
                     }
                 ,
                 english:

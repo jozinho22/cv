@@ -26,20 +26,23 @@ const Education = () => {
                                         <>
                                             <Award className="icon" /> 
                                             <div className="element-of-icon">
-                                                <a href={diploma.titleLink} target="_blank" rel="noreferrer">
-                                                    {diploma.title}
-                                                </a>
+                                                {diploma.what}
                                             </div>
-                                            <div className="desc" >{diploma.desc}</div>
+                                            <a href={diploma.whatLink} target="_blank" rel="noreferrer">
+                                                 <div className="desc" >{diploma.whatDesc}</div>
+                                            </a>
                                         </>
                                     </div>
-                                    <div className="icon-block school">
-                                        <GeoAltFill className="icon" /> 
-                                        <div className="element-of-icon">
-                                            <a href={diploma.schoolLink} target="_blank" rel="noreferrer">
-                                                {diploma.school}
+                                    <div className="school">
+                                        <>
+                                            <GeoAltFill className="icon" /> 
+                                            <div className="element-of-icon">
+                                                {diploma.where}
+                                            </div>
+                                            <a href={diploma.whereLink} target="_blank" rel="noreferrer">
+                                                 <div className="desc" >{diploma.whereDesc}</div>
                                             </a>
-                                        </div>
+                                        </>
                                     </div>
                                 </div>
                     })}

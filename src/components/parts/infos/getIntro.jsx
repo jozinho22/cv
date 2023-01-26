@@ -1,17 +1,17 @@
-const getIntroInfos = () => {
+const getIntro = () => {
     return  {
                 french: {
                         me: "Josselin DOUINEAU, 35 ans",
                         profession: "Développeur",
-                        summary: "Après une pause dans mon activité, je suis de retour dans le métier de la programmation."
+                        summary: "Développeur polyvalent, à la recherche d'un nouveau challenge"
                 },
                 english: {
                         me: "Josselin DOUINEAU, 35",
                         profession: "Developer",
-                        summary: "After a long period while doing other activities, i'm back in the development."                   
+                        summary: "Fullstack developer, looking for a new challenge"                   
                 }
             } 
 
 }
 
-export default getIntroInfos;
+export default getIntro;

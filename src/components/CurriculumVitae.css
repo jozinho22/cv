@@ -14,6 +14,7 @@
     text-align: left;
     padding: 20px;
     color: var(--simple-text-color);
+    font-size: large;
 }
 
 /* header */
@@ -125,7 +126,7 @@ a {
 
 .icon {
     display: inline-block;
-    vertical-align: middle;
+    /* vertical-align: middle; */
 }
 
 .element-of-icon {
@@ -145,9 +146,9 @@ a {
 }
 
 hr {
-    width: 70%;
+    width: 30%;
     position: relative;
-    left:50%;
+    left: 50%;
     transform: translateX(-50%);
 }
 
@@ -214,6 +215,10 @@ hr {
 /* intro */
 .me, .profession {
     font-weight: bold;
+}
+
+.intro img {
+    border-radius: 100px;
 }
 
 .intro {
@@ -361,6 +366,11 @@ hr {
     font-weight: normal;
 }
 
+.reference-desc {
+    margin-left: 40px;
+    color: var(--simple-text-color);
+}
+
 /* education */
 .education .element {
     margin-bottom: 20px;
@@ -370,7 +380,7 @@ hr {
     color : inherit !important;
 }
 
-.education .diplomas .desc {
+.education .desc {
     /* font-style: italic; */
     text-align: justify;
     width: 80%;
@@ -423,6 +433,22 @@ hr {
 } */
 
 /* socials */
+.socials {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+@media (width < 450px) {
+    .socials {
+        flex-direction: column;
+        margin-left: 20px;
+    }
+}
+
+.socials .element {
+    margin-left: 0px;
+}
+
 .socials .element-of-icon {
     font-weight: normal;
 }

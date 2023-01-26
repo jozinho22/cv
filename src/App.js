@@ -25,7 +25,7 @@ function App() {
           <div className="App" id="capture">
               <AppContext.Provider value={appContext} > 
                   <div className={`${theme}`}>
-                      <CurriculumVitae language={language} />
+                      <CurriculumVitae />
                   </div>       
               </AppContext.Provider>
           </div>

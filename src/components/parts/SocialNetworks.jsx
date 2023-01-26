@@ -15,15 +15,18 @@ const SocialNetworks = () => {
                 <div className="title">{title}</div>
                 <div className="socials">
                     {socialNetworks.map((social, index) => {
-                        return  <div className="icon-block element" id={`social-${index}`} key={index}>
-                                    <a href={social.profileLink} target="_blank" rel="noreferrer">    
-                                        <div className="icon"><Link45deg /></div>
-                                        <div className="element-of-icon">{social.platform}</div>
-                                    </a>    
+                        
+                        return  <div className="element">
+                                    <div className="icon-block" id={`social-${index}`} key={index}>
+                                        <a href={social.profileLink} target="_blank" rel="noreferrer">    
+                                            <div className="icon"><Link45deg /></div>
+                                            <div className="element-of-icon">{social.platform}</div>
+                                        </a>    
+                                    </div>
                                 </div>
-                    })}
-                    <hr />        
+                    })}  
                 </div>
+                <hr />
             </div>
 
 }
