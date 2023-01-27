@@ -43,7 +43,7 @@ const Experience = () => {
                                                         <div className="element-of-icon">
                                                             {language === "French" ? "Outils" : "Tools"}
                                                         </div> 
-                                                        <div className="tools-desc">
+                                                        <div className="desc">
                                                             {job.tools}
                                                         </div>                                                
                                                     </>
@@ -51,12 +51,12 @@ const Experience = () => {
                                             </>
                                                 :   <></>
                                         }
-                                        <div className="icon-block achievements">
+                                        <div className="achievements">
                                             {job.company ?
-                                                <>
+                                                <div className="icon-block">
                                                     <CodeSquare className="icon" /> 
                                                     <div className="element-of-icon">{language === "French" ? "Réalisations" : "Achievements"}</div>
-                                                </>    :  <></>
+                                                </div>  : <></>
                                             }
                                             <div className="desc">{job.desc}</div>
                                         </div>
@@ -64,7 +64,7 @@ const Experience = () => {
                                             job.references ?
                                                 job.references.map((reference, index) => {
                                                     return <div key={index} className="reference">
-                                                                <a href={reference.url} className="icon-block" target="_blank" rel="noreferrer">
+                                                                <a href={reference.url} target="_blank" rel="noreferrer">
                                                                     <Link45deg className="icon" /> 
                                                                     <div className="element-of-icon">{reference.webSiteName}</div>
                                                                     {

@@ -10,6 +10,7 @@ import Leasures from './parts/Leasures';
 import Licenses from './parts/Licenses';
 
 import './CurriculumVitae.css';
+import Certifications from './parts/Certifications';
 
 const CurriculumVitae = () => {
   
@@ -19,6 +20,7 @@ const CurriculumVitae = () => {
             <Intro />
             <Skills />
             <Experience />
+            <Certifications />
             <Education />
             <Socials />
             <Leasures />

@@ -23,26 +23,27 @@ const Education = () => {
                                         </div>
                                     </div>
                                     <div className="diplomas">
-                                        <>
+                                        <div className="icon-block">
                                             <Award className="icon" /> 
-                                            <div className="element-of-icon">
-                                                {diploma.what}
-                                            </div>
-                                            <a href={diploma.whatLink} target="_blank" rel="noreferrer">
-                                                 <div className="desc" >{diploma.whatDesc}</div>
+                                            <a href={diploma.titleLink} target="_blank" rel="noreferrer">
+                                                <div className="element-of-icon">
+                                                    {diploma.title}
+                                                </div>
                                             </a>
-                                        </>
+                                        </div>
+                                        <div className="desc">
+                                            {diploma.desc}
+                                        </div>
                                     </div>
                                     <div className="school">
-                                        <>
+                                        <div className="icon-block">
                                             <GeoAltFill className="icon" /> 
-                                            <div className="element-of-icon">
-                                                {diploma.where}
-                                            </div>
-                                            <a href={diploma.whereLink} target="_blank" rel="noreferrer">
-                                                 <div className="desc" >{diploma.whereDesc}</div>
+                                            <a href={diploma.schoolLink} target="_blank" rel="noreferrer">
+                                                <div className="element-of-icon">
+                                                    {diploma.school}
+                                                </div>
                                             </a>
-                                        </>
+                                        </div> 
                                     </div>
                                 </div>
                     })}

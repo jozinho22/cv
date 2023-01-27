@@ -1,57 +1,23 @@
 const getEducation = () => {
     return  {
                 french: [
-                    {
-                        period: "nov 2022 - maintenant",
-                        what: "Certifications",
-                        whatDesc : "Java, HTML, JavaScript, CSS, SQL, React/Redux, C++, Python, Responsive Web Design",
-                        where: "Organisme",
-                        whereDesc: "Sololearn",
-                        whereLink: "https://www.sololearn.com/"
-                    },
-                    {
-                        period: "nov 2015 - fév 2016",
-                        what: "Certification",
-                        whatDesc: "Certification concepteur-développeur Java EE",
-                        where: "Organisme",
-                        whereDesc: "Objis",
-                        whereLink: "https://objis.com/"
-                    },
                     {    
                         period: "sept 2009 - sept 2014",
-                        what: "Diplôme universitaire",
-                        whatDesc: "Certification concepteur-développeur Java EE",
-                        whatLink: "https://www.ipgp.fr/fr/master/genie-de-lenvironnement-industrie-gei",
-                        where: "Université",
-                        whereDesc: "Paris 7 Diderot",
-                        whereLink: "https://u-paris.fr/en/"
+                        title: "Master en sciences et génie de l'environnement",
+                        titleLink: "https://www.ipgp.fr/fr/master/genie-de-lenvironnement-industrie-gei",
+                        school: "Université Paris 7 Diderot",
+                        schoolLink: "https://u-paris.fr/en/",
+                        desc: "Apprentissage des processus de dépollution des milieux et d'amélioration de la performance énergétique des bâtiments"
                     }
                 ],
                 english: [
-                    {
-                        period: "nov 2022 - maintenant",
-                        what: "Certificates",
-                        whatDesc : "Java, HTML, JavaScript, CSS, SQL, React/Redux, C++, Python, Responsive Web Design",
-                        where: "Training center",
-                        whereDesc: "Sololearn",
-                        whereLink: "https://www.sololearn.com/"
-                    },
-                    {
-                        period: "nov 2015 - febr 2016",
-                        what: "Certificates",
-                        whatDesc: "Java EE designer-developer certification",
-                        where: "Training center",
-                        whereDesc: "Objis",
-                        whereLink: "https://objis.com/"
-                    },
                     {    
                         period: "sept 2009 - sept 2014",
-                        what: "Master's degree",
-                        whatDesc: "Master's degree in Environmental Ingeneering",
-                        whatLink: "https://www.ipgp.fr/fr/master/genie-de-lenvironnement-industrie-gei",
-                        where: "University",
-                        whereDesc: "Paris 7 Diderot",
-                        whereLink: "https://u-paris.fr/en/"
+                        title: "Master's degree in environmental engeeniering",
+                        titleLink: "https://www.ipgp.fr/fr/master/genie-de-lenvironnement-industrie-gei",
+                        school: "Université Paris 7 Diderot",
+                        schoolLink: "https://u-paris.fr/en/",
+                        desc: "Learning depollution and building energy performance processes"
                     }
                 ]
             }

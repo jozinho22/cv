@@ -12,12 +12,10 @@ const Intro = () => {
     return  <div className="intro">
                 <img src={photo} alt=""/>
                 <div className="me">{intro.me}</div>
-                {/* <div className="profession">{intro.profession}</div> */}
-
                 <div className="summary">
-                    <p>
-                        {intro.summary} 
-                    </p>
+                    {intro.summary.map((line, index) => {
+                        return <div key={index}><p>{line}.</p></div>
+                    })} 
                 </div>
             </div>
 

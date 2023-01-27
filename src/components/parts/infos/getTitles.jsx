@@ -3,7 +3,8 @@ const getTitles = () => {
         french : {
             skills: "Compétences",
             experience: "Expériences",
-            education: "Diplômes / Certifications",
+            education: "Diplômes",
+            certifications: "Certifications",
             socialNetworks: "Réseaux sociaux",
             leasures: "Loisirs",
             contact: "Contact"
@@ -11,7 +12,8 @@ const getTitles = () => {
         english : {
             skills: "Skills",
             experience: "Experience",
-            education: "Education / Certificates",
+            education: "Education",
+            certifications: "Certifications",
             socialNetworks: "Social networks",
             leasures: "Leasures",
             contact: "Contact"

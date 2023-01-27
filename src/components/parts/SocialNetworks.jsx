@@ -15,8 +15,7 @@ const SocialNetworks = () => {
                 <div className="title">{title}</div>
                 <div className="socials">
                     {socialNetworks.map((social, index) => {
-                        
-                        return  <div className="element">
+                        return  <div key={index} className="element">
                                     <div className="icon-block" id={`social-${index}`} key={index}>
                                         <a href={social.profileLink} target="_blank" rel="noreferrer">    
                                             <div className="icon"><Link45deg /></div>
