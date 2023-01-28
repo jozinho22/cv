@@ -4,7 +4,7 @@ const getContacts = () => {
     return {
             french: [
                 {
-                    info: "Rennes, Bretagne",
+                    info: "Hédé, Bretagne",
                     icon : <GeoAltFill />
                 },
                 {
@@ -20,7 +20,7 @@ const getContacts = () => {
             ],
             english: [
                 {
-                    info: "Rennes, Brittany",
+                    info: "Hédé, Brittany",
                     icon : <GeoAltFill />
                 },
                 {

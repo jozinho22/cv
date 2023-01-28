@@ -9,15 +9,19 @@ import { FilePdfFill, Globe, Magic } from 'react-bootstrap-icons';
 
 const Header = () => {
 
-    const {updateTheme, language, updateLanguage} = React.useContext(AppContext);
+    const {theme, updateTheme, language, updateLanguage} = React.useContext(AppContext);
     var catchedDiv = {};
 
-    var themes = getThemes(); 
+    /* var themes = getThemes();  */
     var mobile = document.body.offsetWidth < 450;
 
-    const selectTheme = (eventKey, event) => {
+/*     const selectTheme = (eventKey, event) => {
         updateTheme(eventKey);
         sessionStorage.setItem('josselin-douineau-developer-theme', JSON.stringify(eventKey));
+    } */
+
+    const switchTheme = () => {
+        updateTheme(theme === 'Blank' ? 'Darcula' : 'Blank');
     }
 
     const switchLanguage = () => {
@@ -61,7 +65,16 @@ const Header = () => {
                     </Col>
                     
                     <Col xs={4}>
-                        <Dropdown onSelect={selectTheme}>
+                        <Button variant="success" className="theme-button" onClick={switchTheme}>
+                            <div className="icon-block">
+                                <Magic className="icon" /> 
+                                {!mobile ?  <div className="element-of-icon">
+                                                {theme === 'Blank' ? 'Switch to dark' : 'Switch to blank'}
+                                            </div> 
+                                                : <></>}
+                            </div>
+                        </Button>
+                        {/* <Dropdown onSelect={selectTheme}>
                             <Dropdown.Toggle 
                                 className="theme-button"
                                 variant="success" 
@@ -84,7 +97,7 @@ const Header = () => {
                                     ))
                                 }     
                             </Dropdown.Menu>
-                        </Dropdown>               
+                        </Dropdown>   */}             
                     </Col>
 
                     <Col xs={4}>

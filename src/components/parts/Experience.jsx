@@ -1,7 +1,7 @@
 import React from 'react';
 import getExperience from "./infos/getExperience";
 
-import { Hourglass, PcDisplayHorizontal, GeoAltFill, CodeSquare, WrenchAdjustable, Link45deg } from 'react-bootstrap-icons';
+import { Hourglass, PcDisplayHorizontal, GeoAltFill, CodeSquare, WrenchAdjustable, Link45deg, Phone } from 'react-bootstrap-icons';
 import AppContext from '../context/AppContext';
 import languageChooser from '../helpers/languageChooser';
 import getTitles from './infos/getTitles';
@@ -66,6 +66,7 @@ const Experience = () => {
                                                     return <div key={index} className="reference">
                                                                 <a href={reference.url} target="_blank" rel="noreferrer">
                                                                     <Link45deg className="icon" /> 
+                                                                    <Phone className="icon" /> 
                                                                     <div className="element-of-icon">{reference.webSiteName}</div>
                                                                     {
                                                                         reference.desc ? 
