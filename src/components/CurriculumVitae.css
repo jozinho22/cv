@@ -132,13 +132,17 @@ a {
 
 .icon {
     display: inline-block;
-    flex-shrink: 0;
-    /* vertical-align: middle; */
 }
 
-.icon-block {
-    display: flex;
+@media (width < 450px) {
+    .icon-block {
+        display: flex;
+    }
+    .icon {
+        flex-shrink: 0;
+    }
 }
+
 
 .element-of-icon {
     position: relative;
