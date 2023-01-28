@@ -290,6 +290,12 @@ hr {
     vertical-align: unset;
 }
 
+@media (width < 450px) {
+    .skills .icon-block {
+        justify-content: center;
+    }
+}
+
 .skills .element {
     flex: 1 0 21%; 
     margin-left: 0px;
