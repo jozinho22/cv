@@ -5,7 +5,7 @@ const getExperience = () => {
                     period: "mar 2020 - maintenant",
                     company: "En autodidacte",
                     as: "Développeur Fullstack",
-                    tools: "Spring, JPA/Hibernate, Maven, ReactJS, MathJax, MySQL, HTML5, CSS3, Git Bash, GitHub", 
+                    tools: "Spring, JPA/Hibernate, Maven, ReactJS, Bootstrap, MathJax, MySQL, HTML5, CSS3, Helmet, Git Bash, GitHub", 
                     desc: "Auto-formation sur de nouvelles technologies et développement de projets personnels",
                     references: [
                         {
@@ -55,7 +55,7 @@ const getExperience = () => {
                 period: "mar 2020 - now",
                 company: "Self-taught",
                 as: "Fullstack developer",
-                tools: "Spring, JPA/Hibernate, Maven, ReactJS, MathJax, MySQL, HTML5, CSS3, Git Bash, GitHub", 
+                tools: "Spring, JPA/Hibernate, Maven, ReactJS, Bootstrap, MathJax, MySQL, HTML5, CSS3, Helmet, Git Bash, GitHub", 
                 desc: "Self-teaching about new technologies and working on personal projects",
                 references: [
                     {
