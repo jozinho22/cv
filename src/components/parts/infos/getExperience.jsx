@@ -5,8 +5,7 @@ const getExperience = () => {
                     period: "mar 2020 - maintenant",
                     company: "En autodidacte",
                     as: "Développeur Fullstack",
-                    tools: "Spring, JPA/Hibernate, Maven, ReactJS, Bootstrap, MathJax, MySQL, HTML5, CSS3, Helmet, Git Bash, GitHub", 
-                    desc: "Auto-formation sur de nouvelles technologies et développement de projets personnels",
+                    tools: "ReactJS, Bootstrap, MathJax, MySQL, HTML5, Spring, JPA/Hibernate, Maven, CSS3, Helmet, Git Bash, GitHub",                     desc: "Auto-formation sur de nouvelles technologies et développement de projets personnels",
                     references: [
                         {
                             url: "https://ma-thematique.netlify.app/",
@@ -55,7 +54,7 @@ const getExperience = () => {
                 period: "mar 2020 - now",
                 company: "Self-taught",
                 as: "Fullstack developer",
-                tools: "Spring, JPA/Hibernate, Maven, ReactJS, Bootstrap, MathJax, MySQL, HTML5, CSS3, Helmet, Git Bash, GitHub", 
+                tools: "ReactJS, Bootstrap, MathJax, MySQL, HTML5, Spring, JPA/Hibernate, Maven, CSS3, Helmet, Git Bash, GitHub", 
                 desc: "Self-teaching about new technologies and working on personal projects",
                 references: [
                     {
