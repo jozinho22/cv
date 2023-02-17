@@ -1,7 +1,7 @@
 import React from 'react';
 import CurriculumVitae from './components/CurriculumVitae';
 import AppContext from './components/context/AppContext';
-
+import EnumDomain from './components/helpers/EnumDomain';
 import { getThemeIfStoredThemeExists } from './components/styles/getThemes';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -12,6 +12,11 @@ function App() {
 
   const [theme, setTheme] = React.useState(getThemeIfStoredThemeExists(JSON.parse(sessionStorage.getItem('josselin-douineau-developer-theme'))) ? JSON.parse(sessionStorage.getItem('josselin-douineau-developer-theme')) : "Blank");
   const [language, setLanguage] = React.useState("French");
+  const [domain] = React.useState(
+    process.env.NODE_ENV === 'development' ?
+        EnumDomain.NON_DEV 
+            :   EnumDomain.DEV 
+    );
 
   const appContext = {
       theme: theme,
@@ -25,7 +30,7 @@ function App() {
           <div className="App" id="capture">
               <AppContext.Provider value={appContext} > 
                   <div className={`${theme}`}>
-                      <CurriculumVitae />
+                      <CurriculumVitae domain={domain}/>
                   </div>       
               </AppContext.Provider>
           </div>

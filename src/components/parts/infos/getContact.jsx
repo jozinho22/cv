@@ -1,6 +1,6 @@
 import { GeoAltFill, TelephoneFill, Envelope} from 'react-bootstrap-icons';
 
-const getContacts = () => {
+const getContact = () => {
     return {
             french: [
                 {
@@ -38,4 +38,4 @@ const getContacts = () => {
         }
 }
 
-export default getContacts;
+export default getContact;

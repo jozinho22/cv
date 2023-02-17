@@ -1,4 +1,4 @@
-const getExperience = () => {
+const getDevExperience = () => {
     return {
             french: [
                 {
@@ -39,7 +39,8 @@ const getExperience = () => {
                 }, */
                 {
                     period: "sept 2016 - sept 2018",
-                    company: "La SACEM",
+                    company: "La SACEM - Paris",
+                    companyLink: "https://www.sacem.fr/",
                     as: "Développeur Java/SQL",
                     tools: "JDBC, Restlet, XStream, JUnit/Cucumber, Maven, PL/SQL, Git Bash, GitLab", 
                     desc: "Maintenance en condition opérationnelle et développement de nouvelles fonctionnalités sur trois applications (application de gestion de clients, application de tarification de contrats et environnement back-end d'une application mobile)"
@@ -89,7 +90,8 @@ const getExperience = () => {
             }, */
             {
                 period: "sept 2016 - sept 2018",
-                company: "La SACEM",
+                company: "La SACEM - Paris",
+                companyLink: "https://www.sacem.fr/",
                 as: "Java/SQL developer",
                 tools: "JDBC, Restlet, XStream, JUnit/Cucumber, Maven, PL/SQL, Git Bash, GitLab".split(","), 
                 desc: "Maintenance and development of three applications (clients management application, pricing application and back-end environment of a mobile app)"
@@ -103,4 +105,4 @@ const getExperience = () => {
     }
 }
 
-export default getExperience;
+export default getDevExperience;

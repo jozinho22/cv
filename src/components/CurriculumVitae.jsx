@@ -8,21 +8,40 @@ import Education from './parts/Education';
 import Socials from './parts/SocialNetworks';
 import Leasures from './parts/Leasures';
 import Licenses from './parts/Licenses';
-
-import './CurriculumVitae.css';
 import Certifications from './parts/Certifications';
+import EnumDomain from './helpers/EnumDomain';
+import './CurriculumVitae.css';
+import Volunteering from './parts/Volunteering';
 
-const CurriculumVitae = () => {
+const CurriculumVitae = ( {domain} ) => {
   
     return (
         <Container className="curriculum-vitae-container">
             <Header />
-            <Intro />
-            <Skills />
-            <Experience />
-            <Certifications />
+            <Intro domain={domain} />
+            {
+                domain === EnumDomain.DEV ? 
+                    <Skills />
+                        : <></>
+            }
+            <Experience domain={domain} />
+            {
+                domain === EnumDomain.DEV ? 
+                    <></>
+                        : <Volunteering />
+            }
+            {
+                domain === EnumDomain.DEV ? 
+                    <Certifications />
+                        : <></>
+            }
+            
             <Education />
-            <Socials />
+            {
+                domain === EnumDomain.DEV ? 
+                    <Socials />
+                        : <></>
+            }
             <Leasures />
             <Contact />
             <Licenses />

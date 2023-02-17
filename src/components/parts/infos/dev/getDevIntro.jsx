@@ -1,4 +1,4 @@
-const getIntro = () => {
+const getDevIntro = () => {
 
         return  {
                         french: {
@@ -15,4 +15,4 @@ const getIntro = () => {
 
 }
 
-export default getIntro;
+export default getDevIntro;

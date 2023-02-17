@@ -2,12 +2,14 @@ import React from 'react';
 import photo from '../assets/photo-profil.jpeg';
 import AppContext from '../context/AppContext';
 import languageChooser from '../helpers/languageChooser';
-import getIntro from './infos/getIntro';
+import getDevIntro from './infos/dev/getDevIntro';
+import getNonDevIntro from './infos/nonDev/getNonDevIntro';
+import EnumDomain from '../helpers/EnumDomain';
 
-const Intro = () => {
+const Intro = ( {domain} ) => {
 
     const {language} = React.useContext(AppContext);
-    var intro = languageChooser(language, getIntro());
+    var intro = domain === EnumDomain.DEV ? languageChooser(language, getDevIntro()) : getNonDevIntro() ;
 
     return  <div className="intro">
                 <img src={photo} alt=""/>

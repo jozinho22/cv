@@ -1,5 +1,5 @@
 import React from 'react';
-import getSocialNetworks from "./infos/getSocialNetworks";
+import getSocialNetworks from "./infos/dev/getSocialNetworks";
 import getTitles from './infos/getTitles';
 import languageChooser from '../helpers/languageChooser';
 import AppContext from '../context/AppContext';

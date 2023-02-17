@@ -1,5 +1,5 @@
 import React from 'react';
-import getContacts from './infos/getContacts';
+import getContact from './infos/getContact';
 import AppContext from '../context/AppContext';
 import languageChooser from '../helpers/languageChooser';
 import getTitles from './infos/getTitles';
@@ -8,7 +8,7 @@ const Contact = () => {
 
     const {language} = React.useContext(AppContext);
     var title = languageChooser(language, getTitles()).contact;
-    var contacts = languageChooser(language, getContacts());
+    var contacts = languageChooser(language, getContact());
 
     return  <div className="page-break">
                 <div className="title">{title}</div>

@@ -232,7 +232,7 @@ hr {
     position: relative;
     left: 50%;
     transform: translateX(-50%);
-    width: 60%;
+    width: 40%;
 }
 
 @media (width < 450px) {
@@ -384,15 +384,23 @@ hr {
     color: var(--simple-text-color);
 }
 
+/* volunteering */
+.volunteering .element {
+    margin-bottom: 20px;
+}
+
 /* education */
 .education .element {
     margin-bottom: 20px;
 }
 
 /* leasures */
-.leasures {
-    text-align: center;
+@media (width < 450px) {
+    .leasures {
+        text-align: center;
+    }
 }
+
 /* socials */
 .socials {
     display: flex;
@@ -422,16 +430,6 @@ hr {
 
 .contact {
     font-size: medium;
-}
-
-@media (width > 450px) {
-    .contact .icon-block {
-        display: flex;
-    }
-}
-
-.contact .icon-block {
-    justify-content: center;
 }
 
 .contact .element-of-icon {

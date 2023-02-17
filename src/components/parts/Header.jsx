@@ -73,31 +73,7 @@ const Header = () => {
                                             </div> 
                                                 : <></>}
                             </div>
-                        </Button>
-                        {/* <Dropdown onSelect={selectTheme}>
-                            <Dropdown.Toggle 
-                                className="theme-button"
-                                variant="success" 
-                                id="theme-dropdown-menu" >
-                                <div className="icon-block">
-                                    <Magic className="icon" /> 
-                                    {!mobile ? <div className="element-of-icon">Theme</div> : <></>}
-                                </div>
-                            </Dropdown.Toggle>
-                            <Dropdown.Menu>
-                                {
-                                    themes.map(theme => (
-                                        <Dropdown.Item 
-                                            key={theme.id}
-                                            id="theme-dropdown-item"
-                                            className={theme.name}
-                                            eventKey={theme.name}>
-                                            {theme.name}
-                                        </Dropdown.Item>
-                                    ))
-                                }     
-                            </Dropdown.Menu>
-                        </Dropdown>   */}             
+                        </Button>         
                     </Col>
 
                     <Col xs={4}>
