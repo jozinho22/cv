@@ -3,7 +3,7 @@ const getEducation = () => {
                 french: [
                     {
                         period: "nov 2022 - maintenant",
-                        title : "Java, HTML, JavaScript, CSS, SQL, React/Redux, C++, Python, Responsive Web Design",
+                        title : "JavaScript, React/Redux, Java, HTML, CSS, SQL, C++, Python, Responsive Web Design",
                         desc: "Apprentissage en autoformation avec exercices pratiques",
                         school: "Sololearn",
                         schoolLink: "https://www.sololearn.com/"
@@ -19,7 +19,7 @@ const getEducation = () => {
                 english: [
                     {
                         period: "nov 2022 - now",
-                        title : "Java, HTML, JavaScript, CSS, SQL, React/Redux, C++, Python, Responsive Web Design",
+                        title : "JavaScript, React/Redux, Java, HTML, CSS, SQL, C++, Python, Responsive Web Design",
                         desc: "Self-taught with practical exercises",
                         school: "Sololearn",
                         schoolLink: "https://www.sololearn.com/"

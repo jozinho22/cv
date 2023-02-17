@@ -11,12 +11,6 @@ const getSkills = () => {
 
     return [
         {
-            language: "Java",
-            icon: <DiJava />,
-            frameworks: "Spring, Maven, JPA/Hibernate, REST",
-            level: 70
-        },
-        {
             language: "Javascript",
             icon: <DiJavascript1 />,
             frameworks: "Node, JSON",
@@ -26,6 +20,12 @@ const getSkills = () => {
             language: "ReactJS",
             icon: <DiReact />,
             frameworks: "Redux, MathJax",
+            level: 70
+        },
+                {
+            language: "Java",
+            icon: <DiJava />,
+            frameworks: "Spring, Maven, JPA/Hibernate, REST",
             level: 70
         },
         {
@@ -44,20 +44,21 @@ const getSkills = () => {
             language: "SQL",
             icon: <DiMysql />,
             frameworks : "MySQL, SQL Server, PostgreSQL, Oracle",
-            level: 85
-        },
-        {
-            language: "Python",
-            icon: <DiPython />,
-            frameworks : "NumPy, Pandas, Matplotlib",
-            level: 40
+            level: 80
         },
         {
             language: "Git",
             icon: <DiGit />,
             frameworks : "GitHub, GitLab, Git Bash, Git Fork",
             level: 65
+        },
+        {
+            language: "Python",
+            icon: <DiPython />,
+            frameworks : "NumPy, Pandas, Matplotlib",
+            level: 40
         }
+
     ]
 }
 
