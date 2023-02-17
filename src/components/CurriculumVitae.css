@@ -390,7 +390,9 @@ hr {
 }
 
 /* leasures */
-
+.leasures {
+    text-align: center;
+}
 /* socials */
 .socials {
     display: flex;
@@ -420,6 +422,16 @@ hr {
 
 .contact {
     font-size: medium;
+}
+
+@media (width > 450px) {
+    .contact .icon-block {
+        display: flex;
+    }
+}
+
+.contact .icon-block {
+    justify-content: center;
 }
 
 .contact .element-of-icon {
