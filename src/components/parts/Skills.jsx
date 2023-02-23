@@ -1,6 +1,6 @@
 import React from 'react';
 import { ProgressBar } from 'react-bootstrap';
-import getSkills from './infos/dev/getSkills';
+import getSkills from './infos/dev/getDevSkills';
 import AppContext from '../context/AppContext';
 import getTitles from './infos/getTitles';
 import languageChooser from '../helpers/languageChooser';

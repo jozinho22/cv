@@ -1,5 +1,5 @@
 import React from 'react';
-import getCertifications from "./infos/dev/getCertifications";
+import getCertifications from "./infos/dev/getDevCertifications";
 import { Hourglass, Award, GeoAltFill } from 'react-bootstrap-icons';
 import AppContext from '../context/AppContext';
 import languageChooser from '../helpers/languageChooser';

@@ -7,7 +7,7 @@ import {DiGit} from 'react-icons/di';
 import {DiReact} from 'react-icons/di';
 import {DiPython} from 'react-icons/di';
 
-const getSkills = () => {
+const getDevSkills = () => {
 
     return [
         {
@@ -62,4 +62,4 @@ const getSkills = () => {
     ]
 }
 
-export default getSkills;
+export default getDevSkills;

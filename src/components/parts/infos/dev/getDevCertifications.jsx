@@ -1,4 +1,4 @@
-const getCertifications = () => {
+const getDevCertifications = () => {
     return  {
                 french: [
                     {
@@ -35,4 +35,4 @@ const getCertifications = () => {
             }
 }
 
-export default getCertifications;
+export default getDevCertifications;

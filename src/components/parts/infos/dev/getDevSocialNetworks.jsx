@@ -1,6 +1,10 @@
-const getSocialNetworks = () => {
+const getDevSocialNetworks = () => {
 
     return [
+        {
+            platform: "Linkedin",
+            profileLink: "https://www.linkedin.com/in/josselin-douineau-679320209/"
+        },
         {
             platform: "GitHub",
             profileLink: "https://github.com/jozinho22"
@@ -20,4 +24,4 @@ const getSocialNetworks = () => {
     ]
 }
 
-export default getSocialNetworks;
+export default getDevSocialNetworks;

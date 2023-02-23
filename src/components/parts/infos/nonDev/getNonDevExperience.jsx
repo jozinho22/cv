@@ -1,5 +1,28 @@
 const getNonDevExperience = () => {
+    
     return [
+                {
+                    period: "août 2021 - oct 2022",
+                    company: "Biocoop Le Chat Biotté - Combourg",
+                    companyLink: "https://www.biocooplechatbiotte.com/",
+                    as: "Employé polyvalent fruits-légumes / vrac / caisse",
+                    tools: "CocoBio, IziBio", 
+                    desc: "Réassort, réception des livraisons, accueil/conseil clients, encaissement, nettoyage"
+                },
+                {
+                    period: "juil 2021 - août 2021",
+                    company: "Biocoop Scarabée - Rennes",
+                    companyLink: "https://scarabee-biocoop.fr/",
+                    as: "Chauffeur - livreur (remplacement)",
+                    desc: "Vérification des commandes, livraisons et entretien du véhicule"
+                },
+                {
+                    period: "juin 2021 - juil 2021",
+                    company: "La vie claire - Monfort-sur-Meu",
+                    companyLink: "https://www.lavieclaire.com/",
+                    as: "Employé polyvalent fruits-légumes / vrac / caisse",
+                    desc: "Réassort, réception des livraisons, accueil/conseil clients, encaissement, nettoyage"
+                },
                 {
                     period: "mar 2020 - maintenant",
                     company: "En autodidacte",
@@ -21,21 +44,6 @@ const getNonDevExperience = () => {
                             desc: "(Pendule pour les joueurs d'échecs)"
                         }
                     ]
-                },
-                {
-                    period: "août 2021 - oct 2022",
-                    company: "Biocoop Le Chat Biotté - Combourg",
-                    companyLink: "https://www.biocooplechatbiotte.com/",
-                    as: "Employé polyvalent FL/vrac/caisse",
-                    tools: "CocoBio, IziBio", 
-                    desc: "Réassort, réception des livraisons, accueil/conseil clients, encaissement, nettoyage"
-                },
-                {
-                    period: "juil 2021 - août 2021",
-                    company: "Biocoop Scarabée - Rennes",
-                    companyLink: "https://scarabee-biocoop.fr/",
-                    as: "Chauffeur - livreur (remplacement)",
-                    desc: "Vérification des commandes, livraisons et entretien du véhicule"
                 },
                 {
                     period: "sept 2016 - sept 2018",
@@ -86,13 +94,17 @@ const getNonDevExperience = () => {
                     desc: "Rédaction d'articles techniques dans le domaine de la mobilité électrique"
                 },
                 {
+                    period: "2012 - maintenant",
+                    as: "Professeur de mathématiques",
+                    desc: "Professeur de mathématiques à domicile (par période) - soutien scolaire et renforcement"
+                },
+                {
                     period: "jan 2008 - sept 2008",
                     company: "Casino de Pougues-les-Eaux",
                     companyLink: "https://casino-pougues-les-eaux.fr/",
                     as: "Croupier de Texas Hold'Em",
                     desc: "Croupier de poker (variante Texas Hold'em), gestion du fond de caisse et des litiges"
                 }
-    
             ]
 
 }

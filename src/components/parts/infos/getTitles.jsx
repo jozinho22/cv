@@ -7,7 +7,7 @@ const getTitles = () => {
             certifications: "Certifications",
             socialNetworks: "Réseaux sociaux",
             leasures: "Loisirs",
-            volunteering: "Bénévolat",
+            volunteering: "Bénévolats",
             contact: "Contact"
         },
         english : {
