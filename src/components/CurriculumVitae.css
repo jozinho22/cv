@@ -395,11 +395,6 @@ hr {
 }
 
 /* leasures */
-@media (width < 450px) {
-    .leasures {
-        text-align: center;
-    }
-}
 
 /* socials */
 .socials {
@@ -423,11 +418,6 @@ hr {
 }
 
 /* contact */
-.contactinfo {
-    margin-top: 15px;
-    margin-bottom: 15px;
-}
-
 .contact {
     font-size: medium;
 }

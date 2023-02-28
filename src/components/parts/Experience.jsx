@@ -67,14 +67,17 @@ const Experience = ( {domain} ) => {
                                     }
                                     <div className="achievements">
                                         {job.desc ?
-                                            <div className="icon-block">
-                                                {domain === EnumDomain.DEV ? 
-                                                    <CodeSquare className="icon" /> 
-                                                        : <Boxes className="icon" /> 
-                                                }
-                                                <div className="element-of-icon">{language === "French" ? "Réalisations" : "Achievements"}</div>
+                                            <>
+                                                <div className="icon-block">
+                                                    {domain === EnumDomain.DEV ? 
+                                                        <CodeSquare className="icon" /> 
+                                                            : <Boxes className="icon" /> 
+                                                    }
+                                                    <div className="element-of-icon">{language === "French" ? "Réalisations" : "Achievements"}</div>
+                                                </div>
                                                 <div className="desc">{job.desc}</div>
-                                            </div>  : <></>
+                                            </>  
+                                                : <></>
                                         }
                                     </div>
                                     {

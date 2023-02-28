@@ -35,10 +35,6 @@ const getNonDevExperience = () => {
                             desc: "(Base documentaire mathématique)"
                         },
                         {
-                            url: "https://josselin-douineau-developer.netlify.app/",
-                            webSiteName : "CV"
-                        },
-                        {
                             url: "https://chess-timer-app.netlify.app/",
                             webSiteName : "Chess Timer",
                             desc: "(Pendule pour les joueurs d'échecs)"
