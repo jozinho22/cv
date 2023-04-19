@@ -14,7 +14,7 @@
     text-align: left;
     padding: 20px;
     color: var(--simple-text-color);
-    font-size: large;
+    font-size: var(--text-font-size);
 }
 
 @media(width < 450px) {
@@ -143,7 +143,6 @@ a {
     }
 }
 
-
 .element-of-icon {
     position: relative;
     display: inline-block;
@@ -151,10 +150,10 @@ a {
     font-weight: bold;
 }
 
-.element .icon, .element .icon svg {
+/* .element .icon, .element .icon svg {
     width: 20px;
     height: 20px;
-}
+} */
 
 .element-of-icon-left {
     margin-right: 10px;
@@ -175,8 +174,8 @@ hr {
     /* font-style: italic; */
     text-align: justify;
     width: 80%;
-    margin-top: 5px;
-    margin-left: 50px;
+/*     margin-top: 5px;
+ */    margin-left: 50px;
     white-space: pre-line;   
     word-wrap: break-word;
     -moz-hyphens:auto; 
@@ -218,10 +217,10 @@ hr {
 
 /* title */
 .title {
-    font-size: 20px;
+    font-size: var(--title-font-size);
     font-weight: bolder;
     text-transform: uppercase;
-    padding: 10px;
+    padding: 7px 50px 7px 50px;
     color: var(--title-color);
     margin-top: 30px;
     margin-bottom: 30px;
@@ -232,7 +231,7 @@ hr {
     position: relative;
     left: 50%;
     transform: translateX(-50%);
-    width: 40%;
+    width: fit-content;
 }
 
 @media (width < 450px) {
@@ -258,9 +257,9 @@ hr {
 
 .intro img {
     float: right;
-    width: 150px;
-    height: 150px;
-    border-radius: 75px;
+    width: 120px;
+    height: 120px;
+    border-radius: 60px;
 }
 
 @media(width < 450px) {
@@ -418,10 +417,6 @@ hr {
 }
 
 /* contact */
-.contact {
-    font-size: medium;
-}
-
 .contact .element-of-icon {
     font-weight: normal;
 }

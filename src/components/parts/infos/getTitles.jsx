@@ -2,6 +2,7 @@ const getTitles = () => {
     return {
         french : {
             skills: "Compétences",
+            languages: "Langues",
             experience: "Expériences",
             education: "Diplômes",
             certifications: "Certifications",
@@ -12,6 +13,7 @@ const getTitles = () => {
         },
         english : {
             skills: "Skills",
+            languages: "Languages",
             experience: "Experience",
             education: "Education",
             certifications: "Certifications",

@@ -7,6 +7,13 @@ const pageStyle = () => {
                 print-color-adjust: exact; 
                 -webkit-print-color-adjust: exact; 
                 background-color: var(--back-color-1) !important;
+                
+            }
+            .curriculum-vitae-container {
+                font-size: 11px !important;
+            }
+            .title {
+                font-size: 11px !important;
             }
         }
 

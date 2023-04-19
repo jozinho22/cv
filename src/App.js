@@ -12,6 +12,7 @@ function App() {
 
   const [theme, setTheme] = React.useState(getThemeIfStoredThemeExists(JSON.parse(sessionStorage.getItem('josselin-douineau-developer-theme'))) ? JSON.parse(sessionStorage.getItem('josselin-douineau-developer-theme')) : "Blank");
   const [language, setLanguage] = React.useState("French");
+
   const [domain] = React.useState(
     process.env.NODE_ENV === 'development' ?
         EnumDomain.NON_DEV 

@@ -6,8 +6,10 @@ import pageStyle from '../helpers/pageStyle';
 import {getThemes} from '../styles/getThemes';
 import AppContext from '../context/AppContext';
 import { FilePdfFill, Globe, Magic } from 'react-bootstrap-icons';
+import EnumDomain from '../helpers/EnumDomain';
 
-const Header = () => {
+
+const Header = ( {domain, poste} ) => {
 
     const {theme, updateTheme, language, updateLanguage} = React.useContext(AppContext);
     var catchedDiv = {};
@@ -48,7 +50,7 @@ const Header = () => {
         {
             content: () => buildElementToPrint(), 
             pageStyle: pageStyle(),
-            documentTitle: 'Josselin DOUINEAU - developer',
+            documentTitle: domain ===  EnumDomain.DEV ? 'Josselin DOUINEAU - developer' : `Josselin DOUINEAU - ${poste} - CV`,
             onAfterPrint: () => destroyElementToPrint()
         }
     );

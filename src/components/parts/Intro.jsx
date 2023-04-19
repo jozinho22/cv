@@ -6,7 +6,7 @@ import getDevIntro from './infos/dev/getDevIntro';
 import getNonDevIntro from './infos/nonDev/getNonDevIntro';
 import EnumDomain from '../helpers/EnumDomain';
 
-const Intro = ( {domain} ) => {
+const Intro = ( {domain, poste} ) => {
 
     const {language} = React.useContext(AppContext);
     var intro = domain === EnumDomain.DEV ? languageChooser(language, getDevIntro()) : getNonDevIntro() ;
@@ -14,11 +14,19 @@ const Intro = ( {domain} ) => {
     return  <div className="intro">
                 <img src={photo} alt=""/>
                 <div className="me">{intro.me}</div>
-                <div className="summary">
-                    {intro.summary.map((line, index) => {
-                        return <div key={index}><p>{line}.</p></div>
-                    })} 
-                </div>
+                {
+                    domain === EnumDomain.DEV ? 
+                        <div className="summary">
+                            {intro.summary.map((line, index) => {
+                                return <div key={index}><p>{line}.</p></div>
+                            })} 
+                        </div>
+                        : 
+                            <div className="summary">
+                                {poste} 
+                            </div>
+                }
+                
             </div>
 
 }
