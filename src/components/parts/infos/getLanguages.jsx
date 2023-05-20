@@ -8,7 +8,7 @@ const getLeasures = () => {
                                 },
                                 {
                                     language : "Anglais",
-                                    level: 60
+                                    level: 70
                                 },
                                 {
                                     language : "Espagnol",
@@ -23,7 +23,7 @@ const getLeasures = () => {
                                 },
                                 {
                                     language : "English",
-                                    level: 60
+                                    level: 70
                                 },
                                 {
                                     language : "Spanish",

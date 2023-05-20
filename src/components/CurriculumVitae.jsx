@@ -17,7 +17,7 @@ import Volunteering from './parts/Volunteering';
 
 const CurriculumVitae = ( {domain} ) => {
 
-    var poste = "Réceptionniste polyvalent en hôtellerie";
+    var poste = "Administrateur MES";
   
     return (
         <Container className="curriculum-vitae-container">

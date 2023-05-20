@@ -2,7 +2,7 @@ const getDevSocialNetworks = () => {
 
     return [
         {
-            platform: "Linkedin",
+            platform: "LinkedIn",
             profileLink: "https://www.linkedin.com/in/josselin-douineau-679320209/"
         },
         {
@@ -18,8 +18,12 @@ const getDevSocialNetworks = () => {
             profileLink: "https://www.chess.com/member/jozinho22"
         },
         {
-            platform: "Sololearn",
+            platform: "SoloLearn",
             profileLink: "https://www.sololearn.com/profile/27697996"
+        },
+        {
+            platform: "CodinGame",
+            profileLink: "https://www.codingame.com/profile/46e69964dfc968b62eb806d7b58a5da26685473"
         }
     ]
 }
