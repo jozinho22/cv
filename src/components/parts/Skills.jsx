@@ -12,8 +12,7 @@ const Skills = ({domain}) => {
 
     const {language} = React.useContext(AppContext);
     var title = languageChooser(language, getTitles()).skills;
-    var skills = domain === EnumDomain.DEV ? languageChooser(language, getDevSkills()) : getNonDevSkills();
-
+    var skills = domain === EnumDomain.DEV ? getDevSkills() : getNonDevSkills();
 
     return  <div className="page-break">
                 <div className="title">{title}</div>

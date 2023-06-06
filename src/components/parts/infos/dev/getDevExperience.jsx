@@ -16,6 +16,10 @@ const getDevExperience = () => {
                             url: "https://jozinho22.github.io/chess-timer",
                             webSiteName : "Chess Timer",
                             desc: "(Pendule pour les joueurs d'échecs)"
+                        },
+                        {
+                            url: "https://jozinho22.github.io/cv",
+                            webSiteName : "Mon CV en tant que développeur"
                         }
                     ]
                 },
@@ -63,6 +67,10 @@ const getDevExperience = () => {
                         url: "https://jozinho22.github.io/chess-timer",
                         webSiteName : "Chess Timer",
                         desc: "(Timer for chess players)"
+                    },
+                    {
+                        url: "https://jozinho22.github.io/cv",
+                        webSiteName : "My CV as developer"
                     }
                 ]
             },

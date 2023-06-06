@@ -23,12 +23,12 @@ const CurriculumVitae = ( {domain} ) => {
         <Container className="curriculum-vitae-container">
             <Header domain={domain} poste={poste} />
             <Intro domain={domain} poste={poste} />
-            {
+            {/* {
                 domain === EnumDomain.DEV ? 
                     <Skills />
                         : <></>
-            }
-            {/* <Skills domain={domain}/> */}
+            } */}
+            <Skills domain={domain}/>
             <Experience domain={domain} />
             {
                 domain === EnumDomain.DEV ? 
