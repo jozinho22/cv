@@ -1,15 +1,32 @@
-import favicon512 from '../assets/favicon-brasil-512.png';
+import React from 'react';
+import photo from '../assets/photo-profil.jpeg';
+import AppContext from '../context/AppContext';
+import languageChooser from '../helpers/languageChooser';
+import getDevIntro from './infos/dev/getDevIntro';
+import getNonDevIntro from './infos/nonDev/getNonDevIntro';
+import EnumDomain from '../helpers/EnumDomain';
 
-const Intro = () => {
+const Intro = ( {domain, poste} ) => {
+
+    const {language} = React.useContext(AppContext);
+    var intro = domain === EnumDomain.DEV ? languageChooser(language, getDevIntro()) : getNonDevIntro() ;
 
     return  <div className="intro">
-                <img src={favicon512} alt = "" height="100" width="100px"/>
-                <div className="heading">Josselin DOUINEAU</div>
-                <div className="prof">Developer</div>
-                <div className="summary">
-                    Hi, I'm a Java developer. 
-                    I do like dark mode while coding...
-                </div>
+                <img src={photo} alt=""/>
+                <div className="me">{intro.me}</div>
+                {
+                    domain === EnumDomain.DEV ? 
+                        <div className="summary">
+                            {intro.summary.map((line, index) => {
+                                return <div key={index}><p>{line}.</p></div>
+                            })} 
+                        </div>
+                        : 
+                            <div className="summary">
+                                {poste} 
+                            </div>
+                }
+                
             </div>
 
 }

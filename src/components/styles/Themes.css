@@ -1,0 +1,79 @@
+.App {
+    --yellow-button-color: rgb(216, 216, 52);
+    --yellow-button-hover-color: rgb(190, 190, 44);
+    --yellow-button-shadow-color: rgb(138, 138, 53);
+    --yellow-button-shadow-darker-color: rgb(83, 83, 43);
+
+    --blue-button-color: rgb(52, 77, 216);
+    --blue-button-hover-color: rgb(52, 69, 161);
+    --blue-button-shadow-color: rgb(50, 61, 124);
+    --blue-button-shadow-darker-color: rgb(41, 47, 82);
+
+    --green-button-color: rgb(46, 148, 52);
+    --green-button-hover-color: rgb(35, 112, 40);
+    --green-button-shadow-color: rgb(36, 94, 40);
+    --green-button-shadow-darker-color: rgb(27, 54, 29);
+}
+
+.Blank {
+    --back-color-1: rgb(255, 255, 255); 
+    --back-color-2: rgb(254, 254, 255); 
+    --back-color-3: rgb(255, 255, 255); 
+    --back-hover-color : rgb(200, 200, 206); 
+    color: var(--simple-text-color) !important;
+    --simple-text-color: rgb(63, 63, 59);
+    --title-color: rgb(78, 69, 64);
+    --intro-background-color: rgb(204, 201, 209);
+    --highlight-color: rgb(86, 78, 185);
+    --hyperlink-color: rgb(15, 146, 58);
+    --progressbar-background-color: rgb(179, 182, 181);
+
+    --printer-button-color: var(--yellow-button-color);
+    --printer-button-hover-color: var(--yellow-button-hover-color);
+    --printer-button-shadow-color: var(--yellow-button-shadow-color);
+    --theme-button-color: var(--green-button-color);
+    --theme-button-hover-color: var(--green-button-hover-color);
+    --theme-button-shadow-color: var(--green-button-shadow-color);
+    --language-button-color: var(--blue-button-color);
+    --language-button-hover-color: var(--blue-button-hover-color);
+    --language-button-shadow-color: var(--blue-button-shadow-color);
+}
+
+.Darcula {
+    --back-color-1: rgb(59, 55, 55); 
+    --back-color-2: rgb(77, 74, 80); 
+    --back-color-3: rgb(95, 91, 99); 
+    --back-hover-color : rgb(50, 50, 51); 
+    color: var(--simple-text-color) !important;
+    --simple-text-color: rgb(197, 197, 193);
+    --title-color: rgb(164, 168, 166);
+    --intro-background-color: rgb(102, 103, 104);
+    --highlight-color: rgb(165, 150, 82);
+    --hyperlink-color: rgb(167, 188, 231);
+    --progressbar-background-color: rgb(179, 182, 181);
+
+    --printer-button-color: var(--yellow-button-hover-color);
+    --printer-button-hover-color: var(--yellow-button-shadow-color);
+    --printer-button-shadow-color: var(--yellow-button-shadow-darker-color);
+    --theme-button-color: var(--green-button-hover-color);
+    --theme-button-hover-color: var(--green-button-shadow-color);
+    --theme-button-shadow-color: var(--green-button-shadow-darker-color);
+    --language-button-color: var(--blue-button-hover-color);
+    --language-button-hover-color: var(--blue-button-shadow-color);
+    --language-button-shadow-color: var(--blue-button-shadow-darker-color)
+}
+
+/* .Purple {
+    --back-color-1: rgb(115, 57, 153); 
+    --back-color-2: rgb(133, 62, 199); 
+    --back-color-3: rgb(157, 119, 190);
+    --back-hover-color : rgb(143, 50, 206); 
+    color: var(--simple-text-color) !important; 
+    --simple-text-color: rgb(224, 224, 219);
+    --title-color: rgb(252, 243, 127);
+    --intro-background-color: rgb(151, 148, 155);
+    --highlight-color: rgb(221, 212, 86);
+    --hyperlink-color: rgb(140, 233, 143);
+    --progressbar-background-color: rgb(170, 197, 184);
+}
+ */
