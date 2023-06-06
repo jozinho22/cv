@@ -8,12 +8,12 @@ const getDevExperience = () => {
                     tools: "ReactJS, Bootstrap, MathJax, MySQL, HTML5, Spring, JPA/Hibernate, Maven, CSS3, Helmet, Git Bash, GitHub",                     desc: "Auto-formation sur de nouvelles technologies et développement de projets personnels",
                     references: [
                         {
-                            url: "https://github.com/jozinho22/maths/",
+                            url: "https://jozinho22.github.io/maths",
                             webSiteName : "Ma Thematique",
                             desc: "(Base documentaire mathématique)"
                         },
                         {
-                            url: "https://github.com/jozinho22/chess-timer/",
+                            url: "https://jozinho22.github.io/chess-timer",
                             webSiteName : "Chess Timer",
                             desc: "(Pendule pour les joueurs d'échecs)"
                         }
@@ -55,12 +55,12 @@ const getDevExperience = () => {
                 desc: "Self-teaching about new technologies and working on personal projects",
                 references: [
                     {
-                        url: "https://github.com/jozinho22/maths/",
+                        url: "https://jozinho22.github.io/maths",
                         webSiteName : "Ma Thematique",
                         desc: "(Documentary library about mathematics)"
                     },
                     {
-                        url: "https://github.com/jozinho22/chess-timer/",
+                        url: "https://jozinho22.github.io/chess-timer",
                         webSiteName : "Chess Timer",
                         desc: "(Timer for chess players)"
                     }

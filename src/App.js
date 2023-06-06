@@ -15,7 +15,7 @@ function App() {
 
   const [domain] = React.useState(
     process.env.NODE_ENV === 'development' ?
-        EnumDomain.DEV 
+        EnumDomain.NON_DEV 
             :   EnumDomain.DEV 
     );
 

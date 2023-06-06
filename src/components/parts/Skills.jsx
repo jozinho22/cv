@@ -1,15 +1,19 @@
 import React from 'react';
 import { ProgressBar } from 'react-bootstrap';
-import getSkills from './infos/dev/getDevSkills';
+import getDevSkills from './infos/dev/getDevSkills';
+import getNonDevSkills from './infos/nonDev/getNonDevSkills';
+
 import AppContext from '../context/AppContext';
 import getTitles from './infos/getTitles';
 import languageChooser from '../helpers/languageChooser';
+import EnumDomain from '../helpers/EnumDomain';
 
-const Skills = () => {
+const Skills = ({domain}) => {
 
     const {language} = React.useContext(AppContext);
     var title = languageChooser(language, getTitles()).skills;
-    var skills = getSkills();
+    var skills = domain === EnumDomain.DEV ? languageChooser(language, getDevSkills()) : getNonDevSkills();
+
 
     return  <div className="page-break">
                 <div className="title">{title}</div>

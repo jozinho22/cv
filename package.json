@@ -5,6 +5,7 @@
   "browser": {
     "[module-name]": false
   },
+  "homepage": "https://jozinho22.github.io/maths",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
@@ -28,10 +29,11 @@
   },
   "scripts": {
     "start": "BROWSER=NONE react-scripts start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -b dev -d build",
     "build": "CI=false react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "postbuild": "react-spa-prerender"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
@@ -52,6 +54,7 @@
     ]
   },
   "devDependencies": {
+    "gh-pages": "^5.0.0",
     "webpack-cli": "^5.0.1"
   }
 }

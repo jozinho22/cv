@@ -13,7 +13,7 @@ const getContact = () => {
                     icon : <TelephoneFill />
                 },
                 {
-                    info: "josselin.douineau@gmail.com",
+                    info: "josselin.douineau.1987@gmail.com",
                     type: "courriel",
                     icon : <Envelope />
                 }
