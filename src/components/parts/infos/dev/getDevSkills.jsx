@@ -5,8 +5,8 @@ import {DiCss3} from 'react-icons/di';
 import {DiMysql} from 'react-icons/di';
 import {DiGit} from 'react-icons/di';
 import {DiReact} from 'react-icons/di';
-import {DiPython} from 'react-icons/di';
-
+/* import {DiPython} from 'react-icons/di';
+ */
 const getDevSkills = () => {
 
     return [
@@ -51,13 +51,13 @@ const getDevSkills = () => {
             icon: <DiGit />,
             frameworks : "GitHub, GitLab, Git Bash, Git Fork",
             level: 65
-        },
+        }/* ,
         {
             language: "Python",
             icon: <DiPython />,
             frameworks : "NumPy, Pandas, Matplotlib",
             level: 40
-        }
+        } */
 
     ]
 }

@@ -24,24 +24,6 @@ const getNonDevExperience = () => {
                     desc: "Réassort, réception des livraisons, accueil/conseil clients, encaissement, nettoyage"
                 },
                 {
-                    period: "mar 2020 - maintenant",
-                    company: "En autodidacte",
-                    as: "Développeur Fullstack",
-                    tools: "ReactJS, Bootstrap, MathJax, MySQL, HTML5, Spring, JPA/Hibernate, Maven, CSS3, Helmet, Git Bash, GitHub",                     desc: "Auto-formation sur de nouvelles technologies et développement de projets personnels",
-                    references: [
-                        {
-                            url: "https://github.com/jozinho22/maths/",
-                            webSiteName : "Ma Thematique",
-                            desc: "(Base documentaire mathématique)"
-                        },
-                        {
-                            url: "https://github.com/jozinho22/chess-timer/",
-                            webSiteName : "Chess Timer",
-                            desc: "(Pendule pour les joueurs d'échecs)"
-                        }
-                    ]
-                },
-                {
                     period: "sept 2016 - sept 2018",
                     company: "La SACEM - Paris",
                     companyLink: "https://www.sacem.fr/",
@@ -88,11 +70,6 @@ const getNonDevExperience = () => {
                     as: "Rédacteur technique (stage de L3)",
                     tools: "Word, Excel", 
                     desc: "Rédaction d'articles techniques dans le domaine de la mobilité électrique"
-                },
-                {
-                    period: "2012 - maintenant",
-                    as: "Professeur de mathématiques",
-                    desc: "Professeur de mathématiques à domicile (par période) - soutien scolaire et renforcement"
                 },
                 {
                     period: "jan 2008 - sept 2008",

@@ -11,8 +11,6 @@ const Languages = () => {
     var title = languageChooser(language, getTitles()).languages;
     var languages = languageChooser(language, getLanguages());
 
-    console.log(languages)
-
     return  <div className="page-break">
                 <div className="title">{title}</div>
                 <div className="languages">

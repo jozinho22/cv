@@ -17,19 +17,20 @@ import Volunteering from './parts/Volunteering';
 
 const CurriculumVitae = ( {domain} ) => {
 
-    var poste = "Professeur de mathématiques";
+    var poste = "Professeur de SII option Informatique et Numérique";
   
     return (
         <Container className="curriculum-vitae-container">
             <Header domain={domain} poste={poste} />
             <Intro domain={domain} poste={poste} />
-            {/* {
+            {
                 domain === EnumDomain.DEV ? 
                     <Skills />
                         : <></>
-            } */}
-            <Skills domain={domain}/>
+            }
+            {/* <Skills domain={domain}/> */}
             <Experience domain={domain} />
+            <Experience domain={domain} pro/>
             {
                 domain === EnumDomain.DEV ? 
                     <></>
