@@ -5,14 +5,14 @@ const getDevExperience = () => {
                     period: "jan 2021 - avr 2021",
                     company: "Open",
                     as: "Développeur Java/ReactJS",
-                    tools: "Spring, Maven, ReactJS, PostgreSQL, Git Fork, GitLab".split(","), 
+                    tools: "Spring, Maven, ReactJS, PostgreSQL, Git Fork, GitLab", 
                     desc: "J'ai travaillé sur un générateur d'applications mobiles"
                 },
                 {
                     period: "fév 2020 - avr 2020",
                     company: "Yoni",
                     as: "Développeur Java",
-                    tools: "Spring, JHipster, Maven, GitLab".split(","), 
+                    tools: "Spring, JHipster, Maven, GitLab", 
                     desc: "J'ai aidé au développement de spécifications dans le domaine de la bijouterie"
                 },
                 {
@@ -29,14 +29,14 @@ const getDevExperience = () => {
                 period: "jan 2021 - apr 2021",
                 company: "Open",
                 as: "Java/ReactJS developer",
-                tools: "Spring, Maven, ReactJS, PostgreSQL, Git Fork, GitLab".split(","), 
+                tools: "Spring, Maven, ReactJS, PostgreSQL, Git Fork, GitLab", 
                 desc: "I worked on a mobile app generator"
             },
             {
                 period: "feb 2020 - apr 2020",
                 company: "Yoni",
                 as: "Java developer",
-                tools: "Spring, JHipster, Maven, GitLab".split(","), 
+                tools: "Spring, JHipster, Maven, GitLab", 
                 desc: "I helped to develop specifications for a jewelry store"
             }, 
             {
@@ -44,7 +44,7 @@ const getDevExperience = () => {
                 company: "La SACEM - Paris",
                 companyLink: "https://www.sacem.fr/",
                 as: "Java/SQL developer",
-                tools: "JDBC, Restlet, XStream, JUnit/Cucumber, Maven, PL/SQL, Git Bash, GitLab".split(","), 
+                tools: "JDBC, Restlet, XStream, JUnit/Cucumber, Maven, PL/SQL, Git Bash, GitLab", 
                 desc: "Maintenance and development of three applications (clients management application, pricing application and back-end environment of a mobile app)"
             }
         ]

@@ -29,8 +29,17 @@ const CurriculumVitae = ( {domain} ) => {
                         : <></>
             }
             {/* <Skills domain={domain}/> */}
-            <Experience domain={domain} />
-            <Experience domain={domain} pro/>
+            {
+                domain === EnumDomain.DEV ? 
+                    <>
+                        <Experience domain={domain} pro/>
+                        <Experience domain={domain} />
+                    </>
+                        :   <>
+                                <Experience domain={domain} />
+                                <Experience domain={domain} pro/>
+                            </>
+            }
             {
                 domain === EnumDomain.DEV ? 
                     <></>
