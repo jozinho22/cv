@@ -7,7 +7,7 @@ const getEducation = () => {
                         titleLink: "https://www.ipgp.fr/fr/master/genie-de-lenvironnement-industrie-gei",
                         school: "Université Paris 7 Diderot",
                         schoolLink: "https://u-paris.fr/en/",
-                        desc: "Apprentissage des processus de dépollution des milieux et d'amélioration de la performance énergétique des bâtiments"
+                        desc: "Apprentissage des processus de dépollution des milieux et d'amélioration de la performance énergétique des bâtiments. \n Programmation informatique sous Matlab."
                     }
                 ],
                 english: [
@@ -17,7 +17,7 @@ const getEducation = () => {
                         titleLink: "https://www.ipgp.fr/fr/master/genie-de-lenvironnement-industrie-gei",
                         school: "Université Paris 7 Diderot",
                         schoolLink: "https://u-paris.fr/en/",
-                        desc: "Learning depollution and building energy performance processes"
+                        desc: "Learning depollution and building energy performance processes. \n Coding with Mathlab."
                     }
                 ]
             }

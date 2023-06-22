@@ -7,7 +7,7 @@ const getTitles = () => {
             experience: "Expériences professionnelles",
             education: "Diplômes",
             certifications: "Certifications",
-            socialNetworks: "Réseaux sociaux",
+            socialNetworks: "Réseaux sociaux / Apps",
             leasures: "Loisirs",
             volunteering: "Bénévolats",
             contact: "Contact"
@@ -19,7 +19,7 @@ const getTitles = () => {
             experience: "Professional experience",
             education: "Education",
             certifications: "Certifications",
-            socialNetworks: "Social networks",
+            socialNetworks: "Social networks - Apps",
             leasures: "Leasures",
             volunteering: "Volunteering",
             contact: "Contact"

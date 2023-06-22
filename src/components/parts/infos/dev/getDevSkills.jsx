@@ -7,6 +7,9 @@ import {DiGit} from 'react-icons/di';
 import {DiReact} from 'react-icons/di';
 /* import {DiPython} from 'react-icons/di';
  */
+import {RiFileExcel2Line} from 'react-icons/ri';
+import {DiNodejsSmall} from 'react-icons/di';
+
 const getDevSkills = () => {
 
     return [
@@ -22,7 +25,12 @@ const getDevSkills = () => {
             frameworks: "Redux, MathJax",
             level: 70
         },
-                {
+        {
+            language: "NodeJS",
+            icon: <DiNodejsSmall />,
+            level: 60
+        },
+        {
             language: "Java",
             icon: <DiJava />,
             frameworks: "Spring, Maven, JPA/Hibernate, REST",
@@ -51,13 +59,14 @@ const getDevSkills = () => {
             icon: <DiGit />,
             frameworks : "GitHub, GitLab, Git Bash, Git Fork",
             level: 65
-        }/* ,
+        },
         {
-            language: "Python",
-            icon: <DiPython />,
-            frameworks : "NumPy, Pandas, Matplotlib",
-            level: 40
-        } */
+            language: "Excel/BVA",
+            icon: <RiFileExcel2Line />,
+            level: 65
+        },
+        {
+        }   
 
     ]
 }

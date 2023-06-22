@@ -289,9 +289,18 @@ hr {
     vertical-align: unset;
 }
 
+.skills .icon svg {
+    width: 25px;
+    height: 25px;
+}
+
 @media (width < 450px) {
     .skills .icon-block {
         justify-content: center;
+    }
+    .skills .icon svg {
+        width: 20px;
+        height: 20px;
     }
 }
 
@@ -391,6 +400,36 @@ hr {
 /* education */
 .education .element {
     margin-bottom: 20px;
+}
+
+/* languages */
+.languages {
+    display: flex;
+    flex-wrap: wrap;
+}
+.languages .element {
+    flex: 1 0 21%; 
+    margin-left: 0px;
+}
+
+@media (width < 450px) {
+   .languages .element {
+        flex: 1 0 100%; 
+    } 
+}
+
+.languages .element .progress {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.languages .element .text-block {
+    text-align: center;
+}
+
+.languages .element-of-text {
+    margin-bottom: 10px;
 }
 
 /* leasures */

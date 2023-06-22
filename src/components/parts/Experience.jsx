@@ -10,13 +10,10 @@ import getExtraProExperience from './infos/getExtraProExperience';
 
 const Experience = ( {domain, pro} ) => {
 
-    console.log(pro)
-
     const {language} = React.useContext(AppContext);
     var title = pro ? languageChooser(language, getTitles()).experience : languageChooser(language, getTitles()).extraProExperience;
     var jobs = pro ? (domain === EnumDomain.DEV ? languageChooser(language, getDevExperience()) : getNonDevExperience()) : languageChooser(language, getExtraProExperience());
 
-    console.log(jobs)
     return  <div className="page-break">
                 <div className="title">{title}</div>
                 <div className="experience">

@@ -1,9 +1,8 @@
 import React from 'react';
-import { Container, Button, Row, Col, Dropdown } from 'react-bootstrap';
+import { Container, Button, Row, Col } from 'react-bootstrap';
 import { useReactToPrint } from "react-to-print";
 import pageStyle from '../helpers/pageStyle';
 
-import {getThemes} from '../styles/getThemes';
 import AppContext from '../context/AppContext';
 import { FilePdfFill, Globe, Magic } from 'react-bootstrap-icons';
 import EnumDomain from '../helpers/EnumDomain';

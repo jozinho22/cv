@@ -24,13 +24,9 @@ const Skills = ({domain}) => {
                                         <div className="icon">{skill.icon}</div>
                                         <div className="element-of-icon">{skill.language}</div>
                                     </div>
-                                    <ProgressBar now={skill.level} />
-                                    {/* <div className="frameworks">
-                                        {skill.frameworks ? 
-                                            `(${skill.frameworks})` :
-                                                <></>
-                                        }
-                                    </div>  */}  
+                                    {
+                                        skill.level ? <ProgressBar now={skill.level} /> : <></>
+                                    }
                                 </div>   
                     })
                 }
