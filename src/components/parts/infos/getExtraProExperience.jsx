@@ -5,7 +5,7 @@ const getExtraProExperience = () => {
                     period: "mar 2020 - maintenant",
                     company: "En autodidacte",
                     as: "Développeur Fullstack",
-                    tools: "JavaScript (ReactJS, NodeJS, MathJax, Helmet), Java (Spring, JPA/Hibernate, Maven), HTML5, CSS3, SQL (MySQL, SQL Server, Oracle), Bootstrap, Git (Git Bash, GitHub)",                     
+                    tools: " - JavaScript (ReactJS, NodeJS, AngularJS, Express, Sequelize, MathJax, Helmet), \n - Java (Spring, JPA/Hibernate, Maven),  \n - HTML5, CSS3, Bootstrap  \n - SQL (PostgreSQL, MySQL, SQL Server, Oracle),  \n - Git (Git Bash, GitHub, GitLab, Git Fork)",                     
                     desc: "Auto-formation sur de nouvelles technologies et développement de projets personnels",
                     references: [
                         {
@@ -17,11 +17,11 @@ const getExtraProExperience = () => {
                             url: "https://jozinho22.github.io/chess-timer",
                             webSiteName : "Chess Timer",
                             desc: "(Pendule pour les joueurs d'échecs)"
-                        },
+                        }/* ,
                         {
                             url: "https://jozinho22.github.io/cv",
                             webSiteName : "Mon CV en tant que développeur"
-                        }
+                        } */
                     ]
                 },
                 {
@@ -35,7 +35,7 @@ const getExtraProExperience = () => {
                 period: "mar 2020 - now",
                 company: "Self-taught",
                 as: "Fullstack developer",
-                tools: "JavaScript (ReactJS, NodeJS, MathJax, Helmet), Java (Spring, JPA/Hibernate, Maven), HTML5, CSS3, SQL (MySQL, SQL Server, Oracle), Bootstrap, Git (Git Bash, GitHub)",                     
+                tools: "JavaScript (ReactJS, NodeJS, AngularJS, Express, Sequelize, MathJax, Helmet), Java (Spring, JPA/Hibernate, Maven), HTML5, CSS3, SQL (PostgreSQL, MySQL, SQL Server, Oracle), Git (Git Bash, GitHub, GitLab, Git Fork), Bootstrap",           
                 desc: "Self-teaching about new technologies and working on personal projects",
                 references: [
                     {
@@ -47,11 +47,11 @@ const getExtraProExperience = () => {
                         url: "https://jozinho22.github.io/chess-timer",
                         webSiteName : "Chess Timer",
                         desc: "(Timer for chess players)"
-                    },
+                    }/* ,
                     {
                         url: "https://jozinho22.github.io/cv",
                         webSiteName : "My CV as developer"
-                    }
+                    } */
                 ]
             },
             {

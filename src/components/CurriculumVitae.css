@@ -184,6 +184,10 @@ hr {
     hyphens:auto;
 }
 
+.hidden {
+    visibility: hidden;
+}
+
 /* .display-flex {
     display: flex;
     flex-wrap: wrap;
@@ -305,17 +309,13 @@ hr {
 }
 
 .skills .element {
-    flex: 1 0 21%; 
-    margin-left: 0px;
-}
-
-.skills .element-of-icon {
-    font-weight: normal;;
+    flex: 0 0 50%; 
+    margin-left: 0px; 
 }
 
 @media (width < 450px) {
    .skills .element {
-        flex: 1 0 40%; 
+        flex: 1 0 100%; 
     } 
 }
 
@@ -323,20 +323,20 @@ hr {
     text-align: center;
 }
 
-.skills .element .progress {
+.skills .element .progress, .progress {
     position: relative;
     left: 50%;
     transform: translateX(-50%);
-}
-
-.progress {
-    width: 60%;
+    height: 20px;
+    width: 50%;
     background-color:var(--progressbar-background-color) !important;
+    border-radius: 15px;
 }
 
 @media(width < 450px) {
-    .progress {
+    .skills .element .progress , .progress {
         width: 70%;
+        height: 20px;
     }
 }
 
@@ -344,16 +344,10 @@ hr {
     background-color:var(--highlight-color) !important;
 }
 
-.frameworks {
-    font-size: medium;
-    padding-left: 25px;
-    text-align: left;
-}
-
-@media (width < 450px) {
-    .frameworks {
-        font-size: small;
-    }
+.skills .desc {
+    padding-top: 5px;
+    margin: 0 auto;
+    text-align: center;
 }
 
 /* experience */

@@ -9,13 +9,15 @@ const pageStyle = () => {
                 background-color: var(--back-color-1) !important;
             }
             .curriculum-vitae-container {
-                font-size: 11px !important;
+                font-size: 13px !important;
             }
             .title {
-                font-size: 11px !important;
+                font-size: 15px !important;
             }
             .page-break {
-                
+                page-break-after: auto;
+            }
+            .element {
                 page-break-inside: avoid;
             }
         }

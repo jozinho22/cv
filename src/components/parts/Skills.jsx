@@ -27,6 +27,12 @@ const Skills = ({domain}) => {
                                     {
                                         skill.level ? <ProgressBar now={skill.level} /> : <></>
                                     }
+                                    {
+                                        skill.frameworks ? 
+                                            <div className="desc">({skill.frameworks})</div>
+                                                :   <div className="desc hidden"> rien </div>
+                                    }
+                                    
                                 </div>   
                     })
                 }

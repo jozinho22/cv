@@ -7,15 +7,7 @@ const getDevExperience = () => {
                     companyLink: "https://www.open.global/",
                     as: "Développeur Java/ReactJS",
                     tools: "Spring, Maven, ReactJS, PostgreSQL, Git Fork, GitLab", 
-                    desc: "J'ai travaillé sur un générateur d'applications mobiles"
-                },
-                {
-                    period: "fév 2020 - avr 2020",
-                    company: "Yoni",
-                    companyLink: "https://www.yoni.fr/",
-                    as: "Développeur Java",
-                    tools: "Spring, JHipster, Maven, GitLab", 
-                    desc: "J'ai aidé au développement de spécifications dans le domaine de la bijouterie"
+                    desc: "J'ai travaillé sur un générateur d'applications mobiles avec ReactJs ainsi que sur le back-end de cette application développé en Java"
                 },
                 {
                     period: "sept 2016 - sept 2018",
@@ -33,16 +25,8 @@ const getDevExperience = () => {
                 companyLink: "https://www.open.global/",
                 as: "Java/ReactJS developer",
                 tools: "Spring, Maven, ReactJS, PostgreSQL, Git Fork, GitLab", 
-                desc: "I worked on a mobile app generator"
+                desc: "I worked on a mobile app generator with ReactJs as well as the back-end part developed in Java"
             },
-            {
-                period: "feb 2020 - apr 2020",
-                company: "Yoni",
-                companyLink: "https://www.yoni.fr/",
-                as: "Java developer",
-                tools: "Spring, JHipster, Maven, GitLab", 
-                desc: "I helped to develop specifications for a jewelry store"
-            }, 
             {
                 period: "sept 2016 - sept 2018",
                 company: "La SACEM - Paris",
