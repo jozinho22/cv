@@ -2,12 +2,12 @@ const getDevSkills = () => {
 
     return [
         {
-            language: "IziBio",
-            level: 75
+            language: "QGIS/ArcGIS",
+            level: 65
         },
         {
-            language: "Connaissances produits Biocoop",
-            level: 70
+            language: "PostgreSQL",
+            level: 75
         },
         {
             language: "Excel/VBA",

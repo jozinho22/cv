@@ -327,7 +327,7 @@ hr {
     position: relative;
     left: 50%;
     transform: translateX(-50%);
-    height: 20px;
+    height: 18px;
     width: 50%;
     background-color:var(--progressbar-background-color) !important;
     border-radius: 15px;

@@ -5,7 +5,7 @@ const getExtraProExperience = () => {
                     period: "mar 2020 - maintenant",
                     company: "En autodidacte",
                     as: "Développeur Fullstack",
-                    tools: " - JavaScript (ReactJS, NodeJS, AngularJS, Express, Sequelize, MathJax, Helmet), \n - Java (Spring, JPA/Hibernate, Maven),  \n - HTML5, CSS3, Bootstrap  \n - SQL (PostgreSQL, MySQL, SQL Server, Oracle),  \n - Git (Git Bash, GitHub, GitLab, Git Fork)",                     
+                    tools: " - JavaScript (ReactJS, NodeJS, AngularJS, Express, Sequelize, MathJax, Helmet, JWT), \n - Java (Spring, JPA/Hibernate, Maven, JWT),  \n - HTML5, CSS3, Bootstrap  \n - SQL (PostgreSQL, MySQL, SQL Server, Oracle),  \n - Git (Git Bash, GitHub, GitLab, Git Fork)",                     
                     desc: "Auto-formation sur de nouvelles technologies et développement de projets personnels",
                     references: [
                         {
@@ -17,11 +17,17 @@ const getExtraProExperience = () => {
                             url: "https://jozinho22.github.io/chess-timer",
                             webSiteName : "Chess Timer",
                             desc: "(Pendule pour les joueurs d'échecs)"
-                        }/* ,
+                        },
                         {
                             url: "https://jozinho22.github.io/cv",
-                            webSiteName : "Mon CV en tant que développeur"
-                        } */
+                            webSiteName : "Mon CV",
+                            desc: "(Mon CV en tant que développeur)"
+                        },
+                        {
+                            url: "https://jozinho22.github.io/test-your-skills",
+                            webSiteName : "Test your skills",
+                            desc: "(Un test pour les devs Java)"
+                        } 
                     ]
                 },
                 {
@@ -47,11 +53,17 @@ const getExtraProExperience = () => {
                         url: "https://jozinho22.github.io/chess-timer",
                         webSiteName : "Chess Timer",
                         desc: "(Timer for chess players)"
-                    }/* ,
+                    },
                     {
                         url: "https://jozinho22.github.io/cv",
-                        webSiteName : "My CV as developer"
-                    } */
+                        webSiteName : "My CV",
+                        desc: "(My CV as developer)"
+                    },
+                    {
+                        url: "https://jozinho22.github.io/test-your-skills",
+                        webSiteName : "Test your skills",
+                        desc: "(A test for Java coders)"
+                    } 
                 ]
             },
             {

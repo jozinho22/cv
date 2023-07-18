@@ -12,7 +12,7 @@ const Experience = ( {domain, pro} ) => {
 
     const {language} = React.useContext(AppContext);
     var title = pro ? languageChooser(language, getTitles()).experience : languageChooser(language, getTitles()).extraProExperience;
-    var jobs = pro ? (domain === EnumDomain.DEV ? languageChooser(language, getDevExperience()) : getNonDevExperience()) : languageChooser(language, getExtraProExperience());
+    var jobs = pro ? (/* domain === EnumDomain.DEV ? languageChooser(language, getDevExperience()) : */ languageChooser(language, getNonDevExperience())) : languageChooser(language, getExtraProExperience());
 
     return  <div className="page-break">
                 <div className="title">{title}</div>

@@ -11,8 +11,8 @@ const getVolunteering = () => {
                     period: "oct 2020 - sept 2021",
                     company: "La SPA - Rennes",
                     companyLink: "https://www.la-spa.fr/etablissement/refuge-spa-de-rennes/",
-                    as: "Agent animalier en chatterie (bénévolat)",
-                    desc: "Nettoyage des espaces communs des chats, nettoyage des litières/gamelles, nettoyage des locaux"
+                    as: "Agent animalier en chatterie",
+                    desc: "Nettoyage des espaces communs des chats, nettoyage des litières/gamelles, nettoyage des locaux (à raison de trois matinées par semaine + 2ème confinement à temps plein)"
                 }
             ]
 

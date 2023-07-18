@@ -7,7 +7,7 @@ const getDevExperience = () => {
                     companyLink: "https://www.open.global/",
                     as: "Développeur Java/ReactJS",
                     tools: "Spring, Maven, ReactJS, PostgreSQL, Git Fork, GitLab", 
-                    desc: "J'ai travaillé sur un générateur d'applications mobiles avec ReactJs ainsi que sur le back-end de cette application développé en Java"
+                    desc: "Maintenance en condition opérationnelle et développement de nouvelles fonctionnalités d'un un générateur d'applications mobiles avec ReactJs ainsi que sur le back-end de cette application développé en Java"
                 },
                 {
                     period: "sept 2016 - sept 2018",
@@ -25,7 +25,7 @@ const getDevExperience = () => {
                 companyLink: "https://www.open.global/",
                 as: "Java/ReactJS developer",
                 tools: "Spring, Maven, ReactJS, PostgreSQL, Git Fork, GitLab", 
-                desc: "I worked on a mobile app generator with ReactJs as well as the back-end part developed in Java"
+                desc: "Maintenance and development of a mobile app generator with ReactJs as well as the back-end part developed in Java"
             },
             {
                 period: "sept 2016 - sept 2018",
