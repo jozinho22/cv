@@ -1,18 +1,20 @@
 import React from 'react';
 import getDevExperience from './infos/dev/getDevExperience';
 import getNonDevExperience from './infos/nonDev/getNonDevExperience';
-import { Hourglass, PcDisplayHorizontal, PersonFill, GeoAltFill, CodeSquare, Boxes, WrenchAdjustable, Link45deg, Phone } from 'react-bootstrap-icons';
+import { Hourglass, PcDisplayHorizontal, PersonFill, GeoAltFill, CodeSquare, Boxes, WrenchAdjustable, Link45deg, Phone, QuestionLg } from 'react-bootstrap-icons';
 import AppContext from '../context/AppContext';
 import languageChooser from '../helpers/languageChooser';
 import getTitles from './infos/getTitles';
 import EnumDomain from '../helpers/EnumDomain';
 import getExtraProExperience from './infos/getExtraProExperience';
+import {DiGit} from 'react-icons/di';
+
 
 const Experience = ( {domain, pro} ) => {
 
     const {language} = React.useContext(AppContext);
     var title = pro ? languageChooser(language, getTitles()).experience : languageChooser(language, getTitles()).extraProExperience;
-    var jobs = pro ? (/* domain === EnumDomain.DEV ? languageChooser(language, getDevExperience()) : */ languageChooser(language, getNonDevExperience())) : languageChooser(language, getExtraProExperience());
+    var jobs = pro ? domain === EnumDomain.DEV ? languageChooser(language, getDevExperience()) : languageChooser(language, getNonDevExperience()) : languageChooser(language, getExtraProExperience());
 
     return  <div className="page-break">
                 <div className="title">{title}</div>
@@ -66,6 +68,18 @@ const Experience = ( {domain, pro} ) => {
                                         </>
                                             :   <></>
                                     }
+                                    <div className="context">
+                                        {job.context ?
+                                            <>
+                                                <div className="icon-block">
+                                                    <QuestionLg className="icon" /> 
+                                                    <div className="element-of-icon">{language === "French" ? "Contexte" : "Context"}</div>
+                                                </div>
+                                                <div className="desc">{job.context}</div>
+                                            </>  
+                                                : <></>
+                                        }
+                                    </div>
                                     <div className="achievements">
                                         {job.desc ?
                                             <>
@@ -89,6 +103,27 @@ const Experience = ( {domain, pro} ) => {
                                                                 <Link45deg className="icon" /> 
                                                                 <Phone className="icon" /> 
                                                                 <div className="element-of-icon">{reference.webSiteName}</div>
+                                                                {
+                                                                    reference.desc ? 
+                                                                        <div className="reference-desc">{reference.desc}</div>
+                                                                            :   <></>
+                                                                }
+                                                            </a>
+                                                        </div> 
+                                            })
+                                                : <></>
+                                    } 
+                                    {job.gitDesc ?
+                                            <div className="desc">{job.gitDesc}</div>
+                                                : <></>
+                                    }
+                                    {
+                                        job.gitReferences ?
+                                            job.gitReferences.map((reference, index) => {
+                                                return <div key={index} className="reference">
+                                                            <a href={reference.url} target="_blank" rel="noreferrer">
+                                                                <DiGit className="icon" /> 
+                                                                <div className="element-of-icon">{reference.projectName}</div>
                                                                 {
                                                                     reference.desc ? 
                                                                         <div className="reference-desc">{reference.desc}</div>

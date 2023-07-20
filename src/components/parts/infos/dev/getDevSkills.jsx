@@ -51,6 +51,7 @@ const getDevSkills = () => {
         {
             language: "CSS",
             icon: <DiCss3 /> ,
+            frameworks: "grids, flex boxes, gradients,transitions, box shadows",
             level: 70
         },
         {
@@ -66,7 +67,7 @@ const getDevSkills = () => {
             level: 65
         },
         {
-            language: "Excel/BVA",
+            language: "Excel/VBA",
             icon: <RiFileExcel2Line />,
             level: 65
         }/* ,

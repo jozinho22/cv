@@ -24,9 +24,9 @@ const Skills = ({domain}) => {
                                         <div className="icon">{skill.icon}</div>
                                         <div className="element-of-icon">{skill.language}</div>
                                     </div>
-                                    {
+                                    {/* {
                                         skill.level ? <ProgressBar now={skill.level} /> : <></>
-                                    }
+                                    } */}
                                     {
                                         skill.frameworks ? 
                                             <div className="desc">({skill.frameworks})</div>

@@ -173,15 +173,21 @@ hr {
 .desc {
     /* font-style: italic; */
     text-align: justify;
-    width: 80%;
+    width: 85%;
 /*     margin-top: 5px;
- */    margin-left: 50px;
+ */    margin-left: 35px;
     white-space: pre-line;   
     word-wrap: break-word;
     -moz-hyphens:auto; 
     -webkit-hyphens:auto; 
     -o-hyphens:auto; 
     hyphens:auto;
+}
+
+@media(width < 450px) {
+    .desc {
+        width: 75%;
+    }
 }
 
 .hidden {
@@ -294,8 +300,13 @@ hr {
 }
 
 .skills .icon svg {
-    width: 25px;
-    height: 25px;
+    width: 45px;
+    height: 45px;
+}
+
+.skills .element-of-icon {
+    font-size: large;
+    color: var(--highlight-color);
 }
 
 @media (width < 450px) {
@@ -303,8 +314,8 @@ hr {
         justify-content: center;
     }
     .skills .icon svg {
-        width: 20px;
-        height: 20px;
+        width: 30px;
+        height: 30px;
     }
 }
 
@@ -365,7 +376,7 @@ hr {
 
 .reference {
     margin-top: 10px;
-    margin-left: 80px;
+    margin-left: 60px;
     display: flex;
     flex-direction: column;
     width: fit-content;
@@ -373,7 +384,7 @@ hr {
 
 @media (width < 450px) {
     .reference {
-        margin-left: 40px;
+        margin-left: 30px;
     }
 }
 
