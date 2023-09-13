@@ -14,6 +14,7 @@ const Intro = ( {domain, poste} ) => {
     return  <div className="intro">
                 <img src={photo} alt=""/>
                 <div className="me">{intro.me}</div>
+                <h1>{poste}</h1>
                 {
                     domain === EnumDomain.DEV ? 
                         <div className="summary">
@@ -22,9 +23,7 @@ const Intro = ( {domain, poste} ) => {
                             })} 
                         </div>
                         : 
-                            <div className="summary">
-                                {poste} 
-                            </div>
+                            <></>
                 }
                 
             </div>

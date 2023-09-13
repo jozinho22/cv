@@ -3,9 +3,12 @@ import { hydrateRoot, createRoot } from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { HelmetProvider } from 'react-helmet-async';
 
 const app = <React.StrictMode>
-                <App />
+                <HelmetProvider>
+                    <App />
+                </HelmetProvider>
             </React.StrictMode>;
 
 const domNode = document.getElementById('root');

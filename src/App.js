@@ -6,7 +6,8 @@ import { getThemeIfStoredThemeExists } from './components/styles/getThemes';
 import { BrowserRouter } from 'react-router-dom';
 import { Route, Routes } from 'react-router-dom';
 import pathBuilder from './components/helpers/pathBuilder';
-
+/* import Error from './components/helpers/Error';
+ */
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './components/styles/Themes.css';
 import './App.css';
@@ -15,11 +16,6 @@ function App() {
 
     const [theme, setTheme] = React.useState(getThemeIfStoredThemeExists(JSON.parse(sessionStorage.getItem('josselin-douineau-developer-theme'))) ? JSON.parse(sessionStorage.getItem('josselin-douineau-developer-theme')) : "Blank");
     const [language, setLanguage] = React.useState("French");
-
-    const [domain] = React.useState(
-        process.env.NODE_ENV === 'development' ?
-            EnumDomain.NON_DEV 
-                :   EnumDomain.DEV); 
 
     const appContext = {
         theme: theme,
@@ -35,8 +31,8 @@ function App() {
                     <div className={`${theme}`}>
                         <BrowserRouter>
                             <Routes>
-                                <Route exact path={pathBuilder("/")} element={<CurriculumVitae domain={EnumDomain.DEV } poste={'Développeur ReactJS'} relativePath={'/'} />} />
-                                <Route path={pathBuilder("/maths")} element={<CurriculumVitae domain={EnumDomain.NON_DEV } poste={'Professeur de mathématiques'} relativePath={'/maths'} />} />
+                                <Route exact path={pathBuilder('/')} element={<CurriculumVitae domain={EnumDomain.DEV} poste={'Développeur ReactJS'} relativePath={'/'} />} />
+                                <Route path={pathBuilder('/maths')} element={<CurriculumVitae domain={EnumDomain.NON_DEV} poste={'Professeur de mathématiques'} relativePath={'/maths'} />} />
                             </Routes>
                         </BrowserRouter>
                     </div>       

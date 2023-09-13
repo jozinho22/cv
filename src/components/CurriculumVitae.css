@@ -2,6 +2,15 @@
     Copyright (c) 2011-2023 The Bootstrap Authors
 */
 
+h1 {
+    font-size: 22px !important;
+}
+
+@media (width < 450px) {
+    h1 {
+        font-size: 13px;
+    }
+}
 /* container */
 .curriculum-vitae-container {
     background: linear-gradient(
@@ -19,7 +28,7 @@
 
 @media(width < 450px) {
    .curriculum-vitae-container {
-        font-size: medium;
+        font-size: small;
    }
 }
 
@@ -246,7 +255,7 @@ hr {
 
 @media (width < 450px) {
     .title {
-        font-size: 17px;
+        font-size: 13px;
         width: 80%;
     }
 }
@@ -254,6 +263,16 @@ hr {
 /* intro */
 .me, .profession {
     font-weight: bold;
+}
+
+.me {
+    font-size: 22px;
+}
+
+@media (width < 450px) {
+    .me {
+        font-size: 15px;
+    }
 }
 
 .intro {
