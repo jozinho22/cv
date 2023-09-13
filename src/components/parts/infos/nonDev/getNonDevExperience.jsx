@@ -3,10 +3,18 @@ const getNonDevExperience = () => {
     return {
                 french: [
                     {
+                        period: "juillet 2023 - septembre 2023",
+                        company: "Biocoop du Cormier - Saint-Aubin-du-Cormier",
+                        companyLink: "https://www.biocoopducormier.fr/",
+                        as: "Employé polyvalent (fruits-légumes / vrac / service arrière / épicerie / caisse)",
+                        tools: "CocoBio, IziBio", 
+                        desc: "Réassort, réception des livraisons, service du pain et fromage, accueil/conseil clients, encaissement, nettoyage"
+                    },
+                    {
                         period: "août 2021 - oct 2022",
                         company: "Biocoop Le Chat Biotté - Combourg",
                         companyLink: "https://www.biocooplechatbiotte.com/",
-                        as: "Employé polyvalent fruits-légumes / vrac / caisse",
+                        as: "Employé polyvalent (fruits-légumes / vrac / caisse)",
                         tools: "CocoBio, IziBio", 
                         desc: "Réassort, réception des livraisons, accueil/conseil clients, encaissement, nettoyage"
                     },
@@ -21,7 +29,7 @@ const getNonDevExperience = () => {
                         period: "juin 2021 - juil 2021",
                         company: "La vie claire - Monfort-sur-Meu",
                         companyLink: "https://www.lavieclaire.com/",
-                        as: "Employé polyvalent fruits-légumes / vrac / caisse",
+                        as: "Employé polyvalent (fruits-légumes / vrac / caisse)",
                         desc: "Réassort, réception des livraisons, accueil/conseil clients, encaissement, nettoyage"
                     },
                    {
@@ -103,6 +111,14 @@ const getNonDevExperience = () => {
                     }
                 ],
                 english: [
+                    {
+                        period: "july 2023 - sept 2023",
+                        company: "Biocoop du Cormier - Saint-Aubin-du-Cormier",
+                        companyLink: "https://www.biocoopducormier.fr/",
+                        as: "Polyvalent employee (notably Fruits & Vegetables)",
+                        tools: "CocoBio, IziBio", 
+                        desc: "Restock, delivering reception, cheese and bread service for clients, welcoming/advices, cashiering, cleaning"
+                    },
                     {
                         period: "aug 2021 - oct 2022",
                         company: "Biocoop Le Chat Biotté - Combourg",

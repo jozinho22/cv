@@ -300,12 +300,12 @@ hr {
 }
 
 .skills .icon svg {
-    width: 45px;
-    height: 45px;
+    width: 35px;
+    height: 35px;
 }
 
 .skills .element-of-icon {
-    font-size: large;
+    font-size: medium;
     color: var(--highlight-color);
 }
 

@@ -9,7 +9,7 @@ const Volunteering = () => {
 
     const {language} = React.useContext(AppContext);
     var title = languageChooser(language, getTitles()).volunteering;
-    var volunteerings = getVolunteering();
+    var volunteerings = languageChooser(language, getVolunteering());
 
     return  <div className="page-break">
                 <div className="title">{title}</div>

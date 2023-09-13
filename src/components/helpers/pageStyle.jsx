@@ -17,9 +17,12 @@ const pageStyle = () => {
             .page-break {
                 page-break-after: auto;
             }
+            .experience .element {
+                page-break-inside: auto;
+            } 
             .element {
                 page-break-inside: avoid;
-            }
+            } 
         }
 
         @page {

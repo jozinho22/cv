@@ -8,7 +8,7 @@ import { FilePdfFill, Globe, Magic } from 'react-bootstrap-icons';
 import EnumDomain from '../helpers/EnumDomain';
 
 
-const Header = ( {domain, poste} ) => {
+const Header = ( {domain, poste, boite} ) => {
 
     const {theme, updateTheme, language, updateLanguage} = React.useContext(AppContext);
     var catchedDiv = {};
@@ -49,7 +49,7 @@ const Header = ( {domain, poste} ) => {
         {
             content: () => buildElementToPrint(), 
             pageStyle: pageStyle(),
-            documentTitle: domain ===  EnumDomain.DEV ? 'Josselin DOUINEAU - developer' : `Josselin DOUINEAU - ${poste} - CV`,
+            documentTitle: domain ===  EnumDomain.DEV ? 'Josselin DOUINEAU - développeur - CV' : `Josselin DOUINEAU - ${poste} - ${boite} - CV`,
             onAfterPrint: () => destroyElementToPrint()
         }
     );

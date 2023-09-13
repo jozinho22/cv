@@ -12,54 +12,72 @@ import Leasures from './parts/Leasures';
 import Licenses from './parts/Licenses';
 import Certifications from './parts/Certifications';
 import EnumDomain from './helpers/EnumDomain';
-import './CurriculumVitae.css';
 import Volunteering from './parts/Volunteering';
 
-const CurriculumVitae = ( {domain} ) => {
+import { Helmet } from "react-helmet-async";
 
-    var poste = domain === EnumDomain.DEV ? "Développeur" : "Cartographe";
-  
+import './CurriculumVitae.css';
+
+const CurriculumVitae = ( {domain, poste, relativePath} ) => {
+
+    var poste2 = '';
+    poste2 !== '' ? poste = poste2 : <></>;
+    
+    var boite = "Collège Saint-Michel de Liffré";
+
     return (
+        
         <Container className="curriculum-vitae-container">
-            <Header domain={domain} poste={poste} />
+            {/* <Helmet>
+                <title>
+                    CV de Josselin DOUINEAU
+                </title>
+                <meta data-rh="true" name="description" content={`Mon CV de ${poste} au format web`} />
+                <link rel="canonical" href={`${'https://jozinho22.github.io/cv'}${relativePath}`} />
+            </Helmet> */}
+            <Header domain={domain} poste={poste} boite={boite} />
             
-            <Contact />
             <Intro domain={domain} poste={poste} />
-
+            <Contact />
             
-            {/* {
+            {
                 domain === EnumDomain.DEV ? 
                     <Skills />
                         : <></>
-            } */}
-            <Skills domain={domain}/> 
+            } 
+
+            {
+                domain === EnumDomain.DEV ? 
+                    <>
+                        <Experience domain={domain} pro/>
+                        <Experience domain={domain} /> 
+                    </>
+                        : 
+                            <>
+                                <Experience domain={domain} /> 
+                                <Experience domain={domain} pro/>
+                            </>
+                    } 
+            
+            <Volunteering />
+
             <Education />
+
             {
                 domain === EnumDomain.DEV ? 
                     <Certifications />
                         : <></>
             }
-            {
-                domain === EnumDomain.DEV ? 
-                    <>
-                        <Experience domain={domain} pro/>
-                        <Experience domain={domain} />
-                    </>
-                        :   <>
-                                <Experience domain={domain} />
-                                <Experience domain={domain} pro/>
-                            </>
-            }
-            <Volunteering />
-           
-            
+
             
             <Languages />
+
             {
                 domain === EnumDomain.DEV ? 
                     <Socials />
                         : <></>
             }
+
             <Leasures />
             
             <Licenses />
