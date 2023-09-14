@@ -1,22 +1,34 @@
 import React from 'react';
 import getDevExperience from './infos/dev/getDevExperience';
-import getNonDevExperience from './infos/nonDev/getNonDevExperience';
-import { Hourglass, PcDisplayHorizontal, PersonFill, GeoAltFill, CodeSquare, Boxes, WrenchAdjustable, Link45deg, Phone } from 'react-bootstrap-icons';
+import getNonDevExperience from './infos/generic/getGenericExperience';
+import { Hourglass, PcDisplayHorizontal, PersonFill, GeoAltFill, CodeSquare, Boxes, WrenchAdjustable, Link45deg, Phone, QuestionLg } from 'react-bootstrap-icons';
 import AppContext from '../context/AppContext';
 import languageChooser from '../helpers/languageChooser';
 import getTitles from './infos/getTitles';
 import EnumDomain from '../helpers/EnumDomain';
+import getExtraProExperience from './infos/getExtraProExperience';
+import {DiGit} from 'react-icons/di';
 
-const Experience = ( {domain} ) => {
+
+const Experience = ( {domain, pro} ) => {
 
     const {language} = React.useContext(AppContext);
-    var title = languageChooser(language, getTitles()).experience;
-    var jobs = domain === EnumDomain.DEV ? languageChooser(language, getDevExperience()) : getNonDevExperience();
+    var title = pro ? languageChooser(language, getTitles()).experience : languageChooser(language, getTitles()).extraProExperience;
+    var jobs = pro ? domain === EnumDomain.DEV ? languageChooser(language, getDevExperience()) : languageChooser(language, getNonDevExperience()) : languageChooser(language, getExtraProExperience(domain)); 
+
+    domain !== EnumDomain.DEV && !pro ? jobs.reverse() : <></>;
 
     return  <div className="page-break">
                 <div className="title">{title}</div>
                 <div className="experience">
                     {jobs.map((job, index) => {
+
+                        if(job.period === "pause") {
+                            return  <div key={index}>  
+                                        <p className="center">{job.desc} </p>
+                                        <hr/>
+                                    </div>
+                        }
                         return  <div className="element" id={`experience-${index}`} key={index}>
                                     <div className="icon-block period">
                                         <Hourglass className="icon" /> 
@@ -49,7 +61,7 @@ const Experience = ( {domain} ) => {
                                                     </>
                                             </div>
                                             <div className="tools">
-                                                {job.tools ?
+                                                {job.tools && domain === EnumDomain.DEV ?
                                                     <> 
                                                         <WrenchAdjustable className="icon" />
                                                         <div className="element-of-icon">
@@ -65,8 +77,20 @@ const Experience = ( {domain} ) => {
                                         </>
                                             :   <></>
                                     }
+                                    <div className="context">
+                                        {job.context && domain === EnumDomain.DEV ?
+                                            <>
+                                                <div className="icon-block">
+                                                    <QuestionLg className="icon" /> 
+                                                    <div className="element-of-icon">{language === "French" ? "Contexte" : "Context"}</div>
+                                                </div>
+                                                <div className="desc">{job.context}</div>
+                                            </>  
+                                                : <></>
+                                        }
+                                    </div>
                                     <div className="achievements">
-                                        {job.desc ?
+                                        {!pro && job.desc ?
                                             <>
                                                 <div className="icon-block">
                                                     {domain === EnumDomain.DEV ? 
@@ -76,6 +100,7 @@ const Experience = ( {domain} ) => {
                                                     <div className="element-of-icon">{language === "French" ? "Réalisations" : "Achievements"}</div>
                                                 </div>
                                                 <div className="desc">{job.desc}</div>
+                                                <div className="desc">{domain === EnumDomain.DEV ? job.more : ''}</div>
                                             </>  
                                                 : <></>
                                         }
@@ -84,10 +109,39 @@ const Experience = ( {domain} ) => {
                                         job.references ?
                                             job.references.map((reference, index) => {
                                                 return <div key={index} className="reference">
+                                                    {
+                                                        Object.keys(reference).length !== 0 ?
                                                             <a href={reference.url} target="_blank" rel="noreferrer">
                                                                 <Link45deg className="icon" /> 
                                                                 <Phone className="icon" /> 
                                                                 <div className="element-of-icon">{reference.webSiteName}</div>
+                                                                {
+                                                                    reference.desc ? 
+                                                                        <div className="reference-desc">{reference.desc}</div>
+                                                                            :   <></>
+                                                                }
+                                                            </a>
+                                                                : <></>
+                                                     }
+                                                     </div> 
+                                            })
+                                                : <></>
+                                    } 
+                                    
+                                    {job.gitDesc && domain === EnumDomain.DEV ?
+                                            <>
+                                                <br></br>
+                                                <div className="desc">{job.gitDesc}</div>
+                                            </>
+                                                : <></>
+                                    }
+                                    {
+                                        job.gitReferences && domain === EnumDomain.DEV ?
+                                            job.gitReferences.map((reference, index) => {
+                                                return <div key={index} className="reference">
+                                                            <a href={reference.url} target="_blank" rel="noreferrer">
+                                                                <DiGit className="icon" /> 
+                                                                <div className="element-of-icon">{reference.projectName}</div>
                                                                 {
                                                                     reference.desc ? 
                                                                         <div className="reference-desc">{reference.desc}</div>
@@ -100,7 +154,6 @@ const Experience = ( {domain} ) => {
                                     } 
                                 </div>  
                     })}  
-                    <hr />      
                 </div>
             </div>
 }

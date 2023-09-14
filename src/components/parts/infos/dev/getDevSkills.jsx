@@ -5,7 +5,12 @@ import {DiCss3} from 'react-icons/di';
 import {DiMysql} from 'react-icons/di';
 import {DiGit} from 'react-icons/di';
 import {DiReact} from 'react-icons/di';
-import {DiPython} from 'react-icons/di';
+import {DiAngularSimple} from 'react-icons/di';
+
+/* import {DiPython} from 'react-icons/di';
+ */
+import {RiFileExcel2Line} from 'react-icons/ri';
+import {DiNodejsSmall} from 'react-icons/di';
 
 const getDevSkills = () => {
 
@@ -13,31 +18,40 @@ const getDevSkills = () => {
         {
             language: "Javascript",
             icon: <DiJavascript1 />,
-            frameworks: "Node, JSON",
+            frameworks: "NodeJS, ReactJS, AngularJS, Express, Sequelize, MathJax, Helmet",
             level: 75
         },
-        {
+        /* {
             language: "ReactJS",
             icon: <DiReact />,
             frameworks: "Redux, MathJax",
             level: 70
         },
-                {
+        {
+            language: "NodeJS",
+            icon: <DiNodejsSmall />,
+            level: 60
+        },
+        {
+            language: "AngularJS",
+            icon: <DiAngularSimple />,
+            level: 50
+        }, */
+        {
             language: "Java",
             icon: <DiJava />,
-            frameworks: "Spring, Maven, JPA/Hibernate, REST",
+            frameworks: "Spring, JPA/Hibernate, REST API, Maven",
             level: 70
         },
         {
             language: "HTML",
             icon: <DiHtml5 /> ,
-            frameworks: "HTML5",
             level: 80
         },
         {
             language: "CSS",
             icon: <DiCss3 /> ,
-            frameworks: "CSS3",
+            frameworks: "grids, flex boxes, gradients,transitions, box shadows",
             level: 70
         },
         {
@@ -53,12 +67,15 @@ const getDevSkills = () => {
             level: 65
         },
         {
-            language: "Python",
-            icon: <DiPython />,
-            frameworks : "NumPy, Pandas, Matplotlib",
-            level: 40
-        }
-
+            language: "Excel/VBA",
+            icon: <RiFileExcel2Line />,
+            level: 65
+        }/* ,
+        {
+            language: "Bootstrap",
+            icon: <RiFileExcel2Line />,
+            level: 65
+        }  */
     ]
 }
 

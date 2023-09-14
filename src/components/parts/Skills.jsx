@@ -1,7 +1,7 @@
 import React from 'react';
 import { ProgressBar } from 'react-bootstrap';
 import getDevSkills from './infos/dev/getDevSkills';
-import getNonDevSkills from './infos/nonDev/getNonDevSkills';
+import getNonDevSkills from './infos/generic/getGenericSkills';
 
 import AppContext from '../context/AppContext';
 import getTitles from './infos/getTitles';
@@ -12,8 +12,7 @@ const Skills = ({domain}) => {
 
     const {language} = React.useContext(AppContext);
     var title = languageChooser(language, getTitles()).skills;
-    var skills = domain === EnumDomain.DEV ? languageChooser(language, getDevSkills()) : getNonDevSkills();
-
+    var skills = domain === undefined || domain === EnumDomain.DEV ? getDevSkills() : getNonDevSkills();
 
     return  <div className="page-break">
                 <div className="title">{title}</div>
@@ -25,13 +24,15 @@ const Skills = ({domain}) => {
                                         <div className="icon">{skill.icon}</div>
                                         <div className="element-of-icon">{skill.language}</div>
                                     </div>
-                                    <ProgressBar now={skill.level} />
-                                    {/* <div className="frameworks">
-                                        {skill.frameworks ? 
-                                            `(${skill.frameworks})` :
-                                                <></>
-                                        }
-                                    </div>  */}  
+                                    {/* {
+                                        skill.level ? <ProgressBar now={skill.level} /> : <></>
+                                    } */}
+                                    {
+                                        skill.frameworks ? 
+                                            <div className="desc">({skill.frameworks})</div>
+                                                :   <div className="desc hidden"> rien </div>
+                                    }
+                                    
                                 </div>   
                     })
                 }

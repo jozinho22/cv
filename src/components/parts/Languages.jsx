@@ -11,17 +11,17 @@ const Languages = () => {
     var title = languageChooser(language, getTitles()).languages;
     var languages = languageChooser(language, getLanguages());
 
-    console.log(languages)
-
     return  <div className="page-break">
                 <div className="title">{title}</div>
                 <div className="languages">
                 {
                     languages.map((language, index) => {
                         return <div key={index} className="element">
-                                    <div>{language.language}</div>
-                                    <ProgressBar now={language.level} />
-                                </div>   
+                                    <div className="text-block">
+                                        <div className="element-of-text">{language.language}</div>
+                                        <ProgressBar now={language.level} />
+                                    </div>
+                            </div>   
                     })
                 }
                 </div>

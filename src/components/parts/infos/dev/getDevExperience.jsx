@@ -2,96 +2,43 @@ const getDevExperience = () => {
     return {
             french: [
                 {
-                    period: "mar 2020 - maintenant",
-                    company: "En autodidacte",
-                    as: "Développeur Fullstack",
-                    tools: "ReactJS, Bootstrap, MathJax, MySQL, HTML5, Spring, JPA/Hibernate, Maven, CSS3, Helmet, Git Bash, GitHub",                     desc: "Auto-formation sur de nouvelles technologies et développement de projets personnels",
-                    references: [
-                        {
-                            url: "https://jozinho22.github.io/maths",
-                            webSiteName : "Ma Thematique",
-                            desc: "(Base documentaire mathématique)"
-                        },
-                        {
-                            url: "https://jozinho22.github.io/chess-timer",
-                            webSiteName : "Chess Timer",
-                            desc: "(Pendule pour les joueurs d'échecs)"
-                        }
-                    ]
-                },
-                /* {
-                    period: "jan 2021 - avr 2021",
+                    period: "january2021 - avril 2021",
                     company: "Open",
+                    companyLink: "https://www.open.global/",
                     as: "Développeur Java/ReactJS",
-                    tools: "Spring, Maven, ReactJS, PostgreSQL, Git Fork, GitLab".split(","), 
-                    desc: "J'ai travaillé sur un générateur d'applications mobiles"
+                    tools: "Java 8, Spring, Maven, ReactJS, PostgreSQL, Git Fork, GitLab", 
+                    context: "La start-up SWIZI développe un générateur d’applications mobiles customisables pour ses clients. \n Il y a alors un front-end développé en ReactJs qui fait appel à un back en Java. ",
+                    desc: "Sur ces deux projets, j'ai été amené à développer de nouvelles fonctionnalités telles que l'ajout de nouvelles données, de créer de nouvelles requêtes à la base de données, de développer la possibilité d’ajout de nouveaux types de fichiers et d’assurer la cohérence des transferts de données entre le front-end et et le back-end."
                 },
                 {
-                    period: "fév 2020 - avr 2020",
-                    company: "Yoni",
-                    as: "Développeur Java",
-                    tools: "Spring, JHipster, Maven, GitLab".split(","), 
-                    desc: "J'ai aidé au développement de spécifications dans le domaine de la bijouterie"
-                }, */
-                {
-                    period: "sept 2016 - sept 2018",
+                    period: "septembre 2016 - septembre 2018",
                     company: "La SACEM - Paris",
                     companyLink: "https://www.sacem.fr/",
                     as: "Développeur Java/SQL",
-                    tools: "JDBC, Restlet, XStream, JUnit/Cucumber, Maven, PL/SQL, Git Bash, GitLab", 
-                    desc: "Maintenance en condition opérationnelle et développement de nouvelles fonctionnalités sur trois applications (application de gestion de clients, application de tarification de contrats et environnement back-end d'une application mobile)"
-                }/* ,
-                {
-                    period: "autres périodes",
-                    desc: "J'ai travaillé divers domaines (cartographie SIG, fruits/légumes, cours à domicile)"
-                } */
+                    tools: "Java 6, JDBC, Restlet, XStream, JUnit/Cucumber, Maven, PL/SQL, Git Bash, GitLab", 
+                    context: "La SACEM facture des redevances aux diffuseurs de musique dans le but de le redistribuer aux acteurs du domaine (auteurs, compositeurs, interprètes). ",
+                    desc: "\n Il y trois projets sur lesquels j'ai travaillé : \n \n - Projet de gestion comptable : application destinée aux employés de la SACEM, contenant une IHM, un back-end en Java et des appels à la base données (avec de nombreuses procédures stockées en PL/SQL). Ce projet est destiné à recenser les clients diffuseurs de musique et de suivre le déroulement comptable de leur facturation. \n J'étais en charge, un sein d'une équipe de sept développeurs, de la maintenance et de l'évolution de la partie Java, avec quelques fois à intervenir dans la partie PL/SQL. \n \n - Projet de facturation des contrats : ce projet est un projet Java qui est appelé par le premier pour retourner un facturation complexe en fonction des paramètres de chaque établissement. \n Sur ce projet, j'ai implémenté de nouveaux contrats en cohérence avec le portail publique d'inscriptions de la SACEM, et développé des tests unitaires systématiquement. \n \n - Projet mobile de suivi d’établissements : une application mobile a été développée pour pouvoir aller prospecter et suivre l’avancement des nouveaux clients sur le terrain. \n Cette appli était relié aux back-end en Java dont j’avais en charge la maintenance et l'évolution."
+                }
         ],
         english: [
             {
-                period: "mar 2020 - now",
-                company: "Self-taught",
-                as: "Fullstack developer",
-                tools: "ReactJS, Bootstrap, MathJax, MySQL, HTML5, Spring, JPA/Hibernate, Maven, CSS3, Helmet, Git Bash, GitHub", 
-                desc: "Self-teaching about new technologies and working on personal projects",
-                references: [
-                    {
-                        url: "https://jozinho22.github.io/maths",
-                        webSiteName : "Ma Thematique",
-                        desc: "(Documentary library about mathematics)"
-                    },
-                    {
-                        url: "https://jozinho22.github.io/chess-timer",
-                        webSiteName : "Chess Timer",
-                        desc: "(Timer for chess players)"
-                    }
-                ]
-            },
-            /* {
-                period: "jan 2021 - apr 2021",
+                period: "january 2021 - april 2021",
                 company: "Open",
+                companyLink: "https://www.open.global/",
                 as: "Java/ReactJS developer",
-                tools: "Spring, Maven, ReactJS, PostgreSQL, Git Fork, GitLab".split(","), 
-                desc: "I worked on a mobile app generator"
+                tools: "Java 8, Spring, Maven, ReactJS, PostgreSQL, Git Fork, GitLab", 
+                context: "SWIZI is a start-up developping a mobile app generator for its customers. \n There is a front-end part on ReactJs and a back-end on Java.",
+                desc: "On those two projects, I developped new features such as adding new datas, creating new databases requests and assuring back and front coherence."
             },
             {
-                period: "feb 2020 - apr 2020",
-                company: "Yoni",
-                as: "Java developer",
-                tools: "Spring, JHipster, Maven, GitLab".split(","), 
-                desc: "I helped to develop specifications for a jewelry store"
-            }, */
-            {
-                period: "sept 2016 - sept 2018",
+                period: "september 2016 - september 2018",
                 company: "La SACEM - Paris",
                 companyLink: "https://www.sacem.fr/",
                 as: "Java/SQL developer",
-                tools: "JDBC, Restlet, XStream, JUnit/Cucumber, Maven, PL/SQL, Git Bash, GitLab".split(","), 
-                desc: "Maintenance and development of three applications (clients management application, pricing application and back-end environment of a mobile app)"
-            }/* ,
-            {
-                period: "other periods",
-                desc: "I did differents jobs (GIS cartography, fruits & vegetables, home courses for pupils)"
-            } */
+                tools: "Java 6, JDBC, Restlet, XStream, JUnit/Cucumber, Maven, PL/SQL, Git Bash, GitLab", 
+                context: "SACEM factures all the music diffusers in order to dsitribute it to the music main actors, such as authors, composers and interpreters.",
+                desc: "I worked on three projects: \n \n - Accountibility management : application made for SACEM's employees, contening a GUI, a Java back-end and database calls (as well with stored procedures in PL/SQL). This projets helps to manage SACEM's clients and facturation. \n I a seven developers team, i was in charge of maintening and developping new features on the Java part, and sometimes on the PL/SQL part. \n \n - Contracts facturation projets : this Java project calculates a complex pricing according to the contract parameters. \n On this projet, I implemented new contracts, and add unit tests systematically. \n \n - New clients management mobile project : a mobile app was developped to follow and prospect new clients at their establishment. \n This app was related to a Java back-end application which I was in charge of the maintenance."
+            }
         ]
 
     }

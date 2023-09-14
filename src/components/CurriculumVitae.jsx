@@ -4,7 +4,6 @@ import Intro from './parts/Intro';
 import Contact from './parts/Contact';
 import Skills from './parts/Skills';
 import Languages from './parts/Languages';
-
 import Experience from './parts/Experience';
 import Education from './parts/Education';
 import Socials from './parts/SocialNetworks';
@@ -12,45 +11,80 @@ import Leasures from './parts/Leasures';
 import Licenses from './parts/Licenses';
 import Certifications from './parts/Certifications';
 import EnumDomain from './helpers/EnumDomain';
-import './CurriculumVitae.css';
 import Volunteering from './parts/Volunteering';
 
-const CurriculumVitae = ( {domain} ) => {
+import { Helmet } from "react-helmet-async";
 
-    var poste = "Professeur de mathématiques";
-  
+import './CurriculumVitae.css';
+
+const CurriculumVitae = ( {domain, poste, relativePath} ) => {
+
+    // entrer le poste ici
+    var posteNonGeneric = '';
+    posteNonGeneric !== '' ? poste = posteNonGeneric : <></>;
+    
+    // entrer la société ici
+    var boite = "";
+
     return (
-        <Container className="curriculum-vitae-container">
-            <Header domain={domain} poste={poste} />
-            <Intro domain={domain} poste={poste} />
-            {
-                domain === EnumDomain.DEV ? 
-                    <Skills />
-                        : <></>
-            }
-            {/* <Skills domain={domain}/> */}
-            <Experience domain={domain} />
-            {
-                domain === EnumDomain.DEV ? 
-                    <></>
-                        : <Volunteering />
-            }
-            {
-                domain === EnumDomain.DEV ? 
-                    <Certifications />
-                        : <></>
-            }
-            <Education />
-            <Languages />
-            {
-                domain === EnumDomain.DEV ? 
-                    <Socials />
-                        : <></>
-            }
-            <Leasures />
-            <Contact />
-            <Licenses />
-        </Container>
+        <>
+            <Helmet>
+                <title>
+                    {`CV de Josselin DOUINEAU${(poste !== '' && poste !== undefined) ? ` - ${poste}` : ''}${boite !== '' ? ` - ${boite}` : ''}`}
+                </title>
+                <meta data-rh="true" name="description" content={`Mon curriculum vitae : ${poste} au format web`} />
+                <link rel="canonical" href={`https://jozinho22.github.io/cv${relativePath}`} />
+            </Helmet>
+            <Container className="curriculum-vitae-container">
+                
+                <Header domain={domain} poste={poste} boite={boite} />
+                
+                <Intro domain={domain} poste={poste} />
+                <Contact />
+                
+                {
+                    domain === EnumDomain.DEV ? 
+                        <Skills />
+                            : <></>
+                } 
+
+                {
+                    domain === EnumDomain.DEV ? 
+                        <>
+                            <Experience domain={domain} pro/>
+                            <Experience domain={domain} /> 
+                        </>
+                            : 
+                                <>
+                                    <Experience domain={domain} /> 
+                                    <Experience domain={domain} pro/>
+                                </>
+                } 
+
+                <Education />
+                
+                <Volunteering domain={domain} />
+
+                {
+                    domain === EnumDomain.DEV ? 
+                        <Certifications />
+                            : <></>
+                }
+
+                
+                <Languages />
+
+                {
+                    domain === EnumDomain.DEV ? 
+                        <Socials />
+                            : <></>
+                }
+
+                <Leasures />
+                
+                <Licenses />
+            </Container>
+        </>
     );
 }
 

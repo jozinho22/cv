@@ -3,23 +3,25 @@ const getTitles = () => {
         french : {
             skills: "Compétences",
             languages: "Langues",
-            experience: "Expériences",
+            extraProExperience: "Expériences extra-professionnelles",
+            experience: "Expériences professionnelles",
             education: "Diplômes",
             certifications: "Certifications",
-            socialNetworks: "Réseaux sociaux",
+            socialNetworks: "Réseaux sociaux / Apps",
             leasures: "Loisirs",
-            volunteering: "Bénévolats",
+            volunteerWork: "Bénévolats",
             contact: "Contact"
         },
         english : {
             skills: "Skills",
             languages: "Languages",
-            experience: "Experience",
+            extraProExperience: "Extra-professional experience",
+            experience: "Professional experience",
             education: "Education",
             certifications: "Certifications",
-            socialNetworks: "Social networks",
+            socialNetworks: "Social networks - Apps",
             leasures: "Leasures",
-            volunteering: "Volunteering",
+            volunteerWork: "Volunteer work",
             contact: "Contact"
         }
     }

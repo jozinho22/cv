@@ -2,6 +2,15 @@
     Copyright (c) 2011-2023 The Bootstrap Authors
 */
 
+h1 {
+    font-size: 22px !important;
+}
+
+@media (width < 450px) {
+    h1 {
+        font-size: 13px;
+    }
+}
 /* container */
 .curriculum-vitae-container {
     background: linear-gradient(
@@ -19,7 +28,7 @@
 
 @media(width < 450px) {
    .curriculum-vitae-container {
-        font-size: medium;
+        font-size: small;
    }
 }
 
@@ -110,6 +119,10 @@ a .dropdown-item {
 }
 
 /* miscellaneous */
+.center {
+    text-align: center;
+}
+
 a {
     color: var(--hyperlink-color) !important;
     text-decoration: none !important;
@@ -173,15 +186,25 @@ hr {
 .desc {
     /* font-style: italic; */
     text-align: justify;
-    width: 80%;
+    width: 85%;
 /*     margin-top: 5px;
- */    margin-left: 50px;
+ */    margin-left: 35px;
     white-space: pre-line;   
     word-wrap: break-word;
     -moz-hyphens:auto; 
     -webkit-hyphens:auto; 
     -o-hyphens:auto; 
     hyphens:auto;
+}
+
+@media(width < 450px) {
+    .desc {
+        width: 75%;
+    }
+}
+
+.hidden {
+    visibility: hidden;
 }
 
 /* .display-flex {
@@ -236,7 +259,7 @@ hr {
 
 @media (width < 450px) {
     .title {
-        font-size: 17px;
+        font-size: 13px;
         width: 80%;
     }
 }
@@ -244,6 +267,16 @@ hr {
 /* intro */
 .me, .profession {
     font-weight: bold;
+}
+
+.me {
+    font-size: 22px;
+}
+
+@media (width < 450px) {
+    .me {
+        font-size: 15px;
+    }
 }
 
 .intro {
@@ -289,24 +322,34 @@ hr {
     vertical-align: unset;
 }
 
+.skills .icon svg {
+    width: 35px;
+    height: 35px;
+}
+
+.skills .element-of-icon {
+    font-size: medium;
+    color: var(--highlight-color);
+}
+
 @media (width < 450px) {
     .skills .icon-block {
         justify-content: center;
     }
+    .skills .icon svg {
+        width: 30px;
+        height: 30px;
+    }
 }
 
 .skills .element {
-    flex: 1 0 21%; 
-    margin-left: 0px;
-}
-
-.skills .element-of-icon {
-    font-weight: normal;;
+    flex: 0 0 50%; 
+    margin-left: 0px; 
 }
 
 @media (width < 450px) {
    .skills .element {
-        flex: 1 0 40%; 
+        flex: 1 0 100%; 
     } 
 }
 
@@ -314,20 +357,20 @@ hr {
     text-align: center;
 }
 
-.skills .element .progress {
+.skills .element .progress, .progress {
     position: relative;
     left: 50%;
     transform: translateX(-50%);
-}
-
-.progress {
-    width: 60%;
+    height: 18px;
+    width: 50%;
     background-color:var(--progressbar-background-color) !important;
+    border-radius: 15px;
 }
 
 @media(width < 450px) {
-    .progress {
+    .skills .element .progress , .progress {
         width: 70%;
+        height: 20px;
     }
 }
 
@@ -335,16 +378,10 @@ hr {
     background-color:var(--highlight-color) !important;
 }
 
-.frameworks {
-    font-size: medium;
-    padding-left: 25px;
-    text-align: left;
-}
-
-@media (width < 450px) {
-    .frameworks {
-        font-size: small;
-    }
+.skills .desc {
+    padding-top: 5px;
+    margin: 0 auto;
+    text-align: center;
 }
 
 /* experience */
@@ -362,7 +399,7 @@ hr {
 
 .reference {
     margin-top: 10px;
-    margin-left: 80px;
+    margin-left: 60px;
     display: flex;
     flex-direction: column;
     width: fit-content;
@@ -370,7 +407,7 @@ hr {
 
 @media (width < 450px) {
     .reference {
-        margin-left: 40px;
+        margin-left: 30px;
     }
 }
 
@@ -391,6 +428,36 @@ hr {
 /* education */
 .education .element {
     margin-bottom: 20px;
+}
+
+/* languages */
+.languages {
+    display: flex;
+    flex-wrap: wrap;
+}
+.languages .element {
+    flex: 1 0 21%; 
+    margin-left: 0px;
+}
+
+@media (width < 450px) {
+   .languages .element {
+        flex: 1 0 100%; 
+    } 
+}
+
+.languages .element .progress {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.languages .element .text-block {
+    text-align: center;
+}
+
+.languages .element-of-text {
+    margin-bottom: 10px;
 }
 
 /* leasures */

@@ -1,15 +1,14 @@
 import React from 'react';
-import { Container, Button, Row, Col, Dropdown } from 'react-bootstrap';
+import { Container, Button, Row, Col } from 'react-bootstrap';
 import { useReactToPrint } from "react-to-print";
 import pageStyle from '../helpers/pageStyle';
 
-import {getThemes} from '../styles/getThemes';
 import AppContext from '../context/AppContext';
 import { FilePdfFill, Globe, Magic } from 'react-bootstrap-icons';
 import EnumDomain from '../helpers/EnumDomain';
 
 
-const Header = ( {domain, poste} ) => {
+const Header = ( {domain, poste, boite} ) => {
 
     const {theme, updateTheme, language, updateLanguage} = React.useContext(AppContext);
     var catchedDiv = {};
@@ -34,12 +33,9 @@ const Header = ( {domain, poste} ) => {
 
         var entirePage = document.querySelector("#capture").cloneNode(true);
         document.getElementById("doc-to-print").appendChild(entirePage);
-
         catchedDiv = document.getElementById("doc-to-print");
-        catchedDiv.getElementsByClassName("header")[0].remove();
 
         return catchedDiv.getElementsByClassName("App")[0];
-
     }
 
     const destroyElementToPrint = () => {
@@ -50,7 +46,7 @@ const Header = ( {domain, poste} ) => {
         {
             content: () => buildElementToPrint(), 
             pageStyle: pageStyle(),
-            documentTitle: domain ===  EnumDomain.DEV ? 'Josselin DOUINEAU - developer' : `Josselin DOUINEAU - ${poste} - CV`,
+            documentTitle: domain === `Josselin DOUINEAU - ${poste}${boite !== '' ? ` - ${boite}` : ''} - CV`,
             onAfterPrint: () => destroyElementToPrint()
         }
     );

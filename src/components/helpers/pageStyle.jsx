@@ -7,27 +7,36 @@ const pageStyle = () => {
                 print-color-adjust: exact; 
                 -webkit-print-color-adjust: exact; 
                 background-color: var(--back-color-1) !important;
-                
             }
             .curriculum-vitae-container {
                 font-size: 11px !important;
             }
+            .me, h1 {
+                font-size: 15px !important;
+            }
             .title {
-                font-size: 11px !important;
+                font-size: 12px !important;
             }
-        }
-
-        @media print {
             .page-break {
-                margin-top: 1rem;
-                display: block;
-                page-break-before: auto;
+                page-break-after: auto;
             }
+            .experience .element {
+                page-break-inside: auto;
+            } 
+            .element {
+                page-break-inside: avoid;
+            } 
         }
 
         @page {
             size: A4;
         }
+        @page {
+            @bottom-right {
+                content: counter(page) " of " counter(pages);
+            }
+        }
+         
     `
 }
 
