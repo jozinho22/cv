@@ -1,4 +1,4 @@
-const getVolunteering = () => {
+const getVolunteerWork = () => {
     return {
         french: [
             {
@@ -37,4 +37,4 @@ const getVolunteering = () => {
 
 }
 
-export default getVolunteering;
+export default getVolunteerWork;

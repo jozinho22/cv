@@ -12,10 +12,10 @@ const pageStyle = () => {
                 font-size: 11px !important;
             }
             .me, h1 {
-                font-size: 17px !important;
+                font-size: 15px !important;
             }
             .title {
-                font-size: 13px !important;
+                font-size: 12px !important;
             }
             .page-break {
                 page-break-after: auto;
@@ -31,6 +31,12 @@ const pageStyle = () => {
         @page {
             size: A4;
         }
+        @page {
+            @bottom-right {
+                content: counter(page) " of " counter(pages);
+            }
+        }
+         
     `
 }
 

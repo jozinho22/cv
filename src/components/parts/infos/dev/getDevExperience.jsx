@@ -2,7 +2,7 @@ const getDevExperience = () => {
     return {
             french: [
                 {
-                    period: "jan 2021 - avr 2021",
+                    period: "january2021 - avril 2021",
                     company: "Open",
                     companyLink: "https://www.open.global/",
                     as: "Développeur Java/ReactJS",
@@ -11,7 +11,7 @@ const getDevExperience = () => {
                     desc: "Sur ces deux projets, j'ai été amené à développer de nouvelles fonctionnalités telles que l'ajout de nouvelles données, de créer de nouvelles requêtes à la base de données, de développer la possibilité d’ajout de nouveaux types de fichiers et d’assurer la cohérence des transferts de données entre le front-end et et le back-end."
                 },
                 {
-                    period: "sept 2016 - sept 2018",
+                    period: "septembre 2016 - septembre 2018",
                     company: "La SACEM - Paris",
                     companyLink: "https://www.sacem.fr/",
                     as: "Développeur Java/SQL",
@@ -22,7 +22,7 @@ const getDevExperience = () => {
         ],
         english: [
             {
-                period: "jan 2021 - apr 2021",
+                period: "january 2021 - april 2021",
                 company: "Open",
                 companyLink: "https://www.open.global/",
                 as: "Java/ReactJS developer",
@@ -31,7 +31,7 @@ const getDevExperience = () => {
                 desc: "On those two projects, I developped new features such as adding new datas, creating new databases requests and assuring back and front coherence."
             },
             {
-                period: "sept 2016 - sept 2018",
+                period: "september 2016 - september 2018",
                 company: "La SACEM - Paris",
                 companyLink: "https://www.sacem.fr/",
                 as: "Java/SQL developer",

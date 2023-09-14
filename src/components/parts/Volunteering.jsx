@@ -2,19 +2,20 @@ import React from 'react';
 import AppContext from '../context/AppContext';
 import languageChooser from '../helpers/languageChooser';
 import getTitles from './infos/getTitles';
-import getVolunteering from './infos/generic/getVolunteering';
+import getVolunteerWork from './infos/generic/getVolunteerWork';
+import EnumDomain from '../helpers/EnumDomain';
 import { Hourglass, PersonFill, GeoAltFill, Boxes } from 'react-bootstrap-icons';
 
-const Volunteering = () => {
+const Volunteering = ({domain}) => {
 
     const {language} = React.useContext(AppContext);
-    var title = languageChooser(language, getTitles()).volunteering;
-    var volunteerings = languageChooser(language, getVolunteering());
+    var title = languageChooser(language, getTitles()).volunteerWork;
+    var volunteerWorks = languageChooser(language, getVolunteerWork());
 
     return  <div className="page-break">
                 <div className="title">{title}</div>
                 <div className="volunteering">
-                    {volunteerings.map((volunteering, index) => {
+                    {volunteerWorks.map((volunteering, index) => {
                         return  <div className="element" id={`volunteering-${index}`} key={index}>
                                     <div className="icon-block period">
                                         <Hourglass className="icon" /> 
@@ -47,13 +48,14 @@ const Volunteering = () => {
                                         </>
                                             :   <></>
                                     }
-                                    <div className="achievements">
+                                   
+                                    {/* <div className="achievements">
                                         <div className="icon-block">
                                             <Boxes className="icon" /> 
                                             <div className="element-of-icon">{language === "French" ? "Réalisations" : "Achievements"}</div>
                                         </div> 
                                         <div className="desc">{volunteering.desc}</div>
-                                    </div>
+                                    </div> */}
                                 </div>  
                     })}  
                     <hr />      

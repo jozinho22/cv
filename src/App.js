@@ -39,7 +39,9 @@ function App() {
                     </div>       
                 </AppContext.Provider>
             </div>
-            <div id="doc-to-print"></div>
+            <div id="doc-to-print">
+               
+            </div>
         </>
     );
 }

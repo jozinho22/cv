@@ -4,10 +4,10 @@ const getExtraProExperience = ( domain ) => {
     return {
         french: [
             {
-                period: "mar 2020 - maintenant",
+                period: "mars 2020 - maintenant",
                 company: "En autodidacte",
                 as: "Développeur Fullstack",
-                tools: " - JavaScript (ReactJS, NodeJS, AngularJS, Express, Sequelize, MathJax, Helmet, JWT),\n - Java (Spring, JPA/Hibernate, Maven, JWT),\n - HTML5, CSS3, Bootstrap,\n - SQL (PostgreSQL, MySQL, SQL Server, Oracle), \n - Git (Git Bash, GitHub, GitLab, Git Fork)",                     
+                tools: "- JavaScript (ReactJS, NodeJS, AngularJS, Express, Sequelize, MathJax, Helmet, JWT),\n - Java (Spring, JPA/Hibernate, Maven, JWT),\n - HTML5, CSS3, Bootstrap,\n - SQL (PostgreSQL, MySQL, SQL Server, Oracle), \n - Git (Git Bash, GitHub, GitLab, Git Fork)",                     
                 desc: "Développement d'applications en ReactJS",
                 more: "Le développement de ces applications s’est réalisée dans le cadre de l’apprentissage de ReactJs, et notamment à partir de la sortie de Hooks. \n\n Voici alors une liste de quelques projets sur lesquels j'ai travaillé ces dernières années. \n Le projet principal sur lequel je travaille est le premier, la base documentaire mathématique, à destination des jeunes et qui est complément de mon activité de professeur de mathématiques à domicile.",
                 references: [
@@ -49,8 +49,8 @@ const getExtraProExperience = ( domain ) => {
             },
             {
                 period: "2012 - maintenant",
-                as: "Professeur de mathématiques",
-                desc: "- Cours de mathématiques à domicile (collège/lycée) - soutien scolaire et renforcement (actuellement quatre élèves) \n - Création d'une base documentaire mathématique",
+                as: "Professeur de mathématiques à domicile",
+                desc: "- Soutien scolaire et renforcement \n - Création d'un site dédié :",
                 references: [
                     {
                         url: "https://jozinho22.github.io/maths",
@@ -62,10 +62,10 @@ const getExtraProExperience = ( domain ) => {
         ],
         english: [
             {
-                period: "mar 2020 - now",
+                period: "march 2020 - up to now",
                 company: "Self-taught",
                 as: "Fullstack developer",
-                tools: " - JavaScript (ReactJS, NodeJS, AngularJS, Express, Sequelize, MathJax, Helmet, JWT),\n - Java (Spring, JPA/Hibernate, Maven, JWT),\n - HTML5, CSS3, Bootstrap,\n - SQL (PostgreSQL, MySQL, SQL Server, Oracle), \n - Git (Git Bash, GitHub, GitLab, Git Fork)",                     
+                tools: "- JavaScript (ReactJS, NodeJS, AngularJS, Express, Sequelize, MathJax, Helmet, JWT),\n - Java (Spring, JPA/Hibernate, Maven, JWT),\n - HTML5, CSS3, Bootstrap,\n - SQL (PostgreSQL, MySQL, SQL Server, Oracle), \n - Git (Git Bash, GitHub, GitLab, Git Fork)",                     
                 desc: "ReactJS apps development",
                 more: "Those apps were builded while learning ReactJs, and precisely after Hooks features releases. \n Others projects without GUI, are available on my GitHub (securised REST API notably). \n\n Here is list of the main projets that I worked on. \n The main project is the first one, the mathematical libray, according to my mathematics teacher activity.",
                 references: [
@@ -76,8 +76,8 @@ const getExtraProExperience = ( domain ) => {
                     },
                     {
                         url: domain === EnumDomain.DEV ? "https://jozinho22.github.io/cv/dev" : "https://jozinho22.github.io/cv/maths",
-                        webSiteName : "My CV on the web",
-                        desc: domain === EnumDomain.DEV ?  "(My CV as a developper)" : "(My CV as a maths teacher)"
+                        webSiteName : "My resume on the web",
+                        desc: domain === EnumDomain.DEV ?  "(My resume as a developper)" : "(My resume as a math teacher)"
                     },
                     {
                         url: "https://jozinho22.github.io/test-your-skills",
@@ -106,16 +106,16 @@ const getExtraProExperience = ( domain ) => {
                     ]
             },
             {
-                period: "2012 - now",
-                as: "Mathematics teacher",
-                desc: "- Mathematics lessons at clients's home - tutoring et reinforcement (currently four pupils) \n - Creation of a mathematics documentary library",
+                period: "2012 - up to now",
+                as: "Maths teacher @Home",
+                desc: "- Tutoring et reinforcement \n - Creation of a dedicated site :",
                 references: [
                     {
                         url: "https://jozinho22.github.io/maths",
                         webSiteName : "Ma Thematique",
-                        desc: "(Mathematics documentary library)"
+                        desc: "(Maths database)"
                     }
-                ],
+                ]
             }
         ]
 

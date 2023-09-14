@@ -119,6 +119,10 @@ a .dropdown-item {
 }
 
 /* miscellaneous */
+.center {
+    text-align: center;
+}
+
 a {
     color: var(--hyperlink-color) !important;
     text-decoration: none !important;

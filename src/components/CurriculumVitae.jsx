@@ -19,18 +19,18 @@ import './CurriculumVitae.css';
 
 const CurriculumVitae = ( {domain, poste, relativePath} ) => {
 
-    var poste2 = 'Employé polyvalent';
-    poste2 !== '' ? poste = poste2 : <></>;
-
-    console.log(domain, poste, relativePath)
+    // entrer le poste ici
+    var posteNonGeneric = '';
+    posteNonGeneric !== '' ? poste = posteNonGeneric : <></>;
     
+    // entrer la société ici
     var boite = "";
 
     return (
         <>
             <Helmet>
                 <title>
-                    {"CV de Josselin DOUINEAU"}
+                    {`CV de Josselin DOUINEAU${(poste !== '' && poste !== undefined) ? ` - ${poste}` : ''}${boite !== '' ? ` - ${boite}` : ''}`}
                 </title>
                 <meta data-rh="true" name="description" content={`Mon curriculum vitae : ${poste} au format web`} />
                 <link rel="canonical" href={`https://jozinho22.github.io/cv${relativePath}`} />
@@ -59,11 +59,11 @@ const CurriculumVitae = ( {domain, poste, relativePath} ) => {
                                     <Experience domain={domain} /> 
                                     <Experience domain={domain} pro/>
                                 </>
-                        } 
-                
-                <Volunteering />
+                } 
 
                 <Education />
+                
+                <Volunteering domain={domain} />
 
                 {
                     domain === EnumDomain.DEV ? 

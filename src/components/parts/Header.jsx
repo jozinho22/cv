@@ -33,12 +33,9 @@ const Header = ( {domain, poste, boite} ) => {
 
         var entirePage = document.querySelector("#capture").cloneNode(true);
         document.getElementById("doc-to-print").appendChild(entirePage);
-
         catchedDiv = document.getElementById("doc-to-print");
-        catchedDiv.getElementsByClassName("header")[0].remove();
 
         return catchedDiv.getElementsByClassName("App")[0];
-
     }
 
     const destroyElementToPrint = () => {
@@ -49,7 +46,7 @@ const Header = ( {domain, poste, boite} ) => {
         {
             content: () => buildElementToPrint(), 
             pageStyle: pageStyle(),
-            documentTitle: domain === `Josselin DOUINEAU${poste ? ` - ${poste}` : ''}${boite ? ` - ${boite}` : ''} - CV`,
+            documentTitle: domain === `Josselin DOUINEAU - ${poste}${boite !== '' ? ` - ${boite}` : ''} - CV`,
             onAfterPrint: () => destroyElementToPrint()
         }
     );

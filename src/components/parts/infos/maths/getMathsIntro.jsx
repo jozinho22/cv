@@ -7,7 +7,7 @@ const getMathsIntro = () => {
                         },
                         english: {
                                 me: "Josselin DOUINEAU, 35",
-                                profession: "Mathematics teacher"
+                                profession: "Maths teacher"
                         }
                 } 
 

@@ -12,8 +12,6 @@ const Intro = ( {domain, poste} ) => {
     const {language} = React.useContext(AppContext);
     var intro = domain === EnumDomain.DEV ? languageChooser(language, getDevIntro()) : domain === EnumDomain.MATHS ? languageChooser(language, getMathsIntro()) : getGenericIntro(poste) ;
 
-    console.log(domain, intro, poste)
-
     return  <div className="intro">
                 <img src={photo} alt=""/>
                 <div className="me">{intro.me}</div>

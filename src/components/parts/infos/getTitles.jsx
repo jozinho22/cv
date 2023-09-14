@@ -9,7 +9,7 @@ const getTitles = () => {
             certifications: "Certifications",
             socialNetworks: "Réseaux sociaux / Apps",
             leasures: "Loisirs",
-            volunteering: "Bénévolats",
+            volunteerWork: "Bénévolats",
             contact: "Contact"
         },
         english : {
@@ -21,7 +21,7 @@ const getTitles = () => {
             certifications: "Certifications",
             socialNetworks: "Social networks - Apps",
             leasures: "Leasures",
-            volunteering: "Volunteering",
+            volunteerWork: "Volunteer work",
             contact: "Contact"
         }
     }

@@ -16,12 +16,19 @@ const Experience = ( {domain, pro} ) => {
     var title = pro ? languageChooser(language, getTitles()).experience : languageChooser(language, getTitles()).extraProExperience;
     var jobs = pro ? domain === EnumDomain.DEV ? languageChooser(language, getDevExperience()) : languageChooser(language, getNonDevExperience()) : languageChooser(language, getExtraProExperience(domain)); 
 
-    domain === EnumDomain.NON_DEV && !pro ? jobs.reverse() : <></>;
+    domain !== EnumDomain.DEV && !pro ? jobs.reverse() : <></>;
 
     return  <div className="page-break">
                 <div className="title">{title}</div>
                 <div className="experience">
                     {jobs.map((job, index) => {
+
+                        if(job.period === "pause") {
+                            return  <div key={index}>  
+                                        <p className="center">{job.desc} </p>
+                                        <hr/>
+                                    </div>
+                        }
                         return  <div className="element" id={`experience-${index}`} key={index}>
                                     <div className="icon-block period">
                                         <Hourglass className="icon" /> 
@@ -83,7 +90,7 @@ const Experience = ( {domain, pro} ) => {
                                         }
                                     </div>
                                     <div className="achievements">
-                                        {job.desc ?
+                                        {!pro && job.desc ?
                                             <>
                                                 <div className="icon-block">
                                                     {domain === EnumDomain.DEV ? 
@@ -147,7 +154,6 @@ const Experience = ( {domain, pro} ) => {
                                     } 
                                 </div>  
                     })}  
-                    <hr />      
                 </div>
             </div>
 }
