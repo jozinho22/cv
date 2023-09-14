@@ -49,7 +49,7 @@ const Header = ( {domain, poste, boite} ) => {
         {
             content: () => buildElementToPrint(), 
             pageStyle: pageStyle(),
-            documentTitle: domain ===  EnumDomain.DEV ? 'Josselin DOUINEAU - développeur - CV' : `Josselin DOUINEAU - ${poste} - ${boite} - CV`,
+            documentTitle: domain === `Josselin DOUINEAU${poste ? ` - ${poste}` : ''}${boite ? ` - ${boite}` : ''} - CV`,
             onAfterPrint: () => destroyElementToPrint()
         }
     );

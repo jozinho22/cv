@@ -19,12 +19,12 @@ import './CurriculumVitae.css';
 
 const CurriculumVitae = ( {domain, poste, relativePath} ) => {
 
-    var poste2 = '';
+    var poste2 = 'Employé polyvalent';
     poste2 !== '' ? poste = poste2 : <></>;
 
     console.log(domain, poste, relativePath)
     
-    var boite = "Collège Saint-Michel de Liffré";
+    var boite = "";
 
     return (
         <>
@@ -32,8 +32,8 @@ const CurriculumVitae = ( {domain, poste, relativePath} ) => {
                 <title>
                     {"CV de Josselin DOUINEAU"}
                 </title>
-                <meta data-rh="true" name="description" content={`Mon curriculim vitae de ${poste} au format web`} />
-                <link rel="canonical" href={`https://jozinho22.github.io/cv/maths${relativePath}`} />
+                <meta data-rh="true" name="description" content={`Mon curriculum vitae : ${poste} au format web`} />
+                <link rel="canonical" href={`https://jozinho22.github.io/cv${relativePath}`} />
             </Helmet>
             <Container className="curriculum-vitae-container">
                 

@@ -11,6 +11,9 @@ const pageStyle = () => {
             .curriculum-vitae-container {
                 font-size: 11px !important;
             }
+            .me, h1 {
+                font-size: 17px !important;
+            }
             .title {
                 font-size: 13px !important;
             }

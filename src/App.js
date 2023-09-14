@@ -31,8 +31,9 @@ function App() {
                     <div className={`${theme}`}>
                         <BrowserRouter>
                             <Routes>
-                                <Route exact path={pathBuilder('/')} element={<CurriculumVitae domain={EnumDomain.DEV} poste={'Développeur ReactJS'} relativePath={'/'} />} />
-                                <Route path={pathBuilder('/maths')} element={<CurriculumVitae domain={EnumDomain.NON_DEV} poste={'Professeur de mathématiques'} relativePath={'/maths'} />} />
+                                <Route exact path={pathBuilder('/')} element={<CurriculumVitae domain={EnumDomain.GENERIC} relativePath={'/'} />} />
+                                <Route path={pathBuilder('/dev')} element={<CurriculumVitae domain={EnumDomain.DEV} poste={'Développeur ReactJS'} relativePath={'/dev'} />} />
+                                <Route path={pathBuilder('/maths')} element={<CurriculumVitae domain={EnumDomain.MATHS} poste={'Professeur de mathématiques'} relativePath={'/maths'} />} />
                             </Routes>
                         </BrowserRouter>
                     </div>       

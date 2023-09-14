@@ -2,7 +2,7 @@ import React from 'react';
 import AppContext from '../context/AppContext';
 import languageChooser from '../helpers/languageChooser';
 import getTitles from './infos/getTitles';
-import getVolunteering from './infos/nonDev/getVolunteering';
+import getVolunteering from './infos/generic/getVolunteering';
 import { Hourglass, PersonFill, GeoAltFill, Boxes } from 'react-bootstrap-icons';
 
 const Volunteering = () => {

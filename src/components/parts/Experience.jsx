@@ -1,6 +1,6 @@
 import React from 'react';
 import getDevExperience from './infos/dev/getDevExperience';
-import getNonDevExperience from './infos/nonDev/getNonDevExperience';
+import getNonDevExperience from './infos/generic/getGenericExperience';
 import { Hourglass, PcDisplayHorizontal, PersonFill, GeoAltFill, CodeSquare, Boxes, WrenchAdjustable, Link45deg, Phone, QuestionLg } from 'react-bootstrap-icons';
 import AppContext from '../context/AppContext';
 import languageChooser from '../helpers/languageChooser';
