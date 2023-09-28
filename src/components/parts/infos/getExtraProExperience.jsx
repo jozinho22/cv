@@ -54,7 +54,7 @@ const getExtraProExperience = ( domain ) => {
                 references: [
                     {
                         url: "https://jozinho22.github.io/maths",
-                        webSiteName : "Ma Thematique",
+                        webSiteName : "Ma Thématique",
                         desc: "(Base documentaire mathématique)"
                     }
                 ],
@@ -107,12 +107,12 @@ const getExtraProExperience = ( domain ) => {
             },
             {
                 period: "2012 - up to now",
-                as: "Maths teacher @Home",
+                as: "Maths teacher (private lessons)",
                 desc: "- Tutoring et reinforcement \n - Creation of a dedicated site :",
                 references: [
                     {
                         url: "https://jozinho22.github.io/maths",
-                        webSiteName : "Ma Thematique",
+                        webSiteName : "Ma Thématique",
                         desc: "(Maths database)"
                     }
                 ]

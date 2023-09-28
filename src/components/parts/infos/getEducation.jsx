@@ -17,7 +17,7 @@ const getEducation = () => {
                         titleLink: "https://www.ipgp.fr/fr/master/genie-de-lenvironnement-industrie-gei",
                         school: "Université Paris 7 Diderot",
                         schoolLink: "https://u-paris.fr/en/",
-                        desc: "- Engineering process, \n - Buildings energy performance process, \n - Sustainable development standards, \n - Coding."
+                        desc: "- Engineering process, \n - Buildings energy performance process, \n - Environmental law, \n - Computer programming."
                     }
                 ]
             }

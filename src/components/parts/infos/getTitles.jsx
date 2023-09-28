@@ -20,7 +20,7 @@ const getTitles = () => {
             education: "Education",
             certifications: "Certifications",
             socialNetworks: "Social networks - Apps",
-            leasures: "Leasures",
+            leasures: "Hobbies",
             volunteerWork: "Volunteer work",
             contact: "Contact"
         }

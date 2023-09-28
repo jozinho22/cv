@@ -35,6 +35,8 @@ const Header = ( {domain, poste, boite} ) => {
         document.getElementById("doc-to-print").appendChild(entirePage);
         catchedDiv = document.getElementById("doc-to-print");
 
+        catchedDiv.getElementsByClassName("header")[0].remove(); 
+        console.log(catchedDiv)
         return catchedDiv.getElementsByClassName("App")[0];
     }
 

@@ -129,7 +129,7 @@ const getNonDevExperience = () => {
                         period: "july 2023 - september 2023",
                         company: "Biocoop du Cormier - Saint-Aubin-du-Cormier",
                         companyLink: "https://www.biocoopducormier.fr/",
-                        as: "Polyvalent employee",
+                        as: "Versatile employee",
                         tools: "CocoBio, IziBio", 
                         desc: "Restock, delivering reception, cheese and bread service for clients, welcoming/advices, cashiering, cleaning"
                     },
@@ -137,7 +137,7 @@ const getNonDevExperience = () => {
                         period: "august 2021 - october 2022",
                         company: "Biocoop Le Chat Biotté - Combourg",
                         companyLink: "https://www.biocooplechatbiotte.com/",
-                        as: "Polyvalent employee",
+                        as: "Versatile employee",
                         tools: "CocoBio, IziBio", 
                         desc: "Restock, delivering reception, welcoming/advices, cashiering, cleaning"
                     },
@@ -152,12 +152,12 @@ const getNonDevExperience = () => {
                         period: "june 2021 - july 2021",
                         company: "La vie claire - Monfort-sur-Meu",
                         companyLink: "https://www.lavieclaire.com/",
-                        as: "Polyvalent employee",
+                        as: "Versatile employee",
                         desc: "Restock, delivering reception, welcoming/advices, cashiering, cleaning"
                     },
                     {
                         period: "pause",
-                        desc: "Organic shops employee"
+                        desc: "Versatile employee in organic stores"
                     },
                     {
                         period: "january 2021 - april 2021",
@@ -205,7 +205,7 @@ const getNonDevExperience = () => {
                     },
                     {
                         period: "pause",
-                        desc: "Cartographer"
+                        desc: "GIS Cartographer"
                     },
                     {
                         period: "april 2014 - september 2014",
