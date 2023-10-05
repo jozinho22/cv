@@ -4,6 +4,7 @@ const getExtraProExperience = ( domain ) => {
     return {
         french: [
             {
+                domain: EnumDomain.MATHS,
                 period: "mars 2020 - maintenant",
                 company: "En autodidacte",
                 as: "Développeur Fullstack",
@@ -48,6 +49,7 @@ const getExtraProExperience = ( domain ) => {
                 ]
             },
             {
+                domain: EnumDomain.MATHS,
                 period: "2012 - maintenant",
                 as: "Professeur de mathématiques à domicile",
                 desc: "- Soutien scolaire et renforcement \n - Création d'un site dédié :",
@@ -62,6 +64,7 @@ const getExtraProExperience = ( domain ) => {
         ],
         english: [
             {
+                domain: EnumDomain.MATHS,
                 period: "march 2020 - up to now",
                 company: "Self-taught",
                 as: "Fullstack developer",
@@ -106,6 +109,7 @@ const getExtraProExperience = ( domain ) => {
                     ]
             },
             {
+                domain: EnumDomain.MATHS,
                 period: "2012 - up to now",
                 as: "Maths teacher (private lessons)",
                 desc: "- Tutoring et reinforcement \n - Creation of a dedicated site :",

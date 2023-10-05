@@ -1,7 +1,7 @@
 import React from 'react';
 import getDevExperience from './infos/dev/getDevExperience';
 import getNonDevExperience from './infos/generic/getGenericExperience';
-import { Hourglass, PcDisplayHorizontal, PersonFill, GeoAltFill, CodeSquare, Boxes, WrenchAdjustable, Link45deg, Phone, QuestionLg } from 'react-bootstrap-icons';
+import { ArrowUp, Hourglass, PcDisplayHorizontal, PersonFill, GeoAltFill, CodeSquare, Boxes, WrenchAdjustable, Link45deg, Phone, QuestionLg } from 'react-bootstrap-icons';
 import AppContext from '../context/AppContext';
 import languageChooser from '../helpers/languageChooser';
 import getTitles from './infos/getTitles';
@@ -12,7 +12,7 @@ import {DiGit} from 'react-icons/di';
 
 const Experience = ( {domain, pro} ) => {
 
-    const {language} = React.useContext(AppContext);
+    const {language, focus} = React.useContext(AppContext);
     var title = pro ? languageChooser(language, getTitles()).experience : languageChooser(language, getTitles()).extraProExperience;
     var jobs = pro ? domain === EnumDomain.DEV ? languageChooser(language, getDevExperience()) : languageChooser(language, getNonDevExperience()) : languageChooser(language, getExtraProExperience(domain)); 
 
@@ -25,11 +25,15 @@ const Experience = ( {domain, pro} ) => {
 
                         if(job.period === "pause") {
                             return  <div key={index}>  
-                                        <p className="center">{job.desc} </p>
-                                        <hr/>
+                                        <div className="pause">
+                                            <ArrowUp className="arrowup-icon-left" /> 
+                                            <div className="center">{job.desc} </div>
+                                            <ArrowUp className="arrowup-icon-right" /> 
+                                        </div>
+                                         <hr/>
                                     </div>
                         }
-                        return  <div className="element" id={`experience-${index}`} key={index}>
+                        return  <div className={`element ${focus && job.domain && job.domain === domain? "focus" : ""}`} id={`experience-${index}`} key={index}>
                                     <div className="icon-block period">
                                         <Hourglass className="icon" /> 
                                         <div className="element-of-icon period-date">{job.period}</div>

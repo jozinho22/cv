@@ -3,14 +3,13 @@ const getLeasures = () => {
     return {
                 french : 
                     {
-                        list: "Basket, échecs, arts martiaux, guitare, programmation"
-                    }
-                ,
+                        list: "Échecs, Mathématiques, Programmation, Basket, Guitare"
+                    },
                 english:
                     {
-                        list: "Basketball, chess, martial arts, guitar, computer programming"
+                        list: "Chess, Maths, Computer programming, Basketball, Guitar"
                     } 
-    }
+        }
 }
 
 export default getLeasures;

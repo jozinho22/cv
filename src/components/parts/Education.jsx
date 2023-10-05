@@ -5,17 +5,17 @@ import AppContext from '../context/AppContext';
 import languageChooser from '../helpers/languageChooser';
 import getTitles from './infos/getTitles';
 
-const Education = () => {
+const Education = ({domain}) => {
 
-    const {language} = React.useContext(AppContext);
+    const {language, focus} = React.useContext(AppContext);
     var title = languageChooser(language, getTitles()).education;
-    var diplomas = languageChooser(language, getEducation());
+    var diplomas = languageChooser(language, getEducation()).filter(dip => (dip.domain === domain) || (!dip.domain));
     
     return  <div className="page-break">
                 <div className="title">{title}</div>
                 <div className="education">
                     {diplomas.map((diploma, index) => {
-                        return  <div className="element" id={`education-${index}`} key={index}>
+                        return  <div className={`element ${focus && diploma.domain && diploma.domain === domain? "focus" : ""}`} id={`education-${index}`} key={index}>
                                     <div className="icon-block period">
                                         <Hourglass className="icon" /> 
                                         <div className="element-of-icon period-date">

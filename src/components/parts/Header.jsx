@@ -4,13 +4,12 @@ import { useReactToPrint } from "react-to-print";
 import pageStyle from '../helpers/pageStyle';
 
 import AppContext from '../context/AppContext';
-import { FilePdfFill, Globe, Magic } from 'react-bootstrap-icons';
-import EnumDomain from '../helpers/EnumDomain';
-
+import { FilePdfFill, Globe, Magic, Search } from 'react-bootstrap-icons';
 
 const Header = ( {domain, poste, boite} ) => {
 
-    const {theme, updateTheme, language, updateLanguage} = React.useContext(AppContext);
+    const {theme, updateTheme, language, updateLanguage, focus, updateFocus} = React.useContext(AppContext);
+
     var catchedDiv = {};
 
     /* var themes = getThemes();  */
@@ -29,6 +28,10 @@ const Header = ( {domain, poste, boite} ) => {
         updateLanguage(language === 'French' ? 'English' : 'French');
     }
 
+    const switchFocus = () => {
+        updateFocus(!focus);
+    }
+
     const buildElementToPrint = () => {
 
         var entirePage = document.querySelector("#capture").cloneNode(true);
@@ -36,7 +39,6 @@ const Header = ( {domain, poste, boite} ) => {
         catchedDiv = document.getElementById("doc-to-print");
 
         catchedDiv.getElementsByClassName("header")[0].remove(); 
-        console.log(catchedDiv)
         return catchedDiv.getElementsByClassName("App")[0];
     }
 
@@ -55,7 +57,7 @@ const Header = ( {domain, poste, boite} ) => {
 
     return  <Container className="header">
                 <Row className="header-button-container">
-                    <Col xs={4}>
+                    <Col xs={3}>
                         <Button variant="warning" className="printer-button" onClick={print}>
                             <div className="icon-block">
                                 <FilePdfFill className="icon" /> 
@@ -64,7 +66,7 @@ const Header = ( {domain, poste, boite} ) => {
                         </Button>
                     </Col>
                     
-                    <Col xs={4}>
+                    <Col xs={3}>
                         <Button variant="success" className="theme-button" onClick={switchTheme}>
                             <div className="icon-block">
                                 <Magic className="icon" /> 
@@ -76,15 +78,13 @@ const Header = ( {domain, poste, boite} ) => {
                         </Button>         
                     </Col>
 
-                    <Col xs={4}>
+                    <Col xs={3}>
                         <Button variant="primary" className="language-button" onClick={switchLanguage}>
                             <div className="icon-block">
                                 {
                                     !mobile ?
                                         <div className="element-of-icon element-of-icon-left">
-                                            {
-                                                language === 'French' ? 'FR' : 'EN'
-                                            }
+                                            {language === 'French' ? 'FR' : 'EN'}
                                         </div>
                                             : <></>
                                 }
@@ -93,14 +93,24 @@ const Header = ( {domain, poste, boite} ) => {
                                 {
                                     !mobile ?
                                         <div className="element-of-icon">
-                                            {
-                                                language === 'French' ? 'EN' : 'FR'
-                                            }
+                                            {language === 'French' ? 'EN' : 'FR'}
                                         </div>
                                             : <></>
                                 }
                             </div>
                         </Button>
+                    </Col>
+
+                    <Col xs={3}>
+                        <Button variant="danger" className="focus-button" onClick={switchFocus}>
+                            <div className="icon-block">
+                                <Search className="icon" /> 
+                                {!mobile ?  <div className="element-of-icon">
+                                                {focus === true ? 'Remove focuses' : 'Display focuses'}
+                                            </div> 
+                                                : <></>}
+                            </div>
+                        </Button>         
                     </Col>
                 </Row>
             </Container>

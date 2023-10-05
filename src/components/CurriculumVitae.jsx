@@ -1,7 +1,8 @@
 import { Container } from 'react-bootstrap';
 import Header from './parts/Header';
-import Intro from './parts/Intro';
+import Card from './parts/Card';
 import Contact from './parts/Contact';
+import Intro from './parts/Intro';
 import Skills from './parts/Skills';
 import Languages from './parts/Languages';
 import Experience from './parts/Experience';
@@ -39,8 +40,9 @@ const CurriculumVitae = ( {domain, poste, relativePath} ) => {
                 
                 <Header domain={domain} poste={poste} boite={boite} />
                 
-                <Intro domain={domain} poste={poste} />
+                <Card domain={domain} poste={poste} />
                 <Contact />
+                <Intro domain={domain} poste={poste} />
                 
                 {
                     domain === EnumDomain.DEV ? 
@@ -61,7 +63,7 @@ const CurriculumVitae = ( {domain, poste, relativePath} ) => {
                                 </>
                 } 
 
-                <Education />
+                <Education domain={domain} />
                 
                 <Volunteering domain={domain} />
 

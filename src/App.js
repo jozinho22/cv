@@ -14,14 +14,17 @@ import './App.css';
 
 function App() {
 
-    const [theme, setTheme] = React.useState(getThemeIfStoredThemeExists(JSON.parse(sessionStorage.getItem('josselin-douineau-developer-theme'))) ? JSON.parse(sessionStorage.getItem('josselin-douineau-developer-theme')) : "Blank");
+    const [theme, setTheme] = React.useState(getThemeIfStoredThemeExists(JSON.parse(sessionStorage.getItem('josselin-cv-developer-theme'))) ? JSON.parse(sessionStorage.getItem('josselin-douineau-cv-theme')) : "Blank");
     const [language, setLanguage] = React.useState("French");
+    const [focus, setFocus] = React.useState(true);
 
     const appContext = {
         theme: theme,
         updateTheme: setTheme,
         language: language,
-        updateLanguage: setLanguage
+        updateLanguage: setLanguage,
+        focus: focus,
+        updateFocus: setFocus,
     }
 
     return (
@@ -39,9 +42,7 @@ function App() {
                     </div>       
                 </AppContext.Provider>
             </div>
-            <div id="doc-to-print">
-               
-            </div>
+            <div id="doc-to-print"></div>
         </>
     );
 }

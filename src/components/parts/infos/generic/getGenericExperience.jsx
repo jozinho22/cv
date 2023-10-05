@@ -1,3 +1,5 @@
+import EnumDomain from "../../../helpers/EnumDomain";
+
 const getNonDevExperience = () => {
     
     return {
@@ -37,6 +39,7 @@ const getNonDevExperience = () => {
                         desc: "Employé polyvalent en magasins bio"
                     },
                     {
+                        domain: EnumDomain.MATHS,
                         period: "janvier 2021 - avril 2021",
                         company: "Open",
                         companyLink: "https://www.open.global/",
@@ -45,6 +48,7 @@ const getNonDevExperience = () => {
                         desc: "Maintenance en condition opérationnelle et développement de nouvelles fonctionnalités d'un un générateur d'applications mobiles avec ReactJs ainsi que sur le back-end de cette application développé en Java"
                     },
                     {
+                        domain: EnumDomain.MATHS,
                         period: "septembre 2016 - september 2018",
                         company: "La SACEM - Paris",
                         companyLink: "https://www.sacem.fr/",
@@ -53,6 +57,7 @@ const getNonDevExperience = () => {
                         desc: "Maintenance en condition opérationnelle et développement de nouvelles fonctionnalités sur trois applications (application de gestion de clients, application de tarification de contrats et environnement back-end d'une application mobile)"
                     },
                     {
+                        domain: EnumDomain.MATHS,
                         period: "février 2016 - juin 2016",
                         company: "La SNCF - Paris",
                         companyLink: "https://www.sncf.com/fr",
@@ -160,6 +165,7 @@ const getNonDevExperience = () => {
                         desc: "Versatile employee in organic stores"
                     },
                     {
+                        domain: EnumDomain.MATHS,
                         period: "january 2021 - april 2021",
                         company: "Open",
                         companyLink: "https://www.open.global/",
@@ -168,6 +174,7 @@ const getNonDevExperience = () => {
                         desc: "Maintenance and development of a mobile app generator with ReactJs as well as the back-end part developed in Java"
                     },
                     {
+                        domain: EnumDomain.MATHS,
                         period: "september 2016 - september 2018",
                         company: "La SACEM - Paris",
                         companyLink: "https://www.sacem.fr/",
@@ -176,6 +183,7 @@ const getNonDevExperience = () => {
                         desc: "Maintenance and development of three applications (clients management application, pricing application and back-end environment of a mobile app)"
                     },
                     {
+                        domain: EnumDomain.MATHS,
                         period: "february 2016 - june 2016",
                         company: "La SNCF - Paris",
                         companyLink: "https://www.sncf.com/fr",

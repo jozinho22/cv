@@ -13,6 +13,11 @@
     --green-button-hover-color: rgb(35, 112, 40);
     --green-button-shadow-color: rgb(36, 94, 40);
     --green-button-shadow-darker-color: rgb(27, 54, 29);
+
+    --red-button-color: rgb(146, 56, 44);
+    --red-button-hover-color: rgb(129, 55, 45);
+    --red-button-shadow-color: rgb(110, 51, 43);
+    --red-button-shadow-darker-color: rgb(94, 48, 42);
 }
 
 .Blank {
@@ -23,7 +28,7 @@
     color: var(--simple-text-color) !important;
     --simple-text-color: rgb(63, 63, 59);
     --title-color: rgb(78, 69, 64);
-    --intro-background-color: rgb(204, 201, 209);
+    --card-background-color: rgb(181, 176, 189);
     --highlight-color: rgb(86, 78, 185);
     --hyperlink-color: rgb(15, 146, 58);
     --progressbar-background-color: rgb(179, 182, 181);
@@ -37,19 +42,22 @@
     --language-button-color: var(--blue-button-color);
     --language-button-hover-color: var(--blue-button-hover-color);
     --language-button-shadow-color: var(--blue-button-shadow-color);
+    --focus-button-color: var(--red-button-color);
+    --focus-button-hover-color: var(--red-button-hover-color);
+    --focus-button-shadow-color: var(--red-button-shadow-color);
 }
 
 .Darcula {
-    --back-color-1: rgb(59, 55, 55); 
-    --back-color-2: rgb(77, 74, 80); 
-    --back-color-3: rgb(95, 91, 99); 
+    --back-color-1: rgb(44, 43, 43); 
+    --back-color-2: rgb(59, 58, 59); 
+    --back-color-3: rgb(82, 81, 83); 
     --back-hover-color : rgb(50, 50, 51); 
     color: var(--simple-text-color) !important;
     --simple-text-color: rgb(197, 197, 193);
     --title-color: rgb(164, 168, 166);
-    --intro-background-color: rgb(102, 103, 104);
+    --card-background-color: rgb(102, 103, 104);
     --highlight-color: rgb(165, 150, 82);
-    --hyperlink-color: rgb(167, 188, 231);
+    --hyperlink-color: rgb(132, 157, 207);
     --progressbar-background-color: rgb(179, 182, 181);
 
     --printer-button-color: var(--yellow-button-hover-color);
@@ -60,7 +68,10 @@
     --theme-button-shadow-color: var(--green-button-shadow-darker-color);
     --language-button-color: var(--blue-button-hover-color);
     --language-button-hover-color: var(--blue-button-shadow-color);
-    --language-button-shadow-color: var(--blue-button-shadow-darker-color)
+    --language-button-shadow-color: var(--blue-button-shadow-darker-color);
+    --focus-button-color: var(--red-button-hover-color);
+    --focus-button-hover-color: var(--red-button-shadow-color);
+    --focus-button-shadow-color: var(--red-button-shadow-darker-color);
 }
 
 /* .Purple {
@@ -71,7 +82,7 @@
     color: var(--simple-text-color) !important; 
     --simple-text-color: rgb(224, 224, 219);
     --title-color: rgb(252, 243, 127);
-    --intro-background-color: rgb(151, 148, 155);
+    --card-background-color: rgb(151, 148, 155);
     --highlight-color: rgb(221, 212, 86);
     --hyperlink-color: rgb(140, 233, 143);
     --progressbar-background-color: rgb(170, 197, 184);
