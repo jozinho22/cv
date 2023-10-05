@@ -1,6 +1,6 @@
 import React from 'react';
 import getDevExperience from './infos/dev/getDevExperience';
-import getNonDevExperience from './infos/generic/getGenericExperience';
+import getNonDevExperience from './infos/getGenericExperience';
 import { ArrowUp, Hourglass, PcDisplayHorizontal, PersonFill, GeoAltFill, CodeSquare, Boxes, WrenchAdjustable, Link45deg, Phone, QuestionLg } from 'react-bootstrap-icons';
 import AppContext from '../context/AppContext';
 import languageChooser from '../helpers/languageChooser';
@@ -16,7 +16,7 @@ const Experience = ( {domain, pro} ) => {
     var title = pro ? languageChooser(language, getTitles()).experience : languageChooser(language, getTitles()).extraProExperience;
     var jobs = pro ? domain === EnumDomain.DEV ? languageChooser(language, getDevExperience()) : languageChooser(language, getNonDevExperience()) : languageChooser(language, getExtraProExperience(domain)); 
 
-    domain !== EnumDomain.DEV && !pro ? jobs.reverse() : <></>;
+    /* domain !== EnumDomain.DEV && !pro ? jobs.reverse() : <></>; */
 
     return  <div className="page-break">
                 <div className="title">{title}</div>
@@ -33,7 +33,7 @@ const Experience = ( {domain, pro} ) => {
                                          <hr/>
                                     </div>
                         }
-                        return  <div className={`element ${focus && job.domain && job.domain === domain? "focus" : ""}`} id={`experience-${index}`} key={index}>
+                        return  <div className={`element ${focus && job.domains && job.domains.includes(EnumDomain.MATHS) ? "focus" : ""}`} id={`experience-${index}`} key={index}>
                                     <div className="icon-block period">
                                         <Hourglass className="icon" /> 
                                         <div className="element-of-icon period-date">{job.period}</div>
@@ -159,6 +159,11 @@ const Experience = ( {domain, pro} ) => {
                                 </div>  
                     })}  
                 </div>
+                {
+                    domain === EnumDomain.DEV ? 
+                        <hr />
+                            : <></>
+                }
             </div>
 }
 

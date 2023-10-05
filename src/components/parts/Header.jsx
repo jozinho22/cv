@@ -5,6 +5,7 @@ import pageStyle from '../helpers/pageStyle';
 
 import AppContext from '../context/AppContext';
 import { FilePdfFill, Globe, Magic, Search } from 'react-bootstrap-icons';
+import EnumDomain from '../helpers/EnumDomain';
 
 const Header = ( {domain, poste, boite} ) => {
 
@@ -57,7 +58,7 @@ const Header = ( {domain, poste, boite} ) => {
 
     return  <Container className="header">
                 <Row className="header-button-container">
-                    <Col xs={3}>
+                    <Col xs={domain === EnumDomain.MATHS ? 3 : 4} >
                         <Button variant="warning" className="printer-button" onClick={print}>
                             <div className="icon-block">
                                 <FilePdfFill className="icon" /> 
@@ -66,7 +67,7 @@ const Header = ( {domain, poste, boite} ) => {
                         </Button>
                     </Col>
                     
-                    <Col xs={3}>
+                    <Col xs={domain === EnumDomain.MATHS ? 3 : 4} >
                         <Button variant="success" className="theme-button" onClick={switchTheme}>
                             <div className="icon-block">
                                 <Magic className="icon" /> 
@@ -78,7 +79,7 @@ const Header = ( {domain, poste, boite} ) => {
                         </Button>         
                     </Col>
 
-                    <Col xs={3}>
+                    <Col xs={domain === EnumDomain.MATHS ? 3 : 4} >
                         <Button variant="primary" className="language-button" onClick={switchLanguage}>
                             <div className="icon-block">
                                 {
@@ -100,18 +101,23 @@ const Header = ( {domain, poste, boite} ) => {
                             </div>
                         </Button>
                     </Col>
-
-                    <Col xs={3}>
-                        <Button variant="danger" className="focus-button" onClick={switchFocus}>
-                            <div className="icon-block">
-                                <Search className="icon" /> 
-                                {!mobile ?  <div className="element-of-icon">
-                                                {focus === true ? 'Remove focuses' : 'Display focuses'}
-                                            </div> 
-                                                : <></>}
-                            </div>
-                        </Button>         
-                    </Col>
+                    
+                    {
+                        domain === EnumDomain.MATHS ?
+                            <Col xs={domain === EnumDomain.MATHS ? 3 : 4} >
+                                <Button variant="danger" className="focus-button" onClick={switchFocus}>
+                                    <div className="icon-block">
+                                        <Search className="icon" /> 
+                                        {!mobile ?  <div className="element-of-icon">
+                                                        {focus === true ? 'Remove focuses' : 'Display focuses'}
+                                                    </div> 
+                                                        : <></>}
+                                    </div>
+                                </Button>         
+                            </Col>
+                                :   <></>
+                    }
+                   
                 </Row>
             </Container>
 }

@@ -1,3 +1,5 @@
+import React from 'react';
+import AppContext from './context/AppContext';
 import { Container } from 'react-bootstrap';
 import Header from './parts/Header';
 import Card from './parts/Card';
@@ -10,9 +12,8 @@ import Education from './parts/Education';
 import Socials from './parts/SocialNetworks';
 import Leasures from './parts/Leasures';
 import Licenses from './parts/Licenses';
-import Certifications from './parts/Certifications';
 import EnumDomain from './helpers/EnumDomain';
-import Volunteering from './parts/Volunteering';
+import VolunteerWork from './parts/VolunteerWork';
 
 import { Helmet } from "react-helmet-async";
 
@@ -22,11 +23,18 @@ const CurriculumVitae = ( {domain, poste, relativePath} ) => {
 
     // entrer le poste ici
     var posteNonGeneric = '';
+    
     posteNonGeneric !== '' ? poste = posteNonGeneric : <></>;
     
     // entrer la société ici
     var boite = "";
 
+    const {focus, updateFocus} = React.useContext(AppContext);
+
+    React.useEffect(() => {
+        updateFocus(focus && domain === EnumDomain.MATHS);
+    }, [domain]) 
+   
     return (
         <>
             <Helmet>
@@ -51,29 +59,32 @@ const CurriculumVitae = ( {domain, poste, relativePath} ) => {
                 } 
 
                 {
-                    domain === EnumDomain.DEV ? 
+                    domain !== EnumDomain.MATHS ? 
                         <>
                             <Experience domain={domain} pro/>
-                            <Experience domain={domain} /> 
+                            {
+                                domain !== EnumDomain.GENERIC ? 
+                                    <Experience domain={domain} /> 
+                                        :   <></>
+                            }
+                            
                         </>
                             : 
                                 <>
-                                    <Experience domain={domain} /> 
+                                    {
+                                        domain !== EnumDomain.GENERIC ? 
+                                            <Experience domain={domain} /> 
+                                                :   <></>
+                                    }
                                     <Experience domain={domain} pro/>
                                 </>
                 } 
 
                 <Education domain={domain} />
                 
-                <Volunteering domain={domain} />
+                <VolunteerWork domain={domain} />
 
-                {
-                    domain === EnumDomain.DEV ? 
-                        <Certifications />
-                            : <></>
-                }
-
-                
+            
                 <Languages />
 
                 {
@@ -82,7 +93,7 @@ const CurriculumVitae = ( {domain, poste, relativePath} ) => {
                             : <></>
                 }
 
-                <Leasures />
+                <Leasures domain={domain} />
                 
                 <Licenses />
             </Container>

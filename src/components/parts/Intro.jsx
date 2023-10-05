@@ -8,7 +8,7 @@ import EnumDomain from '../helpers/EnumDomain';
 
 const Intro = ( {domain, poste} ) => {
 
-    const {language} = React.useContext(AppContext);
+    const {language, focus} = React.useContext(AppContext);
     var intro = domain === EnumDomain.DEV ? languageChooser(language, getDevIntro()) : domain === EnumDomain.MATHS ? languageChooser(language, getMathsIntro()) : getGenericIntro(poste) ;
 
     return  <div className="intro">
@@ -17,11 +17,23 @@ const Intro = ( {domain, poste} ) => {
                     domain === EnumDomain.DEV || domain === EnumDomain.MATHS ? 
                         <div className="summary">
                             {intro.summary.map((line, index) => {
-                                return <div className="element">
-                                            <div key={index}><p>{line +"."}</p></div>
+                                return <div key={index} className="element">
+                                            <p>{line +"."}</p>
                                         </div>
                             })} 
                             <hr/>
+                            {
+                                focus && domain === EnumDomain.MATHS ?
+                                    <div className="element summary-focus">
+                                        <p>
+                                            Les expériences encadrées en rouge sont présentes pour mettre en avant la pertinence de l'élément (c'est-à-dire ce qui se rapporte aux maths ou aux sciences).
+                                        </p>
+                                        <p>
+                                            Vous pouvez désactiver ce mode en cliquant sur le bouton rouge en haut à droite.
+                                        </p>
+                                    </div>
+                                        :   <></> 
+                            }
                         </div>
                         
                         : 

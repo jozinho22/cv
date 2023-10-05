@@ -4,8 +4,9 @@ import languageChooser from '../helpers/languageChooser';
 import getTitles from './infos/getTitles';
 import getVolunteerWork from './infos/getVolunteerWork';
 import { Hourglass, PersonFill, GeoAltFill } from 'react-bootstrap-icons';
+import EnumDomain from '../helpers/EnumDomain';
 
-const Volunteering = ({domain}) => {
+const VolunteerWork = ({domain}) => {
 
     const {language, focus} = React.useContext(AppContext);
     var title = languageChooser(language, getTitles()).volunteerWork;
@@ -15,7 +16,7 @@ const Volunteering = ({domain}) => {
                 <div className="title">{title}</div>
                 <div className="volunteering">
                     {volunteerWorks.map((volunteering, index) => {
-                        return  <div className={`element ${focus && volunteering.domain && volunteering.domain === domain? "focus" : ""}`} id={`volunteering-${index}`} key={index}>
+                        return  <div className={`element ${focus && volunteering.domains && volunteering.domains.includes(EnumDomain.MATHS) ? "focus" : ""}`} id={`volunteering-${index}`} key={index}>
                                     <div className="icon-block period">
                                         <Hourglass className="icon" /> 
                                         <div className="element-of-icon period-date">{volunteering.period}</div>
@@ -62,4 +63,4 @@ const Volunteering = ({domain}) => {
             </div>
 }
 
-export default Volunteering;
+export default VolunteerWork;

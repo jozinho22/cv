@@ -4,7 +4,7 @@ const getVolunteerWork = () => {
     return {
         french: [
             {
-                domain: EnumDomain.MATHS,
+                domains: [EnumDomain.MATHS],
                 period: "jan 2022 - mai 2022",
                 company: "École démocratique de Brocéliande - Muël",
                 companyLink: "https://www.bretagne-grainedesens.bzh/",
@@ -21,7 +21,7 @@ const getVolunteerWork = () => {
         ],
         english: [
             {
-                domain: EnumDomain.MATHS,
+                domains: [EnumDomain.MATHS],
                 period: "jan 2022 - may 2022",
                 company: "École démocratique de Brocéliande - Muël",
                 companyLink: "https://www.bretagne-grainedesens.bzh/",

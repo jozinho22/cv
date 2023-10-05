@@ -1,4 +1,4 @@
-const getDevSkills = () => {
+const getGenericSkills = () => {
 
     return [
         {
@@ -16,4 +16,4 @@ const getDevSkills = () => {
     ]
 }
 
-export default getDevSkills;
+export default getGenericSkills;

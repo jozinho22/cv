@@ -3,8 +3,7 @@ import CurriculumVitae from './components/CurriculumVitae';
 import AppContext from './components/context/AppContext';
 import EnumDomain from './components/helpers/EnumDomain';
 import { getThemeIfStoredThemeExists } from './components/styles/getThemes';
-import { BrowserRouter } from 'react-router-dom';
-import { Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import pathBuilder from './components/helpers/pathBuilder';
 /* import Error from './components/helpers/Error';
  */

@@ -14,7 +14,8 @@
     --green-button-shadow-color: rgb(36, 94, 40);
     --green-button-shadow-darker-color: rgb(27, 54, 29);
 
-    --red-button-color: rgb(146, 56, 44);
+    --red-button-light-color: rgb(190, 67, 50);
+    --red-button-color: rgb(153, 69, 58);
     --red-button-hover-color: rgb(129, 55, 45);
     --red-button-shadow-color: rgb(110, 51, 43);
     --red-button-shadow-darker-color: rgb(94, 48, 42);
@@ -42,6 +43,7 @@
     --language-button-color: var(--blue-button-color);
     --language-button-hover-color: var(--blue-button-hover-color);
     --language-button-shadow-color: var(--blue-button-shadow-color);
+    --focus-text-color: var(--red-button-color);
     --focus-button-color: var(--red-button-color);
     --focus-button-hover-color: var(--red-button-hover-color);
     --focus-button-shadow-color: var(--red-button-shadow-color);
@@ -69,6 +71,7 @@
     --language-button-color: var(--blue-button-hover-color);
     --language-button-hover-color: var(--blue-button-shadow-color);
     --language-button-shadow-color: var(--blue-button-shadow-darker-color);
+    --focus-text-color: var(--red-button-light-color);
     --focus-button-color: var(--red-button-hover-color);
     --focus-button-hover-color: var(--red-button-shadow-color);
     --focus-button-shadow-color: var(--red-button-shadow-darker-color);

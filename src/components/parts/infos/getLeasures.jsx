@@ -1,14 +1,50 @@
+import EnumDomain from "../../helpers/EnumDomain";
+
 const getLeasures = () => {
 
     return {
                 french : 
-                    {
-                        list: "Échecs, Mathématiques, Programmation, Basket, Guitare"
-                    },
+                    [
+                        {
+                            activity: "Échecs",
+                            domains: [EnumDomain.MATHS]
+                        },
+                        {
+                            activity: "Maths",
+                            domains: [EnumDomain.MATHS]
+                        },
+                        {
+                            activity: "Programmation informatique",
+                            domains: [EnumDomain.MATHS]
+                        },
+                        {
+                            activity: "Basket"
+                        },
+                        {
+                            activity: "Guitare"
+                        }
+                    ],
                 english:
-                    {
-                        list: "Chess, Maths, Computer programming, Basketball, Guitar"
-                    } 
+                    [
+                        {
+                            activity: "Chess",
+                            domains: [EnumDomain.MATHS]
+                        },
+                        {
+                            activity: "Maths",
+                            domains: [EnumDomain.MATHS]
+                        },
+                        {
+                            activity: "Computer programming",
+                            domains: [EnumDomain.MATHS]
+                        },
+                        {
+                            activity: "Basketball"
+                        },
+                        {
+                            activity: "Guitar"
+                        }
+                    ]
         }
 }
 
