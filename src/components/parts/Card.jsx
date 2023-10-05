@@ -10,11 +10,13 @@ import EnumDomain from '../helpers/EnumDomain';
 const Card = ( {domain, poste} ) => {
 
     const {language} = React.useContext(AppContext);
+    const age = Math.floor((new Date() - new Date(1987, 10, 26)) / (1000*60*60*24*364.25)) 
+
     var intro = domain === EnumDomain.DEV ? languageChooser(language, getDevIntro()) : domain === EnumDomain.MATHS ? languageChooser(language, getMathsIntro()) : getGenericIntro(poste) ;
 
     return  <div className="vcard">
                 <img src={photo} alt=""/>
-                <div className="me">{intro.me}</div>
+                <div className="me">{language === "French" ? `Josselin DOUINEAU, ${age} ans` : `Josselin DOUINEAU, ${age}` }</div>
               
                 <h1>{intro.profession}</h1>
                 

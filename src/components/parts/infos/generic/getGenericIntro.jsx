@@ -1,7 +1,6 @@
-const getNonDevIntro = ( poste ) => {
+const getNonDevIntro = (poste) => {
 
         return  {
-                        me: "Josselin DOUINEAU, 35 ans",
                         profession: poste
                 } 
 
