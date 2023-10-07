@@ -30,8 +30,7 @@ const pageStyle = () => {
 
         @page {
             size: A4;
-        }
-        @page {
+
             @bottom-right {
                 content: counter(page) " of " counter(pages);
             }

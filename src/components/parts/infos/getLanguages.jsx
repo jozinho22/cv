@@ -1,25 +1,27 @@
+import EnumLanguages from "../../helpers/EnumLanguages";
+
 const getLeasures = () => {
 
     return  {
                 french :  [
                                 {
                                     language : "Français",
-                                    level: 90
+                                    level: 75
                                 },
                                 {
                                     language : "Anglais",
-                                    level: 70
+                                    level: 60
                                 }
                         ]
                 ,
                 english: [
                                 {
                                     language : "French",
-                                    level: 90
+                                    level: 75
                                 },
                                 {
                                     language : "English",
-                                    level: 70
+                                    level: 60
                                 }
                         ]
         }

@@ -6,6 +6,7 @@ import getDevIntro from './infos/dev/getDevIntro';
 import getMathsIntro from './infos/maths/getMathsIntro';
 import getGenericIntro from './infos/generic/getGenericIntro';
 import EnumDomain from '../helpers/EnumDomain';
+import EnumLanguages from '../helpers/EnumLanguages';
 
 const Card = ( {domain, poste} ) => {
 
@@ -16,7 +17,7 @@ const Card = ( {domain, poste} ) => {
 
     return  <div className="vcard">
                 <img src={photo} alt=""/>
-                <div className="me">{language === "French" ? `Josselin DOUINEAU, ${age} ans` : `Josselin DOUINEAU, ${age}` }</div>
+                <div className="me">{language === EnumLanguages.FRENCH ? `Josselin DOUINEAU, ${age} ans` : `Josselin DOUINEAU, ${age}` }</div>
               
                 <h1>{intro.profession}</h1>
                 

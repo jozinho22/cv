@@ -90,6 +90,7 @@ const getNonDevExperience = () => {
                         desc: "Cartographe SIG"
                     },
                     {
+                        domains: [EnumDomain.MATHS],
                         period: "avril 2014 - septembre 2014",
                         company: "Enertrag - Cergy",
                         companyLink: "https://france.enertrag.com/",
@@ -98,6 +99,7 @@ const getNonDevExperience = () => {
                         desc: "Prospection de nouvelles zones propices à l'implantation d'éoliennes, participation aux présentations en mairie"
                     },
                     {
+                        domains: [EnumDomain.MATHS],
                         period: "avril 2013 - septembre 2013",
                         company: "Sermet - Créteil",
                         companyLink: "https://www.manergy.fr/",
@@ -106,6 +108,7 @@ const getNonDevExperience = () => {
                         desc: "Participation à un schéma directeur de développement de la géothermie : collecte de données auprès de bailleurs sociaux, création de cartes à partir des données collectées, participation au rapport final"
                     },
                     {
+                        domains: [EnumDomain.MATHS],
                         period: "avril 2012 - september 2012",
                         company: "Planète verte - Paris",
                         companyLink: "http://www.planete-verte.fr/",
@@ -216,6 +219,7 @@ const getNonDevExperience = () => {
                         desc: "GIS Cartographer"
                     },
                     {
+                        domains: [EnumDomain.MATHS],
                         period: "april 2014 - september 2014",
                         company: "Enertrag - Cergy",
                         companyLink: "https://france.enertrag.com/",
@@ -224,6 +228,7 @@ const getNonDevExperience = () => {
                         desc: "Aeolien cartography prospecter"
                     },
                     {
+                        domains: [EnumDomain.MATHS],
                         period: "april 2013 - september 2013",
                         company: "Sermet - Créteil",
                         companyLink: "https://www.manergy.fr/",
@@ -232,6 +237,7 @@ const getNonDevExperience = () => {
                         desc: "Cartography, data interpretation and support on a geothermy developement blueprint"
                     },
                     {
+                        domains: [EnumDomain.MATHS],
                         period: "april 2012 - september 2012",
                         company: "Planète verte - Paris",
                         companyLink: "http://www.planete-verte.fr/",

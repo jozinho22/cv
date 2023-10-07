@@ -29,10 +29,10 @@
     "webpack": "^5.75.0"
   },
   "scripts": {
-    "start": "BROWSER=NONE GENERATE_SOURCEMAP=false react-scripts start",
+    "start": "BROWSER=NONE react-scripts start",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "build": "CI=false react-scripts build",
+    "build": "CI=false GENERATE_SOURCEMAP=false react-scripts build",
     "postbuild": "react-spa-prerender",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

@@ -10,11 +10,12 @@ import pathBuilder from './components/helpers/pathBuilder';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './components/styles/Themes.css';
 import './App.css';
+import EnumLanguages from './components/helpers/EnumLanguages';
 
 function App() {
 
     const [theme, setTheme] = React.useState(getThemeIfStoredThemeExists(JSON.parse(sessionStorage.getItem('josselin-cv-developer-theme'))) ? JSON.parse(sessionStorage.getItem('josselin-douineau-cv-theme')) : "Blank");
-    const [language, setLanguage] = React.useState("French");
+    const [language, setLanguage] = React.useState(EnumLanguages.FRENCH);
     const [focus, setFocus] = React.useState(true);
 
     const appContext = {
@@ -41,7 +42,10 @@ function App() {
                     </div>       
                 </AppContext.Provider>
             </div>
-            <div id="doc-to-print"></div>
+            <div id="doc-to-print">
+                {/* <div id="page-footer">Page </div> */}
+            </div>
+            
         </>
     );
 }

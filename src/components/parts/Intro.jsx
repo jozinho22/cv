@@ -28,7 +28,7 @@ const Intro = ( {domain, poste} ) => {
                                         <p>
                                             Les expériences encadrées en rouge sont présentes pour mettre en avant la pertinence de l'élément (c'est-à-dire ce qui se rapporte aux maths ou aux sciences).
                                         </p>
-                                        <p>
+                                        <p className="focus-disclaimer">
                                             Vous pouvez désactiver ce mode en cliquant sur le bouton rouge en haut à droite.
                                         </p>
                                     </div>

@@ -19,7 +19,7 @@ const getEducation = () => {
                     },
                     {    
                         domains: [EnumDomain.MATHS, EnumDomain.DEV, EnumDomain.GENERIC],
-                        period: "septembre 2009 - septembre 2014",
+                        period: "septembre 2009 - juin 2014",
                         title: "Master en sciences et génie de l'environnement",
                         titleLink: "https://www.ipgp.fr/fr/master/genie-de-lenvironnement-industrie-gei",
                         school: "Université Paris 7 Diderot",
@@ -43,8 +43,8 @@ const getEducation = () => {
                     },
                     {   
                         domains: [EnumDomain.MATHS],
-                        period: "septembre 2003 - septembre 2006",
-                        title: "Baccalauréat scientique option Maths",
+                        period: "septembre 2003 - juin 2006",
+                        title: "Baccalauréat scientifique (option Maths)",
                         titleLink: "https://www.apmep.fr/Annee-2006-15-sujets-15-corriges",
                         school: "Lycée Eugène Delacroix",
                         schoolLink: "https://lycee-delacroix-maisons-alfort.fr/",
@@ -72,8 +72,8 @@ const getEducation = () => {
                     },
                     {    
                         domains: [EnumDomain.MATHS, EnumDomain.DEV, EnumDomain.GENERIC],
-                        period: "september 2009 - september 2014",
-                        title: "Master's degree in environmental engeeniering",
+                        period: "september 2009 - juin 2014",
+                        title: "Master's degree in environmental engineering",
                         titleLink: "https://www.ipgp.fr/fr/master/genie-de-lenvironnement-industrie-gei",
                         school: "Université Paris 7 Diderot",
                         schoolLink: "https://u-paris.fr/en/",
@@ -96,7 +96,7 @@ const getEducation = () => {
                     },
                     {   
                         domains: [EnumDomain.MATHS],
-                        period: "september 2003 - september 2006",
+                        period: "september 2003 - juin 2006",
                         title: "High school diploma (science course, maths option)",
                         titleLink: "https://www.apmep.fr/Annee-2006-15-sujets-15-corriges",
                         school: "Lycée Eugène Delacroix",

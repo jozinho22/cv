@@ -6,6 +6,7 @@ import AppContext from '../context/AppContext';
 import languageChooser from '../helpers/languageChooser';
 import getTitles from './infos/getTitles';
 import EnumDomain from '../helpers/EnumDomain';
+import EnumLanguages from '../helpers/EnumLanguages';
 import getExtraProExperience from './infos/getExtraProExperience';
 import {DiGit} from 'react-icons/di';
 
@@ -69,7 +70,7 @@ const Experience = ( {domain, pro} ) => {
                                                     <> 
                                                         <WrenchAdjustable className="icon" />
                                                         <div className="element-of-icon">
-                                                            {language === "French" ? "Outils" : "Tools"}
+                                                            {language === EnumLanguages.FRENCH ? "Outils" : "Tools"}
                                                         </div> 
                                                         <div className="desc">
                                                             {job.tools}
@@ -86,7 +87,7 @@ const Experience = ( {domain, pro} ) => {
                                             <>
                                                 <div className="icon-block">
                                                     <QuestionLg className="icon" /> 
-                                                    <div className="element-of-icon">{language === "French" ? "Contexte" : "Context"}</div>
+                                                    <div className="element-of-icon">{language === EnumLanguages.FRENCH ? "Contexte" : "Context"}</div>
                                                 </div>
                                                 <div className="desc">{job.context}</div>
                                             </>  
@@ -101,7 +102,7 @@ const Experience = ( {domain, pro} ) => {
                                                         <CodeSquare className="icon" /> 
                                                             : <Boxes className="icon" /> 
                                                     }
-                                                    <div className="element-of-icon">{language === "French" ? "Réalisations" : "Achievements"}</div>
+                                                    <div className="element-of-icon">{language === EnumLanguages.FRENCH ? "Réalisations" : "Achievements"}</div>
                                                 </div>
                                                 <div className="desc">{job.desc}</div>
                                                 <div className="desc">{domain === EnumDomain.DEV ? job.more : ''}</div>
@@ -160,7 +161,7 @@ const Experience = ( {domain, pro} ) => {
                     })}  
                 </div>
                 {
-                    domain === EnumDomain.DEV ? 
+                    domain === EnumDomain.DEV || !pro ? 
                         <hr />
                             : <></>
                 }

@@ -40,6 +40,8 @@ const Header = ( {domain, poste, boite} ) => {
         catchedDiv = document.getElementById("doc-to-print");
 
         catchedDiv.getElementsByClassName("header")[0].remove(); 
+        catchedDiv.getElementsByClassName("focus-disclaimer")[0].remove(); 
+        console.log(catchedDiv)
         return catchedDiv.getElementsByClassName("App")[0];
     }
 
