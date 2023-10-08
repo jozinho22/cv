@@ -6,11 +6,6 @@
       "src": "favicon-brasil-512.png",
       "type": "image/png",
       "sizes": "512x512"
-    },
-    {
-      "src": "favicon-brasil-mini.png",
-      "type": "image/png",
-      "sizes": "192x192"
     }
   ],
   "start_url": ".",
