@@ -1,19 +1,19 @@
 {
-  "short_name": "Josselin DOUINEAU - developer",
-  "name": "Mon CV en tant que développeur",
+  "short_name": "JD-CV",
+  "name": "Mon CV au format web",
   "icons": [
-    {
-      "src": "favicon-brasil-mini.png",
-      "type": "image/png",
-      "sizes": "192x192"
-    },
     {
       "src": "favicon-brasil-512.png",
       "type": "image/png",
       "sizes": "512x512"
+    },
+    {
+      "src": "favicon-brasil-mini.png",
+      "type": "image/png",
+      "sizes": "192x192"
     }
   ],
-  "start_url": ".",
+  "start_url": "/",
   "display": "standalone",
   "theme_color": "#ffffff",
   "background_color": "#ffffff"
