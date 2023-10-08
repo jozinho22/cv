@@ -1,9 +1,11 @@
 import React from 'react';
 import { hydrateRoot, createRoot } from 'react-dom/client';
-import './index.css';
+
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { HelmetProvider } from 'react-helmet-async';
+
+import './index.css';
 
 const app = <React.StrictMode>
                 <HelmetProvider>
@@ -13,8 +15,10 @@ const app = <React.StrictMode>
 
 const domNode = document.getElementById('root');
 if(domNode.hasChildNodes()) {
+    console.log("hydrate")
     hydrateRoot(domNode, app); 
 } else {
+    console.log("render")
     const root = createRoot(domNode);
     root.render(app);
 }

@@ -84,7 +84,6 @@ const CurriculumVitae = ( {domain, poste, relativePath} ) => {
                 
                 <VolunteerWork domain={domain} />
 
-            
                 <Languages />
 
                 {

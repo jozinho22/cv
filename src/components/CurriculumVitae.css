@@ -213,7 +213,7 @@ hr {
     position: relative;
     left: 50%;
     transform: translateX(-50%);
-    width: 40%;
+    width: 50%;
 }
 
 .title-inline {
@@ -575,13 +575,13 @@ a .dropdown-item {
 /* socials */
 .socials {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
 }
 
 @media (width < 450px) {
     .socials {
-        flex-direction: column;
         margin-left: 20px;
+        flex-wrap: wrap;
     }
 }
 
