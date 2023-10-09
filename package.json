@@ -6,6 +6,7 @@
     "[module-name]": false
   },
   "homepage": "https://jozinho22.github.io/cv",
+  "proxy": "http://localhost:8080",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
@@ -33,7 +34,6 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "build": "CI=false GENERATE_SOURCEMAP=false react-scripts build",
-    "postbuild": "react-spa-prerender",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

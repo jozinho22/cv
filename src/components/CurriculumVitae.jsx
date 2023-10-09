@@ -16,6 +16,8 @@ import EnumDomain from './helpers/EnumDomain';
 import VolunteerWork from './parts/VolunteerWork';
 
 import { Helmet } from "react-helmet-async";
+import { useLocation } from 'react-router-dom';
+import {Button} from 'react-bootstrap';
 
 import './CurriculumVitae.css';
 
@@ -34,6 +36,8 @@ const CurriculumVitae = ( {domain, poste, relativePath} ) => {
     React.useEffect(() => {
         updateFocus(focus && domain === EnumDomain.MATHS);
     }, [domain]) 
+
+    console.log(useLocation())
    
     return (
         <>
@@ -45,7 +49,7 @@ const CurriculumVitae = ( {domain, poste, relativePath} ) => {
                 <link rel="canonical" href={`https://jozinho22.github.io/cv${relativePath}`} />
             </Helmet>
             <Container className="curriculum-vitae-container">
-                
+
                 <Header domain={domain} poste={poste} boite={boite} />
                 
                 <Card domain={domain} poste={poste} />

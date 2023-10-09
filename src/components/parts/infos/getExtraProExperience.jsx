@@ -18,7 +18,7 @@ const getExtraProExperience = ( domain ) => {
                         desc: "(Pendule pour les joueurs d'échecs)"
                     },
                     {
-                        url: domain === EnumDomain.DEV ? "https://jozinho22.github.io/cv/dev" : "https://jozinho22.github.io/cv/maths",
+                        url: domain === EnumDomain.DEV ? "https://jozinho22.github.io/cv/#/dev" : "https://jozinho22.github.io/cv/#/maths",
                         webSiteName : "Mon CV en ligne",
                         desc: domain === EnumDomain.DEV ?  "(Mon CV en tant que développeur)" : "(Mon CV en tant que professeur de mathématiques)"
                     },
@@ -78,7 +78,7 @@ const getExtraProExperience = ( domain ) => {
                         desc: "(Timer for chess players)"
                     },
                     {
-                        url: domain === EnumDomain.DEV ? "https://jozinho22.github.io/cv/dev" : "https://jozinho22.github.io/cv/maths",
+                        url: domain === EnumDomain.DEV ? "https://jozinho22.github.io/cv/#/dev" : "https://jozinho22.github.io/cv/#/maths",
                         webSiteName : "My resume on the web",
                         desc: domain === EnumDomain.DEV ?  "(My resume as a developper)" : "(My resume as a math teacher)"
                     },

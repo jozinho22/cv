@@ -16,6 +16,8 @@ const pageStyle = () => {
             }
             .title {
                 font-size: 12px !important;
+                padding-top: 10px !important; padding-bottom: 10px !important;
+                width: 80%;
             }
             .page-break {
                 page-break-after: auto;
