@@ -13,13 +13,8 @@ const Header = ( {domain, poste, boite} ) => {
 
     var catchedDiv = {};
 
-    /* var themes = getThemes();  */
-    var mobile = document.body.offsetWidth < 450;
 
-/*     const selectTheme = (eventKey, event) => {
-        updateTheme(eventKey);
-        sessionStorage.setItem('josselin-douineau-developer-theme', JSON.stringify(eventKey));
-    } */
+    var mobile = document.body.offsetWidth < 450;
 
     const switchTheme = () => {
         updateTheme(theme === 'Blank' ? 'Darcula' : 'Blank');
@@ -43,7 +38,7 @@ const Header = ( {domain, poste, boite} ) => {
         if(domain === EnumDomain.MATHS) {
             catchedDiv.getElementsByClassName("focus-disclaimer")[0].remove(); 
         }
-        console.log(catchedDiv)
+
         return catchedDiv.getElementsByClassName("App")[0];
     }
 

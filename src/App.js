@@ -2,8 +2,8 @@ import React from 'react';
 import CurriculumVitae from './components/CurriculumVitae';
 import AppContext from './components/context/AppContext';
 import EnumDomain from './components/helpers/EnumDomain';
-import EnumLanguages from './components/helpers/EnumLanguages';
-import { getThemeIfStoredThemeExists } from './components/styles/getThemes';
+import EnumLanguage from './components/helpers/EnumLanguage';
+import EnumTheme from './components/helpers/EnumTheme';
 import { BrowserRouter, Route, Routes, Outlet, HashRouter, createHashRouter, RouterProvider } from 'react-router-dom';
 import pathBuilder from './components/helpers/pathBuilder';
 /* import Error from './components/helpers/Error';
@@ -15,8 +15,8 @@ import Error from './components/helpers/Error';
 
 function App() {
 
-    const [theme, setTheme] = React.useState(getThemeIfStoredThemeExists(JSON.parse(sessionStorage.getItem('josselin-douineau-cv-theme'))) ? JSON.parse(sessionStorage.getItem('josselin-douineau-cv-theme')) : "Blank");
-    const [language, setLanguage] = React.useState(EnumLanguages.FRENCH);
+    const [theme, setTheme] = React.useState(process.env.NODE_ENV === 'development' ? EnumTheme.DARCULA : EnumTheme.BLANK);
+    const [language, setLanguage] = React.useState(EnumLanguage.FRENCH);
     const [focus, setFocus] = React.useState(true);
 
     const appContext = {
@@ -42,11 +42,13 @@ function App() {
                     },
                     {
                         path: "dev",
-                        element: <CurriculumVitae domain={EnumDomain.DEV} poste={'Développeur ReactJS'} relativePath={'/dev'} />
+                        element: <CurriculumVitae domain={EnumDomain.DEV} poste={'Développeur ReactJS'} relativePath={'/#/dev'} />,
+                        errorElement: <Error domain={EnumDomain.DEV} />
                     },
                     {
                         path: "maths",
-                        element: <CurriculumVitae domain={EnumDomain.MATHS} poste={'Professeur de mathématiques'} relativePath={'/maths'} />
+                        element: <CurriculumVitae domain={EnumDomain.MATHS} poste={'Professeur de mathématiques'} relativePath={'/#/maths'} />,
+                        errorElement: <Error domain={EnumDomain.MATHS} />
                     }
                 ]
             }

@@ -6,7 +6,7 @@ import AppContext from '../context/AppContext';
 import languageChooser from '../helpers/languageChooser';
 import getTitles from './infos/getTitles';
 import EnumDomain from '../helpers/EnumDomain';
-import EnumLanguages from '../helpers/EnumLanguages';
+import EnumLanguage from '../helpers/EnumLanguage';
 import getExtraProExperience from './infos/getExtraProExperience';
 import {DiGit} from 'react-icons/di';
 
@@ -70,7 +70,7 @@ const Experience = ( {domain, pro} ) => {
                                                     <> 
                                                         <WrenchAdjustable className="icon" />
                                                         <div className="element-of-icon">
-                                                            {language === EnumLanguages.FRENCH ? "Outils" : "Tools"}
+                                                            {language === EnumLanguage.FRENCH ? "Outils" : "Tools"}
                                                         </div> 
                                                         <div className="desc">
                                                             {job.tools}
@@ -87,7 +87,7 @@ const Experience = ( {domain, pro} ) => {
                                             <>
                                                 <div className="icon-block">
                                                     <QuestionLg className="icon" /> 
-                                                    <div className="element-of-icon">{language === EnumLanguages.FRENCH ? "Contexte" : "Context"}</div>
+                                                    <div className="element-of-icon">{language === EnumLanguage.FRENCH ? "Contexte" : "Context"}</div>
                                                 </div>
                                                 <div className="desc">{job.context}</div>
                                             </>  
@@ -102,7 +102,7 @@ const Experience = ( {domain, pro} ) => {
                                                         <CodeSquare className="icon" /> 
                                                             : <Boxes className="icon" /> 
                                                     }
-                                                    <div className="element-of-icon">{language === EnumLanguages.FRENCH ? "Réalisations" : "Achievements"}</div>
+                                                    <div className="element-of-icon">{language === EnumLanguage.FRENCH ? "Réalisations" : "Achievements"}</div>
                                                 </div>
                                                 <div className="desc">{job.desc}</div>
                                                 <div className="desc">{domain === EnumDomain.DEV ? job.more : ''}</div>
@@ -116,7 +116,7 @@ const Experience = ( {domain, pro} ) => {
                                                 return <div key={index} className="reference">
                                                     {
                                                         Object.keys(reference).length !== 0 ?
-                                                            <a href={reference.url} target="_blank" rel="noreferrer">
+                                                            <a href={jobs[0] === job ? reference.url + '/#/' + domain : reference.url} target="_blank" rel="noreferrer">
                                                                 <Link45deg className="icon" /> 
                                                                 <Phone className="icon" /> 
                                                                 <div className="element-of-icon">{reference.webSiteName}</div>

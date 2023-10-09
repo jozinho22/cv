@@ -1,5 +1,5 @@
 const Constants = {
-    BASE_URL: "/cv"
+    BASE_URL: '/cv'
 }
 
 export default Constants;

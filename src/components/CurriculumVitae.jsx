@@ -37,7 +37,7 @@ const CurriculumVitae = ( {domain, poste, relativePath} ) => {
         updateFocus(focus && domain === EnumDomain.MATHS);
     }, [domain]) 
 
-    console.log(useLocation())
+    /* console.log(useLocation()) */
    
     return (
         <>

@@ -52,7 +52,7 @@ const VolunteerWork = ({domain}) => {
                                     {/* <div className="achievements">
                                         <div className="icon-block">
                                             <Boxes className="icon" /> 
-                                            <div className="element-of-icon">{language === EnumLanguages.FRENCH ? "Réalisations" : "Achievements"}</div>
+                                            <div className="element-of-icon">{language === EnumLanguage.FRENCH ? "Réalisations" : "Achievements"}</div>
                                         </div> 
                                         <div className="desc">{volunteering.desc}</div>
                                     </div> */}
