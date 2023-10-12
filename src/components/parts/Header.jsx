@@ -7,12 +7,11 @@ import AppContext from '../context/AppContext';
 import { FilePdfFill, Globe, Magic, Search } from 'react-bootstrap-icons';
 import EnumDomain from '../helpers/EnumDomain';
 
-const Header = ( {domain, poste, boite} ) => {
+const Header = ( {poste, boite} ) => {
 
-    const {theme, updateTheme, language, updateLanguage, focus, updateFocus} = React.useContext(AppContext);
+    const {theme, updateTheme, language, updateLanguage, reduced, updateReduced, domain} = React.useContext(AppContext);
 
     var catchedDiv = {};
-
 
     var mobile = document.body.offsetWidth < 450;
 
@@ -24,8 +23,8 @@ const Header = ( {domain, poste, boite} ) => {
         updateLanguage(language === 'French' ? 'English' : 'French');
     }
 
-    const switchFocus = () => {
-        updateFocus(!focus);
+    const switchReduced = () => {
+        updateReduced(!reduced);
     }
 
     const buildElementToPrint = () => {
@@ -36,7 +35,7 @@ const Header = ( {domain, poste, boite} ) => {
 
         catchedDiv.getElementsByClassName("header")[0].remove(); 
         if(domain === EnumDomain.MATHS) {
-            catchedDiv.getElementsByClassName("focus-disclaimer")[0].remove(); 
+            /* catchedDiv.getElementsByClassName("focus-disclaimer")[0].remove();  */
         }
 
         return catchedDiv.getElementsByClassName("App")[0];
@@ -103,12 +102,12 @@ const Header = ( {domain, poste, boite} ) => {
                     
                     {
                         domain === EnumDomain.MATHS ?
-                            <Col xs={domain === EnumDomain.MATHS ? 3 : 4} >
-                                <Button variant="danger" className="focus-button" onClick={switchFocus}>
+                            <Col xs={3} >
+                                <Button variant="danger" className="reduced-button" onClick={switchReduced}>
                                     <div className="icon-block">
                                         <Search className="icon" /> 
                                         {!mobile ?  <div className="element-of-icon">
-                                                        {focus === true ? 'Remove focuses' : 'Display focuses'}
+                                                        {reduced === true ? 'More details' : 'Less details'}
                                                     </div> 
                                                         : <></>}
                                     </div>

@@ -1,6 +1,6 @@
 import EnumDomain from "../../helpers/EnumDomain";
 
-const getNonDevExperience = () => {
+const getExperience = () => {
     
     return {
                 french: [
@@ -46,6 +46,12 @@ const getNonDevExperience = () => {
                         as: "Développeur Java/ReactJS",
                         tools: "Spring, Maven, ReactJS, PostgreSQL, Git Fork, GitLab", 
                         desc: "Maintenance en condition opérationnelle et développement de nouvelles fonctionnalités d'un un générateur d'applications mobiles avec ReactJs ainsi que sur le back-end de cette application développé en Java"
+                    },
+                    {
+                        domains: [EnumDomain.MATHS],
+                        period: "février 2020 - mars 2020",
+                        company: "Groupe Yoni - Vannes",
+                        companyLink: "https://www.yoni.fr/"
                     },
                     {
                         domains: [EnumDomain.MATHS],
@@ -178,6 +184,12 @@ const getNonDevExperience = () => {
                     },
                     {
                         domains: [EnumDomain.MATHS],
+                        period: "february 2020 - march 2020",
+                        company: "Groupe Yoni - Vannes",
+                        companyLink: "https://www.yoni.fr/"
+                    },
+                    {
+                        domains: [EnumDomain.MATHS],
                         period: "september 2016 - september 2018",
                         company: "La SACEM - Paris",
                         companyLink: "https://www.sacem.fr/",
@@ -265,4 +277,4 @@ const getNonDevExperience = () => {
 
 }
 
-export default getNonDevExperience;
+export default getExperience;

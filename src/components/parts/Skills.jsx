@@ -8,9 +8,9 @@ import getTitles from './infos/getTitles';
 import languageChooser from '../helpers/languageChooser';
 import EnumDomain from '../helpers/EnumDomain';
 
-const Skills = ({domain}) => {
+const Skills = () => {
 
-    const {language} = React.useContext(AppContext);
+    const {language, domain} = React.useContext(AppContext);
     var title = languageChooser(language, getTitles()).skills;
     var skills = domain === undefined || domain === EnumDomain.DEV ? getDevSkills() : getNonDevSkills();
 

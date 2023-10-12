@@ -6,7 +6,9 @@ export default React.createContext(
         updateTheme: (name) => {},
         language: "",
         updateLanguage: (name) => {},
-        focus: {},
-        updateFocus: (value) => {},
+        reduced: {},
+        updateReduced: (value) => {},
+        domain : {}, 
+        updateDomain: (value) => {}
     }
 );

@@ -31,10 +31,11 @@ const CurriculumVitae = ( {domain, poste, relativePath} ) => {
     // entrer la société ici
     var boite = "";
 
-    const {focus, updateFocus} = React.useContext(AppContext);
+    const {reduced, updateReduced, updateDomain} = React.useContext(AppContext);
 
     React.useEffect(() => {
-        updateFocus(focus && domain === EnumDomain.MATHS);
+        updateReduced(reduced && domain === EnumDomain.MATHS);
+        updateDomain(domain);
     }, [domain]) 
 
     /* console.log(useLocation()) */
@@ -50,53 +51,45 @@ const CurriculumVitae = ( {domain, poste, relativePath} ) => {
             </Helmet>
             <Container className="curriculum-vitae-container">
 
-                <Header domain={domain} poste={poste} boite={boite} />
+                <Header poste={poste} boite={boite} />
                 
-                <Card domain={domain} poste={poste} />
+                <Card poste={poste} />
                 <Contact />
-                <Intro domain={domain} poste={poste} />
-                
+                <Intro poste={poste} />
                 {
                     domain === EnumDomain.DEV ? 
                         <Skills />
                             : <></>
                 } 
-
                 {
                     domain !== EnumDomain.MATHS ? 
                         <>
-                            <Experience domain={domain} pro/>
+                            <Experience pro/>
                             {
                                 domain !== EnumDomain.GENERIC ? 
-                                    <Experience domain={domain} /> 
+                                    <Experience /> 
                                         :   <></>
                             }
-                            
                         </>
                             : 
                                 <>
                                     {
                                         domain !== EnumDomain.GENERIC ? 
-                                            <Experience domain={domain} /> 
+                                            <Experience /> 
                                                 :   <></>
                                     }
-                                    <Experience domain={domain} pro/>
+                                    <Experience pro/>
                                 </>
                 } 
-
-                <Education domain={domain} />
-                
-                <VolunteerWork domain={domain} />
-
+                <Education />
+                <VolunteerWork />
                 <Languages />
-
                 {
                     domain === EnumDomain.DEV ? 
                         <Socials />
                             : <></>
                 }
-
-                <Leasures domain={domain} />
+                <Leasures />
                 
                 <Licenses />
             </Container>

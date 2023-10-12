@@ -17,15 +17,18 @@ function App() {
 
     const [theme, setTheme] = React.useState(process.env.NODE_ENV === 'development' ? EnumTheme.DARCULA : EnumTheme.BLANK);
     const [language, setLanguage] = React.useState(EnumLanguage.FRENCH);
-    const [focus, setFocus] = React.useState(true);
+    const [reduced, setReduced] = React.useState(true);
+    const [domain, setDomain] = React.useState({});
 
     const appContext = {
         theme: theme,
         updateTheme: setTheme,
         language: language,
         updateLanguage: setLanguage,
-        focus: focus,
-        updateFocus: setFocus,
+        reduced: reduced,
+        updateReduced: setReduced,
+        domain: domain,
+        updateDomain: setDomain
     }
     
     /* console.log('public url: ', process.env.PUBLIC_URL) */
@@ -34,23 +37,21 @@ function App() {
         [
             {
                 path: "/",
-                errorElement: <Error />,
                 children : [
                     {
-                        path: "/",
+                        path: "",
                         element: <CurriculumVitae domain={EnumDomain.GENERIC} relativePath={'/'} />
                     },
                     {
                         path: "dev",
-                        element: <CurriculumVitae domain={EnumDomain.DEV} poste={'Développeur ReactJS'} relativePath={'/#/dev'} />,
-                        errorElement: <Error domain={EnumDomain.DEV} />
+                        element: <CurriculumVitae domain={EnumDomain.DEV} poste={'Développeur ReactJS'} relativePath={'/#/dev'} />
                     },
                     {
                         path: "maths",
-                        element: <CurriculumVitae domain={EnumDomain.MATHS} poste={'Professeur de mathématiques'} relativePath={'/#/maths'} />,
-                        errorElement: <Error domain={EnumDomain.MATHS} />
+                        element: <CurriculumVitae domain={EnumDomain.MATHS} poste={'Professeur de mathématiques'} relativePath={'/#/maths'} />
                     }
-                ]
+                ],
+                errorElement: <Error />,
             }
         ]
     );

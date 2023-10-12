@@ -6,25 +6,17 @@ import languageChooser from '../helpers/languageChooser';
 import getTitles from './infos/getTitles';
 import EnumDomain from '../helpers/EnumDomain';
 
-const Education = ({domain}) => {
+const Education = () => {
 
-    const {language, focus} = React.useContext(AppContext);
+    const {language, reduced, domain} = React.useContext(AppContext);
     var title = languageChooser(language, getTitles()).education;
     var diplomas = languageChooser(language, getEducation())
-        .filter(dip => {
-            if(domain === EnumDomain.DEV || domain === EnumDomain.GENERIC) {
-                return (dip.domains && dip.domains.includes(domain))
-            } else {
-                return dip;
-            }
-        });
+        .filter(dip => dip.domains && dip.domains.includes(domain));
     
-   
     return  <div className="page-break">
                 <div className="title">{title}</div>
                 <div className="education">
                     {diplomas.map((diploma, index) => {
-
                         if(diploma.period === "pause") {
                             return  <div key={index}>  
                                         <div className="pause">
@@ -35,7 +27,12 @@ const Education = ({domain}) => {
                                          <hr/>
                                     </div>
                         }
-                        return  <div className={`element ${focus && diploma.domains && diploma.domains.includes(EnumDomain.MATHS) ? "focus" : ""}`} id={`education-${index}`} key={index}>
+
+                        if(diploma.toBreak) {
+                            var brokenList = diploma.desc.split(',')
+                        }
+                        
+                        return  <div className={`element ${reduced && diploma.domains && diploma.domains.includes(EnumDomain.MATHS) ? "focus" : ""}`} id={`education-${index}`} key={index}>
                                     <div className="icon-block period">
                                         <Hourglass className="icon" /> 
                                         <div className="element-of-icon period-date">
@@ -51,9 +48,21 @@ const Education = ({domain}) => {
                                                 </div>
                                             </a>
                                         </div>
-                                        <div className="desc">
-                                            {diploma.desc}
-                                        </div>
+                                        {
+                                            !reduced ? 
+                                                <div className="desc">
+                                                    {
+                                                        diploma.toBreak ? 
+                                                            brokenList.map((el, index) => {
+                                                                return <div className="element" key={index}>
+                                                                            {el}
+                                                                        </div>
+                                                            })  
+                                                                :   <> {diploma.desc}</>
+                                                    }
+                                                    {/* {diploma.desc} */}
+                                                </div> : <></>
+                                        }
                                     </div>
                                     <div className="school">
                                         <div className="icon-block">

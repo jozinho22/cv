@@ -43,10 +43,10 @@
     --language-button-color: var(--blue-button-color);
     --language-button-hover-color: var(--blue-button-hover-color);
     --language-button-shadow-color: var(--blue-button-shadow-color);
-    --focus-text-color: var(--red-button-color);
-    --focus-button-color: var(--red-button-color);
-    --focus-button-hover-color: var(--red-button-hover-color);
-    --focus-button-shadow-color: var(--red-button-shadow-color);
+    --reduced-text-color: var(--red-button-color);
+    --reduced-button-color: var(--red-button-color);
+    --reduced-button-hover-color: var(--red-button-hover-color);
+    --reduced-button-shadow-color: var(--red-button-shadow-color);
 }
 
 .Darcula {
@@ -71,10 +71,10 @@
     --language-button-color: var(--blue-button-hover-color);
     --language-button-hover-color: var(--blue-button-shadow-color);
     --language-button-shadow-color: var(--blue-button-shadow-darker-color);
-    --focus-text-color: var(--red-button-light-color);
-    --focus-button-color: var(--red-button-hover-color);
-    --focus-button-hover-color: var(--red-button-shadow-color);
-    --focus-button-shadow-color: var(--red-button-shadow-darker-color);
+    --reduced-text-color: var(--red-button-light-color);
+    --reduced-button-color: var(--red-button-hover-color);
+    --reduced-button-hover-color: var(--red-button-shadow-color);
+    --reduced-button-shadow-color: var(--red-button-shadow-darker-color);
 }
 
 /* .Purple {

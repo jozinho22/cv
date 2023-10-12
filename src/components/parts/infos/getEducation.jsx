@@ -48,7 +48,8 @@ const getEducation = () => {
                         titleLink: "https://www.apmep.fr/Annee-2006-15-sujets-15-corriges",
                         school: "Lycée Eugène Delacroix",
                         schoolLink: "https://lycee-delacroix-maisons-alfort.fr/",
-                        desc: "- Polynômes de second degré, \n - Suites numériques, \n - Analyse, \n - Dérivées, \n - Intégrales, \n - Divisibilité dans Z, \n - Nombres complexes, \n - Dénombrement, \n - Similitudes, \n - Continuités/limites, \n - Probabilités, \n - Trigonométrie,  \n - Géométrie dans l'espace, \n - Arithmétique, \n - Congruences."
+                        desc: "- Polynômes de second degré, \n - Suites numériques, \n - Analyse, \n - Dérivées, \n - Intégrales, \n - Divisibilité dans Z, \n - Nombres complexes, \n - Dénombrement, \n - Similitudes, \n - Continuités/limites, \n - Probabilités, \n - Trigonométrie,  \n - Géométrie dans l'espace, \n - Arithmétique, \n - Congruences",
+                        toBreak: true
                     },
                     {
                         domains: [EnumDomain.MATHS],
@@ -101,7 +102,8 @@ const getEducation = () => {
                         titleLink: "https://www.apmep.fr/Annee-2006-15-sujets-15-corriges",
                         school: "Lycée Eugène Delacroix",
                         schoolLink: "https://lycee-delacroix-maisons-alfort.fr/",
-                        desc: "- Second degree polynomials, \n - Numéric sequences, \n - Analysis, \n - Derivatives, \n - Integrals, \n - Divisibility in Z, \n - Complex numbers, \n - Enumeration, \n - Similarities, \n - Continuity/limits, \n - Probabilities, \n - Trigonometry,  \n - Géométry in space, \n - Arithmetic, \n - Congruences."
+                        desc: "- Second degree polynomials, \n - Numéric sequences, \n - Analysis, \n - Derivatives, \n - Integrals, \n - Divisibility in Z, \n - Complex numbers, \n - Enumeration, \n - Similarities, \n - Continuity/limits, \n - Probabilities, \n - Trigonometry,  \n - Géométry in space, \n - Arithmetic, \n - Congruences",
+                        toBreak: true
                     },
                     {
                         domains: [EnumDomain.MATHS],

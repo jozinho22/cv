@@ -8,9 +8,9 @@ import getGenericIntro from './infos/generic/getGenericIntro';
 import EnumDomain from '../helpers/EnumDomain';
 import EnumLanguage from '../helpers/EnumLanguage';
 
-const Card = ( {domain, poste} ) => {
+const Card = ( {poste} ) => {
 
-    const {language} = React.useContext(AppContext);
+    const {language, domain} = React.useContext(AppContext);
     const age = Math.floor((new Date() - new Date(1987, 10, 26)) / (1000*60*60*24*364.25)) 
 
     var intro = domain === EnumDomain.DEV ? languageChooser(language, getDevIntro()) : domain === EnumDomain.MATHS ? languageChooser(language, getMathsIntro()) : getGenericIntro(poste) ;

@@ -1,6 +1,6 @@
 import React from 'react';
 import getDevExperience from './infos/dev/getDevExperience';
-import getNonDevExperience from './infos/getGenericExperience';
+import getExperience from './infos/getExperience';
 import { ArrowUp, Hourglass, PcDisplayHorizontal, PersonFill, GeoAltFill, CodeSquare, Boxes, WrenchAdjustable, Link45deg, Phone, QuestionLg } from 'react-bootstrap-icons';
 import AppContext from '../context/AppContext';
 import languageChooser from '../helpers/languageChooser';
@@ -8,20 +8,24 @@ import getTitles from './infos/getTitles';
 import EnumDomain from '../helpers/EnumDomain';
 import EnumLanguage from '../helpers/EnumLanguage';
 import getExtraProExperience from './infos/getExtraProExperience';
+
+import getReducedExperience from './infos/getReducedExperience';
+import getReducedExtraProExperience from './infos/getReducedExtraProExperience';
+
 import {DiGit} from 'react-icons/di';
 
 
-const Experience = ( {domain, pro} ) => {
+const Experience = ( {pro} ) => {
 
-    const {language, focus} = React.useContext(AppContext);
+    const {language, reduced, domain} = React.useContext(AppContext);
     var title = pro ? languageChooser(language, getTitles()).experience : languageChooser(language, getTitles()).extraProExperience;
-    var jobs = pro ? domain === EnumDomain.DEV ? languageChooser(language, getDevExperience()) : languageChooser(language, getNonDevExperience()) : languageChooser(language, getExtraProExperience(domain)); 
-
+    var jobs = pro ? ( domain === EnumDomain.DEV ? languageChooser(language, getDevExperience()) : reduced ? languageChooser(language, getReducedExperience()) : languageChooser(language, getExperience()) ) : reduced ? languageChooser(language, getReducedExtraProExperience(domain)) : languageChooser(language, getExtraProExperience(domain)); 
+    console.log(reduced)
     /* domain !== EnumDomain.DEV && !pro ? jobs.reverse() : <></>; */
 
     return  <div className="page-break">
                 <div className="title">{title}</div>
-                <div className="experience">
+                <div className={`${domain} experience`}>
                     {jobs.map((job, index) => {
 
                         if(job.period === "pause") {
@@ -34,13 +38,16 @@ const Experience = ( {domain, pro} ) => {
                                          <hr/>
                                     </div>
                         }
-                        return  <div className={`element ${focus && job.domains && job.domains.includes(EnumDomain.MATHS) ? "focus" : ""}`} id={`experience-${index}`} key={index}>
-                                    <div className="icon-block period">
-                                        <Hourglass className="icon" /> 
-                                        <div className="element-of-icon period-date">{job.period}</div>
-                                    </div>
-                                    <div className="icon-block">
-                                        {job.as ? 
+                        return  <div className={`element ${reduced && job.domains && job.domains.includes(EnumDomain.MATHS) ? "focus" : ""}`} id={`experience-${index}`} key={index}>
+                                     {job.period ? 
+                                         <div className="icon-block period">
+                                            <Hourglass className="icon" /> 
+                                            <div className="element-of-icon period-date">{job.period}</div>
+                                        </div>
+                                            :   <></>
+                                    }
+                                    {job.as ? 
+                                        <div className="icon-block">
                                             <>
                                                 {
                                                     domain === EnumDomain.DEV ?
@@ -49,8 +56,10 @@ const Experience = ( {domain, pro} ) => {
                                                 }
                                                 <div className="element-of-icon">{job.as}</div> 
                                             </>
-                                                : <></>}
-                                    </div>
+                                        </div>
+                                                :  <></>
+                                        
+                                    }
                                     {job.company ? 
                                         <>
                                             <div className="icon-block">
@@ -95,7 +104,7 @@ const Experience = ( {domain, pro} ) => {
                                         }
                                     </div>
                                     <div className="achievements">
-                                        {!pro && job.desc ?
+                                        {job.desc ?
                                             <>
                                                 <div className="icon-block">
                                                     {domain === EnumDomain.DEV ? 

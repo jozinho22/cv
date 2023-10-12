@@ -5,9 +5,9 @@ import languageChooser from '../helpers/languageChooser';
 import getTitles from './infos/getTitles';
 import EnumDomain from '../helpers/EnumDomain';
 
-const Leasures = ( {domain} ) => {
+const Leasures = () => {
 
-    const {language, focus} = React.useContext(AppContext);
+    const {language, reduced} = React.useContext(AppContext);
     var title = languageChooser(language, getTitles()).leasures;
     var leasures = languageChooser(language, getLeasures());
 
@@ -19,7 +19,7 @@ const Leasures = ( {domain} ) => {
                             return  <div key={index}>
                                         {
                                             index < 3 ? 
-                                                <div className={`element ${focus && leasure.domains && leasure.domains.includes(EnumDomain.MATHS) ? "little-focus" : ""}`}>
+                                                <div className={`element ${reduced && leasure.domains && leasure.domains.includes(EnumDomain.MATHS) ? "little-focus" : ""}`}>
                                                     {/* <div style={{textDecoration: "underline", textDecorationColor: "rgb(170, 65, 65)"}}> */}
                                                         {leasure.activity}
                                                     {/*  </div>
