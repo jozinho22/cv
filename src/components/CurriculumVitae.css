@@ -50,6 +50,7 @@ a {
     margin-left: 30px;
     margin-right: 40px;
     margin-top: 15px;
+    margin-bottom: 20px;
 }
 
 @media(width < 450px) {
@@ -117,26 +118,15 @@ hr {
     margin-left: 30px;
 }
 
-.reduced, .little-reduced {
-    border-style: dotted;
-    border-width: 1px;
-    border-color: var(--reduced-text-color);
-    width : fit-content;
-    height : fit-content;
-    border-radius: 5px;
-}
+/* @media(width < 450px) {
+    .arrowup-icon-left {
+        margin-right: 10px;
+    }
 
-/* .Darcula .reduced, .Darcula .little-reduced {
-    border-color: var(--reduced-button-color);
+    .arrowup-icon-right {
+        margin-left: 10px;
+    }
 } */
-
-.reduced {
-    padding: 20px;
-}
-
-.little-reduced {
-    padding: 10px;
-}
 
 .hyperlink-icon {
     padding-left: 10px;
@@ -280,6 +270,10 @@ hr {
   background-color : var(--back-hover-color);
 }
 
+.header-button-container {
+    padding-top: 20px;
+}
+
 @media (width < 450px) {
     .header-button-container .icon {
         width: 20px;
@@ -290,28 +284,28 @@ hr {
     }
 }
 
-.printer-button, .language-button, .theme-button, .reduced-button {
+/* .printer-button, .language-button, .theme-button, .reduced-button {
     position: relative;
     margin: 0;
     left:50%;
     transform: translateX(-50%);
-}
+} */
 
 @media(width < 450px) {
-    .printer-button, .language-button, .theme-button, .reduced-button {
+    .printer-button, .language-button, .theme-button, .reduced-button, .web-button {
         font-size: small !important;
         height: 60px;
     }
+}
+
+.printer-button:active, .language-button:active, .theme-button:active, .reduced-button:active {
+    top: 6px;
 }
 
 .printer-button {
     background-color: var(--printer-button-color) !important;
     border: var(--printer-button-color) solid !important;
     box-shadow: 3px 3px 0px 0px var(--printer-button-shadow-color);
-}
-
-.printer-button:active, .language-button:active, .theme-button:active, .reduced-button:active {
-    top: 6px;
 }
 
 .printer-button:hover {
@@ -352,6 +346,34 @@ hr {
     border: var(--reduced-button-hover-color) solid !important;
 }
 
+.web-button-container {
+    display: none; /* transform into flex for printing */
+    justify-content: center;
+}
+
+.Blank .web-button-container a {
+    color: white !important;
+}
+
+.Darcula .web-button-container a {
+    color: white !important;
+}
+
+.web-button {
+    margin-top: 20px;
+}
+
+.web-button {
+    background-color: var(--web-button-color) !important;
+    border: var(--web-button-color) solid !important;
+    box-shadow: 3px 3px 0px 0px var(--web-button-shadow-color);
+}
+
+.web-button:hover {
+    background-color: var(--web-button-hover-color) !important;
+    border: var(--web-button-hover-color) solid !important;
+}
+
 .dropdown-toggle::after {
     display: none !important;
 }
@@ -362,13 +384,26 @@ a .dropdown-item {
 
 /* vcard */
 .vcard {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.vcard-content {
     padding: 10px;
     background: var(--card-background-color);
     border-radius: 5px;
-    margin: 10px;
     margin-bottom: 20px;
     line-break: auto;
+    width: 90%;
+    height: 80px;
 }
+
+@media(width < 450px) {
+    .vcard-content {
+        height: fit-content;
+    }
+} 
 
 .vcard img {
     float: right;
@@ -506,17 +541,9 @@ a .dropdown-item {
 }
 
 /* experience */
-.experience .element {
-    margin-bottom: 20px;
-}
-
-.maths.experience .element {
+.reduced.experience .element {
     margin-top: 10px !important;
     margin-bottom: 0px !important;
-}
-
-.maths.experience .element.reduced {
-    margin-bottom: 20px !important;
 }
 
 .period {
@@ -551,14 +578,9 @@ a .dropdown-item {
 }
 
 /* volunteering */
-.volunteering .element {
-    margin-bottom: 20px;
-}
+
 
 /* education */
-/* .education .element {
-    margin-bottom: 20px;
-} */
 
 .diplomas .desc {
     display: flex;
@@ -627,9 +649,6 @@ a .dropdown-item {
     }
 }
 
-.leasures .element {
-    padding: 10px
-}
 /* socials */
 .socials {
     display: flex;
@@ -657,3 +676,42 @@ a .dropdown-item {
     text-align: center;
     font-size: x-small;
 }
+
+/* printing */
+@media print {
+        html, body {
+            height: initial !important;
+            overflow: initial !important;
+            print-color-adjust: exact; 
+            -webkit-print-color-adjust: exact; 
+            background-color: var(--back-color-1) !important;
+        }
+        .curriculum-vitae-container {
+            font-size: 11px !important;
+        }
+        .me, h1 {
+            font-size: 15px !important;
+        }
+        .title {
+            font-size: 12px !important;
+            padding-top: 10px !important; padding-bottom: 10px !important;
+            width: 80%;
+        }
+        .page-break {
+            page-break-after: auto;
+        }
+        .experience .element {
+            page-break-inside: auto;
+        } 
+        .element {
+            page-break-inside: avoid;
+        } 
+    }
+
+    @page {
+        size: A4;
+
+        @bottom-right {
+            content: counter(page) " of " counter(pages);
+        }
+    }

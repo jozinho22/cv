@@ -18,11 +18,6 @@ const getExtraProExperience = ( domain ) => {
                         desc: "(Pendule pour les joueurs d'échecs)"
                     },
                     {
-                        url: "https://jozinho22.github.io/cv",
-                        webSiteName : "Mon CV",
-                        desc: "(Mon CV au format web)"
-                    },
-                    {
                         url: "https://jozinho22.github.io/test-your-skills",
                         webSiteName : "Test your skills",
                         desc: "(Un test pour les devs Java)"
@@ -76,11 +71,6 @@ const getExtraProExperience = ( domain ) => {
                         url: "https://jozinho22.github.io/chess-timer",
                         webSiteName : "Chess Timer",
                         desc: "(Timer for chess players)"
-                    },
-                    {
-                        url: "https://jozinho22.github.io/cv",
-                        webSiteName : "My resume",
-                        desc: "(My web resume)"
                     },
                     {
                         url: "https://jozinho22.github.io/test-your-skills",

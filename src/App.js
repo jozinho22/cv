@@ -1,24 +1,30 @@
 import React from 'react';
+import Header from './components/Header';
 import CurriculumVitae from './components/CurriculumVitae';
 import AppContext from './components/context/AppContext';
 import EnumDomain from './components/helpers/EnumDomain';
 import EnumLanguage from './components/helpers/EnumLanguage';
 import EnumTheme from './components/helpers/EnumTheme';
-import { BrowserRouter, Route, Routes, Outlet, HashRouter, createHashRouter, RouterProvider } from 'react-router-dom';
-import pathBuilder from './components/helpers/pathBuilder';
-/* import Error from './components/helpers/Error';
- */
+import Error from './components/helpers/Error';
+import { createHashRouter, RouterProvider } from 'react-router-dom';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './components/styles/Themes.css';
 import './App.css';
-import Error from './components/helpers/Error';
+
 
 function App() {
 
     const [theme, setTheme] = React.useState(process.env.NODE_ENV === 'development' ? EnumTheme.DARCULA : EnumTheme.BLANK);
     const [language, setLanguage] = React.useState(EnumLanguage.FRENCH);
     const [reduced, setReduced] = React.useState(true);
-    const [domain, setDomain] = React.useState({});
+    const [domain, setDomain] = React.useState(EnumDomain.GENERIC);
+
+    // entrer le poste ici
+    var posteNonGeneric = '';
+    
+    // entrer la société ici
+    var boite = "";
 
     const appContext = {
         theme: theme,
@@ -40,7 +46,7 @@ function App() {
                 children : [
                     {
                         path: "",
-                        element: <CurriculumVitae domain={EnumDomain.GENERIC} relativePath={'/'} />
+                        element: <CurriculumVitae domain={EnumDomain.GENERIC} poste={posteNonGeneric} boite={boite} relativePath={'/'} />
                     },
                     {
                         path: "dev",
@@ -61,13 +67,8 @@ function App() {
             <div className="App" id="capture">
                 <AppContext.Provider value={appContext} > 
                     <div className={`${theme}`}>
-                        {/* <HashRouter>
-                             <Routes>
-                                <Route exact path={'/'} element={<CurriculumVitae domain={EnumDomain.GENERIC} relativePath={'/'} />} />
-                                <Route path={'/dev'} element={<CurriculumVitae domain={EnumDomain.DEV} poste={'Développeur ReactJS'} relativePath={'/dev'} />} />
-                                <Route path={'/maths'} element={<CurriculumVitae domain={EnumDomain.MATHS} poste={'Professeur de mathématiques'} relativePath={'/maths'} />} />
-                            </Routes> 
-                        </HashRouter> */}
+                        <Header />
+                       
                         <RouterProvider router={router} />
                     </div>       
                 </AppContext.Provider>

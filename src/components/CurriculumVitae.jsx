@@ -1,8 +1,7 @@
 import React from 'react';
 import AppContext from './context/AppContext';
 import { Container } from 'react-bootstrap';
-import Header from './parts/Header';
-import Card from './parts/Card';
+import VCard from './parts/VCard';
 import Contact from './parts/Contact';
 import Intro from './parts/Intro';
 import Skills from './parts/Skills';
@@ -16,25 +15,14 @@ import EnumDomain from './helpers/EnumDomain';
 import VolunteerWork from './parts/VolunteerWork';
 
 import { Helmet } from "react-helmet-async";
-import { useLocation } from 'react-router-dom';
-import {Button} from 'react-bootstrap';
 
 import './CurriculumVitae.css';
 
-const CurriculumVitae = ( {domain, poste, relativePath} ) => {
+const CurriculumVitae = ( {domain, poste, boite, relativePath} ) => {
 
-    // entrer le poste ici
-    var posteNonGeneric = '';
-    
-    posteNonGeneric !== '' ? poste = posteNonGeneric : <></>;
-    
-    // entrer la société ici
-    var boite = "";
-
-    const {reduced, updateReduced, updateDomain} = React.useContext(AppContext);
+    const {updateDomain} = React.useContext(AppContext);
 
     React.useEffect(() => {
-        updateReduced(reduced && domain === EnumDomain.MATHS);
         updateDomain(domain);
     }, [domain]) 
 
@@ -50,10 +38,8 @@ const CurriculumVitae = ( {domain, poste, relativePath} ) => {
                 <link rel="canonical" href={`https://jozinho22.github.io/cv${relativePath}`} />
             </Helmet>
             <Container className="curriculum-vitae-container">
-
-                <Header poste={poste} boite={boite} />
                 
-                <Card poste={poste} />
+                <VCard poste={poste} />
                 <Contact />
                 <Intro poste={poste} />
                 {

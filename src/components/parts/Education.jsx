@@ -42,11 +42,17 @@ const Education = () => {
                                     <div className="diplomas">
                                         <div className="icon-block">
                                             <Award className="icon" /> 
-                                            <a href={diploma.titleLink} target="_blank" rel="noreferrer">
-                                                <div className="element-of-icon">
-                                                    {diploma.title}
-                                                </div>
-                                            </a>
+                                            {
+                                               diploma.titleLink ? 
+                                                    <a href={diploma.titleLink} target="_blank" rel="noreferrer">
+                                                        <div className="element-of-icon">
+                                                            {diploma.title}
+                                                        </div>
+                                                    </a>
+                                                        :   <div className="element-of-icon">
+                                                                {diploma.title}
+                                                            </div>
+                                            }
                                         </div>
                                         {
                                             !reduced ? 

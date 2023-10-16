@@ -19,6 +19,11 @@
     --red-button-hover-color: rgb(129, 55, 45);
     --red-button-shadow-color: rgb(110, 51, 43);
     --red-button-shadow-darker-color: rgb(94, 48, 42);
+
+    --orange-button-color: rgb(202, 146, 60);
+    --orange-button-hover-color: rgb(170, 125, 57);
+    --orange-button-shadow-color: rgb(145, 109, 56);
+    --orange-button-shadow-darker-color: rgb(124, 98, 59);
 }
 
 .Blank {
@@ -47,6 +52,10 @@
     --reduced-button-color: var(--red-button-color);
     --reduced-button-hover-color: var(--red-button-hover-color);
     --reduced-button-shadow-color: var(--red-button-shadow-color);
+
+    --web-button-color: var(--orange-button-color);
+    --web-button-hover-color: var(--orange-button-hover-color);
+    --web-button-shadow-color: var(--orange-button-shadow-color);
 }
 
 .Darcula {
@@ -75,6 +84,10 @@
     --reduced-button-color: var(--red-button-hover-color);
     --reduced-button-hover-color: var(--red-button-shadow-color);
     --reduced-button-shadow-color: var(--red-button-shadow-darker-color);
+
+    --web-button-color: var(--orange-button-hover-color);
+    --web-button-hover-color: var(--orange-button-shadow-color);
+    --web-button-shadow-color: var(--orange-button-shadow-darker-color);
 }
 
 /* .Purple {

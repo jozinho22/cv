@@ -1,19 +1,17 @@
 import React from 'react';
 import { Container, Button, Row, Col } from 'react-bootstrap';
-import { useReactToPrint } from "react-to-print";
-import pageStyle from '../helpers/pageStyle';
+import AppContext from './context/AppContext';
+import { FilePdfFill, Globe, Magic, Search, Link45deg } from 'react-bootstrap-icons';
+import EnumDomain from './helpers/EnumDomain';
+import Constants from './helpers/Constants';
 
-import AppContext from '../context/AppContext';
-import { FilePdfFill, Globe, Magic, Search } from 'react-bootstrap-icons';
-import EnumDomain from '../helpers/EnumDomain';
-
-const Header = ( {poste, boite} ) => {
+const Header = () => {
 
     const {theme, updateTheme, language, updateLanguage, reduced, updateReduced, domain} = React.useContext(AppContext);
 
-    var catchedDiv = {};
-
     var mobile = document.body.offsetWidth < 450;
+
+    console.log(domain)
 
     const switchTheme = () => {
         updateTheme(theme === 'Blank' ? 'Darcula' : 'Blank');
@@ -27,37 +25,24 @@ const Header = ( {poste, boite} ) => {
         updateReduced(!reduced);
     }
 
-    const buildElementToPrint = () => {
+    const retrieveHeader = React.useCallback(() => {
+            document.getElementsByClassName("header-button-container")[0].style.display = "flex";
+            document.getElementsByClassName("web-button-container")[0].style.display = "none"; 
+        }, []);
 
-        var entirePage = document.querySelector("#capture").cloneNode(true);
-        document.getElementById("doc-to-print").appendChild(entirePage);
-        catchedDiv = document.getElementById("doc-to-print");
+    const printWindow = () => {
 
-        catchedDiv.getElementsByClassName("header")[0].remove(); 
-        if(domain === EnumDomain.MATHS) {
-            /* catchedDiv.getElementsByClassName("focus-disclaimer")[0].remove();  */
-        }
-
-        return catchedDiv.getElementsByClassName("App")[0];
+        document.getElementsByClassName("header-button-container")[0].style.display = "none";
+        document.getElementsByClassName("web-button-container")[0].style.display = "flex";
+        window.print();
+        retrieveHeader(); 
     }
-
-    const destroyElementToPrint = () => {
-        catchedDiv.getElementsByClassName("App")[0].remove();
-    }
-
-    const print = useReactToPrint(
-        {
-            content: () => buildElementToPrint(), 
-            pageStyle: pageStyle(),
-            documentTitle: domain === `Josselin DOUINEAU - ${poste}${boite !== '' ? ` - ${boite}` : ''} - CV`,
-            onAfterPrint: () => destroyElementToPrint()
-        }
-    );
 
     return  <Container className="header">
                 <Row className="header-button-container">
-                    <Col xs={domain === EnumDomain.MATHS ? 3 : 4} >
-                        <Button variant="warning" className="printer-button" onClick={print}>
+
+                    <Col xs={3} >
+                        <Button variant="warning" className="printer-button" onClick={printWindow} >
                             <div className="icon-block">
                                 <FilePdfFill className="icon" /> 
                                 {!mobile ? <div className="element-of-icon">Export</div> : <></>}
@@ -65,7 +50,7 @@ const Header = ( {poste, boite} ) => {
                         </Button>
                     </Col>
                     
-                    <Col xs={domain === EnumDomain.MATHS ? 3 : 4} >
+                    <Col xs={3} >
                         <Button variant="success" className="theme-button" onClick={switchTheme}>
                             <div className="icon-block">
                                 <Magic className="icon" /> 
@@ -77,7 +62,7 @@ const Header = ( {poste, boite} ) => {
                         </Button>         
                     </Col>
 
-                    <Col xs={domain === EnumDomain.MATHS ? 3 : 4} >
+                    <Col xs={3} >
                         <Button variant="primary" className="language-button" onClick={switchLanguage}>
                             <div className="icon-block">
                                 {
@@ -100,23 +85,33 @@ const Header = ( {poste, boite} ) => {
                         </Button>
                     </Col>
                     
-                    {
-                        domain === EnumDomain.MATHS ?
-                            <Col xs={3} >
-                                <Button variant="danger" className="reduced-button" onClick={switchReduced}>
-                                    <div className="icon-block">
-                                        <Search className="icon" /> 
-                                        {!mobile ?  <div className="element-of-icon">
-                                                        {reduced === true ? 'More details' : 'Less details'}
-                                                    </div> 
-                                                        : <></>}
-                                    </div>
-                                </Button>         
-                            </Col>
-                                :   <></>
-                    }
-                   
+                    <Col xs={3} >
+                        <Button variant="danger" className="reduced-button" onClick={switchReduced}>
+                            <div className="icon-block">
+                                <Search className="icon" /> 
+                                {!mobile ?  <div className="element-of-icon">
+                                                {reduced === true ? 'More details' : 'Less details'}
+                                            </div> 
+                                                : <></>}
+                            </div>
+                        </Button>         
+                    </Col>
+
                 </Row>
+
+                <div className="web-button-container" id="web-button-container">
+                    <a href={`${Constants.WEB_APP_URL}${domain !== EnumDomain.GENERIC ? '/#/' + domain : ''}`} target="_blank" rel="noreferrer">
+                        <Button variant="danger" className="web-button">
+                            <div className="icon-block">
+                                <Link45deg className="icon" /> 
+                                <div className="element-of-icon">
+                                    Web version
+                                </div> 
+                            </div>
+                        </Button> 
+                    </a>
+                </div>
+
             </Container>
 }
 

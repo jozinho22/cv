@@ -20,12 +20,12 @@ const Experience = ( {pro} ) => {
     const {language, reduced, domain} = React.useContext(AppContext);
     var title = pro ? languageChooser(language, getTitles()).experience : languageChooser(language, getTitles()).extraProExperience;
     var jobs = pro ? ( domain === EnumDomain.DEV ? languageChooser(language, getDevExperience()) : reduced ? languageChooser(language, getReducedExperience()) : languageChooser(language, getExperience()) ) : reduced ? languageChooser(language, getReducedExtraProExperience(domain)) : languageChooser(language, getExtraProExperience(domain)); 
-    console.log(reduced)
+    
     /* domain !== EnumDomain.DEV && !pro ? jobs.reverse() : <></>; */
 
     return  <div className="page-break">
                 <div className="title">{title}</div>
-                <div className={`${domain} experience`}>
+                <div className={`${reduced ? 'reduced' : ''} experience`}>
                     {jobs.map((job, index) => {
 
                         if(job.period === "pause") {
@@ -38,7 +38,7 @@ const Experience = ( {pro} ) => {
                                          <hr/>
                                     </div>
                         }
-                        return  <div className={`element ${reduced && job.domains && job.domains.includes(EnumDomain.MATHS) ? "focus" : ""}`} id={`experience-${index}`} key={index}>
+                        return  <div className={`element`} id={`experience-${index}`} key={index}>
                                      {job.period ? 
                                          <div className="icon-block period">
                                             <Hourglass className="icon" /> 
@@ -74,8 +74,8 @@ const Experience = ( {pro} ) => {
                                                         }
                                                     </>
                                             </div>
-                                            <div className="tools">
-                                                {job.tools && domain === EnumDomain.DEV ?
+                                            {job.tools && domain === EnumDomain.DEV ?
+                                                <div className="tools">
                                                     <> 
                                                         <WrenchAdjustable className="icon" />
                                                         <div className="element-of-icon">
@@ -84,15 +84,15 @@ const Experience = ( {pro} ) => {
                                                         <div className="desc">
                                                             {job.tools}
                                                         </div>                                                
-                                                    </>
-                                                        :   <></>
-                                                }
-                                            </div>
+                                                    </>   
+                                                </div>
+                                                    :   <></>
+                                            }
                                         </>
                                             :   <></>
                                     }
-                                    <div className="context">
-                                        {job.context && domain === EnumDomain.DEV ?
+                                    {job.context && domain === EnumDomain.DEV && !reduced ?
+                                        <div className="context">
                                             <>
                                                 <div className="icon-block">
                                                     <QuestionLg className="icon" /> 
@@ -100,32 +100,33 @@ const Experience = ( {pro} ) => {
                                                 </div>
                                                 <div className="desc">{job.context}</div>
                                             </>  
+                                        </div>
+                                            : <></>
+                                    }
+                                    {(job.desc && !reduced) || !pro ?
+                                        <div className="achievements">
+                                            
+                                                <>
+                                                    <div className="icon-block">
+                                                        {domain === EnumDomain.DEV ? 
+                                                            <CodeSquare className="icon" /> 
+                                                                : <Boxes className="icon" /> 
+                                                        }
+                                                        <div className="element-of-icon">{language === EnumLanguage.FRENCH ? "Réalisations" : "Achievements"}</div>
+                                                    </div>
+                                                    <div className="desc">{job.desc}</div>
+                                                    <div className="desc">{domain === EnumDomain.DEV ? job.more : ''}</div>
+                                                </>  
+                                            </div>
                                                 : <></>
-                                        }
-                                    </div>
-                                    <div className="achievements">
-                                        {job.desc ?
-                                            <>
-                                                <div className="icon-block">
-                                                    {domain === EnumDomain.DEV ? 
-                                                        <CodeSquare className="icon" /> 
-                                                            : <Boxes className="icon" /> 
-                                                    }
-                                                    <div className="element-of-icon">{language === EnumLanguage.FRENCH ? "Réalisations" : "Achievements"}</div>
-                                                </div>
-                                                <div className="desc">{job.desc}</div>
-                                                <div className="desc">{domain === EnumDomain.DEV ? job.more : ''}</div>
-                                            </>  
-                                                : <></>
-                                        }
-                                    </div>
+                                    }
                                     {
-                                        job.references ?
+                                        job.references && !reduced ?
                                             job.references.map((reference, index) => {
                                                 return <div key={index} className="reference">
                                                     {
                                                         Object.keys(reference).length !== 0 ?
-                                                            <a href={jobs[0] === job ? reference.url + '/#/' + domain : reference.url} target="_blank" rel="noreferrer">
+                                                            <a href={reference.url} target="_blank" rel="noreferrer">
                                                                 <Link45deg className="icon" /> 
                                                                 <Phone className="icon" /> 
                                                                 <div className="element-of-icon">{reference.webSiteName}</div>
@@ -142,7 +143,7 @@ const Experience = ( {pro} ) => {
                                                 : <></>
                                     } 
                                     
-                                    {job.gitDesc && domain === EnumDomain.DEV ?
+                                    {job.gitDesc && domain === EnumDomain.DEV && !reduced ?
                                             <>
                                                 <br></br>
                                                 <div className="desc">{job.gitDesc}</div>
@@ -150,7 +151,7 @@ const Experience = ( {pro} ) => {
                                                 : <></>
                                     }
                                     {
-                                        job.gitReferences && domain === EnumDomain.DEV ?
+                                        job.gitReferences && domain === EnumDomain.DEV && !reduced ?
                                             job.gitReferences.map((reference, index) => {
                                                 return <div key={index} className="reference">
                                                             <a href={reference.url} target="_blank" rel="noreferrer">

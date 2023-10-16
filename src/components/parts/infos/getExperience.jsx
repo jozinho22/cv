@@ -51,7 +51,10 @@ const getExperience = () => {
                         domains: [EnumDomain.MATHS],
                         period: "février 2020 - mars 2020",
                         company: "Groupe Yoni - Vannes",
-                        companyLink: "https://www.yoni.fr/"
+                        companyLink: "https://www.yoni.fr/",
+                        as: "Développeur Java",
+                        tools: "Spring, Maven, PostgreSQL, JHipster, Liquibase, GitLab", 
+                        desc: "Développement de nouvelles fonctionnalités pour une application dans l'horlogerie"
                     },
                     {
                         domains: [EnumDomain.MATHS],
@@ -186,7 +189,10 @@ const getExperience = () => {
                         domains: [EnumDomain.MATHS],
                         period: "february 2020 - march 2020",
                         company: "Groupe Yoni - Vannes",
-                        companyLink: "https://www.yoni.fr/"
+                        companyLink: "https://www.yoni.fr/",
+                        as: "Java developer",
+                        tools: "Spring, Maven, PostgreSQL, JHipster, Liquibase, GitLab", 
+                        desc: "Development of new features for a clockmaker software"
                     },
                     {
                         domains: [EnumDomain.MATHS],
