@@ -1,5 +1,4 @@
 import React from 'react';
-import Header from './components/Header';
 import CurriculumVitae from './components/CurriculumVitae';
 import AppContext from './components/context/AppContext';
 import EnumDomain from './components/helpers/EnumDomain';
@@ -11,6 +10,7 @@ import { createHashRouter, RouterProvider } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './components/styles/Themes.css';
 import './App.css';
+import TestStack from './components/helpers/TestStack';
 
 
 function App() {
@@ -55,6 +55,10 @@ function App() {
                     {
                         path: "maths",
                         element: <CurriculumVitae domain={EnumDomain.MATHS} poste={'Professeur de mathématiques'} relativePath={'/#/maths'} />
+                    },
+                    {
+                        path: "test",
+                        element: <TestStack />
                     }
                 ],
                 errorElement: <Error />,
@@ -67,7 +71,7 @@ function App() {
             <div className="App" id="capture">
                 <AppContext.Provider value={appContext} > 
                     <div className={`${theme}`}>
-                        <Header />
+                       
                        
                         <RouterProvider router={router} />
                     </div>       

@@ -11,7 +11,7 @@ const Header = () => {
 
     var mobile = document.body.offsetWidth < 450;
 
-    console.log(domain)
+    /* console.log(domain) */
 
     const switchTheme = () => {
         updateTheme(theme === 'Blank' ? 'Darcula' : 'Blank');
@@ -105,7 +105,7 @@ const Header = () => {
                             <div className="icon-block">
                                 <Link45deg className="icon" /> 
                                 <div className="element-of-icon">
-                                    Web version
+                                    Web version : {`${Constants.WEB_APP_URL}${domain !== EnumDomain.GENERIC ? '/#/' + domain : ''}`}
                                 </div> 
                             </div>
                         </Button> 

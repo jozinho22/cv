@@ -24,6 +24,8 @@ h1 {
     padding: 20px;
     color: var(--simple-text-color);
     font-size: var(--text-font-size);
+    position: relative;
+    padding-top: 100px;
 }
 
 @media(width < 450px) {
@@ -252,6 +254,8 @@ hr {
 /* header */
 .header {
     margin-bottom: 20px;
+    position: fixed;
+    top: 0;
 }
 
 .header .dropdown-menu {
@@ -272,6 +276,11 @@ hr {
 
 .header-button-container {
     padding-top: 20px;
+}
+
+.header-button-container .col-3 {
+    display: flex;
+    justify-content: center;
 }
 
 @media (width < 450px) {
@@ -348,7 +357,13 @@ hr {
 
 .web-button-container {
     display: none; /* transform into flex for printing */
+    /* display:flex; */
     justify-content: center;
+}
+
+/* test for Stack */
+.web-button-container-test {
+    display:flex;
 }
 
 .Blank .web-button-container a {

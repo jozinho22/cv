@@ -1,6 +1,7 @@
 import React from 'react';
 import AppContext from './context/AppContext';
 import { Container } from 'react-bootstrap';
+import Header from './Header';
 import VCard from './parts/VCard';
 import Contact from './parts/Contact';
 import Intro from './parts/Intro';
@@ -27,18 +28,21 @@ const CurriculumVitae = ( {domain, poste, boite, relativePath} ) => {
     }, [domain]) 
 
     /* console.log(useLocation()) */
+
+    /* console.log(poste, boite) */
    
     return (
         <>
             <Helmet>
                 <title>
-                    {`CV de Josselin DOUINEAU${(poste !== '' && poste !== undefined) ? ` - ${poste}` : ''}${boite !== '' ? ` - ${boite}` : ''}`}
+                    {`CV de Josselin DOUINEAU${(poste !== '' && poste !== undefined) ? ` - ${poste}` : ''}${boite !== '' && boite !== undefined ? ` - ${boite}` : ''}`}
                 </title>
                 <meta data-rh="true" name="description" content={`Mon curriculum vitae : ${poste} au format web`} />
                 <link rel="canonical" href={`https://jozinho22.github.io/cv${relativePath}`} />
             </Helmet>
             <Container className="curriculum-vitae-container">
-                
+
+                <Header />
                 <VCard poste={poste} />
                 <Contact />
                 <Intro poste={poste} />

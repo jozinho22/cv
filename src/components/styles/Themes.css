@@ -39,7 +39,7 @@
     --hyperlink-color: rgb(15, 146, 58);
     --progressbar-background-color: rgb(179, 182, 181);
 
-    --printer-button-color: var(--yellow-button-color);
+/*     --printer-button-color: var(--yellow-button-color);
     --printer-button-hover-color: var(--yellow-button-hover-color);
     --printer-button-shadow-color: var(--yellow-button-shadow-color);
     --theme-button-color: var(--green-button-color);
@@ -51,11 +51,29 @@
     --reduced-text-color: var(--red-button-color);
     --reduced-button-color: var(--red-button-color);
     --reduced-button-hover-color: var(--red-button-hover-color);
-    --reduced-button-shadow-color: var(--red-button-shadow-color);
+    --reduced-button-shadow-color: var(--red-button-shadow-color); */
 
-    --web-button-color: var(--orange-button-color);
+    --printer-button-color: var(--yellow-button-hover-color);
+    --printer-button-hover-color: var(--yellow-button-shadow-color);
+    --printer-button-shadow-color: var(--yellow-button-shadow-darker-color);
+    --theme-button-color: var(--green-button-hover-color);
+    --theme-button-hover-color: var(--green-button-shadow-color);
+    --theme-button-shadow-color: var(--green-button-shadow-darker-color);
+    --language-button-color: var(--blue-button-hover-color);
+    --language-button-hover-color: var(--blue-button-shadow-color);
+    --language-button-shadow-color: var(--blue-button-shadow-darker-color);
+    --reduced-text-color: var(--red-button-light-color);
+    --reduced-button-color: var(--red-button-hover-color);
+    --reduced-button-hover-color: var(--red-button-shadow-color);
+    --reduced-button-shadow-color: var(--red-button-shadow-darker-color);
+
+/*     --web-button-color: var(--orange-button-color);
     --web-button-hover-color: var(--orange-button-hover-color);
-    --web-button-shadow-color: var(--orange-button-shadow-color);
+    --web-button-shadow-color: var(--orange-button-shadow-color); */
+
+    --web-button-color: var(--orange-button-hover-color);
+    --web-button-hover-color: var(--orange-button-shadow-color);
+    --web-button-shadow-color: var(--orange-button-shadow-darker-color);
 }
 
 .Darcula {
