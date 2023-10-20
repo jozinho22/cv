@@ -1,7 +1,10 @@
+import React from 'react';
+import AppContext from './context/AppContext';
 import { Container } from 'react-bootstrap';
-import Header from './parts/Header';
-import Intro from './parts/Intro';
+import Header from './Header';
+import VCard from './parts/VCard';
 import Contact from './parts/Contact';
+import Intro from './parts/Intro';
 import Skills from './parts/Skills';
 import Languages from './parts/Languages';
 import Experience from './parts/Experience';
@@ -9,77 +12,73 @@ import Education from './parts/Education';
 import Socials from './parts/SocialNetworks';
 import Leasures from './parts/Leasures';
 import Licenses from './parts/Licenses';
-import Certifications from './parts/Certifications';
 import EnumDomain from './helpers/EnumDomain';
-import Volunteering from './parts/Volunteering';
+import VolunteerWork from './parts/VolunteerWork';
 
 import { Helmet } from "react-helmet-async";
 
 import './CurriculumVitae.css';
 
-const CurriculumVitae = ( {domain, poste, relativePath} ) => {
+const CurriculumVitae = ( {domain, poste, boite, relativePath} ) => {
 
-    // entrer le poste ici
-    var posteNonGeneric = '';
-    posteNonGeneric !== '' ? poste = posteNonGeneric : <></>;
-    
-    // entrer la société ici
-    var boite = "";
+    const {updateDomain} = React.useContext(AppContext);
 
+    React.useEffect(() => {
+        updateDomain(domain);
+    }, [domain]) 
+
+    /* console.log(useLocation()) */
+
+    /* console.log(poste, boite) */
+   
     return (
         <>
             <Helmet>
                 <title>
-                    {`CV de Josselin DOUINEAU${(poste !== '' && poste !== undefined) ? ` - ${poste}` : ''}${boite !== '' ? ` - ${boite}` : ''}`}
+                    {`CV de Josselin DOUINEAU${(poste !== '' && poste !== undefined) ? ` - ${poste}` : ''}${boite !== '' && boite !== undefined ? ` - ${boite}` : ''}`}
                 </title>
                 <meta data-rh="true" name="description" content={`Mon curriculum vitae : ${poste} au format web`} />
                 <link rel="canonical" href={`https://jozinho22.github.io/cv${relativePath}`} />
             </Helmet>
             <Container className="curriculum-vitae-container">
-                
-                <Header domain={domain} poste={poste} boite={boite} />
-                
-                <Intro domain={domain} poste={poste} />
+
+                <Header />
+                <VCard poste={poste} />
                 <Contact />
-                
+                <Intro poste={poste} />
                 {
                     domain === EnumDomain.DEV ? 
                         <Skills />
                             : <></>
                 } 
-
                 {
-                    domain === EnumDomain.DEV ? 
+                    domain !== EnumDomain.MATHS ? 
                         <>
-                            <Experience domain={domain} pro/>
-                            <Experience domain={domain} /> 
+                            <Experience pro/>
+                            {
+                                domain !== EnumDomain.GENERIC ? 
+                                    <Experience /> 
+                                        :   <></>
+                            }
                         </>
                             : 
                                 <>
-                                    <Experience domain={domain} /> 
-                                    <Experience domain={domain} pro/>
+                                    {
+                                        domain !== EnumDomain.GENERIC ? 
+                                            <Experience /> 
+                                                :   <></>
+                                    }
+                                    <Experience pro/>
                                 </>
                 } 
-
                 <Education />
-                
-                <Volunteering domain={domain} />
-
-                {
-                    domain === EnumDomain.DEV ? 
-                        <Certifications />
-                            : <></>
-                }
-
-                
+                <VolunteerWork />
                 <Languages />
-
                 {
                     domain === EnumDomain.DEV ? 
                         <Socials />
                             : <></>
                 }
-
                 <Leasures />
                 
                 <Licenses />

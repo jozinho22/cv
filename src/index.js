@@ -1,9 +1,11 @@
 import React from 'react';
 import { hydrateRoot, createRoot } from 'react-dom/client';
-import './index.css';
+
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { HelmetProvider } from 'react-helmet-async';
+
+import './index.css';
 
 const app = <React.StrictMode>
                 <HelmetProvider>

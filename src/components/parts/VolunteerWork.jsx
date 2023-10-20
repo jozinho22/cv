@@ -2,13 +2,13 @@ import React from 'react';
 import AppContext from '../context/AppContext';
 import languageChooser from '../helpers/languageChooser';
 import getTitles from './infos/getTitles';
-import getVolunteerWork from './infos/generic/getVolunteerWork';
+import getVolunteerWork from './infos/getVolunteerWork';
+import { Hourglass, PersonFill, GeoAltFill } from 'react-bootstrap-icons';
 import EnumDomain from '../helpers/EnumDomain';
-import { Hourglass, PersonFill, GeoAltFill, Boxes } from 'react-bootstrap-icons';
 
-const Volunteering = ({domain}) => {
+const VolunteerWork = () => {
 
-    const {language} = React.useContext(AppContext);
+    const {language, reduced} = React.useContext(AppContext);
     var title = languageChooser(language, getTitles()).volunteerWork;
     var volunteerWorks = languageChooser(language, getVolunteerWork());
 
@@ -16,7 +16,7 @@ const Volunteering = ({domain}) => {
                 <div className="title">{title}</div>
                 <div className="volunteering">
                     {volunteerWorks.map((volunteering, index) => {
-                        return  <div className="element" id={`volunteering-${index}`} key={index}>
+                        return  <div className={`element ${reduced && volunteering.domains && volunteering.domains.includes(EnumDomain.MATHS) ? "focus" : ""}`} id={`volunteering-${index}`} key={index}>
                                     <div className="icon-block period">
                                         <Hourglass className="icon" /> 
                                         <div className="element-of-icon period-date">{volunteering.period}</div>
@@ -52,7 +52,7 @@ const Volunteering = ({domain}) => {
                                     {/* <div className="achievements">
                                         <div className="icon-block">
                                             <Boxes className="icon" /> 
-                                            <div className="element-of-icon">{language === "French" ? "Réalisations" : "Achievements"}</div>
+                                            <div className="element-of-icon">{language === EnumLanguage.FRENCH ? "Réalisations" : "Achievements"}</div>
                                         </div> 
                                         <div className="desc">{volunteering.desc}</div>
                                     </div> */}
@@ -63,4 +63,4 @@ const Volunteering = ({domain}) => {
             </div>
 }
 
-export default Volunteering;
+export default VolunteerWork;

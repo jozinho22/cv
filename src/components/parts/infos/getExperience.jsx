@@ -1,4 +1,6 @@
-const getNonDevExperience = () => {
+import EnumDomain from "../../helpers/EnumDomain";
+
+const getExperience = () => {
     
     return {
                 french: [
@@ -37,6 +39,7 @@ const getNonDevExperience = () => {
                         desc: "Employé polyvalent en magasins bio"
                     },
                     {
+                        domains: [EnumDomain.MATHS],
                         period: "janvier 2021 - avril 2021",
                         company: "Open",
                         companyLink: "https://www.open.global/",
@@ -45,6 +48,16 @@ const getNonDevExperience = () => {
                         desc: "Maintenance en condition opérationnelle et développement de nouvelles fonctionnalités d'un un générateur d'applications mobiles avec ReactJs ainsi que sur le back-end de cette application développé en Java"
                     },
                     {
+                        domains: [EnumDomain.MATHS],
+                        period: "février 2020 - mars 2020",
+                        company: "Groupe Yoni - Vannes",
+                        companyLink: "https://www.yoni.fr/",
+                        as: "Développeur Java",
+                        tools: "Spring, Maven, PostgreSQL, JHipster, Liquibase, GitLab", 
+                        desc: "Développement de nouvelles fonctionnalités pour une application dans l'horlogerie"
+                    },
+                    {
+                        domains: [EnumDomain.MATHS],
                         period: "septembre 2016 - september 2018",
                         company: "La SACEM - Paris",
                         companyLink: "https://www.sacem.fr/",
@@ -53,6 +66,7 @@ const getNonDevExperience = () => {
                         desc: "Maintenance en condition opérationnelle et développement de nouvelles fonctionnalités sur trois applications (application de gestion de clients, application de tarification de contrats et environnement back-end d'une application mobile)"
                     },
                     {
+                        domains: [EnumDomain.MATHS],
                         period: "février 2016 - juin 2016",
                         company: "La SNCF - Paris",
                         companyLink: "https://www.sncf.com/fr",
@@ -85,22 +99,25 @@ const getNonDevExperience = () => {
                         desc: "Cartographe SIG"
                     },
                     {
+                        domains: [EnumDomain.MATHS],
                         period: "avril 2014 - septembre 2014",
                         company: "Enertrag - Cergy",
                         companyLink: "https://france.enertrag.com/",
-                        as: "Cartographe (stage de M2)",
+                        as: "Cartographe dans le domaine de l'éolien (stage de M2)",
                         tools: "ArgGIS, Excel", 
                         desc: "Prospection de nouvelles zones propices à l'implantation d'éoliennes, participation aux présentations en mairie"
                     },
                     {
+                        domains: [EnumDomain.MATHS],
                         period: "avril 2013 - septembre 2013",
                         company: "Sermet - Créteil",
                         companyLink: "https://www.manergy.fr/",
-                        as: "Cartographe (stage de M1)",
+                        as: "Cartographe dans le domaine de la géothermie (stage de M1)",
                         tools: "ArgGIS, Excel", 
                         desc: "Participation à un schéma directeur de développement de la géothermie : collecte de données auprès de bailleurs sociaux, création de cartes à partir des données collectées, participation au rapport final"
                     },
                     {
+                        domains: [EnumDomain.MATHS],
                         period: "avril 2012 - september 2012",
                         company: "Planète verte - Paris",
                         companyLink: "http://www.planete-verte.fr/",
@@ -110,7 +127,7 @@ const getNonDevExperience = () => {
                     },
                     {
                         period: "pause",
-                        desc: "Études dans le domaine de l'environnement"
+                        desc: "Étudiant en sciences de l'environnement"
                     },
                     {
                         period: "janvier 2008 - september 2008",
@@ -129,7 +146,7 @@ const getNonDevExperience = () => {
                         period: "july 2023 - september 2023",
                         company: "Biocoop du Cormier - Saint-Aubin-du-Cormier",
                         companyLink: "https://www.biocoopducormier.fr/",
-                        as: "Polyvalent employee",
+                        as: "Versatile employee",
                         tools: "CocoBio, IziBio", 
                         desc: "Restock, delivering reception, cheese and bread service for clients, welcoming/advices, cashiering, cleaning"
                     },
@@ -137,7 +154,7 @@ const getNonDevExperience = () => {
                         period: "august 2021 - october 2022",
                         company: "Biocoop Le Chat Biotté - Combourg",
                         companyLink: "https://www.biocooplechatbiotte.com/",
-                        as: "Polyvalent employee",
+                        as: "Versatile employee",
                         tools: "CocoBio, IziBio", 
                         desc: "Restock, delivering reception, welcoming/advices, cashiering, cleaning"
                     },
@@ -152,14 +169,15 @@ const getNonDevExperience = () => {
                         period: "june 2021 - july 2021",
                         company: "La vie claire - Monfort-sur-Meu",
                         companyLink: "https://www.lavieclaire.com/",
-                        as: "Polyvalent employee",
+                        as: "Versatile employee",
                         desc: "Restock, delivering reception, welcoming/advices, cashiering, cleaning"
                     },
                     {
                         period: "pause",
-                        desc: "Organic shops employee"
+                        desc: "Versatile employee in organic stores"
                     },
                     {
+                        domains: [EnumDomain.MATHS],
                         period: "january 2021 - april 2021",
                         company: "Open",
                         companyLink: "https://www.open.global/",
@@ -168,6 +186,16 @@ const getNonDevExperience = () => {
                         desc: "Maintenance and development of a mobile app generator with ReactJs as well as the back-end part developed in Java"
                     },
                     {
+                        domains: [EnumDomain.MATHS],
+                        period: "february 2020 - march 2020",
+                        company: "Groupe Yoni - Vannes",
+                        companyLink: "https://www.yoni.fr/",
+                        as: "Java developer",
+                        tools: "Spring, Maven, PostgreSQL, JHipster, Liquibase, GitLab", 
+                        desc: "Development of new features for a clockmaker software"
+                    },
+                    {
+                        domains: [EnumDomain.MATHS],
                         period: "september 2016 - september 2018",
                         company: "La SACEM - Paris",
                         companyLink: "https://www.sacem.fr/",
@@ -176,6 +204,7 @@ const getNonDevExperience = () => {
                         desc: "Maintenance and development of three applications (clients management application, pricing application and back-end environment of a mobile app)"
                     },
                     {
+                        domains: [EnumDomain.MATHS],
                         period: "february 2016 - june 2016",
                         company: "La SNCF - Paris",
                         companyLink: "https://www.sncf.com/fr",
@@ -205,25 +234,28 @@ const getNonDevExperience = () => {
                     },
                     {
                         period: "pause",
-                        desc: "Cartographer"
+                        desc: "GIS Cartographer"
                     },
                     {
+                        domains: [EnumDomain.MATHS],
                         period: "april 2014 - september 2014",
                         company: "Enertrag - Cergy",
                         companyLink: "https://france.enertrag.com/",
-                        as: "Cartographer (M2 internship)",
+                        as: "Cartographer in wind power (M2 internship)",
                         tools: "ArgGIS, Excel", 
                         desc: "Aeolien cartography prospecter"
                     },
                     {
+                        domains: [EnumDomain.MATHS],
                         period: "april 2013 - september 2013",
                         company: "Sermet - Créteil",
                         companyLink: "https://www.manergy.fr/",
-                        as: "Cartographer (M1 internship)",
+                        as: "Cartographer in geothermics (M1 internship)",
                         tools: "ArgGIS, Excel", 
                         desc: "Cartography, data interpretation and support on a geothermy developement blueprint"
                     },
                     {
+                        domains: [EnumDomain.MATHS],
                         period: "april 2012 - september 2012",
                         company: "Planète verte - Paris",
                         companyLink: "http://www.planete-verte.fr/",
@@ -233,7 +265,7 @@ const getNonDevExperience = () => {
                     },
                     {
                         period: "pause",
-                        desc: "Environment engineering studies"
+                        desc: "Environment engineering student"
                     },
                     {
                         period: "january 2008 - september 2008",
@@ -251,4 +283,4 @@ const getNonDevExperience = () => {
 
 }
 
-export default getNonDevExperience;
+export default getExperience;

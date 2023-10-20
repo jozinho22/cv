@@ -1,15 +1,18 @@
+import EnumDomain from "../../helpers/EnumDomain";
+
 const getVolunteerWork = () => {
     return {
         french: [
             {
-                period: "jan 2022 - mai 2022",
+                domains: [EnumDomain.MATHS],
+                period: "janvier 2022 - mai 2022",
                 company: "École démocratique de Brocéliande - Muël",
                 companyLink: "https://www.bretagne-grainedesens.bzh/",
                 as: "Professeur de mathématiques",
                 desc: "Dispense de cours (deux heures par semaine) et création de contenus pédagogiques"
             },
             {
-                period: "oct 2020 - sept 2021",
+                period: "octobre 2020 - septembre 2021",
                 company: "La SPA - Rennes",
                 companyLink: "https://www.la-spa.fr/etablissement/refuge-spa-de-rennes/",
                 as: "Agent animalier en chatterie",
@@ -18,14 +21,15 @@ const getVolunteerWork = () => {
         ],
         english: [
             {
-                period: "jan 2022 - may 2022",
+                domains: [EnumDomain.MATHS],
+                period: "january 2022 - may 2022",
                 company: "École démocratique de Brocéliande - Muël",
                 companyLink: "https://www.bretagne-grainedesens.bzh/",
                 as: "Maths teacher",
                 desc: "Two hours a week courses and content creation"
             },
             {
-                period: "oct 2020 - sept 2021",
+                period: "october 2020 - september 2021",
                 company: "La SPA - Rennes",
                 companyLink: "https://www.la-spa.fr/etablissement/refuge-spa-de-rennes/",
                 as: "Cattery agent",

@@ -1,10 +1,11 @@
 import EnumDomain from "../../helpers/EnumDomain";
 
-const getExtraProExperience = ( domain ) => {
+const getExtraProExperience = () => {
     return {
         french: [
             {
-                period: "mars 2020 - maintenant",
+                domains: [EnumDomain.DEV],
+                period: "2020 - maintenant",
                 company: "En autodidacte",
                 as: "Développeur Fullstack",
                 tools: "- JavaScript (ReactJS, NodeJS, AngularJS, Express, Sequelize, MathJax, Helmet, JWT),\n - Java (Spring, JPA/Hibernate, Maven, JWT),\n - HTML5, CSS3, Bootstrap,\n - SQL (PostgreSQL, MySQL, SQL Server, Oracle), \n - Git (Git Bash, GitHub, GitLab, Git Fork)",                     
@@ -15,11 +16,6 @@ const getExtraProExperience = ( domain ) => {
                         url: "https://jozinho22.github.io/chess-timer",
                         webSiteName : "Chess Timer",
                         desc: "(Pendule pour les joueurs d'échecs)"
-                    },
-                    {
-                        url: domain === EnumDomain.DEV ? "https://jozinho22.github.io/cv/dev" : "https://jozinho22.github.io/cv/maths",
-                        webSiteName : "Mon CV en ligne",
-                        desc: domain === EnumDomain.DEV ?  "(Mon CV en tant que développeur)" : "(Mon CV en tant que professeur de mathématiques)"
                     },
                     {
                         url: "https://jozinho22.github.io/test-your-skills",
@@ -48,13 +44,14 @@ const getExtraProExperience = ( domain ) => {
                 ]
             },
             {
+                domains: [EnumDomain.MATHS],
                 period: "2012 - maintenant",
                 as: "Professeur de mathématiques à domicile",
-                desc: "- Soutien scolaire et renforcement \n - Création d'un site dédié :",
+                desc: "- Soutien scolaire et renforcement \n - Création d'un site dédié",
                 references: [
                     {
                         url: "https://jozinho22.github.io/maths",
-                        webSiteName : "Ma Thematique",
+                        webSiteName : "Ma Thématique",
                         desc: "(Base documentaire mathématique)"
                     }
                 ],
@@ -62,7 +59,8 @@ const getExtraProExperience = ( domain ) => {
         ],
         english: [
             {
-                period: "march 2020 - up to now",
+                domains: [EnumDomain.DEV],
+                period: "2020 - up to now",
                 company: "Self-taught",
                 as: "Fullstack developer",
                 tools: "- JavaScript (ReactJS, NodeJS, AngularJS, Express, Sequelize, MathJax, Helmet, JWT),\n - Java (Spring, JPA/Hibernate, Maven, JWT),\n - HTML5, CSS3, Bootstrap,\n - SQL (PostgreSQL, MySQL, SQL Server, Oracle), \n - Git (Git Bash, GitHub, GitLab, Git Fork)",                     
@@ -73,11 +71,6 @@ const getExtraProExperience = ( domain ) => {
                         url: "https://jozinho22.github.io/chess-timer",
                         webSiteName : "Chess Timer",
                         desc: "(Timer for chess players)"
-                    },
-                    {
-                        url: domain === EnumDomain.DEV ? "https://jozinho22.github.io/cv/dev" : "https://jozinho22.github.io/cv/maths",
-                        webSiteName : "My resume on the web",
-                        desc: domain === EnumDomain.DEV ?  "(My resume as a developper)" : "(My resume as a math teacher)"
                     },
                     {
                         url: "https://jozinho22.github.io/test-your-skills",
@@ -106,13 +99,14 @@ const getExtraProExperience = ( domain ) => {
                     ]
             },
             {
+                domains: [EnumDomain.MATHS],
                 period: "2012 - up to now",
-                as: "Maths teacher @Home",
-                desc: "- Tutoring et reinforcement \n - Creation of a dedicated site :",
+                as: "Maths teacher (private lessons)",
+                desc: "- Tutoring et reinforcement \n - Creation of a dedicated site",
                 references: [
                     {
                         url: "https://jozinho22.github.io/maths",
-                        webSiteName : "Ma Thematique",
+                        webSiteName : "Ma Thématique",
                         desc: "(Maths database)"
                     }
                 ]

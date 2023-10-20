@@ -5,6 +5,10 @@ export default React.createContext(
         theme: "",
         updateTheme: (name) => {},
         language: "",
-        updateLanguage: (name) => {}
+        updateLanguage: (name) => {},
+        reduced: {},
+        updateReduced: (value) => {},
+        domain : {}, 
+        updateDomain: (value) => {}
     }
 );

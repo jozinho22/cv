@@ -6,6 +6,7 @@
     "[module-name]": false
   },
   "homepage": "https://jozinho22.github.io/cv",
+  "proxy": "http://localhost:8080",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
@@ -29,11 +30,10 @@
     "webpack": "^5.75.0"
   },
   "scripts": {
-    "start": "BROWSER=NONE GENERATE_SOURCEMAP=false react-scripts start",
+    "start": "BROWSER=NONE react-scripts start",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "build": "CI=false react-scripts build",
-    "postbuild": "react-spa-prerender",
+    "build": "CI=false GENERATE_SOURCEMAP=false react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -56,14 +56,22 @@
     ]
   },
   "devDependencies": {
+    "@adobe/css-tools": "^4.3.1",
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@svgr/webpack": "^8.0.1",
     "gh-pages": "^5.0.0",
     "node-fetch": "^3.3.1",
-    "webpack-cli": "^5.0.1"
+    "postcss": "^8.4.31",
+    "semver": "^7.5.4",
+    "webpack-cli": "^5.0.1",
+    "wordwrap": "^1.0.0"
   },
   "overrides": {
     "@svgr/webpack": "$@svgr/webpack",
-    "node-fetch": "$node-fetch"
+    "node-fetch": "$node-fetch",
+    "@adobe/css-tools": "$@adobe/css-tools",
+    "postcss": "$postcss",
+    "wordwrap": "$wordwrap",
+    "semver": "$semver"
   }
 }
