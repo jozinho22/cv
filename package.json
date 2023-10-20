@@ -57,6 +57,7 @@
   },
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "@babel/traverse": "^7.23.2",
     "@svgr/webpack": "^8.0.1",
     "gh-pages": "^5.0.0",
     "node-fetch": "^3.3.1",

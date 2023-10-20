@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Button, Row, Col } from 'react-bootstrap';
 import AppContext from './context/AppContext';
-import { FilePdfFill, Globe, Magic, Search, Link45deg } from 'react-bootstrap-icons';
+import { FilePdfFill, Globe, Magic, Link45deg, PlusLg, DashLg } from 'react-bootstrap-icons';
 import EnumDomain from './helpers/EnumDomain';
 import Constants from './helpers/Constants';
 
@@ -88,9 +88,9 @@ const Header = () => {
                     <Col xs={3} >
                         <Button variant="danger" className="reduced-button" onClick={switchReduced}>
                             <div className="icon-block">
-                                <Search className="icon" /> 
+                                {reduced ? <PlusLg className="icon" /> : <DashLg className="icon" /> }
                                 {!mobile ?  <div className="element-of-icon">
-                                                {reduced === true ? 'More details' : 'Less details'}
+                                                {reduced ? 'More details' : 'Less details'}
                                             </div> 
                                                 : <></>}
                             </div>

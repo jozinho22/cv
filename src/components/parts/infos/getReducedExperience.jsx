@@ -119,7 +119,7 @@ const getReducedExperience = () => {
                         period: "septembre 2016 - avril 2021",
                         company: "Open - Rennes",
                         companyLink: "https://www.open.global/",
-                        as: "It developer"
+                        as: "IT developer"
                     },
                     {
                         domains: [EnumDomain.MATHS],
@@ -138,7 +138,7 @@ const getReducedExperience = () => {
                     },
                     {
                         period: "pause",
-                        desc: "It developer"
+                        desc: "IT developer"
                     },
                     {
                         period: "novembre 2014 - septembre 2015",

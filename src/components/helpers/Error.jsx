@@ -8,7 +8,7 @@ import AppContext from '../context/AppContext';
 const Error = () => {
 
     const {domain} = React.useContext(AppContext);
-    
+    console.log(domain)
     return (
         <>
             <div className="error">

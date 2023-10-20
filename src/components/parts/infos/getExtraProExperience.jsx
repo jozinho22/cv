@@ -1,10 +1,10 @@
 import EnumDomain from "../../helpers/EnumDomain";
 
-const getExtraProExperience = ( domain ) => {
+const getExtraProExperience = () => {
     return {
         french: [
             {
-                domains: [EnumDomain.MATHS],
+                domains: [EnumDomain.DEV],
                 period: "2020 - maintenant",
                 company: "En autodidacte",
                 as: "Développeur Fullstack",
@@ -47,7 +47,7 @@ const getExtraProExperience = ( domain ) => {
                 domains: [EnumDomain.MATHS],
                 period: "2012 - maintenant",
                 as: "Professeur de mathématiques à domicile",
-                desc: "- Soutien scolaire et renforcement \n - Création d'un site dédié :",
+                desc: "- Soutien scolaire et renforcement \n - Création d'un site dédié",
                 references: [
                     {
                         url: "https://jozinho22.github.io/maths",
@@ -59,7 +59,7 @@ const getExtraProExperience = ( domain ) => {
         ],
         english: [
             {
-                domains: [EnumDomain.MATHS],
+                domains: [EnumDomain.DEV],
                 period: "2020 - up to now",
                 company: "Self-taught",
                 as: "Fullstack developer",
@@ -102,7 +102,7 @@ const getExtraProExperience = ( domain ) => {
                 domains: [EnumDomain.MATHS],
                 period: "2012 - up to now",
                 as: "Maths teacher (private lessons)",
-                desc: "- Tutoring et reinforcement \n - Creation of a dedicated site :",
+                desc: "- Tutoring et reinforcement \n - Creation of a dedicated site",
                 references: [
                     {
                         url: "https://jozinho22.github.io/maths",
