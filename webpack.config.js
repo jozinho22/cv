@@ -1,4 +1,4 @@
-module.exports = {
+/* module.exports = {
     mode: 'development',
     module: {
         rules: [
@@ -25,4 +25,4 @@ module.exports = {
     resolve: {
         extensions: ['', '.js', '.jsx'],
     }
-};
+}; */
