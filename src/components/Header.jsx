@@ -100,12 +100,12 @@ const Header = () => {
                 </Row>
 
                 <div className="web-button-container" id="web-button-container">
-                    <a href={`${Constants.WEB_APP_URL}${domain !== EnumDomain.GENERIC ? '/#/' + domain : ''}`} target="_blank" rel="noreferrer">
+                    <a href={`${Constants.WEB_APP_URL}${domain !== EnumDomain.MATHS ? '/#/' + domain : ''}`} target="_blank" rel="noreferrer">
                         <Button variant="danger" className="web-button">
                             <div className="icon-block">
                                 <Link45deg className="icon" /> 
                                 <div className="element-of-icon">
-                                    Web version : {`${Constants.WEB_APP_URL}${domain !== EnumDomain.GENERIC ? '/#/' + domain : ''}`}
+                                    Web version
                                 </div> 
                             </div>
                         </Button> 

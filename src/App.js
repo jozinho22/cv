@@ -18,7 +18,7 @@ function App() {
     const [theme, setTheme] = React.useState(process.env.NODE_ENV === 'development' ? EnumTheme.DARCULA : EnumTheme.BLANK);
     const [language, setLanguage] = React.useState(EnumLanguage.FRENCH);
     const [reduced, setReduced] = React.useState(true);
-    const [domain, setDomain] = React.useState(EnumDomain.GENERIC);
+    const [domain, setDomain] = React.useState(EnumDomain.BASIC);
 
     // entrer le poste ici
     var posteNonGeneric = '';
@@ -46,15 +46,15 @@ function App() {
                 children : [
                     {
                         path: "",
-                        element: <CurriculumVitae domain={EnumDomain.GENERIC} poste={posteNonGeneric} boite={boite} relativePath={'/'} />
+                        element: <CurriculumVitae domain={EnumDomain.MATHS} poste={'Professeur de mathématiques'} relativePath={'/'} />
                     },
                     {
                         path: "dev",
                         element: <CurriculumVitae domain={EnumDomain.DEV} poste={'Développeur ReactJS'} relativePath={'/#/dev'} />
                     },
                     {
-                        path: "maths",
-                        element: <CurriculumVitae domain={EnumDomain.MATHS} poste={'Professeur de mathématiques'} relativePath={'/#/maths'} />
+                        path: "basic",
+                        element: <CurriculumVitae domain={EnumDomain.BASIC} poste={posteNonGeneric} boite={boite} relativePath={'/#/basic'}/>
                     },
                     {
                         path: "test",
@@ -71,8 +71,6 @@ function App() {
             <div className="App" id="capture">
                 <AppContext.Provider value={appContext} > 
                     <div className={`${theme}`}>
-                       
-                       
                         <RouterProvider router={router} />
                     </div>       
                 </AppContext.Provider>

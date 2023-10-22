@@ -14,7 +14,7 @@ const Error = () => {
             <div className="error">
                 <div style={{paddingTop: "20px"}}>
                     <p>Cette url ne correspond à aucune page du site...</p>
-                    <a href={`${Constants.BASE_URL}${Object.keys(domain).length !== 0 && domain !== EnumDomain.GENERIC ? '/#/' + domain : ''}` }>
+                    <a href={`${Constants.BASE_URL}${Object.keys(domain).length !== 0 && domain !== EnumDomain.MATHS ? '/#/' + domain : ''}` }>
                         <Button variant="success" className="theme-button" >
                             <div className="icon-block">
                                 <House className="icon" /> 

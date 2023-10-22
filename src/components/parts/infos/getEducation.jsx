@@ -18,7 +18,7 @@ const getEducation = () => {
                         desc: "Reconversion vers la programmation informatique"
                     },
                     {    
-                        domains: [EnumDomain.MATHS, EnumDomain.DEV, EnumDomain.GENERIC],
+                        domains: [EnumDomain.MATHS, EnumDomain.DEV, EnumDomain.BASIC],
                         period: "septembre 2009 - juin 2014",
                         title: "Master en sciences et génie de l'environnement",
                         titleLink: "https://www.ipgp.fr/fr/master/genie-de-lenvironnement-industrie-gei",
@@ -27,7 +27,7 @@ const getEducation = () => {
                         desc: "- Génie des procédés, \n - Thermique du bâtiment, \n - Droit de l'environnement, \n - Analyses de laboratoire, \n- Programmation informatique."
                     },
                     {
-                        domains: [EnumDomain.MATHS, EnumDomain.DEV, EnumDomain.GENERIC],
+                        domains: [EnumDomain.MATHS, EnumDomain.DEV, EnumDomain.BASIC],
                         period: "pause",
                         desc: "Reprise d'études dans les sciences de l'environnement"
                     },
@@ -72,7 +72,7 @@ const getEducation = () => {
                         desc: "Career change to IT development"
                     },
                     {    
-                        domains: [EnumDomain.MATHS, EnumDomain.DEV, EnumDomain.GENERIC],
+                        domains: [EnumDomain.MATHS, EnumDomain.DEV, EnumDomain.BASIC],
                         period: "september 2009 - juin 2014",
                         title: "Master's degree in environmental engineering",
                         titleLink: "https://www.ipgp.fr/fr/master/genie-de-lenvironnement-industrie-gei",
@@ -81,7 +81,7 @@ const getEducation = () => {
                         desc: "- Engineering process, \n - Heat science applied to buildings, \n - Environmental law, \n - Laboratory analysis, \n - Computer programming."
                     },
                     {
-                        domains: [EnumDomain.MATHS, EnumDomain.DEV, EnumDomain.GENERIC],
+                        domains: [EnumDomain.MATHS, EnumDomain.DEV, EnumDomain.BASIC],
                         period: "pause",
                         desc: "Studies resumption in environment sciences"
                     },
