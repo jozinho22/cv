@@ -96,7 +96,6 @@ const Header = () => {
                             </div>
                         </Button>         
                     </Col>
-
                 </Row>
 
                 <div className="web-button-container" id="web-button-container">
