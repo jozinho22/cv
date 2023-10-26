@@ -19,7 +19,6 @@ const VCard = ( {poste} ) => {
                 <div className="vcard-content">
                     <img src={photo} alt=""/>
                     <div className="me">{language === EnumLanguage.FRENCH ? `Josselin DOUINEAU, ${age} ans` : `Josselin DOUINEAU, ${age}` }</div>
-                
                     <h1>{intro.profession}</h1>
                 </div>
             </div>

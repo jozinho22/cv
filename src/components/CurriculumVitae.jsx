@@ -56,7 +56,7 @@ const CurriculumVitae = ( {domain, poste, boite, relativePath} ) => {
                         <>
                             <Experience pro/>
                             {
-                                domain !== EnumDomain.GENERIC ? 
+                                domain !== EnumDomain.BASIC ? 
                                     <Experience /> 
                                         :   <></>
                             }
@@ -64,7 +64,7 @@ const CurriculumVitae = ( {domain, poste, boite, relativePath} ) => {
                             : 
                                 <>
                                     {
-                                        domain !== EnumDomain.GENERIC ? 
+                                        domain !== EnumDomain.BASIC ? 
                                             <Experience /> 
                                                 :   <></>
                                     }
