@@ -3,7 +3,7 @@
   "name": "Mon CV au format web",
   "icons": [
     {
-      "src": "favicon-brasil-512.png",
+      "src": "cv.png",
       "type": "image/png",
       "sizes": "512x512"
     }
