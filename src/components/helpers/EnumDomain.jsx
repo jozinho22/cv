@@ -1,5 +1,5 @@
 const EnumDomain = {
-    MATHS: "", MATHS: "maths", BASIC: "basic"
+    MATHS: "", DEV: "dev", BASIC: "basic"
 }
 
 export default EnumDomain;

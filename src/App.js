@@ -7,8 +7,6 @@ import EnumTheme from './components/helpers/EnumTheme';
 import Error from './components/helpers/Error';
 import { createHashRouter, RouterProvider } from 'react-router-dom';
 
-import TestStack from './components/helpers/TestStack';
-
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './components/styles/Themes.css';
 import './App.css';
@@ -22,10 +20,10 @@ function App() {
     const [domain, setDomain] = React.useState(EnumDomain.BASIC);
 
     // entrer le poste ici
-    var posteNonGeneric = '';
+    var posteNonGeneric = 'Technicien informatique';
     
     // entrer la société ici
-    var boite = "";
+    var boite = "Biocoop Scarabée";
 
     const appContext = {
         theme: theme,
@@ -56,10 +54,6 @@ function App() {
                     {
                         path: "basic",
                         element: <CurriculumVitae domain={EnumDomain.BASIC} poste={posteNonGeneric} boite={boite} relativePath={'/#/basic'}/>
-                    },
-                    {
-                        path: "test",
-                        element: <TestStack />
                     }
                 ],
                 errorElement: <Error />,
