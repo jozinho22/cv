@@ -2,7 +2,7 @@ const getDevIntro = () => {
 
         return  {
                         french: {
-                                profession: "Développeur fullstack",
+                                profession: "Développeur Back-end",
                                 summary: "Développeur polyvalent, à la recherche d'un nouveau challenge. Le travail en équipe et l'esprit de solidarité sont des valeurs que j'apprécie dans les projets. Par ailleurs professeur de mathématiques à domicile, je suis passionné par la transmission et le partage du savoir".split('.')
                         },
                         english: {

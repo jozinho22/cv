@@ -20,10 +20,11 @@ function App() {
     const [domain, setDomain] = React.useState(EnumDomain.BASIC);
 
     // entrer le poste ici
-    var posteNonGeneric = 'Technicien informatique';
+    var devPoste = 'Développeur back-end';
+    var genericPoste = 'Employé polyvalent';
     
     // entrer la société ici
-    var boite = "Biocoop Scarabée";
+    var boite = "CNRS";
 
     const appContext = {
         theme: theme,
@@ -49,11 +50,11 @@ function App() {
                     },
                     {
                         path: "dev",
-                        element: <CurriculumVitae domain={EnumDomain.DEV} poste={'Développeur ReactJS'} relativePath={'/#/dev'} />
+                        element: <CurriculumVitae domain={EnumDomain.DEV} poste={process.env.NODE_ENV === 'development' ? devPoste : 'Développeur ReactJS'} boite={process.env.NODE_ENV === 'development' ? boite : ''} relativePath={'/#/dev'} />
                     },
                     {
                         path: "basic",
-                        element: <CurriculumVitae domain={EnumDomain.BASIC} poste={posteNonGeneric} boite={boite} relativePath={'/#/basic'}/>
+                        element: <CurriculumVitae domain={EnumDomain.BASIC} poste={process.env.NODE_ENV === 'development' ? genericPoste : 'Employé polyvalent'} boite={process.env.NODE_ENV === 'development' ? boite : ''} relativePath={'/#/basic'}/>
                     }
                 ],
                 errorElement: <Error />,

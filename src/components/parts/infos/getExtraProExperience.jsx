@@ -44,7 +44,7 @@ const getExtraProExperience = () => {
                 ]
             },
             {
-                domains: [EnumDomain.MATHS],
+                domains: [EnumDomain.MATHS, EnumDomain.DEV],
                 period: "2012 - maintenant",
                 as: "Professeur de mathématiques à domicile",
                 desc: "- Soutien scolaire et renforcement \n - Création d'un site dédié",
@@ -99,7 +99,7 @@ const getExtraProExperience = () => {
                     ]
             },
             {
-                domains: [EnumDomain.MATHS],
+                domains: [EnumDomain.MATHS, EnumDomain.DEV],
                 period: "2012 - up to now",
                 as: "Maths teacher (private lessons)",
                 desc: "- Tutoring et reinforcement \n - Creation of a dedicated site",
