@@ -20,11 +20,11 @@ function App() {
     const [domain, setDomain] = React.useState(EnumDomain.BASIC);
 
     // entrer le poste ici
-    var devPoste = 'Développeur back-end';
+    var devPoste = 'Développeur polyvalent';
     var genericPoste = 'Employé polyvalent';
     
     // entrer la société ici
-    var boite = "CNRS";
+    var boite = "";
 
     const appContext = {
         theme: theme,
