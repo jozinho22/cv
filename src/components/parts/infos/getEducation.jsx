@@ -29,7 +29,7 @@ const getEducation = () => {
                     {
                         domains: [EnumDomain.MATHS, EnumDomain.DEV, EnumDomain.BASIC],
                         period: "pause",
-                        desc: "Reprise d'études dans les sciences de l'environnement"
+                        desc: "Études dans les sciences de l'environnement"
                     },
                     {    
                         period: "novembre 2008 - février 2009",
@@ -83,7 +83,7 @@ const getEducation = () => {
                     {
                         domains: [EnumDomain.MATHS, EnumDomain.DEV, EnumDomain.BASIC],
                         period: "pause",
-                        desc: "Studies resumption in environment sciences"
+                        desc: "Studies in environment sciences"
                     },
                     {    
                         period: "november 2008 - february 2009",

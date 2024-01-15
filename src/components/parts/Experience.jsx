@@ -9,8 +9,6 @@ import EnumDomain from '../helpers/EnumDomain';
 import EnumLanguage from '../helpers/EnumLanguage';
 import getExtraProExperience from './infos/getExtraProExperience';
 
-import getReducedExperience from './infos/getReducedExperience';
-
 import {DiGit} from 'react-icons/di';
 
 
@@ -18,7 +16,7 @@ const Experience = ( {pro} ) => {
 
     const {language, reduced, domain} = React.useContext(AppContext);
     var title = pro ? languageChooser(language, getTitles()).experience : languageChooser(language, getTitles()).extraProExperience;
-    var jobs = pro ? ( domain === EnumDomain.DEV ? languageChooser(language, getDevExperience()) : reduced ? languageChooser(language, getReducedExperience()) : languageChooser(language, getExperience()) ) : languageChooser(language, getExtraProExperience(domain)); 
+    var jobs = pro ? ( domain === EnumDomain.DEV ? languageChooser(language, getDevExperience()) : languageChooser(language, getExperience()) ) : languageChooser(language, getExtraProExperience(domain)); 
     
     /* domain !== EnumDomain.DEV && !pro ? jobs.reverse() : <></>; */
 
@@ -41,14 +39,14 @@ const Experience = ( {pro} ) => {
                         if((!pro && job.domains.includes(domain)) || pro) {
                             return  <div className={`element`} id={`experience-${index}`} key={pro ? `job-${index}`: `extra-pro-job-${index}`}>
     
-                                        {job.period ? 
+                                        {reduced && job.longPeriod || !reduced && job.period || !pro ? 
                                             <div className="icon-block period">
                                                 <Hourglass className="icon" /> 
-                                                <div className="element-of-icon period-date">{job.period}</div>
+                                                <div className="element-of-icon period-date">{reduced && job.longPeriod ? job.longPeriod : job.period}</div>
                                             </div>
-                                                :   <></>
+                                                :   <></>  
                                         }
-                                        {job.as ? 
+                                        {reduced && job.longAs || !reduced && job.as || !pro ? 
                                             <div className="icon-block">
                                                 <>
                                                     {
@@ -56,7 +54,7 @@ const Experience = ( {pro} ) => {
                                                             <PcDisplayHorizontal className="icon" />
                                                             :   <PersonFill className="icon" />
                                                     }
-                                                    <div className="element-of-icon">{job.as}</div> 
+                                                    <div className="element-of-icon">{reduced && job.longAs ? job.longAs : job.as}</div> 
                                                 </>
                                             </div>
                                                     :  <></>
@@ -169,7 +167,7 @@ const Experience = ( {pro} ) => {
                                                 })
                                                     : <></>
                                         } 
-                                        
+                                       
                                     </div>  
                                 }
                      

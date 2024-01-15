@@ -341,16 +341,7 @@ hr {
     justify-content: center;
 }
 
-/* test for Stack */
-.web-button-container-test {
-    display:flex;
-}
-
-.Blank .web-button-container a {
-    color: white !important;
-}
-
-.Darcula .web-button-container a {
+.web-button-container a {
     color: white !important;
 }
 

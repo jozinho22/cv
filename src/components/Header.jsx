@@ -4,12 +4,15 @@ import AppContext from './context/AppContext';
 import { FilePdfFill, Globe, Magic, Link45deg, PlusLg, DashLg } from 'react-bootstrap-icons';
 import EnumDomain from './helpers/EnumDomain';
 import Constants from './helpers/Constants';
+import { useReactToPrint } from "react-to-print";
+import pageStyle from './helpers/pageStyle';
 
-const Header = () => {
+const Header = ( {poste, boite} ) => {
 
     const {theme, updateTheme, language, updateLanguage, reduced, updateReduced, domain} = React.useContext(AppContext);
 
     var mobile = document.body.offsetWidth < 450;
+    var catchedDiv;
 
     /* console.log(domain) */
 
@@ -27,22 +30,47 @@ const Header = () => {
 
     const retrieveHeader = React.useCallback(() => {
             document.getElementsByClassName("header-button-container")[0].style.display = "flex";
-            document.getElementsByClassName("web-button-container")[0].style.display = "none"; 
-        }, []);
+            /* document.getElementsByClassName("web-button-container")[0].style.display = "none";  */
+    }, []);
 
-    const printWindow = () => {
+    /* const printWindow = () => {
 
         document.getElementsByClassName("header-button-container")[0].style.display = "none";
         document.getElementsByClassName("web-button-container")[0].style.display = "flex";
         window.print();
         retrieveHeader(); 
+    } */
+
+    const buildElementToPrint = () => {
+        document.getElementsByClassName("header-button-container")[0].style.display = "none";
+        /* document.getElementsByClassName("web-button-container")[0].style.display = "flex"; */
+
+        var entirePage = document.querySelector("#capture").cloneNode(true);
+        document.getElementById("doc-to-print").appendChild(entirePage);
+        catchedDiv = document.getElementById("doc-to-print");
+
+        return catchedDiv.getElementsByClassName("App")[0];
     }
+
+    const destroyElementToPrint = () => {
+        catchedDiv.getElementsByClassName("App")[0].remove();
+        retrieveHeader(); 
+    }
+
+    const print = useReactToPrint(
+        {
+            content: () => buildElementToPrint(), 
+            pageStyle: pageStyle(),
+            documentTitle: domain === `Josselin DOUINEAU - ${poste}${boite !== '' ? ` - ${boite}` : ''} - CV`,
+            onAfterPrint: () => destroyElementToPrint()
+        }
+    );
 
     return  <Container className="header">
                 <Row className="header-button-container">
 
                     <Col xs={3} >
-                        <Button variant="warning" className="printer-button" onClick={printWindow} >
+                        <Button variant="warning" className="printer-button" onClick={print} >
                             <div className="icon-block">
                                 <FilePdfFill className="icon" /> 
                                 {!mobile ? <div className="element-of-icon">Export</div> : <></>}

@@ -10,7 +10,6 @@ import { createHashRouter, RouterProvider } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './components/styles/Themes.css';
 import './App.css';
-import TestStack from './components/helpers/TestStack';
 
 
 function App() {
@@ -21,7 +20,8 @@ function App() {
     const [domain, setDomain] = React.useState(EnumDomain.BASIC);
 
     // entrer le poste ici
-    var posteNonGeneric = '';
+    var devPoste = 'Développeur polyvalent';
+    var genericPoste = 'Employé polyvalent';
     
     // entrer la société ici
     var boite = "";
@@ -50,15 +50,11 @@ function App() {
                     },
                     {
                         path: "dev",
-                        element: <CurriculumVitae domain={EnumDomain.DEV} poste={'Développeur ReactJS'} relativePath={'/#/dev'} />
+                        element: <CurriculumVitae domain={EnumDomain.DEV} poste={process.env.NODE_ENV === 'development' ? devPoste : 'Développeur ReactJS'} boite={process.env.NODE_ENV === 'development' ? boite : ''} relativePath={'/#/dev'} />
                     },
                     {
                         path: "basic",
-                        element: <CurriculumVitae domain={EnumDomain.BASIC} poste={posteNonGeneric} boite={boite} relativePath={'/#/basic'}/>
-                    },
-                    {
-                        path: "test",
-                        element: <TestStack />
+                        element: <CurriculumVitae domain={EnumDomain.BASIC} poste={process.env.NODE_ENV === 'development' ? genericPoste : 'Employé polyvalent'} boite={process.env.NODE_ENV === 'development' ? boite : ''} relativePath={'/#/basic'}/>
                     }
                 ],
                 errorElement: <Error />,

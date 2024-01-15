@@ -26,23 +26,19 @@ const CurriculumVitae = ( {domain, poste, boite, relativePath} ) => {
     React.useEffect(() => {
         updateDomain(domain);
     }, [domain]) 
-
-    /* console.log(useLocation()) */
-
-    /* console.log(poste, boite) */
    
     return (
         <>
             <Helmet>
                 <title>
-                    {`CV de Josselin DOUINEAU${(poste !== '' && poste !== undefined) ? ` - ${poste}` : ''}${boite !== '' && boite !== undefined ? ` - ${boite}` : ''}`}
+                    {`Josselin DOUINEAU${(poste !== '' && poste !== undefined) ? ` - ${poste}` : ''}${boite !== '' && boite !== undefined ? ` - ${boite}` : ''} - CV`}
                 </title>
-                <meta data-rh="true" name="description" content={`Mon curriculum vitae : ${poste} au format web`} />
+                <meta data-rh="true" name="description" content={`Mon CV au format web`} />
                 <link rel="canonical" href={`https://jozinho22.github.io/cv${relativePath}`} />
             </Helmet>
             <Container className="curriculum-vitae-container">
 
-                <Header />
+                <Header poste={poste} boite={boite} />
                 <VCard poste={poste} />
                 <Contact />
                 <Intro poste={poste} />

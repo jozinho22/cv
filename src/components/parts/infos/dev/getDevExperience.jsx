@@ -2,10 +2,12 @@ const getDevExperience = () => {
     return {
             french: [
                 {
-                    period: "january2021 - avril 2021",
+                    period: "january 2021 - avril 2021",
+                    longPeriod : "septembre 2016 - avril 2021",
                     company: "Open",
                     companyLink: "https://www.open.global/",
                     as: "Développeur Java/ReactJS",
+                    longAs : "Développeur informatique",
                     tools: "Java 8, Spring, Maven, ReactJS, PostgreSQL, Git Fork, GitLab", 
                     context: "La start-up SWIZI développe un générateur d’applications mobiles customisables pour ses clients. \n Il y a alors un front-end développé en ReactJs qui fait appel à un back en Java. ",
                     desc: "Sur ces deux projets, j'ai été amené à développer de nouvelles fonctionnalités telles que l'ajout de nouvelles données, de créer de nouvelles requêtes à la base de données, de développer la possibilité d’ajout de nouveaux types de fichiers et d’assurer la cohérence des transferts de données entre le front-end et et le back-end."
@@ -23,9 +25,11 @@ const getDevExperience = () => {
         english: [
             {
                 period: "january 2021 - april 2021",
+                longPeriod : "september 2016 - april 2021",
                 company: "Open",
                 companyLink: "https://www.open.global/",
                 as: "Java/ReactJS developer",
+                longAs: "IT developer",
                 tools: "Java 8, Spring, Maven, ReactJS, PostgreSQL, Git Fork, GitLab", 
                 context: "SWIZI is a start-up developping a mobile app generator for its customers. \n There is a front-end part on ReactJs and a back-end on Java.",
                 desc: "On those two projects, I developped new features such as adding new datas, creating new databases requests and assuring back and front coherence."
