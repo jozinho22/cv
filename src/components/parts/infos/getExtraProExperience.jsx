@@ -53,6 +53,11 @@ const getExtraProExperience = () => {
                         url: "https://jozinho22.github.io/maths",
                         webSiteName : "Ma Thématique",
                         desc: "(Base documentaire mathématique)"
+                    },
+                    {
+                        url: "https://jozinho22.github.io/maths-demos",
+                        webSiteName : "Maths démos",
+                        desc: "(Site consacré aux démonstrations mathématiques)"
                     }
                 ],
             }
@@ -108,6 +113,11 @@ const getExtraProExperience = () => {
                         url: "https://jozinho22.github.io/maths",
                         webSiteName : "Ma Thématique",
                         desc: "(Maths database)"
+                    },
+                    {
+                        url: "https://jozinho22.github.io/maths-demos",
+                        webSiteName : "Maths demos",
+                        desc: "(Maths demonstrations website)"
                     }
                 ]
             }
