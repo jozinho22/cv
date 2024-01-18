@@ -50,13 +50,8 @@ const getExtraProExperience = () => {
                 desc: "- Soutien scolaire et renforcement \n - Création d'un site dédié",
                 references: [
                     {
-                        url: "https://jozinho22.github.io/maths",
-                        webSiteName : "Ma Thématique",
-                        desc: "(Base documentaire mathématique)"
-                    },
-                    {
                         url: "https://jozinho22.github.io/demonstrations-mathematiques",
-                        webSiteName : "Maths démos",
+                        webSiteName : "Démonstrations mathématiques",
                         desc: "(Site consacré aux démonstrations mathématiques)"
                     }
                 ],
@@ -110,13 +105,8 @@ const getExtraProExperience = () => {
                 desc: "- Tutoring et reinforcement \n - Creation of a dedicated site",
                 references: [
                     {
-                        url: "https://jozinho22.github.io/maths",
-                        webSiteName : "Ma Thématique",
-                        desc: "(Maths database)"
-                    },
-                    {
                         url: "https://jozinho22.github.io/demonstrations-mathematiques",
-                        webSiteName : "Maths demos",
+                        webSiteName : "Maths demonstrations",
                         desc: "(Maths demonstrations website)"
                     }
                 ]
