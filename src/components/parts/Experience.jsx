@@ -130,11 +130,11 @@ const Experience = ( {pro} ) => {
                                                                     <Link45deg className="icon" /> 
                                                                     <Phone className="icon" /> 
                                                                     <div className="element-of-icon">{reference.webSiteName}</div>
-                                                                    {
+                                                                    {/* {
                                                                         reference.desc ? 
                                                                             <div className="reference-desc">{reference.desc}</div>
                                                                                 :   <></>
-                                                                    }
+                                                                    } */}
                                                                 </a>
                                                                     : <></>
                                                         }

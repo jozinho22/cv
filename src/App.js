@@ -21,7 +21,7 @@ function App() {
 
     // entrer le poste ici
     var devPoste = 'Développeur polyvalent';
-    var genericPoste = 'Employé polyvalent';
+    var genericPoste = 'Ingénieur géomatique';
     
     // entrer la société ici
     var boite = "";
@@ -47,15 +47,16 @@ function App() {
                     {
                         path: "",
                         element: <CurriculumVitae domain={EnumDomain.MATHS} poste={'Professeur de mathématiques'} relativePath={'/'} />
-                    },
-                    {
-                        path: "dev",
-                        element: <CurriculumVitae domain={EnumDomain.DEV} poste={process.env.NODE_ENV === 'development' ? devPoste : 'Développeur ReactJS'} boite={process.env.NODE_ENV === 'development' ? boite : ''} relativePath={'/#/dev'} />
-                    },
-                    {
-                        path: "basic",
-                        element: <CurriculumVitae domain={EnumDomain.BASIC} poste={process.env.NODE_ENV === 'development' ? genericPoste : 'Employé polyvalent'} boite={process.env.NODE_ENV === 'development' ? boite : ''} relativePath={'/#/basic'}/>
                     }
+                    // },
+                    // {
+                    //     path: "dev",
+                    //     element: <CurriculumVitae domain={EnumDomain.DEV} poste={process.env.NODE_ENV === 'development' ? devPoste : 'Développeur ReactJS'} boite={process.env.NODE_ENV === 'development' ? boite : ''} relativePath={'/#/dev'} />
+                    // },
+                    // {
+                    //     path: "basic",
+                    //     element: <CurriculumVitae domain={EnumDomain.BASIC} poste={process.env.NODE_ENV === 'development' ? genericPoste : 'Employé polyvalent'} boite={process.env.NODE_ENV === 'development' ? boite : ''} relativePath={'/#/basic'}/>
+                    // }
                 ],
                 errorElement: <Error />,
             }
