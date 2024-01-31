@@ -39,29 +39,33 @@ function App() {
     
     /* console.log('public url: ', process.env.PUBLIC_URL) */
 
-    const router = createHashRouter(
-        [
+    var routes = [
+        {
+            path: "/",
+            children : [
+                {
+                    path: "",
+                    element: <CurriculumVitae domain={EnumDomain.MATHS} poste={'Professeur de mathématiques'} relativePath={'/'} />
+                }
+            ],
+            errorElement: <Error />,
+        }
+    ]
+
+    if(process.env.NODE_ENV === 'development') {
+        routes.push(
             {
-                path: "/",
-                children : [
-                    {
-                        path: "",
-                        element: <CurriculumVitae domain={EnumDomain.MATHS} poste={'Professeur de mathématiques'} relativePath={'/'} />
-                    }
-                    // },
-                    // {
-                    //     path: "dev",
-                    //     element: <CurriculumVitae domain={EnumDomain.DEV} poste={process.env.NODE_ENV === 'development' ? devPoste : 'Développeur ReactJS'} boite={process.env.NODE_ENV === 'development' ? boite : ''} relativePath={'/#/dev'} />
-                    // },
-                    // {
-                    //     path: "basic",
-                    //     element: <CurriculumVitae domain={EnumDomain.BASIC} poste={process.env.NODE_ENV === 'development' ? genericPoste : 'Employé polyvalent'} boite={process.env.NODE_ENV === 'development' ? boite : ''} relativePath={'/#/basic'}/>
-                    // }
-                ],
-                errorElement: <Error />,
+                path: "dev",
+                element: <CurriculumVitae domain={EnumDomain.DEV} poste={process.env.NODE_ENV === 'development' ? devPoste : 'Développeur ReactJS'} boite={process.env.NODE_ENV === 'development' ? boite : ''} relativePath={'/#/dev'} />
+            },
+            {
+                path: "basic",
+                element: <CurriculumVitae domain={EnumDomain.BASIC} poste={process.env.NODE_ENV === 'development' ? genericPoste : 'Employé polyvalent'} boite={process.env.NODE_ENV === 'development' ? boite : ''} relativePath={'/#/basic'}/>
             }
-        ]
-    );
+        )
+    }
+
+    const router = createHashRouter(routes);
 
     return (
         <>
