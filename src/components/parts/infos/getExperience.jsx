@@ -19,8 +19,8 @@ const getExperience = () => {
                         desc: "Professeur de mathématiques"
                     },
                     {
-                        period: "juillet 2023 - septembre 2023",
-                        longPeriod : "juin 2021 - septembre 2023",
+                        period: "juillet 2023 - février 2024",
+                        longPeriod : "juin 2021 - février 2024",
                         company: "Biocoop du Cormier - Saint-Aubin-du-Cormier",
                         companyLink: "https://www.biocoopducormier.fr/",
                         as: "Employé polyvalent",
@@ -163,8 +163,8 @@ const getExperience = () => {
                         desc: "Maths teacher"
                     },
                     {
-                        period: "july 2023 - september 2023",
-                        longPeriod : "june 2021 - september 2023",
+                        period: "july 2023 - february 2024",
+                        longPeriod : "june 2021 - february 2024",
                         company: "Biocoop du Cormier - Saint-Aubin-du-Cormier",
                         companyLink: "https://www.biocoopducormier.fr/",
                         as: "Versatile employee",

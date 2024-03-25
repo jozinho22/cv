@@ -16,11 +16,6 @@ const getExtraProExperience = () => {
                         url: "https://jozinho22.github.io/chess-timer",
                         webSiteName : "Chess Timer",
                         desc: "(Pendule pour les joueurs d'échecs)"
-                    },
-                    {
-                        url: "https://jozinho22.github.io/test-your-skills",
-                        webSiteName : "Test your skills",
-                        desc: "(Un test pour les devs Java)"
                     }
                 ],
                 gitDesc : "D'autres projets, cette fois sans IHM sont disponibles sur mon GitHub. \n Ces projets ont été réalisés dans le but de continuer à pratiquer et de suivre l'évolution des technologies, notamment sur Java, Spring et JavaScript.",
@@ -50,13 +45,8 @@ const getExtraProExperience = () => {
                 desc: "- Soutien scolaire et renforcement \n - Création d'un site dédié",
                 references: [
                     {
-                        url: "https://jozinho22.github.io/maths",
-                        webSiteName : "Ma Thématique",
-                        desc: "(Base documentaire mathématique)"
-                    },
-                    {
-                        url: "https://jozinho22.github.io/maths-demos",
-                        webSiteName : "Maths démos",
+                        url: "https://jozinho22.github.io/demonstrations-mathematiques",
+                        webSiteName : "Démonstrations mathématiques",
                         desc: "(Site consacré aux démonstrations mathématiques)"
                     }
                 ],
@@ -76,11 +66,6 @@ const getExtraProExperience = () => {
                         url: "https://jozinho22.github.io/chess-timer",
                         webSiteName : "Chess Timer",
                         desc: "(Timer for chess players)"
-                    },
-                    {
-                        url: "https://jozinho22.github.io/test-your-skills",
-                        webSiteName : "Test your skills",
-                        desc: "(A test for Java coders)"
                     }
                 ],
                 gitDesc : "Other projects without GUI are on my GitHub. \n Those projects were builded to continue practicing, and notably concerning Java, Spring et JavaScript.",
@@ -110,13 +95,8 @@ const getExtraProExperience = () => {
                 desc: "- Tutoring et reinforcement \n - Creation of a dedicated site",
                 references: [
                     {
-                        url: "https://jozinho22.github.io/maths",
-                        webSiteName : "Ma Thématique",
-                        desc: "(Maths database)"
-                    },
-                    {
-                        url: "https://jozinho22.github.io/maths-demos",
-                        webSiteName : "Maths demos",
+                        url: "https://jozinho22.github.io/demonstrations-mathematiques",
+                        webSiteName : "Maths demonstrations",
                         desc: "(Maths demonstrations website)"
                     }
                 ]

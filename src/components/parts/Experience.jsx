@@ -115,7 +115,7 @@ const Experience = ( {pro} ) => {
                                                             <div className="element-of-icon">{language === EnumLanguage.FRENCH ? "Réalisations" : "Achievements"}</div>
                                                         </div>
                                                         <div className="desc">{job.desc}</div>
-                                                        <div className="desc">{domain === EnumDomain.DEV ? job.more : ''}</div>
+                                                        {/* <div className="desc">{domain === EnumDomain.DEV ? job.more : ''}</div> */}
                                                     </>  
                                                 </div>
                                                     : <></>
@@ -130,11 +130,11 @@ const Experience = ( {pro} ) => {
                                                                     <Link45deg className="icon" /> 
                                                                     <Phone className="icon" /> 
                                                                     <div className="element-of-icon">{reference.webSiteName}</div>
-                                                                    {
+                                                                    {/* {
                                                                         reference.desc ? 
                                                                             <div className="reference-desc">{reference.desc}</div>
                                                                                 :   <></>
-                                                                    }
+                                                                    } */}
                                                                 </a>
                                                                     : <></>
                                                         }
@@ -143,14 +143,14 @@ const Experience = ( {pro} ) => {
                                                     : <></>
                                         } 
                                         
-                                        {job.gitDesc && domain === EnumDomain.DEV && !reduced ?
+                                        {/* {job.gitDesc && domain === EnumDomain.DEV && !reduced ?
                                                 <>
                                                     <br></br>
                                                     <div className="desc">{job.gitDesc}</div>
                                                 </>
                                                     : <></>
-                                        }
-                                        {
+                                        } */}
+                                        {/* {
                                             job.gitReferences && domain === EnumDomain.DEV && !reduced ?
                                                 job.gitReferences.map((reference, index) => {
                                                     return <div key={index} className="reference">
@@ -166,7 +166,7 @@ const Experience = ( {pro} ) => {
                                                             </div> 
                                                 })
                                                     : <></>
-                                        } 
+                                        }  */}
                                        
                                     </div>  
                                 }
